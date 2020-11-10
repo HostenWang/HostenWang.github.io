@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://HostenWang.github.io/categories/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/db/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/oracle/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/posts/oracle-tigger-summary/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/posts/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/categories/tech/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/trigger/</loc>
+    <lastmod>2020-10-10T19:08:13+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/categories/about/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/about/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/bi/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/contact/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/ignite/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/categories/index/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/mysql/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/tags/nifi/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://HostenWang.github.io/posts/from-mysql-materialized-data-to-ignite/</loc>
+    <lastmod>2020-06-13T19:45:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

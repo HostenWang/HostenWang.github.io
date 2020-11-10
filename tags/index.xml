@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on In the poet&#39;s valley</title>
+    <link>https://HostenWang.github.io/tags/</link>
+    <description>Recent content in Tags on In the poet&#39;s valley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2020 19:08:13 +0800</lastBuildDate><atom:link href="https://HostenWang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Db</title>
+      <link>https://HostenWang.github.io/tags/db/</link>
+      <pubDate>Sat, 10 Oct 2020 19:08:13 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://HostenWang.github.io/tags/oracle/</link>
+      <pubDate>Sat, 10 Oct 2020 19:08:13 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trigger</title>
+      <link>https://HostenWang.github.io/tags/trigger/</link>
+      <pubDate>Sat, 10 Oct 2020 19:08:13 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/trigger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BI</title>
+      <link>https://HostenWang.github.io/tags/bi/</link>
+      <pubDate>Sat, 13 Jun 2020 19:45:22 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ignite</title>
+      <link>https://HostenWang.github.io/tags/ignite/</link>
+      <pubDate>Sat, 13 Jun 2020 19:45:22 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/ignite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://HostenWang.github.io/tags/mysql/</link>
+      <pubDate>Sat, 13 Jun 2020 19:45:22 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NiFi</title>
+      <link>https://HostenWang.github.io/tags/nifi/</link>
+      <pubDate>Sat, 13 Jun 2020 19:45:22 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/tags/nifi/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

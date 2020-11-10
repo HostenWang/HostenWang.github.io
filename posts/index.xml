@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on In the poet&#39;s valley</title>
+    <link>https://HostenWang.github.io/posts/</link>
+    <description>Recent content in Posts on In the poet&#39;s valley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2020 19:08:13 +0800</lastBuildDate><atom:link href="https://HostenWang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle Trigger Summary</title>
+      <link>https://HostenWang.github.io/posts/oracle-tigger-summary/</link>
+      <pubDate>Sat, 10 Oct 2020 19:08:13 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/posts/oracle-tigger-summary/</guid>
+      <description>前言 当前项目里使用触发器做准实时同步,顺便小节一下.
+简介 官方原文
+ A trigger is a named program unit that is stored in the database and fired (executed) in response to a specified event. The specified event is associated with either a table, a view, a schema, or the database, and it is one of the following:
+ A database manipulation (DML) statement (DELETE, INSERT, or UPDATE) A database definition (DDL) statement (CREATE, ALTER, or DROP) A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN)  The trigger is said to be defined on the table, view, schema, or database.</description>
+    </item>
+    
+    <item>
+      <title>使用Apache NiFi物化MySQL热数据到Ignite实现即时查询</title>
+      <link>https://HostenWang.github.io/posts/from-mysql-materialized-data-to-ignite/</link>
+      <pubDate>Sat, 13 Jun 2020 19:45:22 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/posts/from-mysql-materialized-data-to-ignite/</guid>
+      <description>0 前言 此次使用 Apache NiFi 将 MySQL 热数据物化到 Ignite ,实现即时查询.
+Apache NiFi 是高效,可拓展的数据流管理工具.
+Ignite 是一个以内存为中心的数据平台，具有数据强一致、高可用、支持标准SQL的特性。
+1 应用场景 背景:随着数据库内数据量越来越大,关联查询对业务库 MySQL 造成巨大压力,也影响了用户体验,例如单表1亿数据的sql关联查询耗时将在40分钟以上.
+当前方案亮点:重新改变数据查询逻辑，引入内存数据库作为缓冲层，完成秒级SQL查询。
+2 技术选型 2.1 内存数据库 Ignite 是一个以内存为中心的数据平台，具有数据强一致、高可用、支持标准SQL的特性。
+2.2 物化实现和调度 Apache NiFi 是高效,可拓展的数据流管理工具.
+当前场景内,NiFi用于实现如下功能
+ 调度,定期执行物化 物化前的业务逻辑,如 清空内存数据库内的指定表 从 MySQL 查询数据,并写入 Ignite  3 详细实现 4 当前方案优势  内存计算,性能很高 自动化.设定定时后自动完成物化.  5 当前版本存在的不足及解决方法  ignite 国内活跃度不高,资料少 nifi 用好需要学习  6 未来规划  提高物化速度.可以使用 ignite 原生方法加载数据 ignite 查询还有优化空间  </description>
+    </item>
+    
+  </channel>
+</rss>

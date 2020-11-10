@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trigger on In the poet&#39;s valley</title>
+    <link>https://HostenWang.github.io/tags/trigger/</link>
+    <description>Recent content in Trigger on In the poet&#39;s valley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2020 19:08:13 +0800</lastBuildDate><atom:link href="https://HostenWang.github.io/tags/trigger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle Trigger Summary</title>
+      <link>https://HostenWang.github.io/posts/oracle-tigger-summary/</link>
+      <pubDate>Sat, 10 Oct 2020 19:08:13 +0800</pubDate>
+      
+      <guid>https://HostenWang.github.io/posts/oracle-tigger-summary/</guid>
+      <description>前言 当前项目里使用触发器做准实时同步,顺便小节一下.
+简介 官方原文
+ A trigger is a named program unit that is stored in the database and fired (executed) in response to a specified event. The specified event is associated with either a table, a view, a schema, or the database, and it is one of the following:
+ A database manipulation (DML) statement (DELETE, INSERT, or UPDATE) A database definition (DDL) statement (CREATE, ALTER, or DROP) A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN)  The trigger is said to be defined on the table, view, schema, or database.</description>
+    </item>
+    
+  </channel>
+</rss>
