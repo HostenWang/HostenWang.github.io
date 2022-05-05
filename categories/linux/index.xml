@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/categories/linux/</link>
+    <description>Recent content in linux on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supervisor 使用总结|Supervisor Usage</title>
+      <link>https://hostenwang.github.io/post/linux/supervisor/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/supervisor/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;Linux 进程管理工具 supervisor 小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UFW 使用总结|UFW Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ufw/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/ufw/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 #Ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH 使用总结|SSH Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ssh/</link>
+      <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/ssh/</guid>
+      <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
+&lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

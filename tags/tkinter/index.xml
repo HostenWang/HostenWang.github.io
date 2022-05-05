@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tkinter on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/tkinter/</link>
+    <description>Recent content in Tkinter on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tkinter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python GUI 总结|Python GUI Usage</title>
+      <link>https://hostenwang.github.io/post/python/gui/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/python/gui/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;python #GUI 常用模块小结&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

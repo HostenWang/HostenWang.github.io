@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/</link>
+    <description>Recent content on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python GUI 总结|Python GUI Usage</title>
+      <link>https://hostenwang.github.io/post/python/gui/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/python/gui/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;python #GUI 常用模块小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>高效使用 Axure RP|Use AxureRP Efficiently</title>
+      <link>https://hostenwang.github.io/post/misc/use-axurerp-efficiently/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/use-axurerp-efficiently/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog</title>
+      <link>https://hostenwang.github.io/post/misc/i2c-verilog/</link>
+      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/i2c-verilog/</guid>
+      <description>&lt;h2 id=&#34;1-概述abstract&#34;&gt;1 概述|Abstract&lt;/h2&gt;
+&lt;p&gt;I2C 是我厂常用的一种通信总线, 本文介绍 I2C 主写功能的 verilog 实现&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 技能点|Apache NiFi Skill Points</title>
+      <link>https://hostenwang.github.io/post/nifi/skill-points/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/skill-points/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python pip 使用总结|Python pip Usage</title>
+      <link>https://hostenwang.github.io/post/python/pip/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/python/pip/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;python #pip 常用命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Supervisor 使用总结|Supervisor Usage</title>
+      <link>https://hostenwang.github.io/post/linux/supervisor/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/supervisor/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;Linux 进程管理工具 supervisor 小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UFW 使用总结|UFW Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ufw/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/ufw/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 #Ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Junit 总结|Junit Usage</title>
+      <link>https://hostenwang.github.io/post/java/junit/</link>
+      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/java/junit/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH 使用总结|SSH Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ssh/</link>
+      <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/ssh/</guid>
+      <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
+&lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hostenwang.github.io/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/top/about/</guid>
+      <description>教育经历 工作经历 2012 - 2016 普源精电 软件开发 参与开发通信领域软件, 如 GSM 信号生成软件, EMI(电磁兼容)测试软件, 数字通信调制解调软件 等 2016 - 2018 科大讯</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hostenwang.github.io/top/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/top/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posts Archive</title>
+      <link>https://hostenwang.github.io/top/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/top/archive/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
