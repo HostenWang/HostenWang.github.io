@@ -9,30 +9,40 @@
     <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Supervisor 使用总结|Supervisor Usage</title>
-      <link>https://hostenwang.github.io/post/linux/supervisor/</link>
+      <link>https://hostenwang.github.io/post/linux/supervisor-usage/</link>
       <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/supervisor/</guid>
+      <guid>https://hostenwang.github.io/post/linux/supervisor-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Linux 进程管理工具 supervisor 小结&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>UFW 使用总结|UFW Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ufw/</link>
+      <link>https://hostenwang.github.io/post/linux/ufw-usage/</link>
       <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ufw/</guid>
+      <guid>https://hostenwang.github.io/post/linux/ufw-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 #Ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>SSH 使用总结|SSH Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ssh/</link>
+      <title>Linux Apt 命令总结|Linux Apt Usage</title>
+      <link>https://hostenwang.github.io/post/linux/apt-usage/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/apt-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;Ubuntu apt 命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux SSH 使用总结|Linux SSH Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ssh-usage/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ssh/</guid>
+      <guid>https://hostenwang.github.io/post/linux/ssh-usage/</guid>
       <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
 &lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
     </item>

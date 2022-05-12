@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tech</title>
+      <link>https://hostenwang.github.io/tags/tech/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/tech/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>gui</title>
       <link>https://hostenwang.github.io/tags/gui/</link>
@@ -238,6 +247,15 @@
       <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://hostenwang.github.io/tags/terminal/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/terminal/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/tech/</link>
+    <description>Recent content in tech on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/mysql/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/mysql/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/zbox/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/zbox/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/gis-overview/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/gis-overview/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/ope-webgis-arch/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/ope-webgis-arch/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/postgis-on-windows/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/postgis-on-windows/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/axurerp/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/axurerp/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>untitiled</title>
+      <link>https://hostenwang.github.io/post/misc/git-submodule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/git-submodule/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;面对比较复杂的项目，我们需要将代码根据功能拆解成不同的子模块。主项目依赖于子模块，又不用关心子模块的内部开发流程细节, 此时就需要使用 git 的 submodule 功能.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

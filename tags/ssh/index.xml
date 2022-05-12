@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Feb 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SSH 使用总结|SSH Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ssh/</link>
+      <title>Linux SSH 使用总结|Linux SSH Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ssh-usage/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ssh/</guid>
+      <guid>https://hostenwang.github.io/post/linux/ssh-usage/</guid>
       <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
 &lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
     </item>

@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 29 Jul 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UFW 使用总结|UFW Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ufw/</link>
+      <link>https://hostenwang.github.io/post/linux/ufw-usage/</link>
       <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ufw/</guid>
+      <guid>https://hostenwang.github.io/post/linux/ufw-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 #Ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
     </item>
