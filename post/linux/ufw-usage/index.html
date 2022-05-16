@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="UFW 使用总结|UFW Usage" />
-    <meta property="og:title" content="UFW 使用总结|UFW Usage" />
-    <meta property="twitter:title" content="UFW 使用总结|UFW Usage" />
+    <meta name="title" content="防火墙工具 UFW 使用总结|UFW Usage" />
+    <meta property="og:title" content="防火墙工具 UFW 使用总结|UFW Usage" />
+    <meta property="twitter:title" content="防火墙工具 UFW 使用总结|UFW Usage" />
     
 
     
-    <meta name="description" content="Ubuntu 防火墙工具 UFW 使用总结">
-    <meta property="og:description" content="Ubuntu 防火墙工具 UFW 使用总结" />
-    <meta property="twitter:description" content="Ubuntu 防火墙工具 UFW 使用总结" />
+    <meta name="description" content="防火墙工具 UFW 使用总结:配置和常用命令">
+    <meta property="og:description" content="防火墙工具 UFW 使用总结:配置和常用命令" />
+    <meta property="twitter:description" content="防火墙工具 UFW 使用总结:配置和常用命令" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>UFW 使用总结|UFW Usage | HostenWang Blog</title>
+    <title>防火墙工具 UFW 使用总结|UFW Usage | HostenWang Blog</title>
 
     <link rel="canonical" href="/post/linux/ufw-usage/">
 
@@ -95,6 +95,14 @@
                         <a href="/">All Posts</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/categories/develop">develop</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/gis">gis</a>
+                        </li>
                         
                         <li>
                             <a href="/categories/java">java</a>
@@ -205,7 +213,7 @@
                         </a>
                         
                     </div>
-                    <h1>UFW 使用总结|UFW Usage</h1>
+                    <h1>防火墙工具 UFW 使用总结|UFW Usage</h1>
                     <h2 class="subheading">配置和常用命令</h2>
                     <span class="meta">
                         
@@ -214,7 +222,7 @@
                                 HostenWang
                              
                             on 
-                            Wednesday, July 29, 2015
+                            Friday, July 29, 2016
                             
                             
                             
@@ -241,7 +249,7 @@
 
                 
                 <h2 id="1-概述">1 概述</h2>
-<p>UFW 全称为<code>Uncomplicated Firewall</code>，是 #Ubuntu 系统上默认的防火墙组件</p>
+<p>UFW 全称为<code>Uncomplicated Firewall</code>，是 ubuntu 系统上默认的防火墙组件</p>
 <p>UFW 是为了轻量化配置 #iptables 而开发的一款工具。 #UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的 #防火墙 规则。</p>
 <p>本文着重介绍其常用的用法</p>
 <h2 id="2-环境信息">2 环境信息</h2>
@@ -260,6 +268,18 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&gt; sudo ufw status verbose <span style="color:#6272a4"># 查询我们制定的规则集</span>
+</span></span></code></pre></div><h2 id="5-推荐设置">5 推荐设置</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#6272a4"># allow ssh</span>
+</span></span><span style="display:flex;"><span>&gt; sudo ufw alllow ssh <span style="color:#6272a4"># 添加ssh的规则，这是简写规则</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># allow http</span>
+</span></span><span style="display:flex;"><span>&gt; sudo ufw allow http <span style="color:#6272a4"># 允许所有访问 IP 可以访问 HTTP</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># allow MySQL</span>
+</span></span><span style="display:flex;"><span>&gt; sudo iptables -A INPUT -p tcp -m tcp --dport <span style="color:#bd93f9">3306</span> -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># allow Tomcat</span>
+</span></span><span style="display:flex;"><span>&gt; sudo iptables -A INPUT -p tcp --dport <span style="color:#bd93f9">8080</span> -j ACCEPT
 </span></span></code></pre></div>
 
                 
@@ -268,13 +288,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/java/junit/" data-toggle="tooltip" data-placement="top" title="Junit 总结|Junit Usage">&larr;
+                        <a href="/post/linux/user-account-management/" data-toggle="tooltip" data-placement="top" title="Linux 账号管理|Linux Account Management">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/linux/supervisor-usage/" data-toggle="tooltip" data-placement="top" title="Supervisor 使用总结|Supervisor Usage">Next
+                        <a href="/post/linux/supervisor-usage/" data-toggle="tooltip" data-placement="top" title="进程管理工具 supervisor 使用总结|Linux supervisor Usage">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -312,6 +332,60 @@
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -416,7 +490,7 @@
                     
                     
                     <li>
-                        <a target="_blank" href="https://hostenwang.github.io/">
+                        <a target="_blank" href="https://github.com/HostenWang">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>

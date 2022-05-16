@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="Linux Apt 命令总结|Linux Apt Usage" />
-    <meta property="og:title" content="Linux Apt 命令总结|Linux Apt Usage" />
-    <meta property="twitter:title" content="Linux Apt 命令总结|Linux Apt Usage" />
+    <meta name="title" content="Linux apt 总结|Linux apt Usage" />
+    <meta property="og:title" content="Linux apt 总结|Linux apt Usage" />
+    <meta property="twitter:title" content="Linux apt 总结|Linux apt Usage" />
     
 
     
-    <meta name="description" content="Linux Apt 命令总结:安装和常用命令">
-    <meta property="og:description" content="Linux Apt 命令总结:安装和常用命令" />
-    <meta property="twitter:description" content="Linux Apt 命令总结:安装和常用命令" />
+    <meta name="description" content="Linux apt 总结:安装配置和常用命令">
+    <meta property="og:description" content="Linux apt 总结:安装配置和常用命令" />
+    <meta property="twitter:description" content="Linux apt 总结:安装配置和常用命令" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Linux Apt 命令总结|Linux Apt Usage | HostenWang Blog</title>
+    <title>Linux apt 总结|Linux apt Usage | HostenWang Blog</title>
 
     <link rel="canonical" href="/post/linux/apt-usage/">
 
@@ -95,6 +95,14 @@
                         <a href="/">All Posts</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/categories/develop">develop</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/gis">gis</a>
+                        </li>
                         
                         <li>
                             <a href="/categories/java">java</a>
@@ -189,8 +197,8 @@
                         </a>
                         
                     </div>
-                    <h1>Linux Apt 命令总结|Linux Apt Usage</h1>
-                    <h2 class="subheading">安装和常用命令</h2>
+                    <h1>Linux apt 总结|Linux apt Usage</h1>
+                    <h2 class="subheading">安装配置和常用命令</h2>
                     <span class="meta">
                         
                             Posted by 
@@ -198,7 +206,7 @@
                                 HostenWang
                              
                             on 
-                            Friday, January 24, 2014
+                            Sunday, January 24, 2016
                             
                             
                             
@@ -228,11 +236,18 @@
 <p>Ubuntu apt 命令小结</p>
 <h2 id="2-安装">2 安装</h2>
 <h3 id="21-添加ppa源">2.1 添加PPA源</h3>
-<p>#PPA ,表示 Personal Package Archives，也就是个人软件包集。有很多软件因为种种原因，不能进入官方的 Ubuntu 软件仓库。 为了方便 Ubuntu 用户使用，launchpad.net 提供了 ppa，允许用户建立自己的软件仓库， 自由的上传软件。</p>
+<p>PPA ,表示 Personal Package Archives，也就是个人软件包集。有很多软件因为种种原因，不能进入官方的 Ubuntu 软件仓库。 为了方便 Ubuntu 用户使用，launchpad.net 提供了 ppa，允许用户建立自己的软件仓库， 自由的上传软件。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4">#到[launchpad.net](https://launchpad.net/+search)搜索到ppa:user/ppa-name之后</span>
-</span></span><span style="display:flex;"><span>&gt; sudo add-apt-repository ppa:ubuntu-wine/ppa
+</span></span><span style="display:flex;"><span>root&gt; add-apt-repository ppa:ubuntu-wine/ppa
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 删除 ppa 源</span>
+</span></span><span style="display:flex;"><span>root&gt; apt-get install ppa-purge
+</span></span><span style="display:flex;"><span>root&gt; ppa-purge ppa:ubuntu-wine/ppa
 </span></span></code></pre></div><h3 id="22-换源">2.2 换源</h3>
-<pre tabindex="0"><code></code></pre><h3 id="23-安装">2.3 安装</h3>
+<p>ubuntu的源存放在<code>/etc/apt/source.list</code>,在换源之前我们要记得对之前的源进行备份，这样的好处是，万一你不行，你还可以复原回去。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>root&gt; cp /etc/apt/sources.list /etc/apt/sources.list.bak
+</span></span><span style="display:flex;"><span>root&gt; vim /etc/apt/sources/list
+</span></span></code></pre></div><h3 id="23-安装">2.3 安装</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4">#搜索包</span>
 </span></span><span style="display:flex;"><span>&gt; apt-cache search <span style="color:#ff79c6">{{</span>package<span style="color:#ff79c6">}}</span>
 </span></span><span style="display:flex;"><span>
@@ -262,10 +277,13 @@
 </span></span><span style="display:flex;"><span>&gt; sudo apt-get upgrade 
 </span></span></code></pre></div><h2 id="5-卸载">5 卸载</h2>
 <h3 id="51-删除不用的老旧内核">5.1 删除不用的老旧内核</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>&gt; uname -r
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 查看当前Ubuntu系统使用的内核</span>
+</span></span><span style="display:flex;"><span>&gt; uname -r
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 查看所有内核</span>
 </span></span><span style="display:flex;"><span>&gt; dpkg --get-selections |grep linux
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 删除</span>
 </span></span><span style="display:flex;"><span>&gt; sudo apt-get remove linux-image-xxxx
 </span></span></code></pre></div><h3 id="52-卸载软件">5.2 卸载软件</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4">#卸载已安装的软件包</span>
@@ -286,6 +304,20 @@
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># 删除系统不再使用的孤立软件</span>
 </span></span><span style="display:flex;"><span>&gt; sudo apt-get autoremove 
 </span></span></code></pre></div><h2 id="6-举例">6 举例</h2>
+<h3 id="61-卸载-mysql">6.1 卸载 MySQL</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 查看MySQL的依赖项</span>
+</span></span><span style="display:flex;"><span>&gt; dpkg --list|grep mysql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 卸载</span>
+</span></span><span style="display:flex;"><span>&gt; sudo apt remove mysql-common
+</span></span><span style="display:flex;"><span>&gt; sudo apt autoremove --purge mysql-server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 清除残留数据</span>
+</span></span><span style="display:flex;"><span>&gt; dpkg -l|grep ^rc|awk <span style="color:#f1fa8c">&#39;{print$2}&#39;</span>|sudo xargs dpkg -P
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 验证</span>
+</span></span><span style="display:flex;"><span>&gt; dpkg --list|grep mysql
+</span></span></code></pre></div>
 
                 
 
@@ -293,13 +325,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/linux/ssh-usage/" data-toggle="tooltip" data-placement="top" title="Linux SSH 使用总结|Linux SSH Usage">&larr;
+                        <a href="/post/linux/ssh-usage/" data-toggle="tooltip" data-placement="top" title="Linux ssh 使用总结|Linux ssh Usage">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/java/junit/" data-toggle="tooltip" data-placement="top" title="Junit 总结|Junit Usage">Next
+                        <a href="/post/develop/install-and-config-mysql-on-ubuntu/" data-toggle="tooltip" data-placement="top" title="Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -337,6 +369,60 @@
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -441,7 +527,7 @@
                     
                     
                     <li>
-                        <a target="_blank" href="https://hostenwang.github.io/">
+                        <a target="_blank" href="https://github.com/HostenWang">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>

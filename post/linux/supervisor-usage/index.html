@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="Supervisor 使用总结|Supervisor Usage" />
-    <meta property="og:title" content="Supervisor 使用总结|Supervisor Usage" />
-    <meta property="twitter:title" content="Supervisor 使用总结|Supervisor Usage" />
+    <meta name="title" content="进程管理工具 supervisor 使用总结|Linux supervisor Usage" />
+    <meta property="og:title" content="进程管理工具 supervisor 使用总结|Linux supervisor Usage" />
+    <meta property="twitter:title" content="进程管理工具 supervisor 使用总结|Linux supervisor Usage" />
     
 
     
-    <meta name="description" content="Linux 进程管理工具 supervisor 使用总结">
-    <meta property="og:description" content="Linux 进程管理工具 supervisor 使用总结" />
-    <meta property="twitter:description" content="Linux 进程管理工具 supervisor 使用总结" />
+    <meta name="description" content="进程管理工具 supervisor 使用总结:安装配置和常用命令">
+    <meta property="og:description" content="进程管理工具 supervisor 使用总结:安装配置和常用命令" />
+    <meta property="twitter:description" content="进程管理工具 supervisor 使用总结:安装配置和常用命令" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Supervisor 使用总结|Supervisor Usage | HostenWang Blog</title>
+    <title>进程管理工具 supervisor 使用总结|Linux supervisor Usage | HostenWang Blog</title>
 
     <link rel="canonical" href="/post/linux/supervisor-usage/">
 
@@ -95,6 +95,14 @@
                         <a href="/">All Posts</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/categories/develop">develop</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/gis">gis</a>
+                        </li>
                         
                         <li>
                             <a href="/categories/java">java</a>
@@ -193,7 +201,7 @@
                         </a>
                         
                     </div>
-                    <h1>Supervisor 使用总结|Supervisor Usage</h1>
+                    <h1>进程管理工具 supervisor 使用总结|Linux supervisor Usage</h1>
                     <h2 class="subheading">安装配置和常用命令</h2>
                     <span class="meta">
                         
@@ -202,7 +210,7 @@
                                 HostenWang
                              
                             on 
-                            Tuesday, March 22, 2016
+                            Wednesday, March 22, 2017
                             
                             
                             
@@ -230,7 +238,7 @@
                 
                 <h2 id="1-概述">1 概述</h2>
 <p>Linux 进程管理工具 supervisor 小结</p>
-<p>通过 #supervisor 启动其他进程，则其他进程都为其子进程。实现对特定的 #进程 的守护（则其他进程不能设置为守护进程），在进程被挂起时，自动重启进程。</p>
+<p>通过 supervisor 启动其他进程，则其他进程都为其子进程。实现对特定的进程的守护（则其他进程不能设置为守护进程），在进程被挂起时，自动重启进程。</p>
 <h2 id="2-安装">2 安装</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 推荐</span>
 </span></span><span style="display:flex;"><span>&gt; apt-get install supervisor
@@ -292,6 +300,12 @@
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># 注2：显式用stop停止掉的进程，用reload或者update都不会自动重启</span>
 </span></span></code></pre></div><h2 id="5-用法">5 用法</h2>
 <p>我厂应用都包含在统一的安装盘内, 安装盘安装应用后, 使用 supervisor 将应用设置为随系统启动</p>
+<h2 id="6-参考">6 参考</h2>
+<ol>
+<li><a href="http://lambda.hk/nginx/2015/05/01/nginx-supervisor/">Ubuntu 14.04下进程管理工具supervisor安装</a></li>
+<li><a href="https://www.paincker.com/supervisor-usage/">Supervisor在Ubuntu中的使用总结</a></li>
+<li></li>
+</ol>
 
                 
 
@@ -299,13 +313,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/linux/ufw-usage/" data-toggle="tooltip" data-placement="top" title="UFW 使用总结|UFW Usage">&larr;
+                        <a href="/post/linux/ufw-usage/" data-toggle="tooltip" data-placement="top" title="防火墙工具 UFW 使用总结|UFW Usage">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/python/pip/" data-toggle="tooltip" data-placement="top" title="Python pip 使用总结|Python pip Usage">Next
+                        <a href="/post/develop/git-submodule/" data-toggle="tooltip" data-placement="top" title="Git submodule 使用总结|Git submodule Usage">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -343,6 +357,60 @@
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -447,7 +515,7 @@
                     
                     
                     <li>
-                        <a target="_blank" href="https://hostenwang.github.io/">
+                        <a target="_blank" href="https://github.com/HostenWang">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>

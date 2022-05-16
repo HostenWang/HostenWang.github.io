@@ -6,35 +6,177 @@
     <description>Recent content on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GeoServer 发布 PostGIS 数据|GeoServer Publish PostGIS</title>
+      <link>https://hostenwang.github.io/post/gis/geoserver-05-publish-postgis/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/gis/geoserver-05-publish-postgis/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GeoServer 发布 shape 文件|GeoServer Publish Shapefile</title>
+      <link>https://hostenwang.github.io/post/gis/geoserver-04-publish-shapefile/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/gis/geoserver-04-publish-shapefile/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GeoServer 安装配置|GeoServer Installa and Configuration</title>
+      <link>https://hostenwang.github.io/post/gis/geoserver-02-installation/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/gis/geoserver-02-installation/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GeoServer 概述|GeoServer Overview</title>
+      <link>https://hostenwang.github.io/post/gis/geoserver-01-overview/</link>
+      <pubDate>Sat, 02 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/gis/geoserver-01-overview/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Windows安装PostGIS|Install PostGIS on Windows</title>
+      <link>https://hostenwang.github.io/post/gis/install-postgis-on-windows/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/gis/install-postgis-on-windows/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;PostGIS是一个对象关系型数据库系统PostgreSQL的扩展，它把GIS（地理信息系统）类型对象存储在数据库中。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gitea 使用总结|Gitea Usage</title>
+      <link>https://hostenwang.github.io/post/develop/gitea-usage/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/gitea-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
     <item>
       <title>Python GUI 总结|Python GUI Usage</title>
       <link>https://hostenwang.github.io/post/python/gui/</link>
-      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/post/python/gui/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;python #GUI 常用模块小结&lt;/p&gt;</description>
+&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog</title>
-      <link>https://hostenwang.github.io/post/misc/i2c-verilog/</link>
-      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      <title>项目管理软件选型|Selection of Project Management Software</title>
+      <link>https://hostenwang.github.io/post/develop/selection-of-project-management-software/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/misc/i2c-verilog/</guid>
-      <description>&lt;h2 id=&#34;1-概述abstract&#34;&gt;1 概述|Abstract&lt;/h2&gt;
-&lt;p&gt;I2C 是我厂常用的一种通信总线, 本文介绍 I2C 主写功能的 verilog 实现&lt;/p&gt;</description>
+      <guid>https://hostenwang.github.io/post/develop/selection-of-project-management-software/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;项目管理软件是指与项目管理工作相关的各种应用软件，可以涉及进度、费用、资源、质量、风险、组织等各个方面，是项目管理相关软件的总称。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Apache NiFi 技能点|Apache NiFi Skill Points</title>
+      <title>代码管理软件选型|Selection of Code Management Software</title>
+      <link>https://hostenwang.github.io/post/develop/selection-of-code-management-software/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/selection-of-code-management-software/</guid>
+      <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;满足常用代码管理需求&lt;/li&gt;
+&lt;li&gt;安装配置简单&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi Error OutOfMemoryError unable to create new native thread</title>
+      <link>https://hostenwang.github.io/post/nifi/error-unable-to-create-new-native-thread/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/error-unable-to-create-new-native-thread/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Apache NiFi 是一个易于使用、功能强大而且可靠的数据处理和分发系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi HBase Error KeyValue size too large</title>
+      <link>https://hostenwang.github.io/post/nifi/error-keyvalue-size-too-large/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/error-keyvalue-size-too-large/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
       <link>https://hostenwang.github.io/post/nifi/skill-points/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/post/nifi/skill-points/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+      <link>https://hostenwang.github.io/post/nifi/best-system-config/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/best-system-config/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi OSGI 机制总结|Apache NiFi OSGI</title>
+      <link>https://hostenwang.github.io/post/nifi/osgi/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/osgi/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;OSGI 框架为基于 Java 的&lt;strong&gt;组件开发&lt;/strong&gt;提供了一套通用的和标准的解决方案.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle 每日备份|Oracle Backup Daily</title>
+      <link>https://hostenwang.github.io/post/develop/oracle-backup-daily/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/oracle-backup-daily/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;数据库的日常备份是运维基本操作.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
+      <link>https://hostenwang.github.io/post/nifi/introduction/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/introduction/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage</title>
+      <link>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,33 +186,13 @@
       
       <guid>https://hostenwang.github.io/post/python/pip/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;python #pip 常用命令小结&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Supervisor 使用总结|Supervisor Usage</title>
-      <link>https://hostenwang.github.io/post/linux/supervisor-usage/</link>
-      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/post/linux/supervisor-usage/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;Linux 进程管理工具 supervisor 小结&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>UFW 使用总结|UFW Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ufw-usage/</link>
-      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/post/linux/ufw-usage/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 #Ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+&lt;p&gt;python pip 常用命令小结&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Junit 总结|Junit Usage</title>
       <link>https://hostenwang.github.io/post/java/junit/</link>
-      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/post/java/junit/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
@@ -78,9 +200,59 @@
     </item>
     
     <item>
-      <title>Linux Apt 命令总结|Linux Apt Usage</title>
+      <title>Git submodule 使用总结|Git submodule Usage</title>
+      <link>https://hostenwang.github.io/post/develop/git-submodule/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/git-submodule/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;面对比较复杂的项目，我们需要将代码根据功能拆解成不同的子模块。主项目依赖于子模块，又不用关心子模块的内部开发流程细节, 此时就需要使用 git 的 submodule 功能.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>进程管理工具 supervisor 使用总结|Linux supervisor Usage</title>
+      <link>https://hostenwang.github.io/post/linux/supervisor-usage/</link>
+      <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/supervisor-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;Linux 进程管理工具 supervisor 小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>防火墙工具 UFW 使用总结|UFW Usage</title>
+      <link>https://hostenwang.github.io/post/linux/ufw-usage/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/ufw-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 账号管理|Linux Account Management</title>
+      <link>https://hostenwang.github.io/post/linux/user-account-management/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/linux/user-account-management/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu</title>
+      <link>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</link>
+      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux apt 总结|Linux apt Usage</title>
       <link>https://hostenwang.github.io/post/linux/apt-usage/</link>
-      <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/post/linux/apt-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
@@ -88,13 +260,33 @@
     </item>
     
     <item>
-      <title>Linux SSH 使用总结|Linux SSH Usage</title>
+      <title>Linux ssh 使用总结|Linux ssh Usage</title>
       <link>https://hostenwang.github.io/post/linux/ssh-usage/</link>
-      <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/post/linux/ssh-usage/</guid>
       <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
 &lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog</title>
+      <link>https://hostenwang.github.io/post/misc/i2c-in-verilog/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/misc/i2c-in-verilog/</guid>
+      <description>&lt;h2 id=&#34;1-概述abstract&#34;&gt;1 概述|Abstract&lt;/h2&gt;
+&lt;p&gt;I2C 是我厂常用的一种通信总线, 本文介绍 I2C 主写功能的 verilog 实现.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 提交信息模板|Git Commit Message Template</title>
+      <link>https://hostenwang.github.io/post/develop/git-commit-msg-template/</link>
+      <pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/git-commit-msg-template/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;如何设计和使用一个好的 commit messages 规范&lt;/p&gt;</description>
     </item>
     
     <item>

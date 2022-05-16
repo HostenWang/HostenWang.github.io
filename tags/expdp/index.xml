@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>expdp on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/expdp/</link>
+    <description>Recent content in expdp on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/expdp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage</title>
+      <link>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

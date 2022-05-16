@@ -6,15 +6,25 @@
     <description>Recent content in ubuntu on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>UFW 使用总结|UFW Usage</title>
+      <title>防火墙工具 UFW 使用总结|UFW Usage</title>
       <link>https://hostenwang.github.io/post/linux/ufw-usage/</link>
-      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/post/linux/ufw-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 #Ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu</title>
+      <link>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</link>
+      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PutHBaseJSON on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/puthbasejson/</link>
+    <description>Recent content in PutHBaseJSON on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/puthbasejson/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache NiFi HBase Error KeyValue size too large</title>
+      <link>https://hostenwang.github.io/post/nifi/error-keyvalue-size-too-large/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/nifi/error-keyvalue-size-too-large/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

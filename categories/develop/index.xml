@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>develop on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/categories/develop/</link>
+    <description>Recent content in develop on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/develop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitea 使用总结|Gitea Usage</title>
+      <link>https://hostenwang.github.io/post/develop/gitea-usage/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/gitea-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>项目管理软件选型|Selection of Project Management Software</title>
+      <link>https://hostenwang.github.io/post/develop/selection-of-project-management-software/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/selection-of-project-management-software/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;项目管理软件是指与项目管理工作相关的各种应用软件，可以涉及进度、费用、资源、质量、风险、组织等各个方面，是项目管理相关软件的总称。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>代码管理软件选型|Selection of Code Management Software</title>
+      <link>https://hostenwang.github.io/post/develop/selection-of-code-management-software/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/selection-of-code-management-software/</guid>
+      <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;满足常用代码管理需求&lt;/li&gt;
+&lt;li&gt;安装配置简单&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle 每日备份|Oracle Backup Daily</title>
+      <link>https://hostenwang.github.io/post/develop/oracle-backup-daily/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/oracle-backup-daily/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;数据库的日常备份是运维基本操作.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage</title>
+      <link>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git submodule 使用总结|Git submodule Usage</title>
+      <link>https://hostenwang.github.io/post/develop/git-submodule/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/git-submodule/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;面对比较复杂的项目，我们需要将代码根据功能拆解成不同的子模块。主项目依赖于子模块，又不用关心子模块的内部开发流程细节, 此时就需要使用 git 的 submodule 功能.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu</title>
+      <link>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</link>
+      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 提交信息模板|Git Commit Message Template</title>
+      <link>https://hostenwang.github.io/post/develop/git-commit-msg-template/</link>
+      <pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/git-commit-msg-template/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;如何设计和使用一个好的 commit messages 规范&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

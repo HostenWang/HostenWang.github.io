@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="Apache NiFi 技能点|Apache NiFi Skill Points" />
-    <meta property="og:title" content="Apache NiFi 技能点|Apache NiFi Skill Points" />
-    <meta property="twitter:title" content="Apache NiFi 技能点|Apache NiFi Skill Points" />
+    <meta name="title" content="Apache NiFi 学习要点|Apache NiFi Skill Points" />
+    <meta property="og:title" content="Apache NiFi 学习要点|Apache NiFi Skill Points" />
+    <meta property="twitter:title" content="Apache NiFi 学习要点|Apache NiFi Skill Points" />
     
 
     
-    <meta name="description" content="总结 Apache NiFi 学习路线">
-    <meta property="og:description" content="总结 Apache NiFi 学习路线" />
-    <meta property="twitter:description" content="总结 Apache NiFi 学习路线" />
+    <meta name="description" content="Apache NiFi 学习要点">
+    <meta property="og:description" content="Apache NiFi 学习要点" />
+    <meta property="twitter:description" content="Apache NiFi 学习要点" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Apache NiFi 技能点|Apache NiFi Skill Points | HostenWang Blog</title>
+    <title>Apache NiFi 学习要点|Apache NiFi Skill Points | HostenWang Blog</title>
 
     <link rel="canonical" href="/post/nifi/skill-points/">
 
@@ -95,6 +95,14 @@
                         <a href="/">All Posts</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/categories/develop">develop</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/gis">gis</a>
+                        </li>
                         
                         <li>
                             <a href="/categories/java">java</a>
@@ -189,7 +197,7 @@
                         </a>
                         
                     </div>
-                    <h1>Apache NiFi 技能点|Apache NiFi Skill Points</h1>
+                    <h1>Apache NiFi 学习要点|Apache NiFi Skill Points</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         
@@ -224,7 +232,7 @@
                 post-container">
 
                 
-                <h2 id="1-概述">1 概述</h2>
+                <h2 id="1-概述overview">1 概述|Overview</h2>
 <p>总结 Apache NiFi 学习路线</p>
 <h2 id="原理和架构">原理和架构</h2>
 <ol>
@@ -243,6 +251,60 @@
 <li>动态优先级</li>
 <li>运行时修改流文件</li>
 </ol>
+<h2 id="2-gui-操作介绍">2 GUI 操作介绍</h2>
+<ol>
+<li>设计、控制和监视</li>
+<li>processor的create、stop、start、restart、delete等操作</li>
+</ol>
+<h2 id="自带处理器介绍">自带处理器介绍</h2>
+<ol>
+<li>NiFi Processor的原理和功能</li>
+<li>Kafka Processor介绍和实战</li>
+<li>ES Processor介绍和实战</li>
+<li>Hbase Processor介绍和实战</li>
+<li>Hdfs Processor、spark Streaming实战</li>
+<li>JDBC Processor介绍和实战</li>
+<li>FTP、Http、XML、Json Processor介绍和实战</li>
+</ol>
+<h2 id="创建数据流">创建数据流</h2>
+<ol>
+<li>创建发送/接收目录</li>
+<li>getFile和putFile Processor创建</li>
+<li>创建复制文件从发送放到接收</li>
+<li>创建Queue队列</li>
+</ol>
+<h2 id="创建高级数据流">创建高级数据流</h2>
+<ol>
+<li>自定义文件名</li>
+<li>添加自定义属性</li>
+<li>添加正则表达式</li>
+<li>实现Path过滤规则</li>
+</ol>
+<h2 id="安全">安全</h2>
+<ol>
+<li>创建用户、用户组、角色</li>
+<li>SSL,SSH,HTTPS加密认证</li>
+<li>可插拔的基于角色的验证/授权</li>
+<li>基于webUI的SLA认证授权</li>
+</ol>
+<h2 id="集群配置和管理">集群配置和管理</h2>
+<ol>
+<li>Apache NiFi集群添加节点</li>
+<li>删除节点</li>
+<li>Apache NiFi 性能优化</li>
+<li>Slaves 节点的负载均衡配置</li>
+<li>制定特定的 Processor 到特定的 node 节点</li>
+<li>集群动态负载均衡配置</li>
+</ol>
+<h2 id="用户自定义处理器">用户自定义处理器</h2>
+<ol>
+<li>自定义处理器开发</li>
+<li>自定义处理器部署</li>
+</ol>
+<h2 id="实战">实战</h2>
+<ol>
+<li>Apache NiFi 在数据中台的使用</li>
+</ol>
 
                 
 
@@ -250,13 +312,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/python/pip/" data-toggle="tooltip" data-placement="top" title="Python pip 使用总结|Python pip Usage">&larr;
+                        <a href="/post/nifi/best-system-config/" data-toggle="tooltip" data-placement="top" title="Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/misc/i2c-verilog/" data-toggle="tooltip" data-placement="top" title="I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog">Next
+                        <a href="/post/nifi/error-keyvalue-size-too-large/" data-toggle="tooltip" data-placement="top" title="Apache NiFi HBase Error KeyValue size too large">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -294,6 +356,60 @@
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -398,7 +514,7 @@
                     
                     
                     <li>
-                        <a target="_blank" href="https://hostenwang.github.io/">
+                        <a target="_blank" href="https://github.com/HostenWang">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>
