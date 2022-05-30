@@ -29,20 +29,20 @@
     
     <item>
       <title>Linux 账号管理|Linux Account Management</title>
-      <link>https://hostenwang.github.io/post/linux/user-account-management/</link>
+      <link>https://hostenwang.github.io/post/linux/linux-account-management/</link>
       <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/user-account-management/</guid>
+      <guid>https://hostenwang.github.io/post/linux/linux-account-management/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux apt 总结|Linux apt Usage</title>
-      <link>https://hostenwang.github.io/post/linux/apt-usage/</link>
+      <link>https://hostenwang.github.io/post/linux/terminal-apt-usage/</link>
       <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/apt-usage/</guid>
+      <guid>https://hostenwang.github.io/post/linux/terminal-apt-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Ubuntu apt 命令小结&lt;/p&gt;</description>
     </item>

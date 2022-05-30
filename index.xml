@@ -67,11 +67,21 @@
     </item>
     
     <item>
+      <title>ELK Metricbeat 使用总结|ELK Metricbeat Usage</title>
+      <link>https://hostenwang.github.io/post/bigdata/elk-metricbeat-installation/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/bigdata/elk-metricbeat-installation/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Metricbeat 通过从服务器上运行的系统和服务收集指标来帮助您监视服务器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Python GUI 总结|Python GUI Usage</title>
-      <link>https://hostenwang.github.io/post/python/gui/</link>
+      <link>https://hostenwang.github.io/post/develop/gui/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/python/gui/</guid>
+      <guid>https://hostenwang.github.io/post/develop/gui/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
     </item>
@@ -101,100 +111,110 @@
     
     <item>
       <title>Apache NiFi Error OutOfMemoryError unable to create new native thread</title>
-      <link>https://hostenwang.github.io/post/nifi/error-unable-to-create-new-native-thread/</link>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-error-unable-to-create-new-native-thread/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/nifi/error-unable-to-create-new-native-thread/</guid>
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-error-unable-to-create-new-native-thread/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;Apache NiFi 是一个易于使用、功能强大而且可靠的数据处理和分发系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Apache NiFi HBase Error KeyValue size too large</title>
-      <link>https://hostenwang.github.io/post/nifi/error-keyvalue-size-too-large/</link>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-error-keyvalue-size-too-large/</link>
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/nifi/error-keyvalue-size-too-large/</guid>
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-error-keyvalue-size-too-large/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
-      <link>https://hostenwang.github.io/post/nifi/skill-points/</link>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-skill-points/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/nifi/skill-points/</guid>
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-skill-points/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
-      <link>https://hostenwang.github.io/post/nifi/best-system-config/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/post/nifi/best-system-config/</guid>
-      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
-&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Apache NiFi OSGI 机制总结|Apache NiFi OSGI</title>
-      <link>https://hostenwang.github.io/post/nifi/osgi/</link>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-osgi/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/nifi/osgi/</guid>
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-osgi/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;OSGI 框架为基于 Java 的&lt;strong&gt;组件开发&lt;/strong&gt;提供了一套通用的和标准的解决方案.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Oracle 每日备份|Oracle Backup Daily</title>
-      <link>https://hostenwang.github.io/post/develop/oracle-backup-daily/</link>
+      <link>https://hostenwang.github.io/post/database/oracle-backup-daily/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/develop/oracle-backup-daily/</guid>
+      <guid>https://hostenwang.github.io/post/database/oracle-backup-daily/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;数据库的日常备份是运维基本操作.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
-      <link>https://hostenwang.github.io/post/nifi/introduction/</link>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-introduction/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/nifi/introduction/</guid>
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-introduction/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage</title>
-      <link>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</link>
+      <link>https://hostenwang.github.io/post/database/oracle-expdp-and-impdp/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</guid>
+      <guid>https://hostenwang.github.io/post/database/oracle-expdp-and-impdp/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Python pip 使用总结|Python pip Usage</title>
-      <link>https://hostenwang.github.io/post/python/pip/</link>
+      <link>https://hostenwang.github.io/post/develop/pip/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/python/pip/</guid>
+      <guid>https://hostenwang.github.io/post/develop/pip/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;python pip 常用命令小结&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Linux sed 使用总结|Linux sed Usage</title>
+      <link>https://hostenwang.github.io/post/ops/ternimal-sed-usage/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/ternimal-sed-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;sed (stream editor) 功能说明：利用script来处理文本文件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux netstat 使用总结|Linux netstat Usage</title>
+      <link>https://hostenwang.github.io/post/ops/ternimal-netstat-usage/</link>
+      <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/ternimal-netstat-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;netstat 是一款命令行工具，可用于列出系统上所有的网络套接字连接情况，包括 tcp, udp 以及 unix 套接字，另外它还能列出处于监听状态（即等待接入请求）的套接字。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Junit 总结|Junit Usage</title>
-      <link>https://hostenwang.github.io/post/java/junit/</link>
+      <link>https://hostenwang.github.io/post/develop/junit/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/java/junit/</guid>
+      <guid>https://hostenwang.github.io/post/develop/junit/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;</description>
     </item>
@@ -210,71 +230,81 @@
     </item>
     
     <item>
+      <title>Linux lsof 使用总结|Linux lsof Usage</title>
+      <link>https://hostenwang.github.io/post/ops/ternimal-lsof-usage/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/ternimal-lsof-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;lsof (list open files)是一个列出当前系统打开文件的工具&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>进程管理工具 supervisor 使用总结|Linux supervisor Usage</title>
-      <link>https://hostenwang.github.io/post/linux/supervisor-usage/</link>
+      <link>https://hostenwang.github.io/post/ops/supervisor-usage/</link>
       <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/supervisor-usage/</guid>
+      <guid>https://hostenwang.github.io/post/ops/supervisor-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Linux 进程管理工具 supervisor 小结&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>防火墙工具 UFW 使用总结|UFW Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ufw-usage/</link>
+      <link>https://hostenwang.github.io/post/ops/ufw-usage/</link>
       <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ufw-usage/</guid>
+      <guid>https://hostenwang.github.io/post/ops/ufw-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux 账号管理|Linux Account Management</title>
-      <link>https://hostenwang.github.io/post/linux/user-account-management/</link>
+      <link>https://hostenwang.github.io/post/ops/linux-account-management/</link>
       <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/user-account-management/</guid>
+      <guid>https://hostenwang.github.io/post/ops/linux-account-management/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu</title>
-      <link>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</link>
+      <link>https://hostenwang.github.io/post/database/install-and-config-mysql-on-ubuntu/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</guid>
+      <guid>https://hostenwang.github.io/post/database/install-and-config-mysql-on-ubuntu/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux apt 总结|Linux apt Usage</title>
-      <link>https://hostenwang.github.io/post/linux/apt-usage/</link>
+      <link>https://hostenwang.github.io/post/ops/terminal-apt-usage/</link>
       <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/apt-usage/</guid>
+      <guid>https://hostenwang.github.io/post/ops/terminal-apt-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Ubuntu apt 命令小结&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux ssh 使用总结|Linux ssh Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ssh-usage/</link>
+      <link>https://hostenwang.github.io/post/ops/ssh-usage/</link>
       <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ssh-usage/</guid>
+      <guid>https://hostenwang.github.io/post/ops/ssh-usage/</guid>
       <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
 &lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog</title>
-      <link>https://hostenwang.github.io/post/misc/i2c-in-verilog/</link>
+      <link>https://hostenwang.github.io/post/develop/i2c-in-verilog/</link>
       <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/misc/i2c-in-verilog/</guid>
+      <guid>https://hostenwang.github.io/post/develop/i2c-in-verilog/</guid>
       <description>&lt;h2 id=&#34;1-概述abstract&#34;&gt;1 概述|Abstract&lt;/h2&gt;
 &lt;p&gt;I2C 是我厂常用的一种通信总线, 本文介绍 I2C 主写功能的 verilog 实现.&lt;/p&gt;</description>
     </item>

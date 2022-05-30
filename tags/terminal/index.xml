@@ -6,23 +6,53 @@
     <description>Recent content in terminal on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux sed 使用总结|Linux sed Usage</title>
+      <link>https://hostenwang.github.io/post/ops/ternimal-sed-usage/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/ternimal-sed-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;sed (stream editor) 功能说明：利用script来处理文本文件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux netstat 使用总结|Linux netstat Usage</title>
+      <link>https://hostenwang.github.io/post/ops/ternimal-netstat-usage/</link>
+      <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/ternimal-netstat-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;netstat 是一款命令行工具，可用于列出系统上所有的网络套接字连接情况，包括 tcp, udp 以及 unix 套接字，另外它还能列出处于监听状态（即等待接入请求）的套接字。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux lsof 使用总结|Linux lsof Usage</title>
+      <link>https://hostenwang.github.io/post/ops/ternimal-lsof-usage/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/ternimal-lsof-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;lsof (list open files)是一个列出当前系统打开文件的工具&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux apt 总结|Linux apt Usage</title>
-      <link>https://hostenwang.github.io/post/linux/apt-usage/</link>
+      <link>https://hostenwang.github.io/post/ops/terminal-apt-usage/</link>
       <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/apt-usage/</guid>
+      <guid>https://hostenwang.github.io/post/ops/terminal-apt-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;Ubuntu apt 命令小结&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux ssh 使用总结|Linux ssh Usage</title>
-      <link>https://hostenwang.github.io/post/linux/ssh-usage/</link>
+      <link>https://hostenwang.github.io/post/ops/ssh-usage/</link>
       <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/linux/ssh-usage/</guid>
+      <guid>https://hostenwang.github.io/post/ops/ssh-usage/</guid>
       <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
 &lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
     </item>

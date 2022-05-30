@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="不忘初心,永远忠诚">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://hostenwang.github.io//img/common/cover.jpg">
+    <meta property="twitter:image" content="https://hostenwang.github.io//img/common/cover.jpg" />
+    
+
+    
+    <meta name="title" content="Linux 账号管理|Linux Account Management" />
+    <meta property="og:title" content="Linux 账号管理|Linux Account Management" />
+    <meta property="twitter:title" content="Linux 账号管理|Linux Account Management" />
+    
+
+    
+    <meta name="description" content="HostenWang，程序员, 生活探险家">
+    <meta property="og:description" content="HostenWang，程序员, 生活探险家" />
+    <meta property="twitter:description" content="HostenWang，程序员, 生活探险家" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Linux 账号管理|Linux Account Management | HostenWang Blog</title>
+
+    <link rel="canonical" href="/post/ops/linux-account-management/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">不忘初心,永远忠诚</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/bigdata">bigdata</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/database">database</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/develop">develop</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/gis">gis</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/ops">ops</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/top/books/">BOOKS</a></li>
+                    
+                        <li><a href="/top/archive/">ARCHIVE</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/common/06.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/account" title="account">
+                            account
+                        </a>
+                        
+                    </div>
+                    <h1>Linux 账号管理|Linux Account Management</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                HostenWang
+                             
+                            on 
+                            Saturday, April 16, 2016
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="1-概述">1 概述</h2>
+<p>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。</p>
+<p>用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。</p>
+<h2 id="2-账号管理">2 账号管理</h2>
+<p>实现用户账号的管理，要完成的工作主要有如下几个方面：</p>
+<ul>
+<li>用户账号的添加、删除与修改。</li>
+<li>用户口令的管理。</li>
+<li>用户组的管理。</li>
+</ul>
+<h2 id="3-用户账号的管理">3 用户账号的管理</h2>
+<h3 id="31-添加">3.1 添加</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 创建了一个用户 john，其中-d和-m选项用来为登录名 john 产生一个主目录 /home/john</span>
+</span></span><span style="display:flex;"><span>root&gt; useradd –d  /home/john -m john
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 新建组 group 和 admin</span>
+</span></span><span style="display:flex;"><span>root&gt; groupadd group
+</span></span><span style="display:flex;"><span>root&gt; groupadd admin
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 新建了一个用户 john，该用户的登录Shell是 /bin/sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 它属于group用户组，同时又属于 admin 和 root 用户组，其中 group 用户组是其主组。 </span>
+</span></span><span style="display:flex;"><span>root&gt; useradd -s /bin/sh -g group –G admin,root john
+</span></span></code></pre></div><p>注意:</p>
+<ol>
+<li><strong>添加完用户后记得设置密码，否则这个用户是不能登录的</strong></li>
+</ol>
+<h3 id="32-批量添加">3.2 批量添加</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 查看 newusers 命令</span>
+</span></span></code></pre></div><h3 id="33-删除">3.3 删除</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 删除用户 john 在系统文件中（主要是/etc/passwd, /etc/shadow, /etc/group等）的记录</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 同时删除用户的主目录。 </span>
+</span></span><span style="display:flex;"><span>root&gt; userdel -r john
+</span></span></code></pre></div><h3 id="34-修改">3.4 修改</h3>
+<p>修改用户账号就是根据实际情况更改用户的有关属性，如用户号、主目录、用户组、登录Shell等</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>root&gt; groupadd dev
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 将用户 john 的登录Shell修改为ksh，主目录改为 /home/dev，用户组改为 dev</span>
+</span></span><span style="display:flex;"><span>root&gt; usermod -s /bin/ksh -d /home/dev –g dev john
+</span></span></code></pre></div><h3 id="35-切换">3.5 切换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>john&gt; su root
+</span></span><span style="display:flex;"><span>root&gt; env
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">USERNAME</span><span style="color:#ff79c6">=</span>john
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#  变更帐号为 root 并改变工作目录至 root 的 home 目录</span>
+</span></span><span style="display:flex;"><span>john&gt; su - root
+</span></span><span style="display:flex;"><span>root&gt; env
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">USERNAME</span><span style="color:#ff79c6">=</span>root
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 变更帐号为 root 并在执行 ls 指令后退出变回原使用者：</span>
+</span></span><span style="display:flex;"><span>john&gt; su -c ls root
+</span></span></code></pre></div><h3 id="36-提权">3.6 提权</h3>
+<h4 id="361-临时">3.6.1 临时</h4>
+<p>当前用户想执行没有权限执行的命令时，使用其他用户身份去执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>john&gt; sudo vim /etc/hosts
+</span></span></code></pre></div><h4 id="362-永久">3.6.2 永久</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>root&gt; vim /etc/sudoers
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># User privilege specification</span>
+</span></span><span style="display:flex;"><span>root <span style="color:#8be9fd;font-style:italic">ALL</span><span style="color:#ff79c6">=(</span>ALL<span style="color:#ff79c6">)</span> ALL
+</span></span><span style="display:flex;"><span>john <span style="color:#8be9fd;font-style:italic">ALL</span><span style="color:#ff79c6">=(</span>ALL<span style="color:#ff79c6">)</span> AL
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root&gt; usermod -d /home/john john
+</span></span><span style="display:flex;"><span>root&gt; usermod -s /bin/bash john
+</span></span></code></pre></div><h4 id="363-免密码授权-sudo">3.6.3 免密码授权 sudo</h4>
+<p>与给普通用户授权 sudo 类似，区别仅在于第 2 步：<code>john ALL=(ALL) NOPASSWD: ALL</code>。</p>
+<h3 id="37-用户口令的管理">3.7 用户口令的管理</h3>
+<p>用户管理的一项重要内容是用户口令的管理。</p>
+<p>用户账号刚创建时没有口令，但是被系统锁定，无法使用，必须为其指定口令后才可以使用，即使是指定空口令。</p>
+<p>指定和修改用户口令的Shell命令是<code>passwd</code>。</p>
+<p>超级用户可以为自己和其他用户指定口令，普通用户只能用它修改自己的口令。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 修改自己账号的密码</span>
+</span></span><span style="display:flex;"><span>john&gt; passwd 
+</span></span><span style="display:flex;"><span>Old password:****** 
+</span></span><span style="display:flex;"><span>New password:******* 
+</span></span><span style="display:flex;"><span>Re-enter new password:*******
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># root用户修改账号的密码</span>
+</span></span><span style="display:flex;"><span>root&gt; passwd john
+</span></span><span style="display:flex;"><span>Old password:****** 
+</span></span><span style="display:flex;"><span>New password:******* 
+</span></span><span style="display:flex;"><span>Re-enter new password:*******
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 查询linuxde用户密码状态</span>
+</span></span><span style="display:flex;"><span>root&gt; passwd -S john
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 锁定账号,不能修改密码</span>
+</span></span><span style="display:flex;"><span>root&gt; passwd -l john
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 删除账号,不能登录</span>
+</span></span><span style="display:flex;"><span>root&gt; passwd -d john
+</span></span></code></pre></div><h2 id="4-用户组的管理">4 用户组的管理</h2>
+<p>每个用户都有一个用户组，系统可以对一个用户组中的所有用户进行集中管理。</p>
+<p>不同Linux 系统对用户组的规定有所不同，如Linux下的用户属于与它同名的用户组，这个用户组在创建用户时同时创建。</p>
+<h3 id="41-添加">4.1 添加</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>root&gt; groupadd dev
+</span></span></code></pre></div><h3 id="42-删除">4.2 删除</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>root&gt; groupdel dev
+</span></span></code></pre></div><h3 id="43-修改">4.3 修改</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 将 dev 组名改为 develop</span>
+</span></span><span style="display:flex;"><span>root&gt; groupmod dev develop
+</span></span></code></pre></div><h3 id="44-用户在用户组之间切换">4.4 用户在用户组之间切换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>john&gt; newgrp dev
+</span></span></code></pre></div>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/database/install-and-config-mysql-on-ubuntu/" data-toggle="tooltip" data-placement="top" title="Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/ops/ufw-usage/" data-toggle="tooltip" data-placement="top" title="防火墙工具 UFW 使用总结|UFW Usage">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/linux" title="linux">
+                            linux
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://cloud.tencent.com/developer/user/7436883">BlackBird的博客</a></li>
+                        
+                        <li><a target="_blank" href="https://www.fengpt.cn/">过去的，未来的 </a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:hostenwang@foxmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/HostenWang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 不忘初心,永远忠诚 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+<script>
+    
+    var _baId = '07b3f66fb5026a9433526edaa232fa7d';
+
+    
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+</body>
+</html>

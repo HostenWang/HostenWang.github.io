@@ -17,6 +17,16 @@
     </item>
     
     <item>
+      <title>Python GUI 总结|Python GUI Usage</title>
+      <link>https://hostenwang.github.io/post/develop/gui/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/develop/gui/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>项目管理软件选型|Selection of Project Management Software</title>
       <link>https://hostenwang.github.io/post/develop/selection-of-project-management-software/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
@@ -40,23 +50,23 @@
     </item>
     
     <item>
-      <title>Oracle 每日备份|Oracle Backup Daily</title>
-      <link>https://hostenwang.github.io/post/develop/oracle-backup-daily/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <title>Python pip 使用总结|Python pip Usage</title>
+      <link>https://hostenwang.github.io/post/develop/pip/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/develop/oracle-backup-daily/</guid>
+      <guid>https://hostenwang.github.io/post/develop/pip/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;数据库的日常备份是运维基本操作.&lt;/p&gt;</description>
+&lt;p&gt;python pip 常用命令小结&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage</title>
-      <link>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</link>
-      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      <title>Junit 总结|Junit Usage</title>
+      <link>https://hostenwang.github.io/post/develop/junit/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/develop/oracle-expdp-and-impdp/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
+      <guid>https://hostenwang.github.io/post/develop/junit/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -70,13 +80,13 @@
     </item>
     
     <item>
-      <title>Ubuntu 下 MySQL 的安装和配置|Installation and Configuration of MySQL in Ubuntu</title>
-      <link>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</link>
-      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      <title>I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog</title>
+      <link>https://hostenwang.github.io/post/develop/i2c-in-verilog/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/develop/install-and-config-mysql-on-ubuntu/</guid>
-      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
-&lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
+      <guid>https://hostenwang.github.io/post/develop/i2c-in-verilog/</guid>
+      <description>&lt;h2 id=&#34;1-概述abstract&#34;&gt;1 概述|Abstract&lt;/h2&gt;
+&lt;p&gt;I2C 是我厂常用的一种通信总线, 本文介绍 I2C 主写功能的 verilog 实现.&lt;/p&gt;</description>
     </item>
     
     <item>

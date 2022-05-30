@@ -26,47 +26,29 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://hostenwang.github.io/categories/python/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      <title>bigdata</title>
+      <link>https://hostenwang.github.io/categories/bigdata/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/categories/python/</guid>
+      <guid>https://hostenwang.github.io/categories/bigdata/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>nifi</title>
-      <link>https://hostenwang.github.io/categories/nifi/</link>
-      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      <title>database</title>
+      <link>https://hostenwang.github.io/categories/database/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/categories/nifi/</guid>
+      <guid>https://hostenwang.github.io/categories/database/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>java</title>
-      <link>https://hostenwang.github.io/categories/java/</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      <title>ops</title>
+      <link>https://hostenwang.github.io/categories/ops/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://hostenwang.github.io/categories/linux/</link>
-      <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>misc</title>
-      <link>https://hostenwang.github.io/categories/misc/</link>
-      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/categories/misc/</guid>
+      <guid>https://hostenwang.github.io/categories/ops/</guid>
       <description></description>
     </item>
     
