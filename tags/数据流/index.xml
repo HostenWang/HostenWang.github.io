@@ -17,5 +17,15 @@
 &lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-system-config-best-practices/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-system-config-best-practices/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

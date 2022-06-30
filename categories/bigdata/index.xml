@@ -48,6 +48,16 @@
     </item>
     
     <item>
+      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-system-config-best-practices/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-system-config-best-practices/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Apache NiFi OSGI 机制总结|Apache NiFi OSGI</title>
       <link>https://hostenwang.github.io/post/bigdata/nifi-osgi/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
@@ -65,6 +75,16 @@
       <guid>https://hostenwang.github.io/post/bigdata/nifi-introduction/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ElasticSearch 分片和复制|ElasticSearch Shards and Replicas</title>
+      <link>https://hostenwang.github.io/post/bigdata/es-introduction-shards-and-replicas/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/bigdata/es-introduction-shards-and-replicas/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;ElasticSearch #集群 是一个 #P2P 类型(使用 #gossip 协议)的分布式系统，除了集群状态管理以外，其他所有的请求都可以发送到集群内任意一台节点上&lt;/p&gt;</description>
     </item>
     
   </channel>

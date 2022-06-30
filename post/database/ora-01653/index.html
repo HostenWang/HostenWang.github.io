@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="不忘初心,永远忠诚">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://hostenwang.github.io//img/common/cover.jpg">
+    <meta property="twitter:image" content="https://hostenwang.github.io//img/common/cover.jpg" />
+    
+
+    
+    <meta name="title" content="ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table" />
+    <meta property="og:title" content="ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table" />
+    <meta property="twitter:title" content="ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table" />
+    
+
+    
+    <meta name="description" content="HostenWang，程序员, 生活探险家">
+    <meta property="og:description" content="HostenWang，程序员, 生活探险家" />
+    <meta property="twitter:description" content="HostenWang，程序员, 生活探险家" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table | HostenWang Blog</title>
+
+    <link rel="canonical" href="/post/database/ora-01653/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">不忘初心,永远忠诚</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/backend">backend</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/bigdata">bigdata</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/database">database</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/develop">develop</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/gis">gis</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/ops">ops</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/top/books/">BOOKS</a></li>
+                    
+                        <li><a href="/top/archive/">ARCHIVE</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/01.png')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/oracle" title="oracle">
+                            oracle
+                        </a>
+                        
+                    </div>
+                    <h1>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                HostenWang
+                             
+                            on 
+                            Friday, March 22, 2019
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="1-相关报错">1 相关报错</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ORA-00604: erroroccurred at recursive SQL level <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>ORA-01000: 超出打开游标的最大数 
+</span></span><span style="display:flex;"><span>ORA-01653: unable to extend table SYS.AUD$ by <span style="color:#bd93f9">8192</span> in tablespace
+</span></span><span style="display:flex;"><span>ORA-01653: unable toextend table SYS.AUD$ by <span style="color:#bd93f9">8192</span> in tablespace SYSTEM
+</span></span><span style="display:flex;"><span>ORA-02002: errorwhile writing to audit trail
+</span></span></code></pre></div><h2 id="2-排查">2 排查</h2>
+<h3 id="21-11g-查看表空间使用率不推荐">2.1 11g 查看表空间使用率,不推荐</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6272a4">-- 它的大小计算单位是block，需要关联下数据库的block大小
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">-- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">select</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">from</span> dba_tablespace_usage_metrics;
+</span></span><span style="display:flex;"><span>TABLESPACE_NAME<span style="color:#ff79c6">|</span>USED_SPACE<span style="color:#ff79c6">|</span>TABLESPACE_SIZE<span style="color:#ff79c6">|</span>USED_PERCENT  <span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SYSTEM</span>         <span style="color:#ff79c6">|</span>    <span style="color:#bd93f9">127240</span><span style="color:#ff79c6">|</span>        <span style="color:#bd93f9">4194302</span><span style="color:#ff79c6">|</span>  <span style="color:#bd93f9">3</span>.<span style="color:#bd93f9">033</span><span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span>TEMP           <span style="color:#ff79c6">|</span>       <span style="color:#bd93f9">128</span><span style="color:#ff79c6">|</span>        <span style="color:#bd93f9">4194302</span><span style="color:#ff79c6">|</span>  <span style="color:#bd93f9">0</span>.<span style="color:#bd93f9">003</span><span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span>USERS          <span style="color:#ff79c6">|</span>       <span style="color:#bd93f9">520</span><span style="color:#ff79c6">|</span>        <span style="color:#bd93f9">4194302</span><span style="color:#ff79c6">|</span>  <span style="color:#bd93f9">0</span>.<span style="color:#bd93f9">012</span><span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">show</span> <span style="color:#ff79c6">parameter</span> db_block_size
+</span></span></code></pre></div><h3 id="22-手写-sql查看表空间使用率推荐参考-1">2.2 手写 SQL查看表空间使用率,推荐,参考 1</h3>
+<h4 id="221-永久表空间">2.2.1 永久表空间</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">select</span> a.tablespace_name,
+</span></span><span style="display:flex;"><span>       a.member,
+</span></span><span style="display:flex;"><span>       round(a.<span style="color:#ff79c6">max</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;MAX_size GB&#34;</span>,
+</span></span><span style="display:flex;"><span>       round((a.<span style="color:#ff79c6">max</span> <span style="color:#ff79c6">-</span> (a.bytes <span style="color:#ff79c6">-</span> b.bytes)) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;MAX_free GB&#34;</span>,
+</span></span><span style="display:flex;"><span>       round((a.bytes <span style="color:#ff79c6">-</span> b.bytes) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;MAX_used GB&#34;</span>,
+</span></span><span style="display:flex;"><span>       round((a.bytes <span style="color:#ff79c6">-</span> b.bytes) <span style="color:#ff79c6">/</span> a.<span style="color:#ff79c6">max</span> <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>) <span style="color:#f1fa8c">&#34;MAX_used_percent %&#34;</span>,
+</span></span><span style="display:flex;"><span>       round(a.bytes <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_Sum MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       round((a.bytes <span style="color:#ff79c6">-</span> b.bytes) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_used MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       round(b.bytes <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_free MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       round(((a.bytes <span style="color:#ff79c6">-</span> b.bytes) <span style="color:#ff79c6">/</span> a.bytes) <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>) <span style="color:#f1fa8c">&#34;Now_used_percent %&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">from</span> (<span style="color:#ff79c6">select</span> tablespace_name,<span style="color:#ff79c6">sum</span>(bytes) bytes,<span style="color:#ff79c6">sum</span>(decode(maxbytes, <span style="color:#bd93f9">0</span>, bytes, maxbytes)) <span style="color:#ff79c6">max</span>,<span style="color:#ff79c6">count</span>(file_id) member <span style="color:#ff79c6">from</span> dba_data_files <span style="color:#ff79c6">group</span> <span style="color:#ff79c6">by</span> tablespace_name) a,
+</span></span><span style="display:flex;"><span>       (<span style="color:#ff79c6">select</span> tablespace_name,<span style="color:#ff79c6">sum</span>(bytes) bytes,<span style="color:#ff79c6">max</span>(bytes) largest <span style="color:#ff79c6">from</span> dba_free_space <span style="color:#ff79c6">group</span> <span style="color:#ff79c6">by</span> tablespace_name) b
+</span></span><span style="display:flex;"><span> <span style="color:#ff79c6">where</span> a.tablespace_name <span style="color:#ff79c6">=</span> b.tablespace_name
+</span></span><span style="display:flex;"><span> <span style="color:#ff79c6">order</span> <span style="color:#ff79c6">by</span> <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">1</span>;
+</span></span></code></pre></div><h4 id="222-临时表空间">2.2.2 临时表空间</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">select</span> a.tablespace_name,
+</span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">count</span>(b.file_id) member,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(round(decode(b.maxbytes, <span style="color:#bd93f9">0</span>, b.bytes, b.maxbytes) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>)) <span style="color:#f1fa8c">&#34;MAX_size GB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(round(a.allocated_space <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>)) <span style="color:#f1fa8c">&#34;MAX_used GB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(round((decode(b.maxbytes, <span style="color:#bd93f9">0</span>, b.bytes, b.maxbytes) <span style="color:#ff79c6">-</span> a.allocated_space) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>)) <span style="color:#f1fa8c">&#34;MAX_free GB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(round(a.allocated_space <span style="color:#ff79c6">/</span> decode(b.maxbytes, <span style="color:#bd93f9">0</span>, b.bytes, b.maxbytes) <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>)) <span style="color:#f1fa8c">&#34;MAX_used_percent %&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(a.TABLESPACE_SIZE <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_sum MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>((a.TABLESPACE_SIZE <span style="color:#ff79c6">-</span> a.FREE_SPACE) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_used MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(a.FREE_SPACE <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_FREE MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(a.ALLOCATED_SPACE <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1024</span>) <span style="color:#f1fa8c">&#34;Now_ALLOCATED MB&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#ff79c6">sum</span>(round((a.TABLESPACE_SIZE <span style="color:#ff79c6">-</span> a.FREE_SPACE) <span style="color:#ff79c6">/</span> a.TABLESPACE_SIZE <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>)) <span style="color:#f1fa8c">&#34;Now_percent_used %&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">from</span> dba_temp_free_space a, dba_temp_files b
+</span></span><span style="display:flex;"><span> <span style="color:#ff79c6">where</span> a.tablespace_name <span style="color:#ff79c6">=</span> b.tablespace_name
+</span></span><span style="display:flex;"><span> <span style="color:#ff79c6">group</span> <span style="color:#ff79c6">by</span> a.tablespace_name;
+</span></span></code></pre></div><h2 id="3-定位问题">3 定位问题</h2>
+<p>发现 SYSTEM 表空间使用率达到 99.4%, 需要扩容</p>
+<h2 id="4-解决方案">4 解决方案</h2>
+<h3 id="41-联系-dba-扩容">4.1 联系 DBA 扩容</h3>
+<h4 id="411-表空间对应的物理文件">4.1.1 表空间对应的物理文件</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">SELECT</span> T.TABLESPACE_NAME,D.FILE_NAME,D.AUTOEXTENSIBLE,D.BYTES,D.MAXBYTES,D.STATUS 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> DBA_TABLESPACES T,DBA_DATA_FILES D 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> T.TABLESPACE_NAME <span style="color:#ff79c6">=</span>D.TABLESPACE_NAME 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> TABLESPACE_NAME,FILE_NAME; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TABLESPACE_NAME<span style="color:#ff79c6">|</span>FILE_NAME                          <span style="color:#ff79c6">|</span>AUTOEXTENSIBLE<span style="color:#ff79c6">|</span>STATUS   <span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SYSTEM</span>         <span style="color:#ff79c6">|</span>      F:\SUN\ORCL\SYSTEM01.DBF     <span style="color:#ff79c6">|</span>YES           <span style="color:#ff79c6">|</span>AVAILABLE<span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span>SYSAUX         <span style="color:#ff79c6">|</span>      F:\SUN\ORCL\SYSAUX.DBF       <span style="color:#ff79c6">|</span>YES           <span style="color:#ff79c6">|</span>AVAILABLE<span style="color:#ff79c6">|</span>
+</span></span><span style="display:flex;"><span>USERS          <span style="color:#ff79c6">|</span>      F:\SUN\ORCL\USERS01.DBF      <span style="color:#ff79c6">|</span>YES           <span style="color:#ff79c6">|</span>AVAILABLE<span style="color:#ff79c6">|</span>
+</span></span></code></pre></div><h4 id="412-扩大表空间大小">4.1.2 扩大表空间大小</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6272a4">-- 方案1: 给表空间增加数据文件，并允许自动增长：
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">ALTER</span> TABLESPACE <span style="color:#ff79c6">SYSTEM</span> <span style="color:#ff79c6">ADD</span> DATAFILE <span style="color:#f1fa8c">&#39;F:\SUN\ORCL\SYSTEM02.DBF&#39;</span> <span style="color:#ff79c6">SIZE</span> <span style="color:#bd93f9">500</span>M AUTOEXTEND <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">NEXT</span> <span style="color:#bd93f9">500</span>M MAXSIZE <span style="color:#bd93f9">20000</span>M;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">-- 方案2: 手工改变已存在数据文件大小
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">alter</span> <span style="color:#ff79c6">database</span> datafile <span style="color:#f1fa8c">&#39;F:\SUN\ORCL\SYSTEM01.DBF&#39;</span> autoextend <span style="color:#ff79c6">on</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">alter</span> <span style="color:#ff79c6">database</span> datafile <span style="color:#f1fa8c">&#39;F:\SUN\ORCL\SYSTEM01.DBF&#39;</span> resize <span style="color:#bd93f9">1200</span>M;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">-- 方案3: 允许已存在的数据文件自动增长：
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">alter</span> <span style="color:#ff79c6">database</span> datafile <span style="color:#f1fa8c">&#39;F:\SUN\ORCL\SYSTEM01.DBF&#39;</span> autoextend <span style="color:#ff79c6">on</span> <span style="color:#ff79c6">next</span> <span style="color:#bd93f9">500</span>M maxsize unlimited;
+</span></span></code></pre></div><h4 id="413-掉-aud表并关闭审计功能">4.1.3 掉 <code>AUD$</code>表并关闭审计功能</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">-- 清理审计表
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">truncate</span> <span style="color:#ff79c6">table</span> SYS.AUD$;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">show</span> <span style="color:#ff79c6">parameter</span> audit;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">-- --关闭审计功能
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">alter</span> <span style="color:#ff79c6">system</span> <span style="color:#ff79c6">set</span> audit_trail<span style="color:#ff79c6">=</span><span style="color:#ff79c6">none</span> <span style="color:#ff79c6">scope</span><span style="color:#ff79c6">=</span>spfile;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> shutdown <span style="color:#ff79c6">immediate</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> startup;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">-- 验证
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">show</span> <span style="color:#ff79c6">parameter</span> audit;
+</span></span></code></pre></div><h2 id="5-原因">5 原因</h2>
+<p>系统表空间正常情况下只存放了数据字典之类的东西，所以占用的空间一般在500M以下。如果你的系统表空间占用比较多的空间，可能有以下几方面的原因：</p>
+<p>1）没有为用户明确指定默认表空间，导致 SYSTEM系统表空间作为用户默认表空间</p>
+<p>2）开启了审计,请检查此表的大小 <code>AUD$</code></p>
+<h2 id="6-参考">6 参考</h2>
+<ol>
+<li><a href="https://blog.csdn.net/zzt_2009/article/details/105004800">Oracle 运维篇+查看表空间使用率</a></li>
+<li><a href="https://www.zhangqiongjie.com/1527.html">Oracle报错SYSTEM系统表空间满解决办法</a></li>
+</ol>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/bigdata/nifi-system-config-best-practices/" data-toggle="tooltip" data-placement="top" title="Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/bigdata/nifi-skill-points/" data-toggle="tooltip" data-placement="top" title="Apache NiFi 学习要点|Apache NiFi Skill Points">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/gis" title="gis">
+                            gis
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/linux" title="linux">
+                            linux
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/postgis" title="postgis">
+                            postgis
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/terminal" title="terminal">
+                            terminal
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://cloud.tencent.com/developer/user/7436883">BlackBird的博客</a></li>
+                        
+                        <li><a target="_blank" href="https://www.fengpt.cn/">过去的，未来的 </a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:hostenwang@foxmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/HostenWang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 不忘初心,永远忠诚 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+<script>
+    
+    var _baId = '07b3f66fb5026a9433526edaa232fa7d';
+
+    
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+</body>
+</html>

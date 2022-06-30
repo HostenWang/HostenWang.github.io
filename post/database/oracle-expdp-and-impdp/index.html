@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage" />
-    <meta property="og:title" content="ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage" />
-    <meta property="twitter:title" content="ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage" />
+    <meta name="title" content="ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage" />
+    <meta property="og:title" content="ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage" />
+    <meta property="twitter:title" content="ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage | HostenWang Blog</title>
+    <title>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage | HostenWang Blog</title>
 
     <link rel="canonical" href="/post/database/oracle-expdp-and-impdp/">
 
@@ -95,6 +95,10 @@
                         <a href="/">All Posts</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/categories/backend">backend</a>
+                        </li>
                         
                         <li>
                             <a href="/categories/bigdata">bigdata</a>
@@ -197,7 +201,7 @@
                         </a>
                         
                     </div>
-                    <h1>ORACLE 数据泵 expdp/impdp 总结|Oracle Expdp And Impdp Usage</h1>
+                    <h1>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         
@@ -234,21 +238,23 @@
                 
                 <h2 id="1-概述">1 概述</h2>
 <p>ORACLE 10G 开始推出了数据泵（<code>expdp /impdp</code>）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。</p>
-<h2 id="expdpimpdp-和-expimp-的区别">expdp/impdp 和 exp/imp 的区别</h2>
-<p>1、exp和imp是客户端工具程序，它们既可以在客户端使用，也可以在服务端使用。
-2、expdp和impdp是服务端的工具程序，他们只能在oracle服务端使用，不能在客户端使用。
-3、imp只适用于exp导出的文件，不适用于expdp导出文件；impdp只适用于expdp导出的文件，而不适用于exp导出文件。
-4、对于10g以上的服务器，使用exp通常不能导出0行数据的空表，而此时必须使用expdp导出.<strong>关键特征</strong></p>
-<h2 id="2-基本用法">2 基本用法</h2>
-<h3 id="21-创建逻辑目录">2.1 创建逻辑目录</h3>
+<h2 id="2-expdpimpdp-和-expimp-的区别">2 expdp/impdp 和 exp/imp 的区别</h2>
+<ul>
+<li>exp和imp是客户端工具程序，它们既可以在客户端使用，也可以在服务端使用。</li>
+<li>expdp和impdp是服务端的工具程序，他们只能在oracle服务端使用，不能在客户端使用。</li>
+<li>imp只适用于exp导出的文件，不适用于expdp导出文件；impdp只适用于expdp导出的文件，而不适用于exp导出文件。</li>
+<li>对于10g以上的服务器，使用exp通常不能导出0行数据的空表，而此时必须使用expdp导出.<strong>关键特征</strong></li>
+</ul>
+<h2 id="3-基本用法">3 基本用法</h2>
+<h3 id="31-创建逻辑目录">3.1 创建逻辑目录</h3>
 <p>该命令不会在操作系统创建真正的目录（请先创建真正的目录），最好以system等管理员创建逻辑目录。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> conn <span style="color:#ff79c6">system</span><span style="color:#ff79c6">/</span>manger<span style="color:#ff79c6">@</span>orcl <span style="color:#ff79c6">as</span> sysdba
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">create</span> directory dump_dir <span style="color:#ff79c6">as</span> ‘d:\test\dump’;
-</span></span></code></pre></div><h3 id="22-查看管理员目录">2.2 查看管理员目录</h3>
+</span></span></code></pre></div><h3 id="32-查看管理员目录">3.2 查看管理员目录</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">select</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">from</span> dba_directories;
-</span></span></code></pre></div><h3 id="23-赋予在指定目录的操作权限">2.3 赋予在指定目录的操作权限</h3>
+</span></span></code></pre></div><h3 id="33-赋予在指定目录的操作权限">3.3 赋予在指定目录的操作权限</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SQL</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">grant</span> <span style="color:#ff79c6">read</span>,<span style="color:#ff79c6">write</span> <span style="color:#ff79c6">on</span> directory dump_dir <span style="color:#ff79c6">to</span> scott;
-</span></span></code></pre></div><h3 id="24-用-expdp-导出数据">2.4 用 expdp 导出数据</h3>
+</span></span></code></pre></div><h3 id="34-用-expdp-导出数据">3.4 用 expdp 导出数据</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 导整个数据库</span>
 </span></span><span style="display:flex;"><span>expdp system/manager@orcl <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>full.dmp <span style="color:#8be9fd;font-style:italic">full</span><span style="color:#ff79c6">=</span>y;
 </span></span><span style="display:flex;"><span>
@@ -260,7 +266,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># 按查询条件导</span>
 </span></span><span style="display:flex;"><span>expdp scott/tiger@orcl <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>expdp.dmp <span style="color:#8be9fd;font-style:italic">tables</span><span style="color:#ff79c6">=</span>emp <span style="color:#8be9fd;font-style:italic">query</span><span style="color:#ff79c6">=</span>‘where <span style="color:#8be9fd;font-style:italic">deptno</span><span style="color:#ff79c6">=</span>20’;
-</span></span></code></pre></div><h3 id="25-用-impdp-导入数据">2.5 用 impdp 导入数据</h3>
+</span></span></code></pre></div><h3 id="35-用-impdp-导入数据">3.5 用 impdp 导入数据</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 导入数据库</span>
 </span></span><span style="display:flex;"><span>CMD&gt; impdp system/manager@orcl <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>full.dmp <span style="color:#8be9fd;font-style:italic">full</span><span style="color:#ff79c6">=</span>y;
 </span></span><span style="display:flex;"><span>
@@ -272,15 +278,15 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># 追加数据</span>
 </span></span><span style="display:flex;"><span>CMD&gt; impdp system/manager@orcl <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>expdp.dmp <span style="color:#8be9fd;font-style:italic">schemas</span><span style="color:#ff79c6">=</span>systemtable_exists_action
-</span></span></code></pre></div><h2 id="3-高级用法">3 高级用法</h2>
-<h3 id="31-自动递增">3.1 自动递增</h3>
+</span></span></code></pre></div><h2 id="4-高级用法">4 高级用法</h2>
+<h3 id="41-自动递增">4.1 自动递增</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># &#34;%U&#34;表示自动生成递增的序列号</span>
 </span></span><span style="display:flex;"><span>expdp scott/tiger <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>expdp_%U.dmp
-</span></span></code></pre></div><h3 id="32-附加日志">3.2 附加日志</h3>
+</span></span></code></pre></div><h3 id="42-附加日志">4.2 附加日志</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expdp scott/tiger <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>expdp.dmp <span style="color:#8be9fd;font-style:italic">logfile</span><span style="color:#ff79c6">=</span>expdp.log
-</span></span></code></pre></div><h3 id="33-采用并行方式备份整库">3.3 采用并行方式备份整库</h3>
+</span></span></code></pre></div><h3 id="43-采用并行方式备份整库">4.3 采用并行方式备份整库</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expdp scott/tiger <span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>dump_dir <span style="color:#8be9fd;font-style:italic">dumpfile</span><span style="color:#ff79c6">=</span>expdp.dmp <span style="color:#8be9fd;font-style:italic">logfile</span><span style="color:#ff79c6">=</span>expdp.log <span style="color:#8be9fd;font-style:italic">parallel</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>
-</span></span></code></pre></div><h2 id="4-参考">4 参考</h2>
+</span></span></code></pre></div><h2 id="5-参考">5 参考</h2>
 <p><a href="http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_export.htm#i1007829">http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_export.htm#i1007829</a></p>
 <p><a href="http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_import.htm#g1025464">http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_import.htm#g1025464</a></p>
 
@@ -290,7 +296,7 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/develop/pip/" data-toggle="tooltip" data-placement="top" title="Python pip 使用总结|Python pip Usage">&larr;
+                        <a href="/post/database/install-and-configure-oracle-on-windows/" data-toggle="tooltip" data-placement="top" title="Windows 系统下 Oracle 的安装和配置|Install and Configure Oracle on Windows">&larr;
                             Previous Post</a>
                     </li>
                     
@@ -361,6 +367,14 @@
                         
                         
                         
+                        <a href="/tags/gis" title="gis">
+                            gis
+                        </a>
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -393,6 +407,23 @@
                         
                         
                         
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/postgis" title="postgis">
+                            postgis
+                        </a>
                         
                         
                         
@@ -414,6 +445,11 @@
                         
                         
                         
+                        
+                        
+                        <a href="/tags/terminal" title="terminal">
+                            terminal
+                        </a>
                         
                         
                         

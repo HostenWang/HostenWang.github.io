@@ -6,11 +6,11 @@
     <description>Recent content in Tags on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GeoServer</title>
       <link>https://hostenwang.github.io/tags/geoserver/</link>
-      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/geoserver/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>gis</title>
       <link>https://hostenwang.github.io/tags/gis/</link>
-      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/gis/</guid>
       <description></description>
@@ -28,7 +28,7 @@
     <item>
       <title>j2ee</title>
       <link>https://hostenwang.github.io/tags/j2ee/</link>
-      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/j2ee/</guid>
       <description></description>
@@ -37,18 +37,9 @@
     <item>
       <title>ogc</title>
       <link>https://hostenwang.github.io/tags/ogc/</link>
-      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/ogc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>postgis</title>
-      <link>https://hostenwang.github.io/tags/postgis/</link>
-      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/tags/postgis/</guid>
       <description></description>
     </item>
     
@@ -58,6 +49,51 @@
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/shape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://hostenwang.github.io/tags/cli/</link>
+      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://hostenwang.github.io/tags/terminal/</link>
+      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://hostenwang.github.io/tags/tool/</link>
+      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgis</title>
+      <link>https://hostenwang.github.io/tags/postgis/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/postgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgresql</title>
+      <link>https://hostenwang.github.io/tags/postgresql/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/postgresql/</guid>
       <description></description>
     </item>
     
@@ -76,6 +112,33 @@
       <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/webgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nc</title>
+      <link>https://hostenwang.github.io/tags/nc/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/nc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yonyou</title>
+      <link>https://hostenwang.github.io/tags/yonyou/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/yonyou/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://hostenwang.github.io/tags/git/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/git/</guid>
       <description></description>
     </item>
     
@@ -161,20 +224,20 @@
     </item>
     
     <item>
-      <title>git</title>
-      <link>https://hostenwang.github.io/tags/git/</link>
-      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>gitlab</title>
       <link>https://hostenwang.github.io/tags/gitlab/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle</title>
+      <link>https://hostenwang.github.io/tags/oracle/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/oracle/</guid>
       <description></description>
     </item>
     
@@ -242,15 +305,6 @@
     </item>
     
     <item>
-      <title>oracle</title>
-      <link>https://hostenwang.github.io/tags/oracle/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/tags/oracle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>expdp</title>
       <link>https://hostenwang.github.io/tags/expdp/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
@@ -269,45 +323,27 @@
     </item>
     
     <item>
-      <title>pip</title>
-      <link>https://hostenwang.github.io/tags/pip/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      <title>descriptors</title>
+      <link>https://hostenwang.github.io/tags/descriptors/</link>
+      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/tags/pip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>virtualenv</title>
-      <link>https://hostenwang.github.io/tags/virtualenv/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/tags/virtualenv/</guid>
+      <guid>https://hostenwang.github.io/tags/descriptors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
       <link>https://hostenwang.github.io/tags/linux/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>terminal</title>
-      <link>https://hostenwang.github.io/tags/terminal/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/tags/terminal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>命令行</title>
       <link>https://hostenwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
       <description></description>
@@ -386,6 +422,24 @@
     </item>
     
     <item>
+      <title>pip</title>
+      <link>https://hostenwang.github.io/tags/pip/</link>
+      <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualenv</title>
+      <link>https://hostenwang.github.io/tags/virtualenv/</link>
+      <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/virtualenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>iptable</title>
       <link>https://hostenwang.github.io/tags/iptable/</link>
       <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
@@ -436,6 +490,15 @@
       <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/tags/account/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ternimal</title>
+      <link>https://hostenwang.github.io/tags/ternimal/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/tags/ternimal/</guid>
       <description></description>
     </item>
     

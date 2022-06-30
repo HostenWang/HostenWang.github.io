@@ -38,6 +38,16 @@
     </item>
     
     <item>
+      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+      <link>https://hostenwang.github.io/post/bigdata/nifi-system-config-best-practices/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/bigdata/nifi-system-config-best-practices/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Apache NiFi OSGI 机制总结|Apache NiFi OSGI</title>
       <link>https://hostenwang.github.io/post/bigdata/nifi-osgi/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
@@ -55,6 +65,26 @@
       <guid>https://hostenwang.github.io/post/bigdata/nifi-introduction/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用户的最大进程数偏少|Max number of threads for user likely too low, increase to at least [2048]</title>
+      <link>https://hostenwang.github.io/post/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
+      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 Max number of threads for user likely too low 问题解决&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>进程的最大文件描述符数量偏少|Max file descriptors for process likely too low</title>
+      <link>https://hostenwang.github.io/post/ops/linux-qa-max-file-descriptors-for-process-likely-too-low/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/linux-qa-max-file-descriptors-for-process-likely-too-low/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 Max file descriptors for process likely too low 问题解决&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -97,6 +97,10 @@
                     
                         
                         <li>
+                            <a href="/categories/backend">backend</a>
+                        </li>
+                        
+                        <li>
                             <a href="/categories/bigdata">bigdata</a>
                         </li>
                         
@@ -282,22 +286,22 @@
 <h2 id="4-特性">4 特性</h2>
 <h3 id="41-轻量型指标采集器">4.1 轻量型指标采集器</h3>
 <p>用于从系统和服务收集指标。Metricbeat 能够以一种轻量型的方式，输送各种系统和服务统计数据，从 CPU 到内存，从 Redis 到 Nginx，不一而足。</p>
-<h3 id="系统级监控更简洁">系统级监控，更简洁</h3>
+<h3 id="42-系统级监控更简洁">4.2 系统级监控，更简洁</h3>
 <p>将 Metricbeat 部署到您的所有 Linux、Windows 和 Mac 主机，并将它连接到 Elasticsearch  就大功告成了：您可以获取系统级的 CPU 使用率、内存、文件系统、磁盘 IO 和网络 IO 统计数据，还可针对系统上的每个进程获得与 top  命令类似的统计数据</p>
-<h3 id="42-单个二进制文件提供多种模块">4.2 单个二进制文件提供多种模块</h3>
+<h3 id="43-单个二进制文件提供多种模块">4.3 单个二进制文件提供多种模块</h3>
 <p>Metricbeat 提供多种内部模块，这些模块可从多项服务（诸如 Apache、Jolokia、NGINX、MongoDB、MySQL、PostgreSQL、Prometheus <a href="https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-modules.html">等等</a>）中收集指标。安装简单，完全零依赖性。只需在配置文件中启用您所需的模块即可。</p>
 <p>而且，如果您没有看到要找的模块，还可以自己构建。以 Go 语言编写 Metricbeat 模块，过程十分简单。</p>
-<h3 id="43-不错过任何检测信号">4.3 不错过任何检测信号</h3>
+<h3 id="44-不错过任何检测信号">4.4 不错过任何检测信号</h3>
 <p>将指标通过假脱机传输方式输送至磁盘，这样您的数据管道再也不会错过任何一个数据点，即使发生中断（例如网络问题），也勿需担心。Metricbeat 会保留传入的数据，并在重新上线后将这些指标输送至 Elasticsearch 或 Logstash。</p>
-<h3 id="输送至-elasticsearch-或-logstash在-kibana-中实现可视化">输送至 Elasticsearch 或 Logstash。在 Kibana 中实现可视化。</h3>
+<h3 id="45-输送至-elasticsearch-或-logstash在-kibana-中实现可视化">4.5 输送至 Elasticsearch 或 Logstash。在 Kibana 中实现可视化。</h3>
 <p>Metricbeat 是 Elastic Stack 的一部分，因此能够与 Logstash、Elasticsearch 和 Kibana 无缝协作。无论您要使用  Logstash 转换或充实指标，还是在 Elasticsearch 中随意处理一些数据分析，亦或在 Kibana  中构建和分享仪表板，Metricbeat 都能轻松地将您的数据发送至最关键的地方。</p>
 <h2 id="5-配置">5 配置</h2>
 <h3 id="51-公共配置">5.1 公共配置</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ vim metricbeat.yml
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># ES集群的IP地址们</span>
 </span></span><span style="display:flex;"><span>hosts: <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;192.168.1.111&#34;</span>,<span style="color:#f1fa8c">&#34;192.168.1.112&#34;</span>,<span style="color:#f1fa8c">&#34;192.168.1.113&#34;</span><span style="color:#ff79c6">]</span>
-</span></span></code></pre></div><h3 id="开启服务器监控默认开启">开启服务器监控(默认开启)</h3>
-<h4 id="511-linux-服务器监控配置">5.1.1 Linux 服务器监控配置</h4>
+</span></span></code></pre></div><h3 id="52-开启服务器监控默认开启">5.2 开启服务器监控(默认开启)</h3>
+<h4 id="521-linux-服务器监控配置">5.2.1 Linux 服务器监控配置</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">metricbeat.modules</span>:
 </span></span><span style="display:flex;"><span>- <span style="color:#ff79c6">module</span>: linux
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">period</span>: 10s
@@ -312,7 +316,7 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">enabled</span>: <span style="color:#ff79c6">true</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#hostfs: /hostfs</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#rapl.use_msr_safe: false</span>
-</span></span></code></pre></div><h4 id="512-windows-服务器监控配置">5.1.2 windows 服务器监控配置</h4>
+</span></span></code></pre></div><h4 id="522-windows-服务器监控配置">5.2.2 windows 服务器监控配置</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">metricbeat.modules</span>:
 </span></span><span style="display:flex;"><span>- <span style="color:#ff79c6">module</span>: windows
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">metricsets</span>: [<span style="color:#f1fa8c">&#34;perfmon&#34;</span>]
@@ -333,11 +337,11 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">metricsets</span>: [<span style="color:#f1fa8c">&#34;service&#34;</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">enabled</span>: <span style="color:#ff79c6">true</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">period</span>: 60s
-</span></span></code></pre></div><h3 id="52-开启-nginx-监控">5.2 开启 nginx 监控</h3>
+</span></span></code></pre></div><h3 id="53-开启-nginx-监控">5.3 开启 nginx 监控</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ vim modules.d/nginx.yml 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ metricbeat.exe modules <span style="color:#8be9fd;font-style:italic">enable</span> nginx
-</span></span></code></pre></div><h3 id="53-验证配置">5.3 验证配置</h3>
+</span></span></code></pre></div><h3 id="54-验证配置">5.4 验证配置</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4">#默认开启的只有system</span>
 </span></span><span style="display:flex;"><span>$ metricbeat.exe modules list
 </span></span><span style="display:flex;"><span>
@@ -388,7 +392,7 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/develop/gui/" data-toggle="tooltip" data-placement="top" title="Python GUI 总结|Python GUI Usage">&larr;
+                        <a href="/post/backend/python-gui-summary/" data-toggle="tooltip" data-placement="top" title="Python GUI 总结|Python GUI Usage">&larr;
                             Previous Post</a>
                     </li>
                     
@@ -459,6 +463,14 @@
                         
                         
                         
+                        <a href="/tags/gis" title="gis">
+                            gis
+                        </a>
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -491,6 +503,23 @@
                         
                         
                         
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/postgis" title="postgis">
+                            postgis
+                        </a>
                         
                         
                         
@@ -512,6 +541,11 @@
                         
                         
                         
+                        
+                        
+                        <a href="/tags/terminal" title="terminal">
+                            terminal
+                        </a>
                         
                         
                         

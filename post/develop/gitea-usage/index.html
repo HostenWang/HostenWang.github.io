@@ -97,6 +97,10 @@
                     
                         
                         <li>
+                            <a href="/categories/backend">backend</a>
+                        </li>
+                        
+                        <li>
                             <a href="/categories/bigdata">bigdata</a>
                         </li>
                         
@@ -184,6 +188,10 @@
                             gitea
                         </a>
                         
+                        <a class="tag" href="/tags/git" title="git">
+                            git
+                        </a>
+                        
                     </div>
                     <h1>Gitea 使用总结|Gitea Usage</h1>
                     <h2 class="subheading"></h2>
@@ -221,16 +229,18 @@
 
                 
                 <h2 id="1-概述overview">1 概述|Overview</h2>
+<p>Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。</p>
+<p>我们采用Go作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC</p>
 <h2 id="2-环境信息">2 环境信息</h2>
 <p>Ubuntu 20</p>
 <p>Gitea 1.13.2</p>
 <h2 id="3-准备">3 准备</h2>
-<h3 id="升级系统--安装软件">升级系统 &amp;&amp; 安装软件</h3>
+<h3 id="31-升级系统--安装软件">3.1 升级系统 &amp;&amp; 安装软件</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SH" data-lang="SH"><span style="display:flex;"><span>apt update <span style="color:#ff79c6">&amp;&amp;</span> apt full-upgrade -y
 </span></span><span style="display:flex;"><span>apt install git wget nginx ufw -y
-</span></span></code></pre></div><h3 id="31-暂时关闭防火墙">3.1 暂时关闭防火墙</h3>
+</span></span></code></pre></div><h3 id="32-暂时关闭防火墙">3.2 暂时关闭防火墙</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SH" data-lang="SH"><span style="display:flex;"><span>ufw disable
-</span></span></code></pre></div><h3 id="32-创建用户">3.2 创建用户</h3>
+</span></span></code></pre></div><h3 id="33-创建用户">3.3 创建用户</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SH" data-lang="SH"><span style="display:flex;"><span>useradd --home-dir /var/lib/gitea  --create-home --no-user-group --shell /bin/bash git
 </span></span></code></pre></div><h2 id="4-安装">4 安装</h2>
 <h3 id="41-建立安装目录">4.1 建立安装目录</h3>
@@ -242,10 +252,36 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SH" data-lang="SH"><span style="display:flex;"><span>su -l git
 </span></span><span style="display:flex;"><span>/opt/gitea/gitea --work-path /var/lib/gitea --custom-path /var/lib/gitea web --config /var/lib/gitea/app.ini
 </span></span></code></pre></div><h2 id="5-配置">5 配置</h2>
-<h3 id="51-配置">5.1 配置</h3>
-<p>访问 <code>http://ip:3000</code>,配置安装选项</p>
-<h3 id="52-开机启动">5.2 开机启动</h3>
-<p>基于 supervisor 的开机启动和自动重启</p>
+<h3 id="51-防火墙配置">5.1 防火墙配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 查看是不是没有开放3000端口</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --zone<span style="color:#ff79c6">=</span>public --list-ports
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 如果没有就添加一个</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --zone<span style="color:#ff79c6">=</span>public --add-port<span style="color:#ff79c6">=</span>3000/tcp --permanent
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 重新载入配置文件</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --reload
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ufw default deny
+</span></span><span style="display:flex;"><span>ufw allow 22/tcp
+</span></span><span style="display:flex;"><span>ufw allow 3000/tcp
+</span></span><span style="display:flex;"><span>ufw allow 80,443/tcp
+</span></span><span style="display:flex;"><span>ufw <span style="color:#8be9fd;font-style:italic">enable</span>
+</span></span></code></pre></div><h3 id="52-nginx-配置">5.2 Nginx 配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>server <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    listen       80;
+</span></span><span style="display:flex;"><span>    server_name  <span style="color:#ff79c6">[</span>域名<span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>location / <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    proxy_set_header Host <span style="color:#8be9fd;font-style:italic">$host</span>;
+</span></span><span style="display:flex;"><span>    proxy_set_header X-Real-IP <span style="color:#8be9fd;font-style:italic">$remote_addr</span>;
+</span></span><span style="display:flex;"><span>    proxy_set_header X-Forwarded-For <span style="color:#8be9fd;font-style:italic">$proxy_add_x_forwarded_for</span>;
+</span></span><span style="display:flex;"><span>    proxy_pass    http://127.0.0.1:3000;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>location ~ .*<span style="color:#f1fa8c">\.</span><span style="color:#ff79c6">(</span>js|css|png<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    proxy_pass  http://127.0.0.1:3000;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><h3 id="53-开机启动">5.3 开机启动</h3>
+<h4 id="531-基于-supervisor-的开机启动和自动重启">5.3.1 基于 supervisor 的开机启动和自动重启</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#ff79c6">[</span>program:gitea<span style="color:#ff79c6">]</span>
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">directory</span><span style="color:#ff79c6">=</span>/opt/gitea/
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">command</span><span style="color:#ff79c6">=</span>/opt/gitea/gitea web
@@ -262,17 +298,38 @@
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">stderr_capture_maxbytes</span><span style="color:#ff79c6">=</span>1MB
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">user</span> <span style="color:#ff79c6">=</span> gitea
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">environment</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">HOME</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/home/gitea&#34;</span>, <span style="color:#8be9fd;font-style:italic">USER</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;gitea&#34;</span>
-</span></span></code></pre></div><h2 id="6-完成">6 完成</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SH" data-lang="SH"><span style="display:flex;"><span>ufw default deny
-</span></span><span style="display:flex;"><span>ufw allow 22/tcp
-</span></span><span style="display:flex;"><span>ufw allow 3000/tcp
-</span></span><span style="display:flex;"><span>ufw allow 80,443/tcp
-</span></span><span style="display:flex;"><span>ufw <span style="color:#8be9fd;font-style:italic">enable</span>
-</span></span></code></pre></div><h2 id="7-未来展望further">7 未来展望|Further</h2>
-<h2 id="8-参考references">8 参考|References</h2>
+</span></span></code></pre></div><h4 id="532-systemd">5.3.2 systemd</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ vim /etc/systemd/system/gitea.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>Unit<span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Description</span><span style="color:#ff79c6">=</span>Gitea
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">After</span><span style="color:#ff79c6">=</span>syslog.target
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">After</span><span style="color:#ff79c6">=</span>network.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>Service<span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RestartSec</span><span style="color:#ff79c6">=</span>2s
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Type</span><span style="color:#ff79c6">=</span>simple
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">User</span><span style="color:#ff79c6">=</span>git
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Group</span><span style="color:#ff79c6">=</span>git
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">ExecStart</span><span style="color:#ff79c6">=</span>/git/gitea web --config /git/custom/conf/app.ini
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Restart</span><span style="color:#ff79c6">=</span>always
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>Install<span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">WantedBy</span><span style="color:#ff79c6">=</span>multi-user.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 开机启动</span>
+</span></span><span style="display:flex;"><span>$ systemctl <span style="color:#8be9fd;font-style:italic">enable</span> gitea
+</span></span></code></pre></div><h2 id="6-运行">6 运行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># 运行</span>
+</span></span><span style="display:flex;"><span>systemctl start gitea
+</span></span></code></pre></div><h2 id="7-软件配置">7 软件配置</h2>
+<p>访问 <code>http://ip:3000</code>,配置安装选项</p>
+<h2 id="8-未来展望further">8 未来展望|Further</h2>
+<h2 id="9-参考references">9 参考|References</h2>
 <ol>
 <li><a href="https://note.open-edgn.cn/archives/gitea-with-debian.page">gitea-with-debian</a></li>
-<li></li>
+<li><a href="https://docs.gitea.io/en-us/install-from-binary/">https://docs.gitea.io/en-us/install-from-binary/</a></li>
+<li><a href="https://discourse.gitea.io/t/ssh-server-configuration-in-gitea/1058">SSH Server configuration in Gitea</a></li>
 </ol>
 
                 
@@ -287,7 +344,7 @@
                     
                     
                     <li class="next">
-                        <a href="/post/gis/install-postgis-on-windows/" data-toggle="tooltip" data-placement="top" title="在Windows安装PostGIS|Install PostGIS on Windows">Next
+                        <a href="/post/backend/yonyou-nc-development-spec/" data-toggle="tooltip" data-placement="top" title="用友 NC 开发规范|Yonyou NC Development Spec">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -352,6 +409,14 @@
                         
                         
                         
+                        <a href="/tags/gis" title="gis">
+                            gis
+                        </a>
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -384,6 +449,23 @@
                         
                         
                         
+                        <a href="/tags/nifi" title="nifi">
+                            nifi
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/postgis" title="postgis">
+                            postgis
+                        </a>
                         
                         
                         
@@ -405,6 +487,11 @@
                         
                         
                         
+                        
+                        
+                        <a href="/tags/terminal" title="terminal">
+                            terminal
+                        </a>
                         
                         
                         

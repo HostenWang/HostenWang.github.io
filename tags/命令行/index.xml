@@ -6,7 +6,17 @@
     <description>Recent content in 命令行 on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux updaterc 使用总结|Linux updaterc Usage</title>
+      <link>https://hostenwang.github.io/post/ops/linux-updaterc-usage/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/linux-updaterc-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Ubuntu 18 不再使用 initd 管理系统，而是使用systemd&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux sed 使用总结|Linux sed Usage</title>
       <link>https://hostenwang.github.io/post/ops/ternimal-sed-usage/</link>
@@ -15,6 +25,16 @@
       <guid>https://hostenwang.github.io/post/ops/ternimal-sed-usage/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;sed (stream editor) 功能说明：利用script来处理文本文件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 命令行使用总结|Linux Terminal Usage</title>
+      <link>https://hostenwang.github.io/post/ops/linux-ternimal-usage/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/post/ops/linux-ternimal-usage/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;熟练使用命令行会提高你作为工程师的灵活性以及生产力&lt;/p&gt;</description>
     </item>
     
     <item>
