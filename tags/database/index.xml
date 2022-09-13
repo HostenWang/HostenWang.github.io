@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/database/</link>
+    <description>Recent content in database on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</title>
+      <link>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为1000多家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品之一&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 下 MySQL 的安装和配置|Install and Configure MySQL on Ubuntu</title>
+      <link>https://hostenwang.github.io/blog/mysql/install-and-configure-mysql-on-ubuntu/</link>
+      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/mysql/install-and-configure-mysql-on-ubuntu/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

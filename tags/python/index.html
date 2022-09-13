@@ -1,719 +1,356 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" data-theme="light">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-    <meta property="og:site_name" content="不忘初心,永远忠诚">
-    <meta property="og:type" content="article">
-
-    
-    <meta property="og:image" content="https://hostenwang.github.io//img/common/cover.jpg">
-    <meta property="twitter:image" content="https://hostenwang.github.io//img/common/cover.jpg" />
-    
-
-    
-    <meta name="title" content="python" />
-    <meta property="og:title" content="python" />
-    <meta property="twitter:title" content="python" />
-    
-
-    
-    <meta name="description" content="HostenWang，程序员, 生活探险家">
-    <meta property="og:description" content="HostenWang，程序员, 生活探险家" />
-    <meta property="twitter:description" content="HostenWang，程序员, 生活探险家" />
-    
-
-    
-    <meta property="twitter:card" content="summary" />
-    
-    
-
-    <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <title>python | HostenWang Blog</title>
-
-    <link rel="canonical" href="/tags/python/">
-
-    
-    
-    
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    
-    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
-
-    
-    <link rel="stylesheet" href="/css/zanshang.css">
-
-    
-    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
-
-    
-    
-
-    
-    <script src="/js/jquery.min.js"></script>
-
-    
-    <script src="/js/bootstrap.min.js"></script>
-
-    
-    <script src="/js/hux-blog.min.js"></script>
-
-    
-    
-
-</head>
-
-
-
-
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-
-    <div class="container-fluid">
-        
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">不忘初心,永远忠诚</a>
-        </div>
-
-        
-        
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">All Posts</a>
-                    </li>
-                    
-                        
-                        <li>
-                            <a href="/categories/backend">backend</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/bigdata">bigdata</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/database">database</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/develop">develop</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/gis">gis</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/ops">ops</a>
-                        </li>
-                        
-                    
-                    
-		    
-                        <li><a href="/top/books/">BOOKS</a></li>
-                    
-                        <li><a href="/top/archive/">ARCHIVE</a></li>
-                    
-                        <li><a href="/top/about/">ABOUT</a></li>
-                    
-
-                    
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-    
-</nav>
-<script>
-    
-    
-    
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        
-            $navbar.className = " ";
-            
-            setTimeout(function(){
-                
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-
-<header class="intro-header" style="background-image: url('/img/common/cover.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>不忘初心,永远忠诚 </h1>
-                    
-		    <span class="subheading">Nerver Forget Why You Started</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Python | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="Nerver Forget Why You Started">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
 
   
-<div class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
-            
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
 
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/backend/python-gui-summary/">
-        <h2 class="post-title">
-            Python GUI 总结|Python GUI Usage
-        </h2>
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico">
+  <link href="/tags/python/index.xml" rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚">
+  <link href="/tags/python/index.xml" rel="feed" type="application/rss+xml" title="不忘初心,永远忠诚">
+  <meta name="og:title" content="Python">
+  <meta name="og:description" content="Nerver Forget Why You Started">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/tags/python/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
 	
-        <h3 class="post-subtitle">
-            常用GUI模块总结
-        </h3>
-	
-        <div class="post-content-preview">
-	
-            Python GUI 总结:常用GUI模块总结
-        
-        </div>
-    </a>
-    <p class="post-meta">
+</head>
+
+<body>
+
+  <script type="text/javascript">
     
-        Posted by HostenWang on Tuesday, September 8, 2020
-        
-        
-    
-    </p>
+    function detectTheme() {
+      var theme = "light";
 
-</div>
-<hr>
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
 
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/backend/python-pip-usage/">
-        <h2 class="post-title">
-            Python pip 使用总结|Python pip Usage
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            <h2 id="1-概述">1 概述</h2>
-<p>python pip 常用命令小结</p>
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by HostenWang on Saturday, February 25, 2017
-        
-        
-    
-    </p>
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
 
-</div>
-<hr>
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
 
+    detectTheme();
+  </script>
 
-            
-
-
-
-       	</div>
-        
-
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-	
-    <section class="visible-md visible-lg">
-	
-        <div class="short-about">
-            
-            <a href="/top/about">
-               <img src="/img/common/avatar.png" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>软件开发者和生活探险家 | Software Developer and Life Adventurer</p>
-            
-           
-           <ul class="list-inline">
-               
-               <li>
-                   <a href="mailto:hostenwang@foxmail.com">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/HostenWang">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-            
-            
-               
-               
-               
-               
-                </ul>
-            </div>
-    </section>
-	
-    
-    
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/gis" title="gis">
-                        gis
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/linux" title="linux">
-                        linux
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/nifi" title="nifi">
-                        nifi
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/postgis" title="postgis">
-                        postgis
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/terminal" title="terminal">
-                        terminal
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-        </div>
-    </section>
-    
-
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://cloud.tencent.com/developer/user/7436883">BlackBird的博客</a></li>
-            
-            <li><a target="_blank" href="https://www.fengpt.cn/">过去的，未来的 </a></li>
-            
-        </ul>
-    </section>
-    
-    
-</div>
-
-	</div>
-</div>
-
-
-
-
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">                  
-                    
-                    <li>
-                        <a href="mailto:hostenwang@foxmail.com">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		           
-                    
-                    
-                    
-                    
-
-		            
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/HostenWang">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		            
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-            
-            
-            
-           
-                   <li>
-                       <a href='/tags/python/index.xml' rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚" >
-                           <span class="fa-stack fa-lg">
-                               <i class="fas fa-circle fa-stack-2x"></i>
-                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                           </span>
-                       </a>
-                   </li>
-            
-             </ul>
-		<p class="copyright text-muted">
-                    Copyright &copy; 不忘初心,永远忠诚 2022
-                    <br>
-                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
-                    </iframe>
-                </p>
-            </div>
-        </div>
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
     </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<section class="l-container_content">
+  <div class="card" data-taxonomy="tags-python">
+    <h1 class="card-title">Tag: Python</h1>
+    
+  </div>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-09-19 00:00:00 &#43;0000 UTC">Sep 19 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/">面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>栅格数据是一个独特的空间数据类型。很多地理处理工具都是为了处理栅格数据而开发的。</p>
+<p>Arcpy 中有一个名为 <code>arepy.sa</code> 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。</p>
+    </section>
+    
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
 </footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-08-28 00:00:00 &#43;0000 UTC">Aug 28 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/">面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
 
+  
 
+</header>
 
-<script>
-    function loadAsync(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-
-
-
-
-
-<script>
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。</p>
+    </section>
     
-    if($('#tag_cloud').length !== 0){
-        loadAsync("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-07-14 00:00:00 &#43;0000 UTC">Jul 14 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/">面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
 
-<script>
-    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
+  
 
+</header>
 
-
-<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https'){
-       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else{
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-
-<script>
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等</p>
+    </section>
     
-    var _baId = '07b3f66fb5026a9433526edaa232fa7d';
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-07-02 00:00:00 &#43;0000 UTC">Jul 2 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-00-overview/">面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+  <figure>
+    <a href="/blog/arcpy/python-scripting-for-arcgis-00-overview/"><img src="/blog/arcpy/python-scripting-for-arcgis-00-overview/logo-arcgis_hu0f2a5ad1ae185433e6ca75a5bafe3590_20885_1280x400_fill_q75_box_smart1.jpeg" alt="A Decorative Image" width="640px" height="200px"></a>
+    <figcaption></figcaption>
+  </figure>
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.</p>
+<p>由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。</p>
+    </section>
     
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  
+  <div class="card-meta">
+    <span><time datetime="2020-09-08 00:00:00 &#43;0000 UTC">Sep 8 2020</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/python/" class="taxonomy-item">Python</a></li>
+      <li><a href="https://hostenwang.github.io/categories/gui/" class="taxonomy-item">gui</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/python/python-gui-summary/">Python GUI 总结|Python GUI Usage</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
 
+  
 
+</header>
 
-
-
-
-<script type="text/javascript">
-    function generateCatalog(selector) {
-
-        
-        
-        
-        
-            _containerSelector = 'div.post-container'
-        
-
-        
-        var P = $(_containerSelector), a, n, t, l, i, c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-
-        
-        $(selector).html('')
-
-        
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#" + $(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
-            l = $('<li class="' + n + '_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;
-    }
-
-    generateCatalog(".catalog-body");
-
+    <section class="card-content">
+      <h2 id="1-概述">1 概述</h2>
+<blockquote>
+<p>目前已经不用 python 开发桌面程序, 转到 Electron 方案</p>
+</blockquote>
+<p>python GUI 常用模块小结</p>
+    </section>
     
-    $(".catalog-toggle").click((function (e) {
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/gui/" class="taxonomy-item">gui</a></li>
+  </ul>
+</footer>
 
+  </article>
+</section>
     
+    
+    
+  
+<footer class="l-container_footer">
 
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/python/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/python/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/python/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+</footer>
 
-    loadAsync("\/js\/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
+  </main>
 
-
-
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
 
 
 </body>
+
 </html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle Database on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/series/oracle/</link>
+    <description>Recent content in Oracle Database on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Fri, 08 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/series/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ORA-28000 帐号被锁定的解决办法|ORA-28000 the account is locked</title>
+      <link>https://hostenwang.github.io/blog/oracle/ora-28000/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/ora-28000/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 ORA-28000 帐号被锁定 的解决方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORA-28002 7天之后口令将过期的解决方法|ORA-28002 The Password Will Expire in 7 Days Errors</title>
+      <link>https://hostenwang.github.io/blog/oracle/ora-28002/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/ora-28002/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 ORA-28002 7天之后口令将过期的解决方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</title>
+      <link>https://hostenwang.github.io/blog/oracle/ora-01653/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/ora-01653/</guid>
+      <description>相关报错 ORA-00604: erroroccurred at recursive SQL level 1 ORA-01000: 超出打开游标的最大数 ORA-01653: unable to extend table SYS.AUD$ by 8192 in tablespace ORA-01653: unable toextend table SYS.AUD$ by 8192 in tablespace SYSTEM ORA-02002: errorwhile writing to audit trail 排查 11g 查看表空间使用率,不推荐 -- 它的大小计算单位是block，需要关联下数据库的block大小 -- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和 SQL&amp;gt; select * from dba_tablespace_usage_metrics; TABLESPACE_NAME|USED_SPACE|TABLESPACE_SIZE|USED_PERCENT | ---------------+----------+---------------+--------------+ SYSTEM | 127240| 4194302| 3.033| TEMP | 128| 4194302| 0.003| USERS | 520| 4194302| 0.012|  SQL&amp;gt; show parameter db_block_size 手写 SQL查看表空间使用率,推荐,参考 1 永久表空间 select a.</description>
+    </item>
+    
+    <item>
+      <title>Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</title>
+      <link>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为1000多家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品之一&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
+      <link>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

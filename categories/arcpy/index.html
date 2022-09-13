@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>arcpy | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="Nerver Forget Why You Started">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico">
+  <link href="/categories/arcpy/index.xml" rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚">
+  <link href="/categories/arcpy/index.xml" rel="feed" type="application/rss+xml" title="不忘初心,永远忠诚">
+  <meta name="og:title" content="arcpy">
+  <meta name="og:description" content="Nerver Forget Why You Started">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/categories/arcpy/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<section class="l-container_content">
+  <div class="card" data-taxonomy="categories-arcpy">
+    <h1 class="card-title">Category: arcpy</h1>
+    
+  </div>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-09-19 00:00:00 &#43;0000 UTC">Sep 19 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/">面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>栅格数据是一个独特的空间数据类型。很多地理处理工具都是为了处理栅格数据而开发的。</p>
+<p>Arcpy 中有一个名为 <code>arepy.sa</code> 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。</p>
+    </section>
+    
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
+
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-08-28 00:00:00 &#43;0000 UTC">Aug 28 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/">面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。</p>
+    </section>
+    
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
+
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-07-14 00:00:00 &#43;0000 UTC">Jul 14 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/">面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等</p>
+    </section>
+    
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
+
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/python-scripting-for-arcgis" class="card-banner" data-taxonomy="series-python-scripting-for-arcgis">Python Scripting for ArcGIS</a>
+  <div class="card-meta">
+    <span><time datetime="2021-07-02 00:00:00 &#43;0000 UTC">Jul 2 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/arcpy/" class="taxonomy-item">arcpy</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/arcpy/python-scripting-for-arcgis-00-overview/">面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+  <figure>
+    <a href="/blog/arcpy/python-scripting-for-arcgis-00-overview/"><img src="/blog/arcpy/python-scripting-for-arcgis-00-overview/logo-arcgis_hu0f2a5ad1ae185433e6ca75a5bafe3590_20885_1280x400_fill_q75_box_smart1.jpeg" alt="A Decorative Image" width="640px" height="200px"></a>
+    <figcaption></figcaption>
+  </figure>
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.</p>
+<p>由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。</p>
+    </section>
+    
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/python/" class="taxonomy-item">Python</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcgis/" class="taxonomy-item">ArcGIS</a></li>
+    <li><a href="https://hostenwang.github.io/tags/arcpy/" class="taxonomy-item">arcpy</a></li>
+  </ul>
+</footer>
+
+  </article>
+</section>
+    
+    
+    
+  
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

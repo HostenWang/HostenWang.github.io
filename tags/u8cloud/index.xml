@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>U8cloud on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/u8cloud/</link>
+    <description>Recent content in U8cloud on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/u8cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用友 NC 开发规范|Yonyou NC Development Specification</title>
+      <link>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;互联网创造了新的经济形态和运行模式，正在成为经济发展的新引擎。作为一家业界领先的管理软件与企业云服务提供商，为积极推进大型集团在互联网时代背景下的转型升级，服务企业互联网化，用友NC 以客户为中心，帮助中国大型企业创新管理模式、引领商业变革。将互联网、云计算、大数据、移动应用等新技术与集团企业运营管理最佳实践深度融合，推出了可有效推进企业互联网化的解决方案，帮助企业迈向“互联网化”的新阶段。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

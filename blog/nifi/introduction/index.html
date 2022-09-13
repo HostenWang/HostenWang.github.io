@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Apache NiFi 介绍|Apache NiFi Introduction | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="概述|Overview
+简单来说，NiFi用于自动化管理系统之间的数据流。">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="nifi, apache"><meta name="author" content="HostenWang">
+  <meta name="og:title" content="Apache NiFi 介绍|Apache NiFi Introduction">
+  <meta name="og:description" content="概述|Overview
+简单来说，NiFi用于自动化管理系统之间的数据流。">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/blog/nifi/introduction/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <progress id="reading-progress" max="100" value="0" ></progress>
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<article class="l-container_content card">
+  <header class="card-header">
+  <a href="/series/nifi" class="card-banner" data-taxonomy="series-nifi">nifi</a>
+  <div class="card-meta">
+    <span><time datetime="2018-11-19 00:00:00 &#43;0000 UTC">Nov 19 2018</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/nifi/" class="taxonomy-item">nifi</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/nifi/introduction/">Apache NiFi 介绍|Apache NiFi Introduction</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+  <section class="card-content">
+    <h2 id="概述overview">概述|Overview</h2>
+<p>简单来说，NiFi用于自动化管理系统之间的数据流。</p>
+<p>在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”</p>
+<h2 id="关键特性和实现原理简述">关键特性和实现原理简述</h2>
+<h3 id="flow-managerment">Flow Managerment</h3>
+<ul>
+<li>确保数据发送成功：这是必须必须必须达到的。这通过有效使用基于目标的持久化提前写入log和<code>Content Repostory</code>实现的。</li>
+<li>数据缓存：NIFI支持缓存queued数据。所以当queue达到上限的时候，或者age达到指定的时间的时候，会进行缓存。</li>
+<li>优先队列：可以选择数据分别到达最老得，最新的，最大的，以及其他状况的队列。</li>
+<li>数据流Qos：指定数据要在多少秒内处理或者发送，精确控制。</li>
+</ul>
+<h3 id="ease-of-use">Ease of Use</h3>
+<ul>
+<li>命令可视化和控制可视化</li>
+<li>流模板：一个成功的有效的模板可以快速推广到解决其他问题</li>
+<li>DataProvenance数据源：NIFI对数据源进行自动记录，索引，跟踪。</li>
+<li>恢复/记录回滚</li>
+</ul>
+<h3 id="安全">安全</h3>
+<ul>
+<li>系统到系统</li>
+<li>用户到系统</li>
+<li>多租户认证(Accessingthe  UI with Multi-Tenant Authorization):就是对用户进行分组，不同的组具有不同的权限</li>
+</ul>
+<h3 id="可扩展架构">可扩展架构</h3>
+<h4 id="扩展">扩展</h4>
+<p>NIFI的核心原则之一是可扩展。可进行扩展的组建包括processors,controller service, reporting taks, prioritezes, 和customeruser interface.</p>
+<h4 id="类加载器隔离">类加载器隔离</h4>
+<p>NIFI的各实例之间的通讯协议是s2s。</p>
+<h3 id="柔性scaling">柔性scaling</h3>
+<h4 id="scale-out">scale-out</h4>
+<p>NIFI单节点的性能是每秒处理百兆级数据，搭建NIFI集群可以提升到每秒处理G级别数据。</p>
+<h4 id="scale-up--down">scale-up &amp; down</h4>
+<p>可以扩容和缩容</p>
+<h2 id="优点">优点</h2>
+<ul>
+<li>
+<p>可图形化编辑、监控整个处理流程</p>
+</li>
+<li>
+<p>可进行单步调试，在上一个处理环节得出正确结果以后再进入下一个处理环节。可以通过Data Provenance追踪数据的完整处理过程。</p>
+</li>
+<li>
+<p>对数据有back pressure机制</p>
+</li>
+<li>
+<p>在运行过程中可随时修改流程中的各个处理环节，调整资源使用量而不必中断整个流程</p>
+</li>
+<li>
+<p>有丰富的接口及数据处理机制（expression language），数据类型转换机制</p>
+</li>
+<li>
+<p>拥有rest接口，通过该接口可进行进一步应用开发</p>
+</li>
+<li>
+<p>由于使用文件作为载体，对所处理数据的大小基本无限制</p>
+</li>
+<li>
+<p>对于大数据结构、批量数据处理具有一定优势</p>
+</li>
+</ul>
+<h2 id="参考references">参考|References</h2>
+<ol>
+<li><a href="https://nifi.apache.org/docs/nifi-docs/html/nifi-in-depth.html">官方文档</a></li>
+</ol>
+  </section>
+  	
+  	
+  	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/nifi/" class="taxonomy-item">nifi</a></li>
+    <li><a href="https://hostenwang.github.io/tags/apache/" class="taxonomy-item">apache</a></li>
+  </ul>
+</footer>
+
+</article>
+    <aside class="l-container_left aside-fade_authors">
+    <article class="card_author headshot-small">
+      <header class="card-header">
+        <figure>
+          <a href="https://hostenwang.github.io/authors/hostenwang/"><img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot" width="100px" height="100px" class="author-headshot"></a>
+        </figure>
+        <h1 class="card-title"><a href="https://hostenwang.github.io/authors/hostenwang/">HostenWang</a></h1>
+        <span class="card-subtitle">Guest Author</span>
+      </header>
+      <section class="card-content">
+        <p>全栈大数据开发工程师, 生活探险家, 开源爱好者</p>
+      </section>
+    </article>
+  
+</aside>
+
+    
+  
+<aside class="l-container_right aside card toc">
+    <script type="text/javascript" src="/js/tocbot.min.js"></script>
+  <script>
+    tocbot.init({
+      tocSelector: '.l-container_right',
+      contentSelector: '.card-content',
+      headingSelector: 'h2, h3',
+      hasInnerContainers: true,
+      collapseDepth: 0,
+      headingsOffset: 80,
+      scrollSmoothOffset: -80
+    });
+  </script>
+</aside>
+
+    
+  
+<footer class="l-container_footer">
+  <nav class="pagination">
+    <a href="https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/" class="pagination-new" role="button"><span class="pagination-title">Next Post</span><br><span>Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</span></a>
+    <a href="https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/" class="pagination-old" role="button"><span class="pagination-title">Previous Post</span><br><span>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</span></a>
+  </nav>
+</footer>
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

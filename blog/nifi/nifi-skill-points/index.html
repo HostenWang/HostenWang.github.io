@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Apache NiFi 学习要点|Apache NiFi Skill Points | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="概述|Overview
+总结 Apache NiFi 学习路线">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="nifi, apache"><meta name="author" content="HostenWang">
+  <meta name="og:title" content="Apache NiFi 学习要点|Apache NiFi Skill Points">
+  <meta name="og:description" content="概述|Overview
+总结 Apache NiFi 学习路线">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/blog/nifi/nifi-skill-points/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <progress id="reading-progress" max="100" value="0" ></progress>
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<article class="l-container_content card">
+  <header class="card-header">
+  <a href="/series/nifi" class="card-banner" data-taxonomy="series-nifi">nifi</a>
+  <div class="card-meta">
+    <span><time datetime="2019-04-05 00:00:00 &#43;0000 UTC">Apr 5 2019</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/nifi/" class="taxonomy-item">nifi</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/nifi/nifi-skill-points/">Apache NiFi 学习要点|Apache NiFi Skill Points</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+  <section class="card-content">
+    <h2 id="概述overview">概述|Overview</h2>
+<p>总结 Apache NiFi 学习路线</p>
+<h2 id="原理和架构">原理和架构</h2>
+<ol>
+<li>Apache NiFi 的功能概述</li>
+<li>Apache NiFi 原理和架构</li>
+<li>Apache NiFi 基本模块介绍</li>
+<li>Apache NiFi Groups、Processor、queue和connector模块介绍</li>
+<li>Apache NiFi toolbar 界面演示</li>
+</ol>
+<h2 id="安装和配置">安装和配置</h2>
+<ol start="6">
+<li>Apache NiFi 单机版安装</li>
+<li>Apache NiFi 分布式安装</li>
+<li>数据丢失容错和保证交付</li>
+<li>低延迟和高吞吐量</li>
+<li>动态优先级</li>
+<li>运行时修改流文件</li>
+</ol>
+<h2 id="gui-操作介绍">GUI 操作介绍</h2>
+<ol>
+<li>设计、控制和监视</li>
+<li>processor的create、stop、start、restart、delete等操作</li>
+</ol>
+<h2 id="自带处理器介绍">自带处理器介绍</h2>
+<ol start="3">
+<li>NiFi Processor的原理和功能</li>
+<li>Kafka Processor介绍和实战</li>
+<li>ES Processor介绍和实战</li>
+<li>Hbase Processor介绍和实战</li>
+<li>Hdfs Processor、spark Streaming实战</li>
+<li>JDBC Processor介绍和实战</li>
+<li>FTP、Http、XML、Json Processor介绍和实战</li>
+</ol>
+<h2 id="创建数据流">创建数据流</h2>
+<ol start="10">
+<li>创建发送/接收目录</li>
+<li>getFile和putFile Processor创建</li>
+<li>创建复制文件从发送放到接收</li>
+<li>创建Queue队列</li>
+</ol>
+<h2 id="创建高级数据流">创建高级数据流</h2>
+<ol start="14">
+<li>自定义文件名</li>
+<li>添加自定义属性</li>
+<li>添加正则表达式</li>
+<li>实现Path过滤规则</li>
+</ol>
+<h2 id="安全">安全</h2>
+<ol start="18">
+<li>创建用户、用户组、角色</li>
+<li>SSL,SSH,HTTPS加密认证</li>
+<li>可插拔的基于角色的验证/授权</li>
+<li>基于webUI的SLA认证授权</li>
+</ol>
+<h2 id="集群配置和管理">集群配置和管理</h2>
+<ol start="22">
+<li>Apache NiFi集群添加节点</li>
+<li>删除节点</li>
+<li>Apache NiFi 性能优化</li>
+<li>Slaves 节点的负载均衡配置</li>
+<li>制定特定的 Processor 到特定的 node 节点</li>
+<li>集群动态负载均衡配置</li>
+</ol>
+<h2 id="用户自定义处理器">用户自定义处理器</h2>
+<ol start="28">
+<li>自定义处理器开发</li>
+<li>自定义处理器部署</li>
+</ol>
+<h2 id="实战">实战</h2>
+<ol start="30">
+<li>Apache NiFi 在数据中台的使用</li>
+</ol>
+  </section>
+  	
+  	
+  	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/nifi/" class="taxonomy-item">nifi</a></li>
+    <li><a href="https://hostenwang.github.io/tags/apache/" class="taxonomy-item">apache</a></li>
+  </ul>
+</footer>
+
+</article>
+    <aside class="l-container_left aside-fade_authors">
+    <article class="card_author headshot-small">
+      <header class="card-header">
+        <figure>
+          <a href="https://hostenwang.github.io/authors/hostenwang/"><img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot" width="100px" height="100px" class="author-headshot"></a>
+        </figure>
+        <h1 class="card-title"><a href="https://hostenwang.github.io/authors/hostenwang/">HostenWang</a></h1>
+        <span class="card-subtitle">Guest Author</span>
+      </header>
+      <section class="card-content">
+        <p>全栈大数据开发工程师, 生活探险家, 开源爱好者</p>
+      </section>
+    </article>
+  
+</aside>
+
+    
+  
+<aside class="l-container_right aside card toc">
+    <script type="text/javascript" src="/js/tocbot.min.js"></script>
+  <script>
+    tocbot.init({
+      tocSelector: '.l-container_right',
+      contentSelector: '.card-content',
+      headingSelector: 'h2, h3',
+      hasInnerContainers: true,
+      collapseDepth: 0,
+      headingsOffset: 80,
+      scrollSmoothOffset: -80
+    });
+  </script>
+</aside>
+
+    
+  
+<footer class="l-container_footer">
+  <nav class="pagination">
+    <a href="https://hostenwang.github.io/blog/frontend/iframes/" class="pagination-new" role="button"><span class="pagination-title">Next Post</span><br><span>HTML iframe 使用总结 | How and When to Use HTML IFrames</span></a>
+    <a href="https://hostenwang.github.io/blog/oracle/ora-01653/" class="pagination-old" role="button"><span class="pagination-title">Previous Post</span><br><span>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</span></a>
+  </nav>
+</footer>
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

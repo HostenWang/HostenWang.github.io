@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="概述|Overview
+TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="Radio"><meta name="author" content="HostenWang">
+  <meta name="og:title" content="TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview">
+  <meta name="og:description" content="概述|Overview
+TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/blog/misc/tdoa-overview/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <progress id="reading-progress" max="100" value="0" ></progress>
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<article class="l-container_content card">
+  <header class="card-header">
+  
+  <div class="card-meta">
+    <span><time datetime="2018-05-22 00:00:00 &#43;0000 UTC">May 22 2018</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/radio/" class="taxonomy-item">Radio</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/misc/tdoa-overview/">TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+  <section class="card-content">
+    <h2 id="概述overview">概述|Overview</h2>
+<p>TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置</p>
+<p>此处记录我厂在 TDOA 上的一些使用心得.</p>
+<h2 id="环境environment">环境|Environment</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>7 home x64</td>
+<td></td>
+</tr>
+<tr>
+<td>Qt</td>
+<td>5.3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="主流定位技术概述">主流定位技术概述</h2>
+<p>对无线电信号源主要的定位方法包括两大类：复合角度定位法和时间差定位法。</p>
+<ul>
+<li>复合角度定位法基于无线电测向工作，通过多个无线电监测设备对同一个信号进行测向，利用测向射线（角度）的交会进行定位。</li>
+<li>时间差定位法则基于信号到达监测设备的时间，通过时间距离换算进行交会定位。</li>
+</ul>
+<h2 id="tdoa-概述">TDOA 概述</h2>
+<p>TDOA（Time difference of Arrival）是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的距离。利用信号源到多个无线电监测设备的距离（以无线电监测设备为中心，距离为半径作圆），就能确定信号的位置。通过比较信号到达多个监测设备的时间差，就能作出以监测设备为焦点、距离差为长轴的双曲线，双曲线的交点就是信号的位置</p>
+<p>TDOA 是基于多站点的定位系统，因此要对信号进行定位必须有至少3 个以上的监测设备进行同时测量。而每个监测设备的组成则相对比较简单，主要包括接收机，天线和时间同步模块。理论上现有的监测设备只要具有时间同步模块就能升级成为TDOA 监测站，而不需要复杂的技术改造。</p>
+<p>相比复合角度的定位方法，TDOA 有以下的优点：</p>
+<ul>
+<li>TDOA 不存在相位模糊的问题，因此测向基线可以不受限制。传统的测向方法需要通过相位来计算方位角，而相位测量存在2π 周期的不确定性，所以往往利用天线基线小于信号波长的方法来避免2π 周期的回绕。但是高频信号的波长较短，使得测试天线的距离较近，容易产生信号耦合，使得测量产生误差。而每个TDOA 监测设备只需一个天线，从根本上解决了信号耦合的问题。</li>
+<li>TDOA 系统复杂度低。对于TDOA 监测设备，只需配置监测天线和接收机即可，而且对于天线的要求不高，即便不同的监测点用不同的天线也没有关系。而测向天线本身就是一组天线组成的天线阵列，并且阵列中各个天线的性能尽可能保持一致，否则会对测向的准确度带来影响，从而使系统成本较高，不利于广泛开展监测。</li>
+<li>TDOA 系统定位的精度较高。对于TDOA 检测站而言其定位精度取决于时间测量的准确程度。通过优化后的算法，时间差的计算误差在100ns 量级，从定位的准确度来说大约是30m。</li>
+</ul>
+<h2 id="总结">总结</h2>
+<p>综上所述，TDOA 定位是一个稳定可靠的基于网络化的定位方式。</p>
+<p>优势:</p>
+<ul>
+<li>天线简单</li>
+<li>定位精度高</li>
+<li>对环境要求低</li>
+</ul>
+<p>劣势:</p>
+<ul>
+<li>设备要求高. 需要多站联合检测, 单台设备和组合的设备要求比测向方案的要求更高</li>
+<li>技术要求高</li>
+</ul>
+<h2 id="未来展望further">未来展望|Further</h2>
+<p>我厂目前基于 TDOA 做定位, 面向高精度定位应用的场景</p>
+<h2 id="参考references">参考|References</h2>
+  </section>
+  	
+  	
+  	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/radio/" class="taxonomy-item">Radio</a></li>
+  </ul>
+</footer>
+
+</article>
+    <aside class="l-container_left aside-fade_authors">
+    <article class="card_author headshot-small">
+      <header class="card-header">
+        <figure>
+          <a href="https://hostenwang.github.io/authors/hostenwang/"><img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot" width="100px" height="100px" class="author-headshot"></a>
+        </figure>
+        <h1 class="card-title"><a href="https://hostenwang.github.io/authors/hostenwang/">HostenWang</a></h1>
+        <span class="card-subtitle">Guest Author</span>
+      </header>
+      <section class="card-content">
+        <p>全栈大数据开发工程师, 生活探险家, 开源爱好者</p>
+      </section>
+    </article>
+  
+</aside>
+
+    
+  
+<aside class="l-container_right aside card toc">
+    <script type="text/javascript" src="/js/tocbot.min.js"></script>
+  <script>
+    tocbot.init({
+      tocSelector: '.l-container_right',
+      contentSelector: '.card-content',
+      headingSelector: 'h2, h3',
+      hasInnerContainers: true,
+      collapseDepth: 0,
+      headingsOffset: 80,
+      scrollSmoothOffset: -80
+    });
+  </script>
+</aside>
+
+    
+  
+<footer class="l-container_footer">
+  <nav class="pagination">
+    <a href="https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/" class="pagination-new" role="button"><span class="pagination-title">Next Post</span><br><span>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</span></a>
+    <a href="https://hostenwang.github.io/blog/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/" class="pagination-old" role="button"><span class="pagination-title">Previous Post</span><br><span>用户的最大进程数偏少|Max number of threads for user likely too low, increase to at least</span></a>
+  </nav>
+</footer>
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

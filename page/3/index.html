@@ -1,806 +1,359 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" data-theme="light">
+
 <head>
-	<meta name="generator" content="Hugo 0.97.0" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-    <meta property="og:site_name" content="不忘初心,永远忠诚">
-    <meta property="og:type" content="article">
-
-    
-    <meta property="og:image" content="https://hostenwang.github.io//img/common/cover.jpg">
-    <meta property="twitter:image" content="https://hostenwang.github.io//img/common/cover.jpg" />
-    
-
-    
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
-    
-
-    
-    <meta name="description" content="HostenWang，程序员, 生活探险家">
-    <meta property="og:description" content="HostenWang，程序员, 生活探险家" />
-    <meta property="twitter:description" content="HostenWang，程序员, 生活探险家" />
-    
-
-    
-    <meta property="twitter:card" content="summary" />
-    
-    
-
-    <meta name="keyword"  content="不忘初心, HostenWang, Java, Spring, Python, NiFi, BI, GIS, PostGIS, ArcGIS">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <title>不忘初心,永远忠诚 | HostenWang Blog</title>
-
-    <link rel="canonical" href="/">
-
-    
-    
-    
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    
-    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
-
-    
-    <link rel="stylesheet" href="/css/zanshang.css">
-
-    
-    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
-
-    
-    
-
-    
-    <script src="/js/jquery.min.js"></script>
-
-    
-    <script src="/js/bootstrap.min.js"></script>
-
-    
-    <script src="/js/hux-blog.min.js"></script>
-
-    
-    
-
-</head>
-
-
-
-
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-
-    <div class="container-fluid">
-        
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">不忘初心,永远忠诚</a>
-        </div>
-
-        
-        
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">All Posts</a>
-                    </li>
-                    
-                        
-                        <li>
-                            <a href="/categories/backend">backend</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/bigdata">bigdata</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/database">database</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/develop">develop</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/gis">gis</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/ops">ops</a>
-                        </li>
-                        
-                    
-                    
-		    
-                        <li><a href="/top/books/">BOOKS</a></li>
-                    
-                        <li><a href="/top/archive/">ARCHIVE</a></li>
-                    
-                        <li><a href="/top/about/">ABOUT</a></li>
-                    
-
-                    
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-    
-</nav>
-<script>
-    
-    
-    
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        
-            $navbar.className = " ";
-            
-            setTimeout(function(){
-                
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-
-<header class="intro-header" style="background-image: url('/img/common/cover.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>不忘初心,永远忠诚 </h1>
-                    
-		    <span class="subheading">Nerver Forget Why You Started</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="Nerver Forget Why You Started">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
 
   
-<div class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
-            
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
 
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/gis/postgis-0402-geography-type/">
-        <h2 class="post-title">
-            PostGIS 地理数据类型|PostGIS Geography Type
-        </h2>
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚">
+  <link href="/index.xml" rel="feed" type="application/rss+xml" title="不忘初心,永远忠诚">
+  <meta name="og:title" content="不忘初心,永远忠诚">
+  <meta name="og:description" content="Nerver Forget Why You Started">
+  <meta name="og:type" content="website">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
 	
-        <div class="post-content-preview">
-	
-            <h2 id="1-概述overview">1 概述|Overview</h2>
-<p>PostGIS 是目前业界主流的地理数据库之一，提供如下空间信息服务功能：空间对象、空间索引、空间操作函数和空间操作符等。</p>
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by HostenWang on Saturday, September 18, 2021
-        
-        
-    
-    </p>
+</head>
 
-</div>
-<hr>
+<body>
 
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/gis/postgis-0401-gis-object/">
-        <h2 class="post-title">
-            PostGIS GIS 对象|PostGIS GIS Object
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            <h2 id="1-概述overview">1 概述|Overview</h2>
-<p>PostGIS 是目前业界主流的地理数据库之一，提供如下空间信息服务功能：空间对象、空间索引、空间操作函数和空间操作符等。</p>
-       
-        </div>
-    </a>
-    <p class="post-meta">
+  <script type="text/javascript">
     
-        Posted by HostenWang on Thursday, September 16, 2021
-        
-        
-    
-    </p>
+    function detectTheme() {
+      var theme = "light";
 
-</div>
-<hr>
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
 
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/gis/postgis-0206-create-spatial-database/">
-        <h2 class="post-title">
-            PostGIS 创建空间数据库|Creating a Spatial Database in PostGIS
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            <h2 id="1-概述overview">1 概述|Overview</h2>
-<p>如果你使用PostgreSQL 9.1+ 数据库，并且编译并安装了postgis扩展，你可以以新的方式来创建空间数据库</p>
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by HostenWang on Saturday, September 11, 2021
-        
-        
-    
-    </p>
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
 
-</div>
-<hr>
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
 
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/gis/postgis-0201-install-on-windows/">
-        <h2 class="post-title">
-            在Windows安装PostGIS|Install PostGIS on Windows
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            <h2 id="1-概述overview">1 概述|Overview</h2>
-<p>PostGIS是一个对象关系型数据库系统PostgreSQL的扩展，它把GIS（地理信息系统）类型对象存储在数据库中。</p>
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by HostenWang on Tuesday, September 7, 2021
-        
-        
-    
-    </p>
+    detectTheme();
+  </script>
 
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="https://hostenwang.github.io/post/gis/arcgis-01-overview/">
-        <h2 class="post-title">
-            ArcGIS 概述|ArcGIS Overview
-        </h2>
-	
-        <h3 class="post-subtitle">
-            常用组件和价格
-        </h3>
-	
-        <div class="post-content-preview">
-	
-            <h2 id="1-概述overview">1 概述|Overview</h2>
-<p>介绍 ArcGIS 主要产品和模块的功能</p>
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by HostenWang on Sunday, September 5, 2021
-        
-        
-    
-    </p>
-
-</div>
-<hr>
-
-
-            
-
-
-<ul class="pager">
-    
-    <li class="previous">
-        <a href="/page/2/">&larr; Newer Posts</a>
-    </li>
-    
-    
-    <li class="next">
-        <a href="/page/4/">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
-
-
-       	</div>
-        
-
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-	
-    <section class="visible-md visible-lg">
-	
-        <div class="short-about">
-            
-            <a href="/top/about">
-               <img src="/img/common/avatar.png" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>软件开发者和生活探险家 | Software Developer and Life Adventurer</p>
-            
-           
-           <ul class="list-inline">
-               
-               <li>
-                   <a href="mailto:hostenwang@foxmail.com">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/HostenWang">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-            
-            
-               
-               
-               
-               
-                </ul>
-            </div>
-    </section>
-	
-    
-    
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/gis" title="gis">
-                        gis
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/linux" title="linux">
-                        linux
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/nifi" title="nifi">
-                        nifi
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/postgis" title="postgis">
-                        postgis
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/terminal" title="terminal">
-                        terminal
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-        </div>
-    </section>
-    
-
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://cloud.tencent.com/developer/user/7436883">BlackBird的博客</a></li>
-            
-            <li><a target="_blank" href="https://www.fengpt.cn/">过去的，未来的 </a></li>
-            
-        </ul>
-    </section>
-    
-    
-</div>
-
-	</div>
-</div>
-
-
-
-
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">                  
-                    
-                    <li>
-                        <a href="mailto:hostenwang@foxmail.com">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		           
-                    
-                    
-                    
-                    
-
-		            
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/HostenWang">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		            
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-            
-            
-            
-           
-                   <li>
-                       <a href='/index.xml' rel="alternate" type="application/rss+xml" title="不忘初心,永远忠诚" >
-                           <span class="fa-stack fa-lg">
-                               <i class="fas fa-circle fa-stack-2x"></i>
-                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                           </span>
-                       </a>
-                   </li>
-            
-             </ul>
-		<p class="copyright text-muted">
-                    Copyright &copy; 不忘初心,永远忠诚 2022
-                    <br>
-                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
-                    </iframe>
-                </p>
-            </div>
-        </div>
+  
+    <header id="site-header" >
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
     </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<section class="l-container_content">
+  
+  
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/oracle" class="card-banner" data-taxonomy="series-oracle">oracle</a>
+  <div class="card-meta">
+    <span><time datetime="2020-05-08 00:00:00 &#43;0000 UTC">May 8 2020</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/oracle/" class="taxonomy-item">oracle</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/oracle/ora-28000/">ORA-28000 帐号被锁定的解决办法|ORA-28000 the account is locked</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>记录 ORA-28000 帐号被锁定 的解决方法</p>
+    </section>
+    	
+    	
+    	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/oracle/" class="taxonomy-item">oracle</a></li>
+    <li><a href="https://hostenwang.github.io/tags/ora/" class="taxonomy-item">ORA</a></li>
+  </ul>
 </footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/oracle" class="card-banner" data-taxonomy="series-oracle">oracle</a>
+  <div class="card-meta">
+    <span><time datetime="2020-04-07 00:00:00 &#43;0000 UTC">Apr 7 2020</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/oracle/" class="taxonomy-item">oracle</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/oracle/ora-28002/">ORA-28002 7天之后口令将过期的解决方法|ORA-28002 The Password Will Expire in 7 Days Errors</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
 
+  
 
+</header>
 
-<script>
-    function loadAsync(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>记录 ORA-28002 7天之后口令将过期的解决方法</p>
+    </section>
+    	
+    	
+    	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/oracle/" class="taxonomy-item">oracle</a></li>
+    <li><a href="https://hostenwang.github.io/tags/ora/" class="taxonomy-item">ORA</a></li>
+  </ul>
+</footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  
+  <div class="card-meta">
+    <span><time datetime="2020-01-06 00:00:00 &#43;0000 UTC">Jan 6 2020</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/frontend/" class="taxonomy-item">frontend</a></li>
+      <li><a href="https://hostenwang.github.io/categories/js/" class="taxonomy-item">js</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/frontend/iframes/">HTML iframe 使用总结 | How and When to Use HTML IFrames</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
 
+  
 
+</header>
 
+    <section class="card-content">
+      <h2 id="1-概述overview">1 概述|Overview</h2>
+<p>我厂使用 #iframe 较多, 这里做个总结</p>
+    </section>
+    	
+    	
+    	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/html/" class="taxonomy-item">html</a></li>
+    <li><a href="https://hostenwang.github.io/tags/iframe/" class="taxonomy-item">iframe</a></li>
+  </ul>
+</footer>
 
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/nifi" class="card-banner" data-taxonomy="series-nifi">nifi</a>
+  <div class="card-meta">
+    <span><time datetime="2019-04-05 00:00:00 &#43;0000 UTC">Apr 5 2019</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/nifi/" class="taxonomy-item">nifi</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/nifi/nifi-skill-points/">Apache NiFi 学习要点|Apache NiFi Skill Points</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
 
-<script>
+  
+
+</header>
+
+    <section class="card-content">
+      <h2 id="概述overview">概述|Overview</h2>
+<p>总结 Apache NiFi 学习路线</p>
+    </section>
+    	
+    	
+    	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/nifi/" class="taxonomy-item">nifi</a></li>
+    <li><a href="https://hostenwang.github.io/tags/apache/" class="taxonomy-item">apache</a></li>
+  </ul>
+</footer>
+
+  </article>
+  <article class="card">
+    <header class="card-header">
+  <a href="/series/oracle" class="card-banner" data-taxonomy="series-oracle">oracle</a>
+  <div class="card-meta">
+    <span><time datetime="2019-03-22 00:00:00 &#43;0000 UTC">Mar 22 2019</time> · 2 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/oracle/" class="taxonomy-item">oracle</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/oracle/ora-01653/">ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+    <section class="card-content">
+      相关报错 ORA-00604: erroroccurred at recursive SQL level 1 ORA-01000: 超出打开游标的最大数 ORA-01653: unable to extend table SYS.AUD$ by 8192 in tablespace ORA-01653: unable toextend table SYS.AUD$ by 8192 in tablespace SYSTEM ORA-02002: errorwhile writing to audit trail 排查 11g 查看表空间使用率,不推荐 -- 它的大小计算单位是block，需要关联下数据库的block大小 -- 表空间总容量如果是可自动扩展的datafile，那么结果就是所...
+    </section>
+    	
+    	
+    	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/oracle/" class="taxonomy-item">oracle</a></li>
+    <li><a href="https://hostenwang.github.io/tags/ora/" class="taxonomy-item">ORA</a></li>
+  </ul>
+</footer>
+
+  </article>
+</section>
     
-    if($('#tag_cloud').length !== 0){
-        loadAsync("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-
-<script>
-    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-
-<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https'){
-       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else{
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-
-<script>
     
-    var _baId = '07b3f66fb5026a9433526edaa232fa7d';
-
     
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+  
+<footer class="l-container_footer">
 
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/4/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+</footer>
 
+  </main>
 
-
-
-
-
-<script type="text/javascript">
-    function generateCatalog(selector) {
-
-        
-        
-        
-        
-            _containerSelector = 'div.post-container'
-        
-
-        
-        var P = $(_containerSelector), a, n, t, l, i, c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-
-        
-        $(selector).html('')
-
-        
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#" + $(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
-            l = $('<li class="' + n + '_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;
-    }
-
-    generateCatalog(".catalog-body");
-
-    
-    $(".catalog-toggle").click((function (e) {
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    
-
-
-    loadAsync("\/js\/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
-
-
-
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
 
 
 </body>
+
 </html>

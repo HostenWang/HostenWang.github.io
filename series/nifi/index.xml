@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache NiFi on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/series/nifi/</link>
+    <description>Recent content in Apache NiFi on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/series/nifi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
+      <link>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+      <link>https://hostenwang.github.io/blog/nifi/nifi-system-config-best-practices/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/nifi/nifi-system-config-best-practices/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
+      <link>https://hostenwang.github.io/blog/nifi/introduction/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/nifi/introduction/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

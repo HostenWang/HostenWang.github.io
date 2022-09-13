@@ -1,29 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on 不忘初心,永远忠诚</title>
+    <title>Python on 不忘初心,永远忠诚</title>
     <link>https://hostenwang.github.io/tags/python/</link>
-    <description>Recent content in python on 不忘初心,永远忠诚</description>
+    <description>Recent content in Python on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;栅格数据是一个独特的空间数据类型。很多地理处理工具都是为了处理栅格数据而开发的。&lt;/p&gt;
+&lt;p&gt;Arcpy 中有一个名为 &lt;code&gt;arepy.sa&lt;/code&gt; 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</link>
+      <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
+&lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Python GUI 总结|Python GUI Usage</title>
-      <link>https://hostenwang.github.io/post/backend/python-gui-summary/</link>
+      <link>https://hostenwang.github.io/blog/python/python-gui-summary/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/backend/python-gui-summary/</guid>
+      <guid>https://hostenwang.github.io/blog/python/python-gui-summary/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
+      <link>https://hostenwang.github.io/blog/python/how-to-install-both-python2-and-python3-in-windows/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/python/how-to-install-both-python2-and-python3-in-windows/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Python pip 使用总结|Python pip Usage</title>
-      <link>https://hostenwang.github.io/post/backend/python-pip-usage/</link>
+      <link>https://hostenwang.github.io/blog/python/python-pip-usage/</link>
       <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/backend/python-pip-usage/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+      <guid>https://hostenwang.github.io/blog/python/python-pip-usage/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;python pip 常用命令小结&lt;/p&gt;</description>
     </item>
     

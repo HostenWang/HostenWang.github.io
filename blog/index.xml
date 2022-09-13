@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/blog/</link>
+    <description>Recent content in Blogs on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;栅格数据是一个独特的空间数据类型。很多地理处理工具都是为了处理栅格数据而开发的。&lt;/p&gt;
+&lt;p&gt;Arcpy 中有一个名为 &lt;code&gt;arepy.sa&lt;/code&gt; 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</link>
+      <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gitea 配置|Gitea Configuration</title>
+      <link>https://hostenwang.github.io/blog/develop/gitea-configuration/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/develop/gitea-configuration/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用友 NC 开发规范|Yonyou NC Development Specification</title>
+      <link>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;互联网创造了新的经济形态和运行模式，正在成为经济发展的新引擎。作为一家业界领先的管理软件与企业云服务提供商，为积极推进大型集团在互联网时代背景下的转型升级，服务企业互联网化，用友NC 以客户为中心，帮助中国大型企业创新管理模式、引领商业变革。将互联网、云计算、大数据、移动应用等新技术与集团企业运营管理最佳实践深度融合，推出了可有效推进企业互联网化的解决方案，帮助企业迈向“互联网化”的新阶段。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gitea 安装|Gitea Installation</title>
+      <link>https://hostenwang.github.io/blog/develop/gitea-installation/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/develop/gitea-installation/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
+      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
+&lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python GUI 总结|Python GUI Usage</title>
+      <link>https://hostenwang.github.io/blog/python/python-gui-summary/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/python/python-gui-summary/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>项目管理软件选型|Selection of Project Management Software</title>
+      <link>https://hostenwang.github.io/blog/develop/selection-of-project-management-software/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/develop/selection-of-project-management-software/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;项目管理软件是指与项目管理工作相关的各种应用软件，可以涉及进度、费用、资源、质量、风险、组织等各个方面，是项目管理相关软件的总称。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>代码管理软件选型|Selection of Code Management Software</title>
+      <link>https://hostenwang.github.io/blog/develop/selection-of-code-management-software/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/develop/selection-of-code-management-software/</guid>
+      <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;满足常用代码管理需求&lt;/li&gt;
+&lt;li&gt;安装配置简单&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORA-28000 帐号被锁定的解决办法|ORA-28000 the account is locked</title>
+      <link>https://hostenwang.github.io/blog/oracle/ora-28000/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/ora-28000/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 ORA-28000 帐号被锁定 的解决方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORA-28002 7天之后口令将过期的解决方法|ORA-28002 The Password Will Expire in 7 Days Errors</title>
+      <link>https://hostenwang.github.io/blog/oracle/ora-28002/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/ora-28002/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 ORA-28002 7天之后口令将过期的解决方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML iframe 使用总结 | How and When to Use HTML IFrames</title>
+      <link>https://hostenwang.github.io/blog/frontend/iframes/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/frontend/iframes/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;我厂使用 #iframe 较多, 这里做个总结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
+      <link>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</title>
+      <link>https://hostenwang.github.io/blog/oracle/ora-01653/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/ora-01653/</guid>
+      <description>相关报错 ORA-00604: erroroccurred at recursive SQL level 1 ORA-01000: 超出打开游标的最大数 ORA-01653: unable to extend table SYS.AUD$ by 8192 in tablespace ORA-01653: unable toextend table SYS.AUD$ by 8192 in tablespace SYSTEM ORA-02002: errorwhile writing to audit trail 排查 11g 查看表空间使用率,不推荐 -- 它的大小计算单位是block，需要关联下数据库的block大小 -- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和 SQL&amp;gt; select * from dba_tablespace_usage_metrics; TABLESPACE_NAME|USED_SPACE|TABLESPACE_SIZE|USED_PERCENT | ---------------+----------+---------------+--------------+ SYSTEM | 127240| 4194302| 3.033| TEMP | 128| 4194302| 0.003| USERS | 520| 4194302| 0.012|  SQL&amp;gt; show parameter db_block_size 手写 SQL查看表空间使用率,推荐,参考 1 永久表空间 select a.</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+      <link>https://hostenwang.github.io/blog/nifi/nifi-system-config-best-practices/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/nifi/nifi-system-config-best-practices/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</title>
+      <link>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为1000多家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品之一&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
+      <link>https://hostenwang.github.io/blog/nifi/introduction/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/nifi/introduction/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
+      <link>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview</title>
+      <link>https://hostenwang.github.io/blog/misc/tdoa-overview/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/misc/tdoa-overview/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用户的最大进程数偏少|Max number of threads for user likely too low, increase to at least</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
+      <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 Max number of threads for user likely too low 问题解决&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>进程的最大文件描述符数量偏少|Max file descriptors for process likely too low</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-qa-max-file-descriptors-for-process-likely-too-low/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-qa-max-file-descriptors-for-process-likely-too-low/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 Max file descriptors for process likely too low 问题解决&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux sed 使用总结</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-sed/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-sed/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;sed (stream editor) 功能说明：利用script来处理文本文件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 命令行使用总结|Linux Terminal Usage</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-ternimal-usage/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-ternimal-usage/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;熟练使用命令行会提高你作为工程师的灵活性以及生产力&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
+      <link>https://hostenwang.github.io/blog/python/how-to-install-both-python2-and-python3-in-windows/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/python/how-to-install-both-python2-and-python3-in-windows/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Junit 总结</title>
+      <link>https://hostenwang.github.io/blog/java/junit/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/java/junit/</guid>
+      <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python pip 使用总结|Python pip Usage</title>
+      <link>https://hostenwang.github.io/blog/python/python-pip-usage/</link>
+      <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/python/python-pip-usage/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;python pip 常用命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>防火墙工具 UFW 使用总结</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-ufw/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-ufw/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 ubuntu 系统上默认的防火墙组件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 系统升级|Ubuntu Update</title>
+      <link>https://hostenwang.github.io/blog/ops/ubuntu-update/</link>
+      <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/ubuntu-update/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 账号管理|Linux Account Management</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-account-management/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-account-management/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 提交信息模板|Git Commit Message Template</title>
+      <link>https://hostenwang.github.io/blog/develop/git-commit-msg-tmpl/</link>
+      <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/develop/git-commit-msg-tmpl/</guid>
+      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+&lt;p&gt;如何设计和使用一个好的 commit messages 规范&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 下 MySQL 的安装和配置|Install and Configure MySQL on Ubuntu</title>
+      <link>https://hostenwang.github.io/blog/mysql/install-and-configure-mysql-on-ubuntu/</link>
+      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/mysql/install-and-configure-mysql-on-ubuntu/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux apt 总结|Linux apt Usage</title>
+      <link>https://hostenwang.github.io/blog/ops/terminal-apt-usage/</link>
+      <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/terminal-apt-usage/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Ubuntu apt 命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux SSH 使用总结</title>
+      <link>https://hostenwang.github.io/blog/ops/linux-ssh/</link>
+      <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/linux-ssh/</guid>
+      <description>&lt;h2 id=&#34;1-背景&#34;&gt;1 背景&lt;/h2&gt;
+&lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>I2C 协议主写功能的 Verilog 实现|I2C Master Write Function In Verilog</title>
+      <link>https://hostenwang.github.io/blog/misc/i2c-in-verilog/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/misc/i2c-in-verilog/</guid>
+      <description>&lt;h2 id=&#34;1-概述abstract&#34;&gt;1 概述|Abstract&lt;/h2&gt;
+&lt;p&gt;I2C 是我厂常用的一种通信总线, 本文介绍 I2C 主写功能的 verilog 实现.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

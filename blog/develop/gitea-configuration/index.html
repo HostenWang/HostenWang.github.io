@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Gitea 配置|Gitea Configuration | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="1 概述|Overview
+Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="git, gitea"><meta name="author" content="HostenWang">
+  <meta name="og:title" content="Gitea 配置|Gitea Configuration">
+  <meta name="og:description" content="1 概述|Overview
+Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/blog/develop/gitea-configuration/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <progress id="reading-progress" max="100" value="0" ></progress>
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<article class="l-container_content card">
+  <header class="card-header">
+  <a href="/series/rd-management" class="card-banner" data-taxonomy="series-rd-management">R&amp;D Management</a>
+  <div class="card-meta">
+    <span><time datetime="2021-07-14 00:00:00 &#43;0000 UTC">Jul 14 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/git/" class="taxonomy-item">git</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/develop/gitea-configuration/">Gitea 配置|Gitea Configuration</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+  <section class="card-content">
+    <h2 id="1-概述overview">1 概述|Overview</h2>
+<p>Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。</p>
+<p>Gitea 采用Go作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC</p>
+<h2 id="2-环境environment">2 环境|Environment</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>Gitea</td>
+<td>1.13.2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-配置">3 配置</h2>
+<h3 id="31-防火墙配置">3.1 防火墙配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># 查看是不是没有开放3000端口</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --zone<span style="color:#f92672">=</span>public --list-ports
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果没有就添加一个</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --zone<span style="color:#f92672">=</span>public --add-port<span style="color:#f92672">=</span>3000/tcp --permanent
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 重新载入配置文件</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --reload
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ufw default deny
+</span></span><span style="display:flex;"><span>ufw allow 22/tcp
+</span></span><span style="display:flex;"><span>ufw allow 3000/tcp
+</span></span><span style="display:flex;"><span>ufw allow 80,443/tcp
+</span></span><span style="display:flex;"><span>ufw enable
+</span></span></code></pre></div><h3 id="32-nginx-配置">3.2 Nginx 配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen       80;
+</span></span><span style="display:flex;"><span>    server_name  <span style="color:#f92672">[</span>域名<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>    proxy_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>    proxy_pass    http://127.0.0.1:3000;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>location ~ .*<span style="color:#ae81ff">\.</span><span style="color:#f92672">(</span>js|css|png<span style="color:#f92672">)</span>$ <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    proxy_pass  http://127.0.0.1:3000;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="33-开机启动">3.3 开机启动</h3>
+<h4 id="331-基于-supervisor-的开机启动和自动重启">3.3.1 基于 supervisor 的开机启动和自动重启</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">[</span>program:gitea<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>directory<span style="color:#f92672">=</span>/opt/gitea/
+</span></span><span style="display:flex;"><span>command<span style="color:#f92672">=</span>/opt/gitea/gitea web
+</span></span><span style="display:flex;"><span>autostart<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>autorestart<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>startsecs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>stdout_logfile<span style="color:#f92672">=</span>/opt/gitea/log/stdout.log
+</span></span><span style="display:flex;"><span>stdout_logfile_maxbytes<span style="color:#f92672">=</span>1MB
+</span></span><span style="display:flex;"><span>stdout_logfile_backups<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>stdout_capture_maxbytes<span style="color:#f92672">=</span>1MB
+</span></span><span style="display:flex;"><span>stderr_logfile<span style="color:#f92672">=</span>/opt/gitea/log/stderr.log
+</span></span><span style="display:flex;"><span>stderr_logfile_maxbytes<span style="color:#f92672">=</span>1MB
+</span></span><span style="display:flex;"><span>stderr_logfile_backups<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>stderr_capture_maxbytes<span style="color:#f92672">=</span>1MB
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> gitea
+</span></span><span style="display:flex;"><span>environment <span style="color:#f92672">=</span> HOME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/gitea&#34;</span>, USER<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gitea&#34;</span>
+</span></span></code></pre></div><h4 id="332-systemd">3.3.2 systemd</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ vim /etc/systemd/system/gitea.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Description<span style="color:#f92672">=</span>Gitea
+</span></span><span style="display:flex;"><span>After<span style="color:#f92672">=</span>syslog.target
+</span></span><span style="display:flex;"><span>After<span style="color:#f92672">=</span>network.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>RestartSec<span style="color:#f92672">=</span>2s
+</span></span><span style="display:flex;"><span>Type<span style="color:#f92672">=</span>simple
+</span></span><span style="display:flex;"><span>User<span style="color:#f92672">=</span>git
+</span></span><span style="display:flex;"><span>Group<span style="color:#f92672">=</span>git
+</span></span><span style="display:flex;"><span>ExecStart<span style="color:#f92672">=</span>/git/gitea web --config /git/custom/conf/app.ini
+</span></span><span style="display:flex;"><span>Restart<span style="color:#f92672">=</span>always
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>WantedBy<span style="color:#f92672">=</span>multi-user.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 开机启动</span>
+</span></span><span style="display:flex;"><span>$ systemctl enable gitea
+</span></span></code></pre></div><h2 id="4-运行">4 运行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># 运行</span>
+</span></span><span style="display:flex;"><span>systemctl start gitea
+</span></span></code></pre></div><h2 id="5-未来展望further">5 未来展望|Further</h2>
+<ol>
+<li>目前我厂 gitea 使用良好, 运行稳定</li>
+<li>未来希望开启更多功能</li>
+</ol>
+<h2 id="6-参考references">6 参考|References</h2>
+<ol>
+<li><a href="https://note.open-edgn.cn/archives/gitea-with-debian.page">gitea-with-debian</a></li>
+<li><a href="https://docs.gitea.io/en-us/install-from-binary/">https://docs.gitea.io/en-us/install-from-binary/</a></li>
+<li><a href="https://discourse.gitea.io/t/ssh-server-configuration-in-gitea/1058">SSH Server configuration in Gitea</a></li>
+</ol>
+  </section>
+  	
+  	
+  	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/git/" class="taxonomy-item">git</a></li>
+    <li><a href="https://hostenwang.github.io/tags/gitea/" class="taxonomy-item">gitea</a></li>
+  </ul>
+</footer>
+
+</article>
+    <aside class="l-container_left aside-fade_authors">
+    <article class="card_author headshot-small">
+      <header class="card-header">
+        <figure>
+          <a href="https://hostenwang.github.io/authors/hostenwang/"><img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot" width="100px" height="100px" class="author-headshot"></a>
+        </figure>
+        <h1 class="card-title"><a href="https://hostenwang.github.io/authors/hostenwang/">HostenWang</a></h1>
+        <span class="card-subtitle">Guest Author</span>
+      </header>
+      <section class="card-content">
+        <p>全栈大数据开发工程师, 生活探险家, 开源爱好者</p>
+      </section>
+    </article>
+  
+</aside>
+
+    
+  
+<aside class="l-container_right aside card toc">
+    <script type="text/javascript" src="/js/tocbot.min.js"></script>
+  <script>
+    tocbot.init({
+      tocSelector: '.l-container_right',
+      contentSelector: '.card-content',
+      headingSelector: 'h2, h3',
+      hasInnerContainers: true,
+      collapseDepth: 0,
+      headingsOffset: 80,
+      scrollSmoothOffset: -80
+    });
+  </script>
+</aside>
+
+    
+  
+<footer class="l-container_footer">
+  <nav class="pagination">
+    <a href="https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/" class="pagination-new" role="button"><span class="pagination-title">Next Post</span><br><span>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</span></a>
+    <a href="https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/" class="pagination-old" role="button"><span class="pagination-title">Previous Post</span><br><span>面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</span></a>
+  </nav>
+</footer>
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

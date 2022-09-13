@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>backup on 不忘初心,永远忠诚</title>
+    <title>Backup on 不忘初心,永远忠诚</title>
     <link>https://hostenwang.github.io/tags/backup/</link>
-    <description>Recent content in backup on 不忘初心,永远忠诚</description>
+    <description>Recent content in Backup on 不忘初心,永远忠诚</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
     <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/backup/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Oracle 每日备份|Oracle Backup Daily</title>
-      <link>https://hostenwang.github.io/post/database/oracle-backup-daily/</link>
+      <title>Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</title>
+      <link>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/database/oracle-backup-daily/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
-&lt;p&gt;数据库的日常备份是运维基本操作.&lt;/p&gt;</description>
+      <guid>https://hostenwang.github.io/blog/oracle/daily-backup-script-in-windows/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为1000多家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品之一&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
-      <link>https://hostenwang.github.io/post/database/oracle-expdp-and-impdp/</link>
+      <link>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/post/database/oracle-expdp-and-impdp/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+      <guid>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
     </item>
     
