@@ -2,6 +2,138 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hostenwang.github.io/authors/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/authors/hostenwang/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/security/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/series/security/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/security/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/series/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/server/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/ops/simple-server-security-reinforcement/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/gis/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/ogc/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/openlayers/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/series/openlayers/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/openlayers/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/openlayers/wfs/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/web/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/webgis/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/wfs/</loc>
+    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/geoserver/</loc>
+    <lastmod>2021-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/http/</loc>
+    <lastmod>2021-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/series/webgis/</loc>
+    <lastmod>2021-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/webgis/</loc>
+    <lastmod>2021-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/webgis/wfs/</loc>
+    <lastmod>2021-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/tile/</loc>
+    <lastmod>2021-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/webgis/tile/</loc>
+    <lastmod>2021-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/message/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/nc/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/u8c/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/u8cloud/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/yonyou/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/yonyou/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E6%B6%88%E6%81%AF/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E7%94%A8%E5%8F%8B/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/series/yonyou-nc-development/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-07-message/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/js/</loc>
+    <lastmod>2021-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/openlayers/wmts/</loc>
+    <lastmod>2021-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/wmts/</loc>
+    <lastmod>2021-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/openlayers/map-marking/</loc>
+    <lastmod>2021-09-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/tags/arcgis/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,38 +143,29 @@
     <loc>https://hostenwang.github.io/categories/arcpy/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/authors/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/blog/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/categories/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/authors/hostenwang/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/tags/python/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/series/python-scripting-for-arcgis/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/series/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/tags/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/tags/task/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E4%BB%BB%E5%8A%A1/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-05-custom-reference/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</loc>
     <lastmod>2021-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/webgis/wmts/</loc>
+    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/git/</loc>
     <lastmod>2021-07-14T00:00:00+00:00</lastmod>
@@ -62,28 +185,13 @@
     <loc>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</loc>
     <lastmod>2021-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/nc/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/categories/nc/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/specification/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/u8cloud/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/tags/yonyou/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/series/yonyou/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/categories/yonyou/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</loc>
+    <loc>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-01-specification/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/blog/develop/gitea-installation/</loc>
@@ -92,8 +200,26 @@
     <loc>https://hostenwang.github.io/tags/%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-06-background-task/</loc>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/log/</loc>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-04-log-configuration/</loc>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</loc>
     <lastmod>2021-07-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-02-environment-setup/</loc>
+    <lastmod>2021-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/webgis/ogc/</loc>
+    <lastmod>2021-06-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/gui/</loc>
     <lastmod>2020-09-08T00:00:00+00:00</lastmod>
@@ -108,6 +234,9 @@
     <lastmod>2020-09-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/gitlab/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/rd/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/blog/develop/selection-of-project-management-software/</loc>
@@ -200,6 +329,27 @@
     <loc>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/tags/hadoop/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/hadoop/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/hbase/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/series/hbase-beginner-guide/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-03-data-model/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-02-arch/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-01-overview/</loc>
+    <lastmod>2018-06-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/tags/radio/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -207,6 +357,9 @@
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/blog/misc/tdoa-overview/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/%E6%97%A0%E7%BA%BF%E7%94%B5/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/elasticsearch/</loc>
@@ -269,10 +422,22 @@
     <loc>https://hostenwang.github.io/categories/test/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/pip/</loc>
-    <lastmod>2017-02-25T00:00:00+00:00</lastmod>
+    <loc>https://hostenwang.github.io/tags/design/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/categories/pip/</loc>
+    <loc>https://hostenwang.github.io/series/design/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/design/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/powerdesigner/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/blog/misc/copy-name-to-comment-in-powersigner/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/pip/</loc>
     <lastmod>2017-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/blog/python/python-pip-usage/</loc>

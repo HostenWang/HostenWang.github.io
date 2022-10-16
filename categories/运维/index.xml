@@ -18,5 +18,15 @@
 &lt;p&gt;Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为1000多家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品之一&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
+      <link>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/oracle/oracle-expdp-and-impdp/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

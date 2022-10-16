@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>HBase 从入门到精通 - 系统架构 | HBase Beginner Guide - Architecture | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="概述|Overview
+HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="hadoop, hbase"><meta name="author" content="HostenWang">
+  <meta name="og:title" content="HBase 从入门到精通 - 系统架构 | HBase Beginner Guide - Architecture">
+  <meta name="og:description" content="概述|Overview
+HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-02-arch/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <progress id="reading-progress" max="100" value="0" ></progress>
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<article class="l-container_content card">
+  <header class="card-header">
+  <a href="/series/hbase-beginner-guide" class="card-banner" data-taxonomy="series-hbase-beginner-guide">HBase Beginner Guide</a>
+  <div class="card-meta">
+    <span><time datetime="2018-08-03 00:00:00 &#43;0000 UTC">Aug 3 2018</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/hadoop/" class="taxonomy-item">hadoop</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/hadoop/hbase-beginner-guide-02-arch/">HBase 从入门到精通 - 系统架构 | HBase Beginner Guide - Architecture</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+  <section class="card-content">
+    <h2 id="概述overview">概述|Overview</h2>
+<p>HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。</p>
+<p>HBase是Google Bigtable的开源实现，类似Google Bigtable利用GFS作为其文件存储系统，HBase利用Hadoop HDFS作为其文件存储系统；Google运行MapReduce来处理Bigtable中的海量数据，HBase同样利用Hadoop MapReduce来处理HBase中的海量数据；Google Bigtable利用 Chubby作为协同服务，HBase利用Zookeeper作为对应。</p>
+<h2 id="hbase-系统架构">HBase 系统架构</h2>
+<p>
+
+<figure>
+    <a href="arch.png" target="calligraphy-image">
+      <img loading="lazy" src="arch.png" alt="A Decorative Image">
+    </a>
+  
+</figure>
+</p>
+<h3 id="client">Client</h3>
+<p>HBase Client使用HBase的RPC机制与HMaster和HRegionServer进行通信，对于管理类操作，Client与HMaster进行RPC；对于数据读写类操作，Client与HRegionServer进行RPC</p>
+<h3 id="zookeeper">Zookeeper</h3>
+<p>Zookeeper Quorum中除了存储了<code>-ROOT-</code>表的地址和HMaster的地址，HRegionServer也会把自己以Ephemeral方式注册到Zookeeper中，使得HMaster可以随时感知到各个HRegionServer的健康状态。此外，Zookeeper也避免了HMaster的单点问题，见下文描述</p>
+<h3 id="hmaster">HMaster</h3>
+<p>HMaster没有单点问题，HBase中可以启动多个HMaster，通过Zookeeper的Master Election机制保证总有一个Master运行，HMaster在功能上主要负责Table和Region的管理工作：</p>
+<ol>
+<li>管理用户对Table的增、删、改、查操作</li>
+<li>管理HRegionServer的负载均衡，调整Region分布</li>
+<li>在Region Split后，负责新Region的分配</li>
+<li>在HRegionServer停机后，负责失效HRegionServer 上的Regions迁移</li>
+</ol>
+<h3 id="hregionserver">HRegionServer</h3>
+<p>HRegionServer主要负责响应用户I/O请求，向HDFS文件系统中读写数据，是HBase中最核心的模块。</p>
+<p>
+
+<figure>
+    <a href="HRegionServer.png" target="calligraphy-image">
+      <img loading="lazy" src="HRegionServer.png" alt="A Decorative Image">
+    </a>
+  
+</figure>
+</p>
+<p>HRegionServer内部管理了一系列HRegion对象，每个HRegion对应了Table中的一个Region，HRegion中由多个HStore组成。<strong>每个HStore对应了Table中的一个Column Family的存储，可以看出每个Column Family其实就是一个集中的存储单元，因此最好将具备共同IO特性的column放在一个Column Family中，这样最高效</strong>。==怎么算 共同IO特性?==</p>
+<p><strong>HStore存储是HBase存储的核心了，其中由两部分组成，一部分是MemStore，一部分是若干StoreFile。<strong>MemStore是Sorted Memory Buffer，用户写入的数据首先会放入MemStore，当MemStore满了以后会Flush成一个StoreFile（底层实现是HFile），当StoreFile文件数量增长到一定阈值，会触发Compact合并操作，将多个StoreFiles合并成一个StoreFile，合并过程中会进行版本合并和数据删除，因此可以看出</strong>HBase其实只有增加数据，所有的更新和删除操作都是在后续的compact过程中进行的，这使得用户的写操作只要进入内存中就可以立即返回，保证了HBase I/O的高性能</strong>。当StoreFiles Compact后，会逐步形成越来越大的StoreFile，当单个StoreFile大小超过一定阈值后，会触发Split操作，同时把当前Region Split成2个Region，父Region会下线，新Split出的2个孩子Region会被HMaster分配到相应的HRegionServer上，使得原先1个Region的压力得以分流到2个Region上。下图描述了Compaction和Split的过程：</p>
+<p>
+
+<figure>
+    <a href="compaction_and_split.png" target="calligraphy-image">
+      <img loading="lazy" src="compaction_and_split.png" alt="A Decorative Image">
+    </a>
+  
+</figure>
+</p>
+<p>在理解了上述HStore的基本原理后，还必须了解一下HLog的功能，因为上述的HStore在系统正常工作的前提下是没有问题的，但是在分布式系统环境中，无法避免系统出错或者宕机，因此一旦HRegionServer意外退出，MemStore中的内存数据将会丢失，这就需要引入HLog了。每个HRegionServer中都有一个HLog对象，HLog是一个实现Write Ahead Log的类，在每次用户操作写入MemStore的同时，也会写一份数据到HLog文件中（HLog文件格式见后续），HLog文件定期会滚动出新的，并删除旧的文件（已持久化到StoreFile中的数据）。当HRegionServer意外终止后，HMaster会通过Zookeeper感知到，HMaster首先会处理遗留的 HLog文件，将其中不同Region的Log数据进行拆分，分别放到相应region的目录下，然后再将失效的region重新分配，领取 到这些region的HRegionServer在Load Region的过程中，会发现有历史HLog需要处理，因此会Replay HLog中的数据到MemStore中，然后flush到StoreFiles，完成数据恢复。</p>
+<h2 id="参考references">参考|References</h2>
+<ol>
+<li><a href=""></a></li>
+<li>​</li>
+</ol>
+  </section>
+  	
+  	
+  	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/hadoop/" class="taxonomy-item">hadoop</a></li>
+    <li><a href="https://hostenwang.github.io/tags/hbase/" class="taxonomy-item">hbase</a></li>
+  </ul>
+</footer>
+
+</article>
+    <aside class="l-container_left aside-fade_authors">
+    <article class="card_author headshot-small">
+      <header class="card-header">
+        <figure>
+          <a href="https://hostenwang.github.io/authors/hostenwang/"><img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot" width="100px" height="100px" class="author-headshot"></a>
+        </figure>
+        <h1 class="card-title"><a href="https://hostenwang.github.io/authors/hostenwang/">HostenWang</a></h1>
+        <span class="card-subtitle">Guest Author</span>
+      </header>
+      <section class="card-content">
+        <p>全栈大数据开发工程师, 生活探险家, 开源爱好者</p>
+      </section>
+    </article>
+  
+</aside>
+
+    
+  
+<aside class="l-container_right aside card toc">
+    <script type="text/javascript" src="/js/tocbot.min.js"></script>
+  <script>
+    tocbot.init({
+      tocSelector: '.l-container_right',
+      contentSelector: '.card-content',
+      headingSelector: 'h2, h3',
+      hasInnerContainers: true,
+      collapseDepth: 0,
+      headingsOffset: 80,
+      scrollSmoothOffset: -80
+    });
+  </script>
+</aside>
+
+    
+  
+<footer class="l-container_footer">
+  <nav class="pagination">
+    <a href="https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-03-data-model/" class="pagination-new" role="button"><span class="pagination-title">Next Post</span><br><span>HBase 从入门到精通 - 概述 | HBase Beginner Guide - Data Model</span></a>
+    <a href="https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-01-overview/" class="pagination-old" role="button"><span class="pagination-title">Previous Post</span><br><span>HBase 从入门到精通 - 概述 | HBase Beginner Guide - Overview</span></a>
+  </nav>
+</footer>
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

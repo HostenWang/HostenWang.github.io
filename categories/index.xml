@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security</title>
+      <link>https://hostenwang.github.io/categories/security/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenLayers</title>
+      <link>https://hostenwang.github.io/categories/openlayers/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/openlayers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webgis</title>
+      <link>https://hostenwang.github.io/categories/webgis/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/webgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yonyou</title>
+      <link>https://hostenwang.github.io/categories/yonyou/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/yonyou/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>arcpy</title>
       <link>https://hostenwang.github.io/categories/arcpy/</link>
@@ -36,15 +72,6 @@
     </item>
     
     <item>
-      <title>Yonyou</title>
-      <link>https://hostenwang.github.io/categories/yonyou/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/categories/yonyou/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>gui</title>
       <link>https://hostenwang.github.io/categories/gui/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
@@ -59,6 +86,15 @@
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R&amp;D</title>
+      <link>https://hostenwang.github.io/categories/rd/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/rd/</guid>
       <description></description>
     </item>
     
@@ -108,11 +144,29 @@
     </item>
     
     <item>
+      <title>hadoop</title>
+      <link>https://hostenwang.github.io/categories/hadoop/</link>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/hadoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Radio</title>
       <link>https://hostenwang.github.io/categories/radio/</link>
       <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/categories/radio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>无线电</title>
+      <link>https://hostenwang.github.io/categories/%E6%97%A0%E7%BA%BF%E7%94%B5/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/categories/%E6%97%A0%E7%BA%BF%E7%94%B5/</guid>
       <description></description>
     </item>
     
@@ -162,11 +216,11 @@
     </item>
     
     <item>
-      <title>pip</title>
-      <link>https://hostenwang.github.io/categories/pip/</link>
-      <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
+      <title>design</title>
+      <link>https://hostenwang.github.io/categories/design/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/categories/pip/</guid>
+      <guid>https://hostenwang.github.io/categories/design/</guid>
       <description></description>
     </item>
     

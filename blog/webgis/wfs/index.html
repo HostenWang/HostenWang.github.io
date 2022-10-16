@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service) | 不忘初心,永远忠诚</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="概述|Overview
+OGC的WMS和WMTS规范都是有关空间数据显示的标准，而WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。">
+  <meta name="generator" content="Hugo 0.97.0" />
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="stylesheet" href="/css/libraries.min.71ed9843bd9de5b970d18e88108ced41f778369861ec5e39a971f94435ada25f.css" crossorigin="anonymous" integrity="sha256-ce2YQ72d5blw0Y6IEIztQfd4Nphh7F45qXH5RDWtol8=">
+
+  
+<link rel="stylesheet" href="/scss/main.min.64dae8eee3d97eacbae01bb5e43355d958b4a10819b4688e1130db647707fec3.css" crossorigin="anonymous" integrity="sha256-ZNro7uPZfqy64Bu15DNV2Vi0oQgZtGiOETDbZHcH/sM=">
+
+  <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="gis, web, webgis, wfs, ogc, http, geoserver"><meta name="author" content="HostenWang">
+  <meta name="og:title" content="WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service)">
+  <meta name="og:description" content="概述|Overview
+OGC的WMS和WMTS规范都是有关空间数据显示的标准，而WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。">
+  <meta name="og:type" content="article">
+  <meta name="og:site_name" content="不忘初心,永远忠诚">
+  <meta name="og:url" content="https://hostenwang.github.io/blog/webgis/wfs/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_1200x630_fit_box_3.png">
+  <meta name="twitter:image" content="https://hostenwang.github.io/img/cover_hucd1aa4a6bb13f7bb33b58d0e407cc419_65192_287cde664921b7f8307328b167530e69.png">
+  
+	
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    
+    function detectTheme() {
+      var theme = "light";
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme = "dark";
+      }
+
+      if (localStorage.getItem("theme")) {
+        var theme = localStorage.getItem("theme");
+      }
+
+      if (theme == "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+
+    detectTheme();
+  </script>
+
+  
+    <header id="site-header" class="l-compact">
+  <nav class="l-container_site">
+    <div class="branding">
+        <h1 class="branding-title">
+          <a href="/" accesskey="h" title="Home (Alt + H)">不忘初心,永远忠诚</a>
+        </h1>
+      <p class="branding-tagline">Nerver Forget Why You Started</p>
+    </div>
+    <label class="toggle" accesskey="t" title="Change Theme (Alt + T)">
+      <input id="theme-toggle" type="checkbox"></input>
+      <span class="theme-button"></span>
+    </label>
+    <div id="site-nav">
+      <label class="toggle" accesskey="n" title="Open Site Navigation (Alt + N)">
+        <input id="nav-toggle" type="checkbox"></input>
+        <span class="nav-button"></span>
+      </label>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="/about/">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="menu-item">
+          <a href="/series/">Series</a>
+        </li>
+        <li class="menu-item">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="menu-item">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <progress id="reading-progress" max="100" value="0" ></progress>
+</header>
+
+  
+
+  <main id="site-main" role="main">
+
+    
+<article class="l-container_content card">
+  <header class="card-header">
+  <a href="/series/webgis" class="card-banner" data-taxonomy="series-webgis">webgis</a>
+  <div class="card-meta">
+    <span><time datetime="2021-12-27 00:00:00 &#43;0000 UTC">Dec 27 2021</time> · 1 min read</span>
+    <ul class="taxonomy-list_categories">
+      <li><a href="https://hostenwang.github.io/categories/webgis/" class="taxonomy-item">webgis</a></li>
+    </ul>
+  </div>
+  <h1 class="card-title"><a href="/blog/webgis/wfs/">WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service)</a></h1>
+  
+<ol class="author-list">
+    <li class="author-item">
+      <img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot"  width="50px" height="50px" class="author-headshot">
+      <div class="author-meta">
+        <a href="https://hostenwang.github.io/authors/hostenwang/" class="author-name">HostenWang</a>
+        <p class="author-assignment">Guest Author</p>
+      </div>
+    </li>
+  
+</ol>
+
+  
+
+</header>
+
+  <section class="card-content">
+    <h2 id="概述overview">概述|Overview</h2>
+<p>OGC的WMS和WMTS规范都是有关空间数据显示的标准，而WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。</p>
+<p>记录我厂使用 WFS 的知识</p>
+<h2 id="环境environment">环境|Environment</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>10 home x64</td>
+<td></td>
+</tr>
+<tr>
+<td>geoserver</td>
+<td>2.21.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="wfs-概述">WFS 概述</h2>
+<p>OGC的 #WMS 和 #WMTS 规范都是有关空间数据显示的标准，而 #WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。</p>
+<blockquote>
+<p>The <a href="http://www.opengeospatial.org/standards/wfs">Web Feature Service</a> (WFS) is a standard created by the Open Geospatial Consortium (OGC) for creating, modifying and exchanging vector format geographic information on the Internet using HTTP. A WFS encodes and transfers information in Geography Markup Language (GML), a subset of XML.</p>
+<p>&ndash; <a href="https://docs.geoserver.org/stable/en/user/services/wfs/index.html">GeoServer 官网对 WFS 的描述</a></p>
+</blockquote>
+<h2 id="wms-vs-wfs">WMS VS WFS</h2>
+<p>WMS是由服务器将地图图像发送给客户端，而WFS是服务器将矢量数据发送给客户端。也就是在使用WMS时地图由服务器绘制，在使用WFS时地图由客户端绘制。另外最最重要的，使用WFS可以对WebGIS服务器中的地理数据（存储在空间数据库中）直接进行增、删、改、查。</p>
+<h2 id="wfs一般支持的功能">WFS一般支持的功能：</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GetCapabilities</td>
+<td>获取WFS服务的元数据（介绍服务中的要素类和支持的操作）</td>
+</tr>
+<tr>
+<td>DescribeFeatureType</td>
+<td>获取WFS服务支持的要素类的定义（要素类的元数据，比如要素包含哪些字段）</td>
+</tr>
+<tr>
+<td>GetFeature</td>
+<td>获取要素数据</td>
+</tr>
+<tr>
+<td>GetGmlObject</td>
+<td>通过XLink获取GML对象</td>
+</tr>
+<tr>
+<td>Transaction</td>
+<td>创建、更新、删除要素数据的事务操作</td>
+</tr>
+<tr>
+<td>LockFeature</td>
+<td>在事务过程中锁定要素</td>
+</tr>
+</tbody>
+</table>
+<h2 id="优势和劣势">优势和劣势</h2>
+<p>待定</p>
+<h2 id="未来展望further">未来展望|Further</h2>
+<ol>
+<li>我厂使用 WFS 对地图要素进行增查改删</li>
+<li>​</li>
+</ol>
+<h2 id="参考references">参考|References</h2>
+<ol>
+<li><a href="https://www.cnblogs.com/rainbow70626/p/12315529.html">OGC——WFS服务</a></li>
+</ol>
+  </section>
+  	
+  	
+  	
+<footer class="card-footer">
+  <ul class="taxonomy-list_tags">
+    <li><a href="https://hostenwang.github.io/tags/gis/" class="taxonomy-item">gis</a></li>
+    <li><a href="https://hostenwang.github.io/tags/web/" class="taxonomy-item">web</a></li>
+    <li><a href="https://hostenwang.github.io/tags/webgis/" class="taxonomy-item">webgis</a></li>
+    <li><a href="https://hostenwang.github.io/tags/wfs/" class="taxonomy-item">wfs</a></li>
+    <li><a href="https://hostenwang.github.io/tags/ogc/" class="taxonomy-item">ogc</a></li>
+    <li><a href="https://hostenwang.github.io/tags/http/" class="taxonomy-item">http</a></li>
+    <li><a href="https://hostenwang.github.io/tags/geoserver/" class="taxonomy-item">geoserver</a></li>
+  </ul>
+</footer>
+
+</article>
+    <aside class="l-container_left aside-fade_authors">
+    <article class="card_author headshot-small">
+      <header class="card-header">
+        <figure>
+          <a href="https://hostenwang.github.io/authors/hostenwang/"><img src="/authors/hostenwang/avatar_hu868e21478a9aff196c883c48f01b466e_32992_200x200_fill_box_center_3.png" alt="HostenWang's Headshot" width="100px" height="100px" class="author-headshot"></a>
+        </figure>
+        <h1 class="card-title"><a href="https://hostenwang.github.io/authors/hostenwang/">HostenWang</a></h1>
+        <span class="card-subtitle">Guest Author</span>
+      </header>
+      <section class="card-content">
+        <p>全栈大数据开发工程师, 生活探险家, 开源爱好者</p>
+      </section>
+    </article>
+  
+</aside>
+
+    
+  
+<aside class="l-container_right aside card toc">
+    <script type="text/javascript" src="/js/tocbot.min.js"></script>
+  <script>
+    tocbot.init({
+      tocSelector: '.l-container_right',
+      contentSelector: '.card-content',
+      headingSelector: 'h2, h3',
+      hasInnerContainers: true,
+      collapseDepth: 0,
+      headingsOffset: 80,
+      scrollSmoothOffset: -80
+    });
+  </script>
+</aside>
+
+    
+  
+<footer class="l-container_footer">
+  <nav class="pagination">
+    <a href="https://hostenwang.github.io/blog/openlayers/wfs/" class="pagination-new" role="button"><span class="pagination-title">Next Post</span><br><span>OpenLayers - WFS(网络要素服务|Web Feature Service)</span></a>
+    <a href="https://hostenwang.github.io/blog/webgis/tile/" class="pagination-old" role="button"><span class="pagination-title">Previous Post</span><br><span>WebGIS 系列 - 瓦片地图|WebGIS - Tile</span></a>
+  </nav>
+</footer>
+
+  </main>
+
+  <footer id="site-footer">
+  <p>Copyright © 2022 | Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/pacollins/calligraphy">Calligraphy</a></p>
+</footer>
+<script type="text/javascript" src="/js/bundle.min.674f48d0f5730edf20db350960e5ab016d76beb3090e7ec3cbc6e58693fda465.js" crossorigin="anonymous" integrity="sha256-Z09I0PVzDt8g2zUJYOWrAW12vrMJDn7Dy8blhpP9pGU="></script>
+
+
+</body>
+
+</html>

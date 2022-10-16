@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/design/</link>
+    <description>Recent content in design on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 PowerDesigner 里将名称复制到备注|Copy Name to Comment in PowerDesigner </title>
+      <link>https://hostenwang.github.io/blog/misc/copy-name-to-comment-in-powersigner/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/misc/copy-name-to-comment-in-powersigner/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

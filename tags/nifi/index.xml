@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title>用户的最大进程数偏少|Max number of threads for user likely too low, increase to at least</title>
+      <title>用户的最大进程数偏少|Max number of threads for user likely too low</title>
       <link>https://hostenwang.github.io/blog/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
       <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
       

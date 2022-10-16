@@ -7,7 +7,8 @@
   
   <title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table | 不忘初心,永远忠诚</title>
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="description" content="相关报错 ORA-00604: erroroccurred at recursive SQL level 1 ORA-01000: 超出打开游标的最大数 ORA-01653: unable to extend table SYS.AUD$ by 8192 in tablespace ORA-01653: unable toextend table SYS.AUD$ by 8192 in tablespace SYSTEM ORA-02002: errorwhile writing to audit trail 排查 11g 查看表空间使用率,不推荐 -- 它的大小计算单位是block，需要关联下数据库的block大小 -- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和 SQL&gt; select * from dba_tablespace_usage_metrics; TABLESPACE_NAME|USED_SPACE|TABLESPACE_SIZE|USED_PERCENT | ---------------&#43;----------&#43;---------------&#43;--------------&#43; SYSTEM | 127240| 4194302| 3.033| TEMP | 128| 4194302| 0.003| USERS | 520| 4194302| 0.012|  SQL&gt; show parameter db_block_size 手写 SQL查看表空间使用率,推荐,参考 1 永久表空间 select a.">
+  <meta name="description" content="概述|Overview
+记录 ORA-00604 报错 的解决方法">
   <meta name="generator" content="Hugo 0.97.0" />
   <meta name="robots" content="index, follow">
 
@@ -19,7 +20,8 @@
 
   <link rel="shortcut icon" href="https://hostenwang.github.io/favicon.ico"><meta name="keywords" content="oracle, ORA"><meta name="author" content="HostenWang">
   <meta name="og:title" content="ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table">
-  <meta name="og:description" content="相关报错 ORA-00604: erroroccurred at recursive SQL level 1 ORA-01000: 超出打开游标的最大数 ORA-01653: unable to extend table SYS.AUD$ by 8192 in tablespace ORA-01653: unable toextend table SYS.AUD$ by 8192 in tablespace SYSTEM ORA-02002: errorwhile writing to audit trail 排查 11g 查看表空间使用率,不推荐 -- 它的大小计算单位是block，需要关联下数据库的block大小 -- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和 SQL&gt; select * from dba_tablespace_usage_metrics; TABLESPACE_NAME|USED_SPACE|TABLESPACE_SIZE|USED_PERCENT | ---------------&#43;----------&#43;---------------&#43;--------------&#43; SYSTEM | 127240| 4194302| 3.033| TEMP | 128| 4194302| 0.003| USERS | 520| 4194302| 0.012|  SQL&gt; show parameter db_block_size 手写 SQL查看表空间使用率,推荐,参考 1 永久表空间 select a.">
+  <meta name="og:description" content="概述|Overview
+记录 ORA-00604 报错 的解决方法">
   <meta name="og:type" content="article">
   <meta name="og:site_name" content="不忘初心,永远忠诚">
   <meta name="og:url" content="https://hostenwang.github.io/blog/oracle/ora-01653/">
@@ -125,7 +127,9 @@
 </header>
 
   <section class="card-content">
-    <h2 id="相关报错">相关报错</h2>
+    <h2 id="概述overview">概述|Overview</h2>
+<p>记录 ORA-00604 报错 的解决方法</p>
+<h2 id="相关报错">相关报错</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ORA-00604: erroroccurred at recursive SQL level <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>ORA-01000: 超出打开游标的最大数 
 </span></span><span style="display:flex;"><span>ORA-01653: unable to extend table SYS.AUD$ by <span style="color:#ae81ff">8192</span> in tablespace
@@ -220,7 +224,6 @@
 <li><a href="https://blog.csdn.net/zzt_2009/article/details/105004800">Oracle 运维篇+查看表空间使用率</a></li>
 <li><a href="https://www.zhangqiongjie.com/1527.html">Oracle报错SYSTEM系统表空间满解决办法</a></li>
 </ol>
-
   </section>
   	
   	

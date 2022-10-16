@@ -7,7 +7,77 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/authors/hostenwang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/authors/hostenwang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单的服务器安全加固策略|Simple Server Security Reinforcement</title>
+      <link>https://hostenwang.github.io/blog/ops/simple-server-security-reinforcement/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/ops/simple-server-security-reinforcement/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;即使服务器规模不大, 安全问题还是要重视&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenLayers - WFS(网络要素服务|Web Feature Service)</title>
+      <link>https://hostenwang.github.io/blog/openlayers/wfs/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/openlayers/wfs/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;OpenLayers 支持OGC的WFS规范，可以基于WFS来对空间数据进行增查改删&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service)</title>
+      <link>https://hostenwang.github.io/blog/webgis/wfs/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/webgis/wfs/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;OGC的WMS和WMTS规范都是有关空间数据显示的标准，而WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WebGIS 系列 - 瓦片地图|WebGIS - Tile</title>
+      <link>https://hostenwang.github.io/blog/webgis/tile/</link>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/webgis/tile/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;瓦片地图（也叫切片地图）源于一种大地图解决方案，就是在多个比例尺下配置地图，然后提前把每个比例尺下的地图绘制为小块图片（瓦片），保存在服务器上用于缓存的目录中。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用友NC开发 - 消息功能使用配置|Yonyou Nc Development - Message</title>
+      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-07-message/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-07-message/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;本文记录如何在 用友(yonyou) NC 使用消息功能&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenLayers 教程 - WMTS(网络地图瓦片服务)|OpenLayers - WMTS(Web Map Tile Service)</title>
+      <link>https://hostenwang.github.io/blog/openlayers/wmts/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/openlayers/wmts/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;WMTS，即Web地图瓦片服务（Web Map Tile Service），由OGC（开放地理信息联盟）制定。根据WMTS标准，可以使我们轻松的访问瓦片数据。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenLayers 教程 - 地图标记|OpenLayers - Map Marking</title>
+      <link>https://hostenwang.github.io/blog/openlayers/map-marking/</link>
+      <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/openlayers/map-marking/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;地图标注是将空间位置点与该点的信息相关联，通过图标、文字等形式把点相关的信息展现到地图上&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</title>
       <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</link>
@@ -20,6 +90,16 @@
     </item>
     
     <item>
+      <title>用友NC开发 - 自定义参照|Yonyou Nc Development - Custom Reference</title>
+      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-05-custom-reference/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-05-custom-reference/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;本文记录 用友NC自定义参照的开发,导入,配置,验证和添加过滤条件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</title>
       <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</link>
       <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
@@ -27,6 +107,16 @@
       <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
       <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WebGIS 系列 - 网络地图切片服务|WebGIS - WMTS(Web Map Tile Service)</title>
+      <link>https://hostenwang.github.io/blog/webgis/wmts/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/webgis/wmts/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;WMTS 是 OGC 提出的缓存技术标准，即在服务器端缓存被切割成一定大小瓦片的地图，对客户端只提供这些预先定义好的单个瓦片的服务，将更多的数据处理操作如图层叠加等放在客户端，从而缓解 GIS 服务器端数据处理的压力，改善用户体验。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,11 +140,11 @@
     </item>
     
     <item>
-      <title>用友 NC 开发规范|Yonyou NC Development Specification</title>
-      <link>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</link>
+      <title>用友NC开发 - 规范|Yonyou NC Development - Specification</title>
+      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-01-specification/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hostenwang.github.io/blog/yonyou/nc-development-specification/</guid>
+      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-01-specification/</guid>
       <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;互联网创造了新的经济形态和运行模式，正在成为经济发展的新引擎。作为一家业界领先的管理软件与企业云服务提供商，为积极推进大型集团在互联网时代背景下的转型升级，服务企业互联网化，用友NC 以客户为中心，帮助中国大型企业创新管理模式、引领商业变革。将互联网、云计算、大数据、移动应用等新技术与集团企业运营管理最佳实践深度融合，推出了可有效推进企业互联网化的解决方案，帮助企业迈向“互联网化”的新阶段。&lt;/p&gt;</description>
     </item>
@@ -70,6 +160,26 @@
     </item>
     
     <item>
+      <title>用友NC开发 - 后台任务|Yonyou Nc Development - Background Task</title>
+      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-06-background-task/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-06-background-task/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;本文记录如何在 用友(yonyou) NC 使用后台任务功能&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用友NC开发 - 日志配置|Yonyou Nc Development - Log Configuration</title>
+      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-04-log-configuration/</link>
+      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-04-log-configuration/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;本文记录如何在 用友(yonyou) NC 使用日志&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
       <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</link>
       <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
@@ -81,12 +191,32 @@
     </item>
     
     <item>
+      <title>用友NC开发 - 环境建立|Yonyou Nc Development - Environment Setup</title>
+      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-02-environment-setup/</link>
+      <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-02-environment-setup/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录建立开发环境等开发前的准备事宜&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WebGIS 系列 - 常用服务|WebGIS - Service</title>
+      <link>https://hostenwang.github.io/blog/webgis/ogc/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/webgis/ogc/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;OGC全称——开放地理空间信息联盟(&lt;a href=&#34;http://www.opengeospatial.org/&#34;&gt;Open Geospatial Consortium&lt;/a&gt;),    它的主要目的就是制定与空间信息、基于位置服务相关的标准。而这些所谓的标准其实就是一些接口或编码的技术文档，不同的厂商、各种GIS产品都可以对照这些文档来定义开放服务的接口、空间数据存储的编码、空间操作的方法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Python GUI 总结|Python GUI Usage</title>
       <link>https://hostenwang.github.io/blog/python/python-gui-summary/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/blog/python/python-gui-summary/</guid>
-      <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -162,7 +292,8 @@
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/blog/oracle/ora-01653/</guid>
-      <description>相关报错 ORA-00604: erroroccurred at recursive SQL level 1 ORA-01000: 超出打开游标的最大数 ORA-01653: unable to extend table SYS.AUD$ by 8192 in tablespace ORA-01653: unable toextend table SYS.AUD$ by 8192 in tablespace SYSTEM ORA-02002: errorwhile writing to audit trail 排查 11g 查看表空间使用率,不推荐 -- 它的大小计算单位是block，需要关联下数据库的block大小 -- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和 SQL&amp;gt; select * from dba_tablespace_usage_metrics; TABLESPACE_NAME|USED_SPACE|TABLESPACE_SIZE|USED_PERCENT | ---------------+----------+---------------+--------------+ SYSTEM | 127240| 4194302| 3.033| TEMP | 128| 4194302| 0.003| USERS | 520| 4194302| 0.012|  SQL&amp;gt; show parameter db_block_size 手写 SQL查看表空间使用率,推荐,参考 1 永久表空间 select a.</description>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;记录 ORA-00604 报错 的解决方法&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -206,6 +337,36 @@
     </item>
     
     <item>
+      <title>HBase 从入门到精通 - 概述 | HBase Beginner Guide - Data Model</title>
+      <link>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-03-data-model/</link>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-03-data-model/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HBase 从入门到精通 - 系统架构 | HBase Beginner Guide - Architecture</title>
+      <link>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-02-arch/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-02-arch/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HBase 从入门到精通 - 概述 | HBase Beginner Guide - Overview</title>
+      <link>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-01-overview/</link>
+      <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/hadoop/hbase-beginner-guide-01-overview/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview</title>
       <link>https://hostenwang.github.io/blog/misc/tdoa-overview/</link>
       <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
@@ -216,7 +377,7 @@
     </item>
     
     <item>
-      <title>用户的最大进程数偏少|Max number of threads for user likely too low, increase to at least</title>
+      <title>用户的最大进程数偏少|Max number of threads for user likely too low</title>
       <link>https://hostenwang.github.io/blog/ops/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
       <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -273,6 +434,15 @@
       <guid>https://hostenwang.github.io/blog/java/junit/</guid>
       <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 PowerDesigner 里将名称复制到备注|Copy Name to Comment in PowerDesigner </title>
+      <link>https://hostenwang.github.io/blog/misc/copy-name-to-comment-in-powersigner/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/misc/copy-name-to-comment-in-powersigner/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;</description>
     </item>
     
     <item>

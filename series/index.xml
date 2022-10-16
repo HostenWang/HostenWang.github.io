@@ -7,7 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security</title>
+      <link>https://hostenwang.github.io/series/security/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/series/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenLayers</title>
+      <link>https://hostenwang.github.io/series/openlayers/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/series/openlayers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webgis</title>
+      <link>https://hostenwang.github.io/series/webgis/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/series/webgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>用友NC开发</title>
+      <link>https://hostenwang.github.io/series/yonyou-nc-development/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/series/yonyou-nc-development/</guid>
+      <description>记录我厂使用 NC 二次开发的经验
+Oracle Database</description>
+    </item>
+    
     <item>
       <title>Python Scripting for ArcGIS</title>
       <link>https://hostenwang.github.io/series/python-scripting-for-arcgis/</link>
@@ -27,22 +64,13 @@
     </item>
     
     <item>
-      <title>Yonyou</title>
-      <link>https://hostenwang.github.io/series/yonyou/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/series/yonyou/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Oracle Database</title>
       <link>https://hostenwang.github.io/series/oracle/</link>
       <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/series/oracle/</guid>
       <description>记录我厂使用 Oracle 数据库的经验
-nifi.apache.org</description>
+Oracle Database</description>
     </item>
     
     <item>
@@ -53,6 +81,15 @@
       <guid>https://hostenwang.github.io/series/nifi/</guid>
       <description>记录我厂使用 NiFi 的经验
 nifi.apache.org</description>
+    </item>
+    
+    <item>
+      <title>HBase Beginner Guide</title>
+      <link>https://hostenwang.github.io/series/hbase-beginner-guide/</link>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/series/hbase-beginner-guide/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -70,6 +107,15 @@
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://hostenwang.github.io/series/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://hostenwang.github.io/series/design/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/series/design/</guid>
       <description></description>
     </item>
     

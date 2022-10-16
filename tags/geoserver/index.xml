@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geoserver on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/geoserver/</link>
+    <description>Recent content in geoserver on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Mon, 27 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/geoserver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service)</title>
+      <link>https://hostenwang.github.io/blog/webgis/wfs/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/webgis/wfs/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;OGC的WMS和WMTS规范都是有关空间数据显示的标准，而WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

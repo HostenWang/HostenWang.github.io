@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tile on 不忘初心,永远忠诚</title>
+    <link>https://hostenwang.github.io/tags/tile/</link>
+    <description>Recent content in tile on 不忘初心,永远忠诚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022</copyright>
+    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebGIS 系列 - 瓦片地图|WebGIS - Tile</title>
+      <link>https://hostenwang.github.io/blog/webgis/tile/</link>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hostenwang.github.io/blog/webgis/tile/</guid>
+      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;瓦片地图（也叫切片地图）源于一种大地图解决方案，就是在多个比例尺下配置地图，然后提前把每个比例尺下的地图绘制为小块图片（瓦片），保存在服务器上用于缓存的目录中。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
