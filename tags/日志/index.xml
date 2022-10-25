@@ -1,22 +1,129 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>日志 on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/tags/%E6%97%A5%E5%BF%97/</link>
-    <description>Recent content in 日志 on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>用友NC开发 - 日志配置|Yonyou Nc Development - Log Configuration</title>
-      <link>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-04-log-configuration/</link>
-      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/yonyou/yonyou-nc-development-04-log-configuration/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;本文记录如何在 用友(yonyou) NC 使用日志&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>日志 on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/%E6%97%A5%E5%BF%97/</link>
+        <description>Recent content in 日志 on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用友NC开发 - 日志配置|Yonyou Nc Development - Log Configuration</title>
+        <link>https://hostenwang.github.io/p/yonyou-nc-development-04-log-configuration/</link>
+        <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/yonyou-nc-development-04-log-configuration/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;本文记录如何在 用友(yonyou) NC 使用日志&lt;/p&gt;
+&lt;p&gt;日志机制提供对系统运行时的监控及支持对系统异常的追踪与定位。日志机制可控制日志输出的格式、日志信息的级别、日志信息输出的目的地（文件、控制台、SocketServer等）。通过配置文件进行灵活的设置，用户可以细致地控制日志的生成过程，而不需修改程序代码&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jdk8&lt;/td&gt;
+&lt;td&gt;131以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;U8Cloud&lt;/td&gt;
+&lt;td&gt;3.1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eclipse_u8c&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
+&lt;h3 id=&#34;查看日志配置&#34;&gt;查看日志配置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 NC 安装目录下的  &lt;code&gt;sysConfig.sh&lt;/code&gt; 进行日志配置&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;读取&amp;quot;按钮.选择路径 &lt;code&gt;{{NCHOME}}/ierp/bin/logger-config.properties&lt;/code&gt;文件，点击【读取】按钮, 会看到很多日志信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/yonyou-nc-development-04-log-configuration/sysconfig.png&#34;
+	width=&#34;595&#34;
+	height=&#34;443&#34;
+	srcset=&#34;https://hostenwang.github.io/p/yonyou-nc-development-04-log-configuration/sysconfig_hu368ec24aa8632e5f1aa1b88c30052c2d_145601_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/yonyou-nc-development-04-log-configuration/sysconfig_hu368ec24aa8632e5f1aa1b88c30052c2d_145601_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;yonyou&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;添加自定义日志&#34;&gt;添加自定义日志&lt;/h2&gt;
+&lt;p&gt;添加自定义日志&lt;/p&gt;
+&lt;h3 id=&#34;添加&#34;&gt;添加&lt;/h3&gt;
+&lt;p&gt;点击【添加】按钮,新增的行，填写如下信息:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;模块：test
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;包前缀：为空 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;级别：DEBUG
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;输出：./nclogs/&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;/test-log.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;格式：%X&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;serial&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;%t&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; %X&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;remoteAddr&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; %X&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;user&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; %d&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;yyyy-MM-dd HH:mm:ss&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;%A&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; %p  %m %n
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;保存后重启nc服务&#34;&gt;保存后重启NC服务&lt;/h3&gt;
+&lt;p&gt;重启NC服务&lt;/p&gt;
+&lt;h3 id=&#34;使用&#34;&gt;使用&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 在输出日志前添加
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;logging&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Logger&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Logger&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;debug&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://hostenwang.github.io/&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;日志级别的选择&#34;&gt;日志级别的选择&lt;/h2&gt;
+&lt;p&gt;目前规定日志只有四种日志级别DEBUG、INFO、 WARN、 ERROR,顺序为&lt;code&gt;DEBUG&amp;lt;INFO&amp;lt;WARN&amp;lt;ERROR&lt;/code&gt;,如果日志级别调的较高，低级别的日志就不能输出如，设置位WARN，那么DEBUG与INFO的信息就不能输出。
+对四个级别的信息输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DEBUG: 输出普通的调试信息，主要用于开发环境的信息输出&lt;/li&gt;
+&lt;li&gt;INFO: 输出提示性的信息，如程序运行所花费的时间等&lt;/li&gt;
+&lt;li&gt;WARN: 输出警告性的信息，如系统设置了一个需要打开的文件，但是系统在打开他的时候有问题，而用了一个缺省的文件，为此系统还是能够正常运行，但却不符合某些期望，采用警告&lt;/li&gt;
+&lt;li&gt;ERROR: 错误信息输出，表示系统出了错误，影响了系统的功能，如系统抛出了一个NullPointException,系统不能正常运行。统运行时默认输出级别为ERROR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;NC 包含的功能还是比较齐全的&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_42516207/article/details/98078253&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NC添加自定义日志文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/dongguacha/p/6625680.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NC 日志文件注册&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

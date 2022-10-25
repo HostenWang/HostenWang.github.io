@@ -1,42 +1,438 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>nifi on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/categories/nifi/</link>
-    <description>Recent content in nifi on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/nifi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
-      <link>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</link>
-      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
-      <link>https://hostenwang.github.io/blog/nifi/nifi-system-config-best-practices/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/nifi/nifi-system-config-best-practices/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
-      <link>https://hostenwang.github.io/blog/nifi/introduction/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/nifi/introduction/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>nifi on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/categories/nifi/</link>
+        <description>Recent content in nifi on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/nifi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Apache NiFi 源码学习:文档系统 | Apache NiFi Code - Doc System</title>
+        <link>https://hostenwang.github.io/p/nifi-code-doc-system/</link>
+        <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-code-doc-system/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
+&lt;p&gt;本文记录如下内容&lt;/p&gt;
+&lt;p&gt;研究 Apache NiFi Doc系统实现&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;技术实现&lt;/li&gt;
+&lt;li&gt;java注释提取到html的实现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nifi&lt;/td&gt;
+&lt;td&gt;1.7.1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;web层&#34;&gt;web层&lt;/h2&gt;
+&lt;p&gt;nifi-web-docs 项目基于servlet,不涉及复杂技巧.&lt;/p&gt;
+&lt;h3 id=&#34;监听url&#34;&gt;监听URL&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;web.xml&lt;/code&gt;内容如下,参考[1]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;web-app&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;version=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;3.0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://java.sun.com/xml/ns/javaee&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c&#34;&gt;&amp;lt;!--应用名称,体现在URL内--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;display-name&amp;gt;&lt;/span&gt;nifi-docs&lt;span class=&#34;nt&#34;&gt;&amp;lt;/display-name&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;error-page&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;error-code&amp;gt;&lt;/span&gt;404&lt;span class=&#34;nt&#34;&gt;&amp;lt;/error-code&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;location&amp;gt;&lt;/span&gt;/WEB-INF/jsp/no-documentation-found.jsp&lt;span class=&#34;nt&#34;&gt;&amp;lt;/location&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/error-page&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;servlet&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;servlet-name&amp;gt;&lt;/span&gt;documentation-controller&lt;span class=&#34;nt&#34;&gt;&amp;lt;/servlet-name&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;servlet-class&amp;gt;&lt;/span&gt;org.apache.nifi.web.docs.DocumentationController&lt;span class=&#34;nt&#34;&gt;&amp;lt;/servlet-class&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/servlet&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;servlet-mapping&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;servlet-name&amp;gt;&lt;/span&gt;documentation-controller&lt;span class=&#34;nt&#34;&gt;&amp;lt;/servlet-name&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;url-pattern&amp;gt;&lt;/span&gt;/documentation&lt;span class=&#34;nt&#34;&gt;&amp;lt;/url-pattern&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/servlet-mapping&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;welcome-file-list&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;welcome-file&amp;gt;&lt;/span&gt;documentation&lt;span class=&#34;nt&#34;&gt;&amp;lt;/welcome-file&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/welcome-file-list&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/web-app&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;处理请求输出页面内容&#34;&gt;处理请求,输出页面内容&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;DocumentationController&lt;/code&gt;内加载model,view为&lt;code&gt;documentation.jsp&lt;/code&gt;.
+JSP内加载model内容,基于JSTL,渲染成左侧导航栏,右侧内容栏.
+导航栏内显示所有processor,controller service名称,URL分别指向不同的html文件.
+内容栏嵌套一个iframe,加载用户点击URL后的html内容.&lt;/p&gt;
+&lt;h2 id=&#34;内容层&#34;&gt;内容层&lt;/h2&gt;
+&lt;h3 id=&#34;通用文档&#34;&gt;通用文档&lt;/h3&gt;
+&lt;p&gt;如 用户手册,开发者手册等,放在nifi-docs包内,格式为adoc&lt;/p&gt;
+&lt;h3 id=&#34;processorcontroller-service-文档&#34;&gt;processor,controller service 文档&lt;/h3&gt;
+&lt;h4 id=&#34;参数文档&#34;&gt;参数文档&lt;/h4&gt;
+&lt;p&gt;基于 asciidoc ,提取注释生成文档
+&lt;strong&gt;可能&lt;/strong&gt;是部署时,从class文件提取出来放在&lt;code&gt;nifi-1.8.0\work\docs\components\org.apache.nifi&lt;/code&gt;,bundle对应的jar文件内没看到文档信息.&lt;/p&gt;
+&lt;h4 id=&#34;附加文档&#34;&gt;附加文档&lt;/h4&gt;
+&lt;p&gt;同bundle内
+例如,处理器&lt;code&gt;org.apache.nifi.processors.standard.CalculateRecordStats&lt;/code&gt;的附加文档位于&lt;code&gt;nifi-1.7.1\nifi-nar-bundles\nifi-standard-bundle\nifi-standard-processors\src\main\resources\docs\org.apache.nifi.processors.standard.CalculateRecordStats\additionalDetails.html&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;注释到html层&#34;&gt;注释到html层&lt;/h2&gt;
+&lt;p&gt;基于 nifi-documentation bundle
+定义&lt;code&gt;DocumentationWriter&lt;/code&gt;接口，定义&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;void write(ConfigurableComponent configurableComponent, OutputStream streamToWriteTo,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        boolean includesAdditionalDocumentation)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;定义&lt;code&gt;HtmlDocumentationWriter implements DocumentationWriter&lt;/code&gt;,override write方法,包含writeHeader,writeBody等方法.
+writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字符串,然后写入文件内.
+使用模板模式,留下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;protected void writeAdditionalBodyInfo(final ConfigurableComponent configurableComponent,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        final XMLStreamWriter xmlStreamWriter)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;留给子类(如 &lt;code&gt;HtmlProcessorDocumentationWriter&lt;/code&gt;)追加附加文档信息&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;p&gt;我厂 广泛使用 Apache NiFi 作为 ETL 层, 在国内算是很早一批使用 NiFi 的厂家. 有一定积累&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/Y-oung/p/8401549.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;web.xml配置文件详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
+        <link>https://hostenwang.github.io/p/nifi-skill-points/</link>
+        <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-skill-points/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;
+&lt;h2 id=&#34;原理和架构&#34;&gt;原理和架构&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Apache NiFi 的功能概述&lt;/li&gt;
+&lt;li&gt;Apache NiFi 原理和架构&lt;/li&gt;
+&lt;li&gt;Apache NiFi 基本模块介绍&lt;/li&gt;
+&lt;li&gt;Apache NiFi Groups、Processor、queue和connector模块介绍&lt;/li&gt;
+&lt;li&gt;Apache NiFi toolbar 界面演示&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安装和配置&#34;&gt;安装和配置&lt;/h2&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Apache NiFi 单机版安装&lt;/li&gt;
+&lt;li&gt;Apache NiFi 分布式安装&lt;/li&gt;
+&lt;li&gt;数据丢失容错和保证交付&lt;/li&gt;
+&lt;li&gt;低延迟和高吞吐量&lt;/li&gt;
+&lt;li&gt;动态优先级&lt;/li&gt;
+&lt;li&gt;运行时修改流文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;gui-操作介绍&#34;&gt;GUI 操作介绍&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;设计、控制和监视&lt;/li&gt;
+&lt;li&gt;processor的create、stop、start、restart、delete等操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;自带处理器介绍&#34;&gt;自带处理器介绍&lt;/h2&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;NiFi Processor的原理和功能&lt;/li&gt;
+&lt;li&gt;Kafka Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;ES Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;Hbase Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;Hdfs Processor、spark Streaming实战&lt;/li&gt;
+&lt;li&gt;JDBC Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;FTP、Http、XML、Json Processor介绍和实战&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;创建数据流&#34;&gt;创建数据流&lt;/h2&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;创建发送/接收目录&lt;/li&gt;
+&lt;li&gt;getFile和putFile Processor创建&lt;/li&gt;
+&lt;li&gt;创建复制文件从发送放到接收&lt;/li&gt;
+&lt;li&gt;创建Queue队列&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;创建高级数据流&#34;&gt;创建高级数据流&lt;/h2&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;自定义文件名&lt;/li&gt;
+&lt;li&gt;添加自定义属性&lt;/li&gt;
+&lt;li&gt;添加正则表达式&lt;/li&gt;
+&lt;li&gt;实现Path过滤规则&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安全&#34;&gt;安全&lt;/h2&gt;
+&lt;ol start=&#34;18&#34;&gt;
+&lt;li&gt;创建用户、用户组、角色&lt;/li&gt;
+&lt;li&gt;SSL,SSH,HTTPS加密认证&lt;/li&gt;
+&lt;li&gt;可插拔的基于角色的验证/授权&lt;/li&gt;
+&lt;li&gt;基于webUI的SLA认证授权&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;集群配置和管理&#34;&gt;集群配置和管理&lt;/h2&gt;
+&lt;ol start=&#34;22&#34;&gt;
+&lt;li&gt;Apache NiFi集群添加节点&lt;/li&gt;
+&lt;li&gt;删除节点&lt;/li&gt;
+&lt;li&gt;Apache NiFi 性能优化&lt;/li&gt;
+&lt;li&gt;Slaves 节点的负载均衡配置&lt;/li&gt;
+&lt;li&gt;制定特定的 Processor 到特定的 node 节点&lt;/li&gt;
+&lt;li&gt;集群动态负载均衡配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;用户自定义处理器&#34;&gt;用户自定义处理器&lt;/h2&gt;
+&lt;ol start=&#34;28&#34;&gt;
+&lt;li&gt;自定义处理器开发&lt;/li&gt;
+&lt;li&gt;自定义处理器部署&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;实战&#34;&gt;实战&lt;/h2&gt;
+&lt;ol start=&#34;30&#34;&gt;
+&lt;li&gt;Apache NiFi 在数据中台的使用&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
+        <link>https://hostenwang.github.io/p/nifi-system-config-best-practices/</link>
+        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-system-config-best-practices/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;
+&lt;p&gt;典型的Linux缺省值并不一定能够很好地适应像NiFi这样的IO密集型应用程序的需要。&lt;/p&gt;
+&lt;h2 id=&#34;文件句柄数量调优maximum-file-handles&#34;&gt;文件句柄数量调优|Maximum File Handles&lt;/h2&gt;
+&lt;p&gt;NiFi在任何时候都可能打开大量的文件句柄&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root&amp;gt; vim /etc/security/limits.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* hard nofile &lt;span class=&#34;m&#34;&gt;50000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* soft nofile &lt;span class=&#34;m&#34;&gt;50000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;进程数量调优maximum-forked-processes&#34;&gt;进程数量调优|Maximum Forked Processes&lt;/h2&gt;
+&lt;p&gt;NiFi配置为生成大量线程。要增加允许的数量&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root&amp;gt; vim /etc/security/limits.con
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* hard nproc &lt;span class=&#34;m&#34;&gt;10000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* soft nproc &lt;span class=&#34;m&#34;&gt;10000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root&amp;gt; vim /etc/security/limits.d/90-nproc.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* soft nproc &lt;span class=&#34;m&#34;&gt;10000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;tcp-socket调优tcp-socket-tunning&#34;&gt;TCP socket调优|TCP socket Tunning&lt;/h2&gt;
+&lt;p&gt;如果您的流程将在短时间内设置和拆除大量套接字&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Increase the number of TCP socket ports available&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root&amp;gt; sudo sysctl -w net.ipv4.ip_local_port_range&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;10000 65000&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Set how long sockets stay in a TIMED_WAIT state when closed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root&amp;gt; sudo sysctl -w net.ipv4.netfilter.ip_conntrack_tcp_timeout_time_wait&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;禁用-swappingdisable-swapping&#34;&gt;禁用 Swapping|Disable Swapping&lt;/h2&gt;
+&lt;p&gt;Swapping 对某些应用很好，但不适用一直在运行的NIFI，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root&amp;gt; /etc/sysctl.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vm.swappiness &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
+        <link>https://hostenwang.github.io/p/nifi-introduction/</link>
+        <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-introduction/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;
+&lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
+&lt;h2 id=&#34;关键特性和实现原理简述&#34;&gt;关键特性和实现原理简述&lt;/h2&gt;
+&lt;h3 id=&#34;flow-managerment&#34;&gt;Flow Managerment&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;确保数据发送成功：这是必须必须必须达到的。这通过有效使用基于目标的持久化提前写入log和&lt;code&gt;Content Repostory&lt;/code&gt;实现的。&lt;/li&gt;
+&lt;li&gt;数据缓存：NIFI支持缓存queued数据。所以当queue达到上限的时候，或者age达到指定的时间的时候，会进行缓存。&lt;/li&gt;
+&lt;li&gt;优先队列：可以选择数据分别到达最老得，最新的，最大的，以及其他状况的队列。&lt;/li&gt;
+&lt;li&gt;数据流Qos：指定数据要在多少秒内处理或者发送，精确控制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ease-of-use&#34;&gt;Ease of Use&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;命令可视化和控制可视化&lt;/li&gt;
+&lt;li&gt;流模板：一个成功的有效的模板可以快速推广到解决其他问题&lt;/li&gt;
+&lt;li&gt;DataProvenance数据源：NIFI对数据源进行自动记录，索引，跟踪。&lt;/li&gt;
+&lt;li&gt;恢复/记录回滚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安全&#34;&gt;安全&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统到系统&lt;/li&gt;
+&lt;li&gt;用户到系统&lt;/li&gt;
+&lt;li&gt;多租户认证(Accessingthe  UI with Multi-Tenant Authorization):就是对用户进行分组，不同的组具有不同的权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;可扩展架构&#34;&gt;可扩展架构&lt;/h3&gt;
+&lt;h4 id=&#34;扩展&#34;&gt;扩展&lt;/h4&gt;
+&lt;p&gt;NIFI的核心原则之一是可扩展。可进行扩展的组建包括processors,controller service, reporting taks, prioritezes, 和customeruser interface.&lt;/p&gt;
+&lt;h4 id=&#34;类加载器隔离&#34;&gt;类加载器隔离&lt;/h4&gt;
+&lt;p&gt;NIFI的各实例之间的通讯协议是s2s。&lt;/p&gt;
+&lt;h3 id=&#34;柔性scaling&#34;&gt;柔性scaling&lt;/h3&gt;
+&lt;h4 id=&#34;scale-out&#34;&gt;scale-out&lt;/h4&gt;
+&lt;p&gt;NIFI单节点的性能是每秒处理百兆级数据，搭建NIFI集群可以提升到每秒处理G级别数据。&lt;/p&gt;
+&lt;h4 id=&#34;scale-up--down&#34;&gt;scale-up &amp;amp; down&lt;/h4&gt;
+&lt;p&gt;可以扩容和缩容&lt;/p&gt;
+&lt;h2 id=&#34;优点&#34;&gt;优点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可图形化编辑、监控整个处理流程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可进行单步调试，在上一个处理环节得出正确结果以后再进入下一个处理环节。可以通过Data Provenance追踪数据的完整处理过程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对数据有back pressure机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在运行过程中可随时修改流程中的各个处理环节，调整资源使用量而不必中断整个流程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有丰富的接口及数据处理机制（expression language），数据类型转换机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拥有rest接口，通过该接口可进行进一步应用开发&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于使用文件作为载体，对所处理数据的大小基本无限制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于大数据结构、批量数据处理具有一定优势&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;apache-nifi-源码学习&#34;&gt;Apache NiFI 源码学习&lt;/h2&gt;
+&lt;p&gt;可以参考&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://liutaohua.github.io/2017/08/31/nifi-server/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NiFiServer启动流程(3) — 刘涛华&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://liutaohua.github.io/2017/08/31/nifi-start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NiFi引导性启动代码分析(1) — 刘涛华&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nifi.apache.org/docs/nifi-docs/html/nifi-in-depth.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>将 Apache NiFi 用于 ETL |Use Apache NiFi in ETL</title>
+        <link>https://hostenwang.github.io/p/use-nifi-in-etl/</link>
+        <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/use-nifi-in-etl/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ETL 通俗定义: 在数据源抽取后首先进行转换，然后将转换的结果写入目的地&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nifi&lt;/td&gt;
+&lt;td&gt;1.7.1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;etl-系统设计难点&#34;&gt;ETL 系统设计难点&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;数据源的异构性： 传统 ETL 方案中，企业要通过 ETL 工具或者编写脚本的方式来完成数据源到目的地同步工作。当数据源异构的时候，需要特别考虑 Schema（可以简单理解为数据字段类型）兼容性带来的影响。&lt;/li&gt;
+&lt;li&gt;数据源的动态性： 动态性有两方面含义。一是如何获取数据源的增量；二是如何应对数据源端的 Schema 变化，例如增加列和删除列。&lt;/li&gt;
+&lt;li&gt;任务的可伸缩性： 当面对少量几个数据源，数据增量不过每日几百 MB 的时候，当面对的是成百上千个数据源，或者数据源数据增速很快时。平台不仅要支持单节点的多任务并行，还需要支持节点的水平扩展。此外上游通常会遇到一些吞吐能力较差的数据源，需要能够对读取进行限速，避免对现有业务产生影响。&lt;/li&gt;
+&lt;li&gt;任务的容错性：平台某些节点出现故障的时候，失败的作业必须能够迁移到健康的节点上继续工作。同时，作业的恢复需要实现断点重传，至少不能出现丢失数据，最好能够做到不产生重复的数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;apache-nifi-提供的能力&#34;&gt;Apache NiFi 提供的能力&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;数据源异构型: NiFi 对数据源进行了抽象，数据统一抽象为 record .但是类型支持一般, 需要自研拓展类型支持.目前我厂的 NiFi 已经支持 MySQL, Oracle, SQL Server, PostgreSQL 等主流数据库&lt;/li&gt;
+&lt;li&gt;数据源的动态性:这个 NiFi 支持的一般, 需要额外的机制&lt;/li&gt;
+&lt;li&gt;任务的可伸缩性: (1)NiFi 支持横向拓展和纵向拓展(2)NiFi 原生支持限流&lt;/li&gt;
+&lt;li&gt;任务的容错性:需要自研, 目前我厂设计了错误检测和重传机制.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;p&gt;目前我厂广泛使用 Apache NiFi 作为 ETL 工具, 进行数据采集,转换和写入&lt;/p&gt;
+&lt;p&gt;优势如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;原生组价丰富, 简单使用的场景可以开箱即用&lt;/li&gt;
+&lt;li&gt;部署,二次开发友好&lt;/li&gt;
+&lt;li&gt;社区活跃&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.datapipeline.com/blog/datapipeline-ctochen-su-cong-etldao-elt-aishi-dai-shu-ju-ji-cheng-de-wen-ti-yu-jie-jue-fang-an&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DataPipeline CTO陈肃：从ETL到ELT，AI时代数据集成的问题与解决方案&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

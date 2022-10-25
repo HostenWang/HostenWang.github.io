@@ -1,32 +1,115 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>wmts on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/tags/wmts/</link>
-    <description>Recent content in wmts on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/wmts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OpenLayers 教程 - WMTS(网络地图瓦片服务)|OpenLayers - WMTS(Web Map Tile Service)</title>
-      <link>https://hostenwang.github.io/blog/openlayers/wmts/</link>
-      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/openlayers/wmts/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;WMTS，即Web地图瓦片服务（Web Map Tile Service），由OGC（开放地理信息联盟）制定。根据WMTS标准，可以使我们轻松的访问瓦片数据。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>WebGIS 系列 - 网络地图切片服务|WebGIS - WMTS(Web Map Tile Service)</title>
-      <link>https://hostenwang.github.io/blog/webgis/wmts/</link>
-      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/webgis/wmts/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;WMTS 是 OGC 提出的缓存技术标准，即在服务器端缓存被切割成一定大小瓦片的地图，对客户端只提供这些预先定义好的单个瓦片的服务，将更多的数据处理操作如图层叠加等放在客户端，从而缓解 GIS 服务器端数据处理的压力，改善用户体验。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>wmts on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/wmts/</link>
+        <description>Recent content in wmts on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/wmts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OpenLayers - WMTS(网络地图瓦片服务)|OpenLayers - WMTS(Web Map Tile Service)</title>
+        <link>https://hostenwang.github.io/p/openlayers-wmts-web-map-tile-service/</link>
+        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/openlayers-wmts-web-map-tile-service/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;WMTS，即Web地图瓦片服务（Web Map Tile Service），由OGC（开放地理信息联盟）制定。根据WMTS标准，可以使我们轻松的访问瓦片数据。&lt;/p&gt;
+&lt;p&gt;WMTS提供了一种采用预定义地图瓦片发布数字地图服务的标准化解决方案，它最重要的特征是采用瓦片缓存技术缓解WebGIS服务器端数据处理的压力，提高前后端交互响应速度。&lt;/p&gt;
+&lt;p&gt;WMS（Web地图服务）提供可定制地图的服务，是一个动态数据或用户定制地图（需结合SLD-Style Layer Descriptor）的理想解决方法。例如，可以在GeoServer中通过修改SLD样式文件来随时自定义地图样式：&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenLayers&lt;/td&gt;
+&lt;td&gt;5.3.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/87826787&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenLayers教程：地图标注&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>WebGIS 系列 - 网络地图切片服务|WebGIS - WMTS(Web Map Tile Service)</title>
+        <link>https://hostenwang.github.io/p/webgis-wmts-web-map-tile-service/</link>
+        <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/webgis-wmts-web-map-tile-service/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;WMTS 是 OGC 提出的缓存技术标准，即在服务器端缓存被切割成一定大小瓦片的地图，对客户端只提供这些预先定义好的单个瓦片的服务，将更多的数据处理操作如图层叠加等放在客户端，从而缓解 GIS 服务器端数据处理的压力，改善用户体验。&lt;/p&gt;
+&lt;p&gt;WMTS 提供了一种采用预定义图块方法发布数字地图服务的标准化解决方案。WMTS 弥补了 WMS 不能提供分块地图的不足。WMTS牺牲了提供定制地图的灵活性，代之以通过提供静态数据（基础地图）来增强伸缩性，这些静态数据的范围框和比例尺被限定在各个图块内。这些固定的图块集使得对WMTS服务的实现可以使用一个仅简单返回已有文件的Web服务器即可，同时使得可以利用一些标准的诸如分布式缓存的网络机制实现伸缩性。&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;geoserver&lt;/td&gt;
+&lt;td&gt;2.21.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;wms-vs-wmts&#34;&gt;WMS VS WMTS&lt;/h2&gt;
+&lt;p&gt;WMS(Web地图服务)提供可定制地图的服务，是一个动态数据的解决方法。基于SLD(Style Layer Descriptor)可以实现样式丰富的用户定制地图, 且修改后立即生效, 因为WMS的地图数据并没有通过切片放置到硬盘中，它的地图数据是实时处理并传输到客户端的。&lt;/p&gt;
+&lt;p&gt;WMTS标准需要地图数据切片后放置在硬盘中，然后再调用数据传输到客户端。&lt;/p&gt;
+&lt;p&gt;WMTS牺牲了提供定制地图的灵活性，代之以通过提供静态数据（瓦片地图）来增强伸缩性，这些静态数据的范围框和比例尺被限定在瓦片坐标系中。这些固定的瓦片地图数据集使得对WMTS服务的实现可以使用一个仅简单返回已有文件的Web服务器即可，同时使得可以利用一些标准诸如分布式缓存的网络机制实现伸缩性。&lt;/p&gt;
+&lt;h2 id=&#34;wmts-接口&#34;&gt;WMTS 接口&lt;/h2&gt;
+&lt;h3 id=&#34;格式&#34;&gt;格式&lt;/h3&gt;
+&lt;p&gt;支持RESTful和KVP访问&lt;/p&gt;
+&lt;h2 id=&#34;支持的三类资源&#34;&gt;支持的三类资源&lt;/h2&gt;
+&lt;h3 id=&#34;基于-gettile-获取地图瓦片服务端必须实现&#34;&gt;基于 GetTile 获取地图瓦片,服务端必须实现&lt;/h3&gt;
+&lt;p&gt;图块资源表示一个图层的地图表达结果的一小块&lt;/p&gt;
+&lt;h3 id=&#34;基于-getcapabilities-获取服务元数据服务端必须实现&#34;&gt;基于 GetCapabilities 获取服务元数据,服务端必须实现&lt;/h3&gt;
+&lt;p&gt;元数据描述该服务的功能和包含的信息&lt;/p&gt;
+&lt;h3 id=&#34;基于-getfeatureinfo-获取要素信息服务端可选实现&#34;&gt;基于 GetFeatureInfo 获取要素信息,服务端可选实现&lt;/h3&gt;
+&lt;p&gt;提供了图块地图中某一特定像素位置处地物要素的信息&lt;/p&gt;
+&lt;h2 id=&#34;天地图wmts&#34;&gt;天地图WMTS&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.tianditu.gov.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天地图官网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://lbs.tianditu.gov.cn/authorization/authorization.html#example&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;申请key&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;我厂使用 QGIS 修改 SLD, 非常方便&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhoulujun.cn/html/GIS/GIS-Science/8217.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OGC标准WMTS服务概念与地图商的瓦片编号流派-web地图切片加载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/nodegis/p/10233259.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天地图OGC WMTS服务规则&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/81258050&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenLayers教程：多源数据加载之WMTS&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

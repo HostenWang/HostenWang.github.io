@@ -1,22 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Radio on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/categories/radio/</link>
-    <description>Recent content in Radio on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Tue, 22 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/radio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview</title>
-      <link>https://hostenwang.github.io/blog/misc/tdoa-overview/</link>
-      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/misc/tdoa-overview/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Radio on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/categories/radio/</link>
+        <description>Recent content in Radio on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 22 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/radio/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>TDOA时间差定位法概述|Time Difference of Arrival Positioning Overview</title>
+        <link>https://hostenwang.github.io/p/time-difference-of-arrival-positioning-overview/</link>
+        <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/time-difference-of-arrival-positioning-overview/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置&lt;/p&gt;
+&lt;p&gt;此处记录我厂在 TDOA 上的一些使用心得.&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Qt&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;主流定位技术概述&#34;&gt;主流定位技术概述&lt;/h2&gt;
+&lt;p&gt;对无线电信号源主要的定位方法包括两大类：复合角度定位法和时间差定位法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;复合角度定位法基于无线电测向工作，通过多个无线电监测设备对同一个信号进行测向，利用测向射线（角度）的交会进行定位。&lt;/li&gt;
+&lt;li&gt;时间差定位法则基于信号到达监测设备的时间，通过时间距离换算进行交会定位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tdoa-概述&#34;&gt;TDOA 概述&lt;/h2&gt;
+&lt;p&gt;TDOA（Time difference of Arrival）是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的距离。利用信号源到多个无线电监测设备的距离（以无线电监测设备为中心，距离为半径作圆），就能确定信号的位置。通过比较信号到达多个监测设备的时间差，就能作出以监测设备为焦点、距离差为长轴的双曲线，双曲线的交点就是信号的位置&lt;/p&gt;
+&lt;p&gt;TDOA 是基于多站点的定位系统，因此要对信号进行定位必须有至少3 个以上的监测设备进行同时测量。而每个监测设备的组成则相对比较简单，主要包括接收机，天线和时间同步模块。理论上现有的监测设备只要具有时间同步模块就能升级成为TDOA 监测站，而不需要复杂的技术改造。&lt;/p&gt;
+&lt;p&gt;相比复合角度的定位方法，TDOA 有以下的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TDOA 不存在相位模糊的问题，因此测向基线可以不受限制。传统的测向方法需要通过相位来计算方位角，而相位测量存在2π 周期的不确定性，所以往往利用天线基线小于信号波长的方法来避免2π 周期的回绕。但是高频信号的波长较短，使得测试天线的距离较近，容易产生信号耦合，使得测量产生误差。而每个TDOA 监测设备只需一个天线，从根本上解决了信号耦合的问题。&lt;/li&gt;
+&lt;li&gt;TDOA 系统复杂度低。对于TDOA 监测设备，只需配置监测天线和接收机即可，而且对于天线的要求不高，即便不同的监测点用不同的天线也没有关系。而测向天线本身就是一组天线组成的天线阵列，并且阵列中各个天线的性能尽可能保持一致，否则会对测向的准确度带来影响，从而使系统成本较高，不利于广泛开展监测。&lt;/li&gt;
+&lt;li&gt;TDOA 系统定位的精度较高。对于TDOA 检测站而言其定位精度取决于时间测量的准确程度。通过优化后的算法，时间差的计算误差在100ns 量级，从定位的准确度来说大约是30m。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;综上所述，TDOA 定位是一个稳定可靠的基于网络化的定位方式。&lt;/p&gt;
+&lt;p&gt;优势:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;天线简单&lt;/li&gt;
+&lt;li&gt;定位精度高&lt;/li&gt;
+&lt;li&gt;对环境要求低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;劣势:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设备要求高. 需要多站联合检测, 单台设备和组合的设备要求比测向方案的要求更高&lt;/li&gt;
+&lt;li&gt;技术要求高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;p&gt;我厂目前基于 TDOA 做定位, 面向高精度定位应用的场景&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

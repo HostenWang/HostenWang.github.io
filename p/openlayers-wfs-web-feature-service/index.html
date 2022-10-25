@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Overview OpenLayers 支持OGC的WFS规范，可以基于WFS来对空间数据进行增查改删
+'>
+<title>OpenLayers - WFS(网络要素服务|Web Feature Service)</title>
+
+<link rel='canonical' href='https://hostenwang.github.io/p/openlayers-wfs-web-feature-service/'>
+
+<link rel="stylesheet" href="/scss/style.min.711787006ce766a1813dd794147899ff920bd0c64d42fbc94a978bb6e117ca65.css"><meta property='og:title' content='OpenLayers - WFS(网络要素服务|Web Feature Service)'>
+<meta property='og:description' content='概述|Overview OpenLayers 支持OGC的WFS规范，可以基于WFS来对空间数据进行增查改删
+'>
+<meta property='og:url' content='https://hostenwang.github.io/p/openlayers-wfs-web-feature-service/'>
+<meta property='og:site_name' content='Nerver Forget Why You Started'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='gis' /><meta property='article:tag' content='web' /><meta property='article:tag' content='webgis' /><meta property='article:tag' content='wfs' /><meta property='article:tag' content='ogc' /><meta property='article:tag' content='OpenLayers' /><meta property='article:published_time' content='2022-04-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-04-01T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="OpenLayers - WFS(网络要素服务|Web Feature Service)">
+<meta name="twitter:description" content="概述|Overview OpenLayers 支持OGC的WFS规范，可以基于WFS来对空间数据进行增查改删
+">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu06f28ed77c34952e63d738f73d7d0dfd_28689_300x0_resize_box_3.png" width="300"
+                            height="318" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Nerver Forget Why You Started</a></h1>
+            <h2 class="site-description">全栈开发工程师, 数据开发工程师, 开源爱好者, 生活探险家</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/hostenwang'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hostenwang.github.io/" selected>English</option>
+                        
+                            <option value="https://hostenwang.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#概述overview">概述|Overview</a></li>
+    <li><a href="#环境environment">环境|Environment</a></li>
+    <li><a href="#使用-wfs-getfeature-查询要素">使用 WFS GetFeature 查询要素</a></li>
+    <li><a href="#使用-wfs-transaction-修改要素">使用 WFS Transaction 修改要素</a></li>
+    <li><a href="#使用-wfs-transaction--添加要素">使用 WFS Transaction  添加要素</a></li>
+    <li><a href="#使用-wfs-transaction-删除要素">使用 WFS Transaction 删除要素</a></li>
+    <li><a href="#未来展望further">未来展望|Further</a></li>
+    <li><a href="#参考references">参考|References</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/openlayers/" >
+                OpenLayers
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/openlayers-wfs-web-feature-service/">OpenLayers - WFS(网络要素服务|Web Feature Service)</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 01, 2022</time>
+            </div>
+        
+
+    
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="概述overview">概述|Overview</h2>
+<p>OpenLayers 支持OGC的WFS规范，可以基于WFS来对空间数据进行增查改删</p>
+<p>记录我厂使用 WFS 的经验</p>
+<h2 id="环境environment">环境|Environment</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>10 home x64</td>
+<td></td>
+</tr>
+<tr>
+<td>geoserver</td>
+<td>2.21.0</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="使用-wfs-getfeature-查询要素">使用 WFS GetFeature 查询要素</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;map&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">vectorLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 解析从服务器端发过来的GeoJSON数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">format</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">GeoJSON</span><span class="p">(),</span>            
+</span></span><span class="line"><span class="cl">                <span class="c1">// 设置KVP格式的请求URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&#39;</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;&amp;TYPENAME=demo:world&amp;OUTPUTFORMAT=application/json&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 关联到对应的div容器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>                          
+</span></span><span class="line"><span class="cl">            <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Tile</span><span class="p">({</span>                 
+</span></span><span class="line"><span class="cl">                    <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Stamen</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">layer</span><span class="o">:</span> <span class="s1">&#39;basemap&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">view</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">View</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">projection</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mi">114</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">zoom</span><span class="o">:</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-wfs-transaction-修改要素">使用 WFS Transaction 修改要素</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span><span class="lnt">99
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;save&#34;</span><span class="p">&gt;</span>保存修改<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;map&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      	<span class="c1">// 用于保存被修改的要素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">modifiedFeatures</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>    
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">save</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;save&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">vectorLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">              	<span class="c1">// // 用于解析从服务器端发过来的GeoJSON数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">format</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">GeoJSON</span><span class="p">({</span>    
+</span></span><span class="line"><span class="cl">                    <span class="nx">geometryName</span><span class="o">:</span> <span class="s1">&#39;geom&#39;</span>           <span class="c1">// 注意：这里图形信息字段一定要和后端服务器一致
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="p">}),</span>            
+</span></span><span class="line"><span class="cl">                <span class="c1">// 设置KVP格式的请求URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&#39;</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;&amp;TYPENAME=demo:world&amp;OUTPUTFORMAT=application/json&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Tile</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Stamen</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">layer</span><span class="o">:</span> <span class="s1">&#39;world&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">view</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">View</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">projection</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mi">114</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">zoom</span><span class="o">:</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 选择要素控件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">select</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">interaction</span><span class="p">.</span><span class="nx">Select</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">map</span><span class="p">.</span><span class="nx">addInteraction</span><span class="p">(</span><span class="nx">select</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 修改要素控件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">modify</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">interaction</span><span class="p">.</span><span class="nx">Modify</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">features</span><span class="o">:</span> <span class="nx">select</span><span class="p">.</span><span class="nx">getFeatures</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存修改完成的要素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">modify</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;modifyend&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">modifiedFeatures</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">features</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">map</span><span class="p">.</span><span class="nx">addInteraction</span><span class="p">(</span><span class="nx">modify</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">save</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">features</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">modifiedFeatures</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">updateWFS</span><span class="p">(</span><span class="nx">features</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">function</span> <span class="nx">updateWFS</span><span class="p">(</span><span class="nx">features</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">WFS</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">WFS</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 生成XML格式的WFS请求信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">transact_xml</span> <span class="o">=</span> <span class="nx">WFS</span><span class="p">.</span><span class="nx">writeTransaction</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="kc">null</span><span class="p">,</span> <span class="nx">features</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featureNS</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8084/geoserver/demo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;world&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">srsName</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 将XML格式请求信息序列化为字符串格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">transact_str</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">XMLSerializer</span><span class="p">()).</span><span class="nx">serializeToString</span><span class="p">(</span><span class="nx">transact_xml</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">            <span class="c1">// 使用AJAX将请求发送到后端
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;readystatechange&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span><span class="p">((</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="o">||</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">304</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">let</span> <span class="nx">transactRes</span> <span class="o">=</span> <span class="nx">WFS</span><span class="p">.</span><span class="nx">readTransactionResponse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalInserted</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                                   <span class="s2">&#34; totalInserted!, insertIds: &#34;</span> <span class="o">+</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">insertIds</span> <span class="o">+</span> <span class="s2">&#34;\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">str</span> <span class="o">+=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalUpdated</span> <span class="o">+</span> <span class="s2">&#34; totalUpdated!\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">str</span> <span class="o">+=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalDeleted</span> <span class="o">+</span> <span class="s2">&#34; totalDeleted!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;text/xml&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">transact_str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-wfs-transaction--添加要素">使用 WFS Transaction  添加要素</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;add&#34;</span><span class="p">&gt;</span>添加<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;map&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">drawedFeatures</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">addButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">vectorLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">format</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">GeoJSON</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">geometryName</span><span class="o">:</span> <span class="s1">&#39;geom&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>            
+</span></span><span class="line"><span class="cl">                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&#39;</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;&amp;TYPENAME=demo:world&amp;OUTPUTFORMAT=application/json&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Tile</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Stamen</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">layer</span><span class="o">:</span> <span class="s1">&#39;world&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">view</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">View</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">projection</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mi">114</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">zoom</span><span class="o">:</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 绘制控件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">draw</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">interaction</span><span class="p">.</span><span class="nx">Draw</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">source</span><span class="o">:</span> <span class="nx">vectorLayer</span><span class="p">.</span><span class="nx">getSource</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;MultiPolygon&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">geometryName</span><span class="o">:</span> <span class="s1">&#39;geom&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">draw</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;drawend&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">feature</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">feature</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;格林兰岛&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;popname&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;display&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;extention&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">drawedFeatures</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">feature</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">map</span><span class="p">.</span><span class="nx">addInteraction</span><span class="p">(</span><span class="nx">draw</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">addButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 将绘制的要素添加到后台
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">addFeatureWFS</span><span class="p">(</span><span class="nx">drawedFeatures</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">function</span> <span class="nx">addFeatureWFS</span><span class="p">(</span><span class="nx">features</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">WFS</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">WFS</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 生成XML格式的WFS请求信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">transact_xml</span> <span class="o">=</span> <span class="nx">WFS</span><span class="p">.</span><span class="nx">writeTransaction</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">features</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featureNS</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8080/geoserver/demo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featurePrefix</span><span class="o">:</span> <span class="s1">&#39;demo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;world&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">srsName</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 将XML格式请求信息序列化为字符串格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">transact_str</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">XMLSerializer</span><span class="p">()).</span><span class="nx">serializeToString</span><span class="p">(</span><span class="nx">transact_xml</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">            <span class="c1">// 使用AJAX将请求发送到后端
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;readystatechange&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span><span class="p">((</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="o">||</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">304</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">let</span> <span class="nx">transactRes</span> <span class="o">=</span> <span class="nx">WFS</span><span class="p">.</span><span class="nx">readTransactionResponse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalInserted</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                                 <span class="s2">&#34; totalInserted!, insertIds: &#34;</span> <span class="o">+</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">insertIds</span> <span class="o">+</span> <span class="s2">&#34;\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">str</span> <span class="o">+=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalUpdated</span> <span class="o">+</span> <span class="s2">&#34; totalUpdated!\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">str</span> <span class="o">+=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalDeleted</span> <span class="o">+</span> <span class="s2">&#34; totalDeleted!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">drawedFeatures</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;text/xml&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">transact_str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-wfs-transaction-删除要素">使用 WFS Transaction 删除要素</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;delete&#34;</span><span class="p">&gt;</span>确认删除<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;map&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">deleteBtn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">vectorLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Vector</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">format</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">GeoJSON</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">geometryName</span><span class="o">:</span> <span class="s1">&#39;geom&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>            
+</span></span><span class="line"><span class="cl">                <span class="c1">// 设置KVP格式的请求URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&#39;</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;&amp;TYPENAME=demo:world&amp;OUTPUTFORMAT=application/json&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">Tile</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">source</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">Stamen</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">layer</span><span class="o">:</span> <span class="s1">&#39;watercolor&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">view</span><span class="o">:</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">View</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">projection</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">zoom</span><span class="o">:</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 选择要素控件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">select</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">interaction</span><span class="p">.</span><span class="nx">Select</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">map</span><span class="p">.</span><span class="nx">addInteraction</span><span class="p">(</span><span class="nx">select</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">deleteBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">features</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">select</span><span class="p">.</span><span class="nx">getFeatures</span><span class="p">().</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">vectorLayer</span><span class="p">.</span><span class="nx">getSource</span><span class="p">().</span><span class="nx">removeFeature</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 向后端发送请求，删除要素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">deleteWFS</span><span class="p">(</span><span class="nx">features</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">function</span> <span class="nx">deleteWFS</span><span class="p">(</span><span class="nx">features</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">WFS</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ol</span><span class="p">.</span><span class="nx">format</span><span class="p">.</span><span class="nx">WFS</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 生成XML格式的WFS请求信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">transact_xml</span> <span class="o">=</span> <span class="nx">WFS</span><span class="p">.</span><span class="nx">writeTransaction</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">features</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featureNS</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8080/geoserver/test&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featurePrefix</span><span class="o">:</span> <span class="s1">&#39;demo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;world&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">srsName</span><span class="o">:</span> <span class="s1">&#39;EPSG:3857&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 将XML格式请求信息序列化为字符串格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">transact_str</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">XMLSerializer</span><span class="p">()).</span><span class="nx">serializeToString</span><span class="p">(</span><span class="nx">transact_xml</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">            <span class="c1">// 使用AJAX将请求发送到后端
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;readystatechange&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span><span class="p">((</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="o">||</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">304</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">let</span> <span class="nx">transactRes</span> <span class="o">=</span> <span class="nx">WFS</span><span class="p">.</span><span class="nx">readTransactionResponse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalInserted</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                          <span class="s2">&#34; totalInserted!, insertIds: &#34;</span> <span class="o">+</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">insertIds</span> <span class="o">+</span> <span class="s2">&#34;\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">str</span> <span class="o">+=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalUpdated</span> <span class="o">+</span> <span class="s2">&#34; totalUpdated!\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">str</span> <span class="o">+=</span> <span class="nx">transactRes</span><span class="p">.</span><span class="nx">transactionSummary</span><span class="p">.</span><span class="nx">totalDeleted</span> <span class="o">+</span> <span class="s2">&#34; totalDeleted!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">map</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;http://localhost:8080/geoserver/wfs&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;text/xml&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">transact_str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="未来展望further">未来展望|Further</h2>
+<h2 id="参考references">参考|References</h2>
+<ol>
+<li><a class="link" href="" ></a></li>
+<li></li>
+</ol>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/gis/">gis</a>
+        
+            <a href="/tags/web/">Web</a>
+        
+            <a href="/tags/webgis/">webgis</a>
+        
+            <a href="/tags/wfs/">wfs</a>
+        
+            <a href="/tags/ogc/">ogc</a>
+        
+            <a href="/tags/openlayers/">OpenLayers</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/webgis-wfs-web-feature-service/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/webgis-tile/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WebGIS 系列 - 瓦片地图|WebGIS - Tile</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/openlayers-wmts-web-map-tile-service/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OpenLayers - WMTS(网络地图瓦片服务)|OpenLayers - WMTS(Web Map Tile Service)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/openlayers-map-marking/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OpenLayers - 地图标记|OpenLayers - Map Marking</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/webgis-wmts-web-map-tile-service/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WebGIS 系列 - 网络地图切片服务|WebGIS - WMTS(Web Map Tile Service)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2012 - 
+        
+        2022 Nerver Forget Why You Started
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.15.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>tile on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/tags/tile/</link>
-    <description>Recent content in tile on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tile/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>WebGIS 系列 - 瓦片地图|WebGIS - Tile</title>
-      <link>https://hostenwang.github.io/blog/webgis/tile/</link>
-      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/webgis/tile/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;瓦片地图（也叫切片地图）源于一种大地图解决方案，就是在多个比例尺下配置地图，然后提前把每个比例尺下的地图绘制为小块图片（瓦片），保存在服务器上用于缓存的目录中。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>tile on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/tile/</link>
+        <description>Recent content in tile on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tile/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>WebGIS 系列 - 瓦片地图|WebGIS - Tile</title>
+        <link>https://hostenwang.github.io/p/webgis-tile/</link>
+        <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/webgis-tile/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;瓦片地图（也叫切片地图）源于一种大地图解决方案，就是在多个比例尺下配置地图，然后提前把每个比例尺下的地图绘制为小块图片（瓦片），保存在服务器上用于缓存的目录中。&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;geoserver&lt;/td&gt;
+&lt;td&gt;2.21.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;瓦片&#34;&gt;瓦片&lt;/h3&gt;
+&lt;p&gt;瓦片就是包含地理数据的矩形影像，一幅地图按一定的瓦片大小被切割成多个瓦片，形成瓦片矩阵，一个或多个瓦片矩阵即组成瓦片矩阵集。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/webgis-tile/tile.png&#34;
+	width=&#34;401&#34;
+	height=&#34;346&#34;
+	srcset=&#34;https://hostenwang.github.io/p/webgis-tile/tile_hua46021cf5e3d5f20568594beac973426_34243_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/webgis-tile/tile_hua46021cf5e3d5f20568594beac973426_34243_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;115&#34;
+		data-flex-basis=&#34;278px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;优势和劣势&#34;&gt;优势和劣势&lt;/h2&gt;
+&lt;p&gt;使用瓦片地图, 客户端在访问地图时，可以直接获取需要的小块图片拼接成整幅地图，而不是由服务器动态创建（实时创建）出一幅图片再发送到客户端，从而极大提高了访问速度。&lt;/p&gt;
+&lt;p&gt;瓦片地图的缺点是不能改变图层的符号，可以认为它们是一些&amp;quot;死图片&amp;quot;，不能进行更新。因此，WebGIS中通常的做法是将通用的基础底图图层发布为瓦片，在其上叠加另外的包含专题信息的图层，这种图层结构可以被比喻为&amp;quot;图层三明治&amp;quot;。&lt;/p&gt;
+&lt;h2 id=&#34;地图底图瓦片&#34;&gt;地图底图瓦片&lt;/h2&gt;
+&lt;p&gt;使用 XYZ 这样的坐标来精确定位一张瓦片。即XY表示某个层级内的平面，X为横坐标，Y为纵坐标，类似于数学上常见的笛卡尔坐标系。Z一般表示缩放比率zoom，不同地图商定义有分歧&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;我厂底图使用瓦片地图&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/72316089&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenLayers教程十：多源数据加载之瓦片地图原理二&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

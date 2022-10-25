@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>etl on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/etl/</link>
+        <description>Recent content in etl on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 23 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/etl/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>将 Apache NiFi 用于 ETL |Use Apache NiFi in ETL</title>
+        <link>https://hostenwang.github.io/p/use-nifi-in-etl/</link>
+        <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/use-nifi-in-etl/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ETL 通俗定义: 在数据源抽取后首先进行转换，然后将转换的结果写入目的地&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nifi&lt;/td&gt;
+&lt;td&gt;1.7.1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;etl-系统设计难点&#34;&gt;ETL 系统设计难点&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;数据源的异构性： 传统 ETL 方案中，企业要通过 ETL 工具或者编写脚本的方式来完成数据源到目的地同步工作。当数据源异构的时候，需要特别考虑 Schema（可以简单理解为数据字段类型）兼容性带来的影响。&lt;/li&gt;
+&lt;li&gt;数据源的动态性： 动态性有两方面含义。一是如何获取数据源的增量；二是如何应对数据源端的 Schema 变化，例如增加列和删除列。&lt;/li&gt;
+&lt;li&gt;任务的可伸缩性： 当面对少量几个数据源，数据增量不过每日几百 MB 的时候，当面对的是成百上千个数据源，或者数据源数据增速很快时。平台不仅要支持单节点的多任务并行，还需要支持节点的水平扩展。此外上游通常会遇到一些吞吐能力较差的数据源，需要能够对读取进行限速，避免对现有业务产生影响。&lt;/li&gt;
+&lt;li&gt;任务的容错性：平台某些节点出现故障的时候，失败的作业必须能够迁移到健康的节点上继续工作。同时，作业的恢复需要实现断点重传，至少不能出现丢失数据，最好能够做到不产生重复的数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;apache-nifi-提供的能力&#34;&gt;Apache NiFi 提供的能力&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;数据源异构型: NiFi 对数据源进行了抽象，数据统一抽象为 record .但是类型支持一般, 需要自研拓展类型支持.目前我厂的 NiFi 已经支持 MySQL, Oracle, SQL Server, PostgreSQL 等主流数据库&lt;/li&gt;
+&lt;li&gt;数据源的动态性:这个 NiFi 支持的一般, 需要额外的机制&lt;/li&gt;
+&lt;li&gt;任务的可伸缩性: (1)NiFi 支持横向拓展和纵向拓展(2)NiFi 原生支持限流&lt;/li&gt;
+&lt;li&gt;任务的容错性:需要自研, 目前我厂设计了错误检测和重传机制.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;p&gt;目前我厂广泛使用 Apache NiFi 作为 ETL 工具, 进行数据采集,转换和写入&lt;/p&gt;
+&lt;p&gt;优势如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;原生组价丰富, 简单使用的场景可以开箱即用&lt;/li&gt;
+&lt;li&gt;部署,二次开发友好&lt;/li&gt;
+&lt;li&gt;社区活跃&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.datapipeline.com/blog/datapipeline-ctochen-su-cong-etldao-elt-aishi-dai-shu-ju-ji-cheng-de-wen-ti-yu-jie-jue-fang-an&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DataPipeline CTO陈肃：从ETL到ELT，AI时代数据集成的问题与解决方案&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

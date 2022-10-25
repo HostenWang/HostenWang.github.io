@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>gui on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/categories/gui/</link>
-    <description>Recent content in gui on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/gui/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python GUI 总结|Python GUI Usage</title>
-      <link>https://hostenwang.github.io/blog/python/python-gui-summary/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/python/python-gui-summary/</guid>
-      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+    <channel>
+        <title>gui on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/categories/gui/</link>
+        <description>Recent content in gui on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/gui/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python GUI 总结|Python GUI Usage</title>
+        <link>https://hostenwang.github.io/p/python-gui-summary/</link>
+        <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-gui-summary/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;
+&lt;h2 id=&#34;python-gui-方案缺点&#34;&gt;python gui 方案缺点:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;好的 GUI 模块少&lt;/li&gt;
+&lt;li&gt;表现力不如 基于 WEB 技术的 Electron 方案&lt;/li&gt;
+&lt;li&gt;还是可能出现缺少依赖的情况, 如缺少 C++ 库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结对比&#34;&gt;总结对比&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.python.org/moin/GuiProgramming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wiki.python.org/moin/GuiProgramming&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tkinter-资源&#34;&gt;Tkinter 资源&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ParthJadhav/Tkinter-Designer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/ParthJadhav/Tkinter-Designer&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythongeeks.org/gui-programming-in-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GUI Programming in Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

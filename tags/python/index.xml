@@ -1,87 +1,452 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/tags/python/</link>
-    <description>Recent content in Python on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</title>
-      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</link>
-      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-09-processing-raster-data/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+    <channel>
+        <title>Python on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/python/</link>
+        <description>Recent content in Python on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</title>
+        <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-09-processing-raster-data/</link>
+        <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-09-processing-raster-data/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;栅格数据是一个独特的空间数据类型。很多地理处理工具都是为了处理栅格数据而开发的。&lt;/p&gt;
-&lt;p&gt;Arcpy 中有一个名为 &lt;code&gt;arepy.sa&lt;/code&gt; 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</title>
-      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</link>
-      <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</title>
-      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</link>
-      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-07-using-spatial-data/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
-      <link>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</link>
-      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/arcpy/python-scripting-for-arcgis-00-overview/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Arcpy 中有一个名为 &lt;code&gt;arepy.sa&lt;/code&gt; 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;列出栅格数据&#34;&gt;列出栅格数据&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;LisRasters&lt;/code&gt;函数是以 Python 列表的形式返回工作空间中的棚格数据&lt;/p&gt;
+&lt;h2 id=&#34;描述栅格属性&#34;&gt;描述栅格属性&lt;/h2&gt;
+&lt;p&gt;当使用 Describe 函数描述栅格数据时，除了有一些通用的属性之外，针对不同的栅格元素，还会有一些具有针对性的属性&lt;/p&gt;
+&lt;p&gt;三种不同类型的栅格元素如下所示：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;栅格数据集: 栅格数据集是一种栅格数据模型，它可以存储在磁盘上或者地理数据库中。栅格数据集有多种存储格式，包括TIFF、JPEG、IMAGINE、ErsiGRID和MrSID。栅格数据集可以由单波段组成，也可以由多波段组成。&lt;/li&gt;
+&lt;li&gt;栅格波段: 栅格波段是栅格数据集中的一个图层，代表电磁光谱某个范围内或波段内的值。例如许多卫星影像，包含了多个波段。&lt;/li&gt;
+&lt;li&gt;栅格目录: 栅格目录是以表格形式定义的栅格数据集的集合，目录中的每条记录表示一个栅格数据集。栅格目录通常用于显示相邻、完全重叠或部分重叠的栅格数据集，而无需将它们镶嵌为一个较大的栅格数据集。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;spatial-analyst-模块&#34;&gt;Spatial Analyst 模块&lt;/h2&gt;
+&lt;p&gt;ArcPy 中的 SpatialAnalyst 模块 arcpy.sa 可以用来执行地图代数和其他相关操作。SpatialAnalyst 模块所提供的功能和 SpatialAnalyst工具箱中的工具差不多。&lt;/p&gt;
+&lt;h2 id=&#34;numpy-数组&#34;&gt;NumPy 数组&lt;/h2&gt;
+&lt;p&gt;在 ArcPy 中，还有两个栅格函数需要介绍，分别是 NumPyArrayToRaster 和 RasterToNumPyArray。它们是常规的Arcpy函数，并不是 arcpy.sa 模块里的函数。这两个函数可以在栅格数据和 NumPy 数组之间实现转换。NumPy 数组专门用于处理大型数据矩阵。&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</title>
+        <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-08-processing-geometric-data/</link>
+        <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;处理几何对象&#34;&gt;处理几何对象&lt;/h2&gt;
+&lt;p&gt;要素类中的每一个要素都包含一组用来定义点、线和多边形的折点。这些折点可以通过儿何对象（例如Point、Polyline、PointGeomety和Mulipoint）来访间，并以点对象数组的形式返回。&lt;/p&gt;
+&lt;p&gt;读取全部几何对象需要耗费较长的时间。因此，如果存储几何对象的数据集比较大，那么处理这个数据集的脚本就会运行得很慢。&lt;/p&gt;
+&lt;p&gt;如果仅仅需要该几何对象的某几个属性，可以定义一个“几何短语”来获取几何对象的属性。例如，&lt;code&gt;SHAPE@XY&lt;/code&gt;会返回一组表示要素几何中心的x、y坐标值：&lt;code&gt;SHAPE@LENGTH&lt;/code&gt;会以双精度类型返回要素的长度：&lt;code&gt;SHAPE@&lt;/code&gt;会返回整个几何对象。&lt;/p&gt;
+&lt;h2 id=&#34;处理多部分要素&#34;&gt;处理多部分要素&lt;/h2&gt;
+&lt;p&gt;要素类中的要素可以分为多个部分，我们将其称为多部分要素。&lt;/p&gt;
+&lt;p&gt;有时，需要创建由多个部分组成，但只共享一组属性的要素。上述情况下的点要素，称为多点要素；而线要素和多边形要素，则称为多部分要素。&lt;/p&gt;
+&lt;h2 id=&#34;处理有孔洞的多边形&#34;&gt;处理有孔洞的多边形&lt;/h2&gt;
+&lt;p&gt;如果一个多边形内包含孔洞，那说明这个多边形包含很多环：一个外环和若千个内环。&lt;/p&gt;
+&lt;p&gt;环是定义在二维平面上的闭合路径。路径由一系列点构成，其中包含起始点和终止点。而一个有效的环是由一个从起始点到终止点的路径构成，其中起始点和终止点的坐标相同。顺时针定义的是一个外部环，逆时针定义的是一个内部环。&lt;/p&gt;
+&lt;p&gt;对于一个含有孔洞的多边形，访间几何对象时将会返回一个包含外环和所有内环的点对象的数组。首先返回外环，其次返回所有内环。环和环之问用空的点对象分开。&lt;/p&gt;
+&lt;h2 id=&#34;使用游标设置空间参考&#34;&gt;使用游标设置空间参考&lt;/h2&gt;
+&lt;p&gt;要素类的空间参考描述了要素类的坐标系、空间域和精度。&lt;/p&gt;
+&lt;p&gt;通常情况下，要素类的空间参考是在创建要素类的时候进行设置。但是空间参考并不是必选参数，如果要素类中没有设置空间参考，其空间参考的值为 unknown。此时，需要使用 DefineProjection 工具来定义该要素类的空间参考。&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</title>
+        <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-07-using-spatial-data/</link>
+        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-07-using-spatial-data/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;使用游标访问数据&#34;&gt;使用游标访问数据&lt;/h2&gt;
+&lt;p&gt;使用游标可以遍历属性表中的每一行数据。&lt;/p&gt;
+&lt;p&gt;游标是一个数据库术语，它主要用于访问表格中的每一行记录或者向表中插入新的记录。在表格中，一条记录也被称为一行。在ArcGIS中，游标通常用于从表中或向表中按行读取或写入新几何结构。&lt;/p&gt;
+&lt;p&gt;游标有三种形式：搜索、插入和更新。这三种游标的功能如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;搜索游标可用于检索行。&lt;/li&gt;
+&lt;li&gt;插入游标可用于向表或要素类中插入行。&lt;/li&gt;
+&lt;li&gt;更新游标可用于根据位置更新和删除行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;每种类型的游标均由 arepy.da 模块中对应的 Arcpy 函数（SearchCursor、InsertCursor 和 UpdateCursor）创建。所有这三种游标可以在表、表格视图、要素类或要素图层上进行操作。&lt;/p&gt;
+&lt;p&gt;插入游标和更新游标均支持编辑操作。在 ArcGIS 地理处理框架中，创建游标对象的同时会在属性表上添加一个锁。这个锁能够防止多个进程同时更改同一个属性表。锁有两种类型：共享锁和排他锁。&lt;/p&gt;
+&lt;h2 id=&#34;在-python-中使用-sql&#34;&gt;在 Python 中使用 SQL&lt;/h2&gt;
+&lt;p&gt;在地理处理中，经常需要使用结构化查询语言（SQL）查询数据。SQL 可以定义一个或多个由属性、运算符和算式组成的条件语句。&lt;/p&gt;
+&lt;h2 id=&#34;处理表和字段名&#34;&gt;处理表和字段名&lt;/h2&gt;
+&lt;p&gt;在处理不同的数据集时，要确保每个属性表和字段都有一个有效且唯一的名称，特别是在地理数据库中创建数据时。这样做可以避免数据被覆盖&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
+        <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/</link>
+        <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/</guid>
+        <description>&lt;img src="https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/arcgis.jpg" alt="Featured image of post 面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview" /&gt;&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
-&lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Python GUI 总结|Python GUI Usage</title>
-      <link>https://hostenwang.github.io/blog/python/python-gui-summary/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/python/python-gui-summary/</guid>
-      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;
+&lt;p&gt;目前，Python 已经成为 GIS 专业人员的一个基本工具。他们使用 Python 来扩展 ArcGIS 的功能并实现任务的自动化。&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;开发更多贴近业务的工具, 提高业务员效率&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
+        <link>https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/</link>
+        <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。&lt;/p&gt;
+&lt;p&gt;记录两个环境共存的配置&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python3&lt;/td&gt;
+&lt;td&gt;3.2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;py-方式&#34;&gt;py 方式&lt;/h2&gt;
+&lt;h3 id=&#34;脚本调用&#34;&gt;脚本调用&lt;/h3&gt;
+&lt;p&gt;手动指定&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;py -2 helloworld.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;py -3 helloworld.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在脚本内第一行指定版本, 然后执行 &lt;code&gt;py helloworld.py&lt;/code&gt; 即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#! python3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;pip&#34;&gt;pip&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;py -2 -m pip install watermark-painter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;py -3 -m pip install watermark-painter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;pyenv-方式&#34;&gt;pyenv 方式&lt;/h2&gt;
+&lt;p&gt;略&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;感觉还是太复杂, 希望以后有更好的切换方式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Python GUI 总结|Python GUI Usage</title>
+        <link>https://hostenwang.github.io/p/python-gui-summary/</link>
+        <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-gui-summary/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
-      <link>https://hostenwang.github.io/blog/python/how-to-install-both-python2-and-python3-in-windows/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/python/how-to-install-both-python2-and-python3-in-windows/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Python pip 使用总结|Python pip Usage</title>
-      <link>https://hostenwang.github.io/blog/python/python-pip-usage/</link>
-      <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/python/python-pip-usage/</guid>
-      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;p&gt;python pip 常用命令小结&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;
+&lt;h2 id=&#34;python-gui-方案缺点&#34;&gt;python gui 方案缺点:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;好的 GUI 模块少&lt;/li&gt;
+&lt;li&gt;表现力不如 基于 WEB 技术的 Electron 方案&lt;/li&gt;
+&lt;li&gt;还是可能出现缺少依赖的情况, 如缺少 C++ 库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结对比&#34;&gt;总结对比&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.python.org/moin/GuiProgramming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wiki.python.org/moin/GuiProgramming&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tkinter-资源&#34;&gt;Tkinter 资源&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ParthJadhav/Tkinter-Designer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/ParthJadhav/Tkinter-Designer&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythongeeks.org/gui-programming-in-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GUI Programming in Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Python pip 使用总结|Python pip Usage</title>
+        <link>https://hostenwang.github.io/p/python-pip-usage/</link>
+        <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-pip-usage/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;python pip 常用命令小结&lt;/p&gt;
+&lt;h2 id=&#34;安装卸载&#34;&gt;安装卸载&lt;/h2&gt;
+&lt;h3 id=&#34;安装时临时换源&#34;&gt;安装时临时换源&lt;/h3&gt;
+&lt;p&gt;配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#清华源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tuna&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tsinghua&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;edu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 阿里源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mirrors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;aliyun&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 腾讯源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mirrors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cloud&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tencent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 豆瓣源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;douban&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;永久换源&#34;&gt;永久换源&lt;/h3&gt;
+&lt;p&gt;配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 清华源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tuna&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tsinghua&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;edu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 阿里源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mirrors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;aliyun&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 腾讯源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mirrors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cloud&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tencent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 豆瓣源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pypi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;douban&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simple&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 换回默认源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unset&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;导出依赖&#34;&gt;导出依赖&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;freeze&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requirements&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;卸载&#34;&gt;卸载&lt;/h2&gt;
+&lt;h3 id=&#34;单个卸载&#34;&gt;单个卸载&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uninstall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;批量卸载&#34;&gt;批量卸载&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# If we want to remove all at once then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uninstall&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requirements&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uninstall&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requirements&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;txt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;虚拟环境&#34;&gt;虚拟环境&lt;/h2&gt;
+&lt;p&gt;virtualenv 使用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建一个名字为envname的虚拟环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;virtualenv envname   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看当前目录可以知道一个envname的文件已经被创建&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dir     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果安装了多个python版本，如py2和py3，需要指定使用哪个创建虚拟环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;virtualenv -p python2 envname  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;qa&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
+&lt;h3 id=&#34;the-script-automat-visualizeexe--is-not-on-path&#34;&gt;The script automat-visualize.exe  is not on PATH.&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=/usr/local/python3/bin:$PATH&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt;~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

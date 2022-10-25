@@ -1,32 +1,173 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>apache on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/tags/apache/</link>
-    <description>Recent content in apache on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
-      <link>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</link>
-      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/nifi/nifi-skill-points/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
-      <link>https://hostenwang.github.io/blog/nifi/introduction/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/nifi/introduction/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>apache on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/apache/</link>
+        <description>Recent content in apache on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
+        <link>https://hostenwang.github.io/p/nifi-skill-points/</link>
+        <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-skill-points/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;
+&lt;h2 id=&#34;原理和架构&#34;&gt;原理和架构&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Apache NiFi 的功能概述&lt;/li&gt;
+&lt;li&gt;Apache NiFi 原理和架构&lt;/li&gt;
+&lt;li&gt;Apache NiFi 基本模块介绍&lt;/li&gt;
+&lt;li&gt;Apache NiFi Groups、Processor、queue和connector模块介绍&lt;/li&gt;
+&lt;li&gt;Apache NiFi toolbar 界面演示&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安装和配置&#34;&gt;安装和配置&lt;/h2&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Apache NiFi 单机版安装&lt;/li&gt;
+&lt;li&gt;Apache NiFi 分布式安装&lt;/li&gt;
+&lt;li&gt;数据丢失容错和保证交付&lt;/li&gt;
+&lt;li&gt;低延迟和高吞吐量&lt;/li&gt;
+&lt;li&gt;动态优先级&lt;/li&gt;
+&lt;li&gt;运行时修改流文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;gui-操作介绍&#34;&gt;GUI 操作介绍&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;设计、控制和监视&lt;/li&gt;
+&lt;li&gt;processor的create、stop、start、restart、delete等操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;自带处理器介绍&#34;&gt;自带处理器介绍&lt;/h2&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;NiFi Processor的原理和功能&lt;/li&gt;
+&lt;li&gt;Kafka Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;ES Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;Hbase Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;Hdfs Processor、spark Streaming实战&lt;/li&gt;
+&lt;li&gt;JDBC Processor介绍和实战&lt;/li&gt;
+&lt;li&gt;FTP、Http、XML、Json Processor介绍和实战&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;创建数据流&#34;&gt;创建数据流&lt;/h2&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;创建发送/接收目录&lt;/li&gt;
+&lt;li&gt;getFile和putFile Processor创建&lt;/li&gt;
+&lt;li&gt;创建复制文件从发送放到接收&lt;/li&gt;
+&lt;li&gt;创建Queue队列&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;创建高级数据流&#34;&gt;创建高级数据流&lt;/h2&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;自定义文件名&lt;/li&gt;
+&lt;li&gt;添加自定义属性&lt;/li&gt;
+&lt;li&gt;添加正则表达式&lt;/li&gt;
+&lt;li&gt;实现Path过滤规则&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安全&#34;&gt;安全&lt;/h2&gt;
+&lt;ol start=&#34;18&#34;&gt;
+&lt;li&gt;创建用户、用户组、角色&lt;/li&gt;
+&lt;li&gt;SSL,SSH,HTTPS加密认证&lt;/li&gt;
+&lt;li&gt;可插拔的基于角色的验证/授权&lt;/li&gt;
+&lt;li&gt;基于webUI的SLA认证授权&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;集群配置和管理&#34;&gt;集群配置和管理&lt;/h2&gt;
+&lt;ol start=&#34;22&#34;&gt;
+&lt;li&gt;Apache NiFi集群添加节点&lt;/li&gt;
+&lt;li&gt;删除节点&lt;/li&gt;
+&lt;li&gt;Apache NiFi 性能优化&lt;/li&gt;
+&lt;li&gt;Slaves 节点的负载均衡配置&lt;/li&gt;
+&lt;li&gt;制定特定的 Processor 到特定的 node 节点&lt;/li&gt;
+&lt;li&gt;集群动态负载均衡配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;用户自定义处理器&#34;&gt;用户自定义处理器&lt;/h2&gt;
+&lt;ol start=&#34;28&#34;&gt;
+&lt;li&gt;自定义处理器开发&lt;/li&gt;
+&lt;li&gt;自定义处理器部署&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;实战&#34;&gt;实战&lt;/h2&gt;
+&lt;ol start=&#34;30&#34;&gt;
+&lt;li&gt;Apache NiFi 在数据中台的使用&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
+        <link>https://hostenwang.github.io/p/nifi-introduction/</link>
+        <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-introduction/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;
+&lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
+&lt;h2 id=&#34;关键特性和实现原理简述&#34;&gt;关键特性和实现原理简述&lt;/h2&gt;
+&lt;h3 id=&#34;flow-managerment&#34;&gt;Flow Managerment&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;确保数据发送成功：这是必须必须必须达到的。这通过有效使用基于目标的持久化提前写入log和&lt;code&gt;Content Repostory&lt;/code&gt;实现的。&lt;/li&gt;
+&lt;li&gt;数据缓存：NIFI支持缓存queued数据。所以当queue达到上限的时候，或者age达到指定的时间的时候，会进行缓存。&lt;/li&gt;
+&lt;li&gt;优先队列：可以选择数据分别到达最老得，最新的，最大的，以及其他状况的队列。&lt;/li&gt;
+&lt;li&gt;数据流Qos：指定数据要在多少秒内处理或者发送，精确控制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ease-of-use&#34;&gt;Ease of Use&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;命令可视化和控制可视化&lt;/li&gt;
+&lt;li&gt;流模板：一个成功的有效的模板可以快速推广到解决其他问题&lt;/li&gt;
+&lt;li&gt;DataProvenance数据源：NIFI对数据源进行自动记录，索引，跟踪。&lt;/li&gt;
+&lt;li&gt;恢复/记录回滚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安全&#34;&gt;安全&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统到系统&lt;/li&gt;
+&lt;li&gt;用户到系统&lt;/li&gt;
+&lt;li&gt;多租户认证(Accessingthe  UI with Multi-Tenant Authorization):就是对用户进行分组，不同的组具有不同的权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;可扩展架构&#34;&gt;可扩展架构&lt;/h3&gt;
+&lt;h4 id=&#34;扩展&#34;&gt;扩展&lt;/h4&gt;
+&lt;p&gt;NIFI的核心原则之一是可扩展。可进行扩展的组建包括processors,controller service, reporting taks, prioritezes, 和customeruser interface.&lt;/p&gt;
+&lt;h4 id=&#34;类加载器隔离&#34;&gt;类加载器隔离&lt;/h4&gt;
+&lt;p&gt;NIFI的各实例之间的通讯协议是s2s。&lt;/p&gt;
+&lt;h3 id=&#34;柔性scaling&#34;&gt;柔性scaling&lt;/h3&gt;
+&lt;h4 id=&#34;scale-out&#34;&gt;scale-out&lt;/h4&gt;
+&lt;p&gt;NIFI单节点的性能是每秒处理百兆级数据，搭建NIFI集群可以提升到每秒处理G级别数据。&lt;/p&gt;
+&lt;h4 id=&#34;scale-up--down&#34;&gt;scale-up &amp;amp; down&lt;/h4&gt;
+&lt;p&gt;可以扩容和缩容&lt;/p&gt;
+&lt;h2 id=&#34;优点&#34;&gt;优点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可图形化编辑、监控整个处理流程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可进行单步调试，在上一个处理环节得出正确结果以后再进入下一个处理环节。可以通过Data Provenance追踪数据的完整处理过程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对数据有back pressure机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在运行过程中可随时修改流程中的各个处理环节，调整资源使用量而不必中断整个流程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有丰富的接口及数据处理机制（expression language），数据类型转换机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拥有rest接口，通过该接口可进行进一步应用开发&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于使用文件作为载体，对所处理数据的大小基本无限制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于大数据结构、批量数据处理具有一定优势&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;apache-nifi-源码学习&#34;&gt;Apache NiFI 源码学习&lt;/h2&gt;
+&lt;p&gt;可以参考&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://liutaohua.github.io/2017/08/31/nifi-server/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NiFiServer启动流程(3) — 刘涛华&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://liutaohua.github.io/2017/08/31/nifi-start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NiFi引导性启动代码分析(1) — 刘涛华&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nifi.apache.org/docs/nifi-docs/html/nifi-in-depth.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

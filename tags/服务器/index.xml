@@ -1,22 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>服务器 on 不忘初心,永远忠诚</title>
-    <link>https://hostenwang.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-    <description>Recent content in 服务器 on 不忘初心,永远忠诚</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>Copyright © 2022</copyright>
-    <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>简单的服务器安全加固策略|Simple Server Security Reinforcement</title>
-      <link>https://hostenwang.github.io/blog/ops/simple-server-security-reinforcement/</link>
-      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://hostenwang.github.io/blog/ops/simple-server-security-reinforcement/</guid>
-      <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;即使服务器规模不大, 安全问题还是要重视&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>服务器 on Nerver Forget Why You Started</title>
+        <link>https://hostenwang.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <description>Recent content in 服务器 on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>简单的服务器安全加固策略|Simple Server Security Reinforcement</title>
+        <link>https://hostenwang.github.io/p/simple-server-security-reinforcement/</link>
+        <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/simple-server-security-reinforcement/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;即使服务器规模不大, 安全问题还是要重视&lt;/p&gt;
+&lt;h2 id=&#34;信息安全涉及的领域&#34;&gt;信息安全涉及的领域&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;终端安全
+&lt;ol&gt;
+&lt;li&gt;病毒防护, 补丁分发, 软件管理&lt;/li&gt;
+&lt;li&gt;办公上网行为管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;应用安全
+&lt;ol&gt;
+&lt;li&gt;应用漏洞扫描&lt;/li&gt;
+&lt;li&gt;应用数据灾备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;主机安全
+&lt;ol&gt;
+&lt;li&gt;漏洞扫描, 安全配置&lt;/li&gt;
+&lt;li&gt;主机日志收集&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;网络安全
+&lt;ol&gt;
+&lt;li&gt;网络漏洞, 安全配置&lt;/li&gt;
+&lt;li&gt;网络访问策略&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;数据安全
+&lt;ol&gt;
+&lt;li&gt;敏感数据防护&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;应急监测
+&lt;ol&gt;
+&lt;li&gt;监控和通知&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本次只关注 主机安全和&lt;/p&gt;
+&lt;h2 id=&#34;主机安全加固策略&#34;&gt;主机安全加固策略:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;系统更新&lt;/li&gt;
+&lt;li&gt;补丁更新(确认开启自动更新)&lt;/li&gt;
+&lt;li&gt;防火墙&lt;/li&gt;
+&lt;li&gt;远程登录&lt;/li&gt;
+&lt;li&gt;用户弱口令检查&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/h2zZhou/p/9666966.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一个人的安全部之企业信息安全建设规划&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
