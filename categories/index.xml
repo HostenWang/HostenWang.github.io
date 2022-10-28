@@ -20,7 +20,8 @@
         <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/geoserver/</guid>
-        <description></description>
+        <description>&lt;img src="https://hostenwang.github.io/categories/geoserver/geoserver.png" alt="Featured image of post geoserver" /&gt;&lt;p&gt;记录我厂使用 GeoServer 的经验&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>OpenLayers</title>
@@ -53,6 +54,15 @@
         
         <guid>https://hostenwang.github.io/categories/yonyou/</guid>
         <description></description>
+        </item>
+        <item>
+        <title>用友NC开发</title>
+        <link>https://hostenwang.github.io/categories/yonyou-nc-development/</link>
+        <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/categories/yonyou-nc-development/</guid>
+        <description>&lt;img src="https://hostenwang.github.io/categories/yonyou-nc-development/yonyou.png" alt="Featured image of post 用友NC开发" /&gt;&lt;p&gt;记录我厂用友NC开发的经验&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>arcpy</title>
@@ -119,12 +129,13 @@
         <description></description>
         </item>
         <item>
-        <title>oracle</title>
+        <title>Oracle Database</title>
         <link>https://hostenwang.github.io/categories/oracle/</link>
         <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/oracle/</guid>
-        <description></description>
+        <description>&lt;p&gt;记录我厂使用 Oracle 数据库的经验&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>运维</title>
@@ -135,12 +146,13 @@
         <description></description>
         </item>
         <item>
-        <title>nifi</title>
+        <title>Apache NiFi</title>
         <link>https://hostenwang.github.io/categories/nifi/</link>
         <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/nifi/</guid>
-        <description></description>
+        <description>&lt;img src="https://hostenwang.github.io/categories/nifi/nifi.png" alt="Featured image of post Apache NiFi" /&gt;&lt;p&gt;记录我厂使用 NiFi 的经验&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>frontend</title>

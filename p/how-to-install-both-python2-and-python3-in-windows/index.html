@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Overview 个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。
-'>
-<title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Overview'>
+<title>Python scrapy 爬虫配置</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/'>
 
-<link rel="stylesheet" href="/scss/style.min.711787006ce766a1813dd794147899ff920bd0c64d42fbc94a978bb6e117ca65.css"><meta property='og:title' content='如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows'>
-<meta property='og:description' content='概述|Overview 个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。
-'>
+<link rel="stylesheet" href="/scss/style.min.711787006ce766a1813dd794147899ff920bd0c64d42fbc94a978bb6e117ca65.css">
+<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?07b3f66fb5026a9433526edaa232fa7d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><meta property='og:title' content='Python scrapy 爬虫配置'>
+<meta property='og:description' content='概述|Overview'>
 <meta property='og:url' content='https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/'>
 <meta property='og:site_name' content='Nerver Forget Why You Started'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='gitea' /><meta property='article:tag' content='gitlab' /><meta property='article:published_time' content='2017-09-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-09-25T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows">
-<meta name="twitter:description" content="概述|Overview 个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。
-">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='Python2' /><meta property='article:tag' content='Python3' /><meta property='article:published_time' content='2017-09-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-09-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Python scrapy 爬虫配置">
+<meta name="twitter:description" content="概述|Overview">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -236,10 +245,13 @@
   <ol>
     <li><a href="#概述overview">概述|Overview</a></li>
     <li><a href="#环境environment">环境|Environment</a></li>
-    <li><a href="#动态配置-user-agent">动态配置 User-Agent</a></li>
-    <li><a href="#禁用-cookies">禁用 Cookies</a></li>
-    <li><a href="#延迟">延迟</a></li>
-    <li><a href="#代理ip">代理IP</a></li>
+    <li><a href="#py-方式">py 方式</a>
+      <ol>
+        <li><a href="#脚本调用">脚本调用</a></li>
+        <li><a href="#pip">pip</a></li>
+      </ol>
+    </li>
+    <li><a href="#pyenv-方式">pyenv 方式</a></li>
     <li><a href="#未来展望further">未来展望|Further</a></li>
     <li><a href="#参考references">参考|References</a></li>
   </ol>
@@ -269,7 +281,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/how-to-install-both-python2-and-python3-in-windows/">如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</a>
+            <a href="/p/how-to-install-both-python2-and-python3-in-windows/">Python scrapy 爬虫配置</a>
         </h2>
     
         
@@ -319,6 +331,8 @@
     
     
     <h2 id="概述overview">概述|Overview</h2>
+<p>个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。</p>
+<p>记录两个环境共存的配置</p>
 <h2 id="环境environment">环境|Environment</h2>
 <div class="table-wrapper"><table>
 <thead>
@@ -331,25 +345,64 @@
 <tbody>
 <tr>
 <td>Windows</td>
-<td>10 home x64</td>
+<td>7 home x64</td>
 <td></td>
 </tr>
 <tr>
+<td>Python2</td>
+<td>2.7</td>
 <td></td>
-<td></td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3.2</td>
 <td></td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="动态配置-user-agent">动态配置 User-Agent</h2>
-<h2 id="禁用-cookies">禁用 Cookies</h2>
-<h2 id="延迟">延迟</h2>
-<h2 id="代理ip">代理IP</h2>
+<h2 id="py-方式">py 方式</h2>
+<h3 id="脚本调用">脚本调用</h3>
+<p>手动指定</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">py -2 helloworld.py
+</span></span><span class="line"><span class="cl">py -3 helloworld.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在脚本内第一行指定版本, 然后执行 <code>py helloworld.py</code> 即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#! python3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pip">pip</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">py -2 -m pip install watermark-painter
+</span></span><span class="line"><span class="cl">py -3 -m pip install watermark-painter
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="pyenv-方式">pyenv 方式</h2>
+<p>略</p>
 <h2 id="未来展望further">未来展望|Further</h2>
+<ol>
+<li>感觉还是太复杂, 希望以后有更好的切换方式</li>
+</ol>
 <h2 id="参考references">参考|References</h2>
 <ol>
 <li><a class="link" href="" ></a></li>
-<li></li>
+<li>​</li>
 </ol>
 </section>
 
@@ -358,9 +411,11 @@
     
     <section class="article-tags">
         
-            <a href="/tags/gitea/">gitea</a>
+            <a href="/tags/python/">Python</a>
         
-            <a href="/tags/gitlab/">gitlab</a>
+            <a href="/tags/python2/">Python2</a>
+        
+            <a href="/tags/python3/">Python3</a>
         
     </section>
 
@@ -391,6 +446,32 @@
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/python-gui-summary/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python GUI 总结|Python GUI Usage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/python-pip-usage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python pip 使用总结|Python pip Usage</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -426,43 +507,6 @@
 
         <div class="article-details">
             <h2 class="article-title">面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/python-scripting-for-arcgis-00-overview/">
-        
-        
-            <div class="article-image">
-                <img src="/p/python-scripting-for-arcgis-00-overview/arcgis.7a7be94514fab286b61f88e8a0263c34_huc26f5985470eca4f116cc8060d7d2ba1_29417_250x150_fill_q75_box_smart1.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview"
-                        data-key="python-scripting-for-arcgis-00-overview" 
-                        data-hash="md5-envpRRT6soa2H4jooCY8NA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/selection-of-code-management-software/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">代码管理软件选型|Selection of Code Management Software</h2>
         </div>
     </a>
 </article>
