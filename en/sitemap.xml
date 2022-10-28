@@ -149,6 +149,9 @@
     <loc>https://hostenwang.github.io/tags/%E7%94%A8%E5%8F%8B/</loc>
     <lastmod>2021-10-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/categories/yonyou-nc-development/</loc>
+    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/p/yonyou-nc-development-07-message/</loc>
     <lastmod>2021-10-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -308,6 +311,9 @@
     <loc>https://hostenwang.github.io/p/oracle-ora-28002-the-password-will-expire/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/categories/nifi/</loc>
+    <lastmod>2019-06-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/p/nifi-code-doc-system/</loc>
     <lastmod>2019-06-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -315,9 +321,6 @@
     <lastmod>2019-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/nifi/</loc>
-    <lastmod>2019-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/categories/nifi/</loc>
     <lastmod>2019-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/%E6%BA%90%E7%A0%81/</loc>
@@ -645,15 +648,5 @@
   </url><url>
     <loc>https://hostenwang.github.io/archives/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/series/nifi/</loc>
-  </url><url>
-    <loc>https://hostenwang.github.io/series/geoserver/</loc>
-  </url><url>
-    <loc>https://hostenwang.github.io/series/oracle/</loc>
-  </url><url>
-    <loc>https://hostenwang.github.io/series/</loc>
-  </url><url>
-    <loc>https://hostenwang.github.io/series/yonyou-nc-development/</loc>
   </url>
 </urlset>
