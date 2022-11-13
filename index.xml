@@ -6,7 +6,179 @@
         <description>Recent content on Nerver Forget Why You Started</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 05 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>高效使用 Axure的几条原则|Several Principes Of Using Axure Efficiently</title>
+        <link>https://hostenwang.github.io/p/several-principes-of-using-axure-efficiently/</link>
+        <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/several-principes-of-using-axure-efficiently/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;原则&#34;&gt;原则&lt;/h2&gt;
+&lt;h3 id=&#34;原型不等于开发&#34;&gt;原型不等于开发&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;不要陷入展现网页样式, 视觉效果等细节. 原型不等于开发&lt;/li&gt;
+&lt;li&gt;有些用笔记(Note)能说明的交互, 和研发沟通以后可以不画原型(如重复的增删改查操作), 聚焦确实需要原型进行说明的场景.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;积累自己的组件库axure-rp-library&#34;&gt;积累自己的组件库(Axure RP library)&lt;/h3&gt;
+&lt;p&gt;如设计自己公司的表单组件, 如输入组件, 搜索组件等&lt;/p&gt;
+&lt;h3 id=&#34;尽可能使用母版-master&#34;&gt;尽可能使用母版 Master&lt;/h3&gt;
+&lt;p&gt;使用母版的便利性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;能够快速的使用一组控件&lt;/li&gt;
+&lt;li&gt;在设计后期快速调整组件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单个母版尽可能功能单一&#34;&gt;单个母版尽可能功能单一&lt;/h3&gt;
+&lt;p&gt;不要把太多的组合对象变成母版。越是多的组合对象，越是有可能需要在母版的很多地方做出修改。把一些母版和另外一个母版合并起来一般会是更好的办法。&lt;/p&gt;
+&lt;h3 id=&#34;学会使用样式styles&#34;&gt;学会使用样式(Styles)&lt;/h3&gt;
+&lt;p&gt;便于组件风格的统一&lt;/p&gt;
+&lt;h3 id=&#34;在创建母版之前要设置好样式&#34;&gt;在创建母版之前要设置好样式&lt;/h3&gt;
+&lt;h3 id=&#34;保持项目的组织性和命名的清晰性&#34;&gt;保持项目的组织性和命名的清晰性&lt;/h3&gt;
+&lt;p&gt;刚开始会觉得多此一举, 后续原型复杂以后, 在设计交互动作时好的命名会让选择目标组件轻松很多&lt;/p&gt;
+&lt;h3 id=&#34;学会使用-this-对象&#34;&gt;学会使用 this 对象&lt;/h3&gt;
+&lt;p&gt;主要方便设置组件状态&lt;/p&gt;
+&lt;h2 id=&#34;总结summary&#34;&gt;总结|Summary&lt;/h2&gt;
+&lt;p&gt;从短期来看，这些原则很少能显示出效果，但是从长远来看，能使你工作更高效。&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.smashingmagazine.com/2013/10/04/ten-commandments-of-efficient-design-in-axure/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; The Ten Commandments Of Efficient Design In Axure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;AXURE在原型设计中的应用&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Axure 在原型设计中的使用|The Use Of Axure In Prototype Design</title>
+        <link>https://hostenwang.github.io/p/the-use-of-axure-in-prototype-design/</link>
+        <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/the-use-of-axure-in-prototype-design/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
+&lt;h2 id=&#34;什么是原型&#34;&gt;什么是原型&lt;/h2&gt;
+&lt;p&gt;产品原型简单的说就是产品设计成形之前的一个简单框架，对网站来讲，就是将页面模块、元素进行粗放式的排版和布局，深入一些，还会加入一些交互性的元素，使其更加具体、形象和生动。对于软件来讲, 主要将UI和交互进行形象的展示.&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;开始设计原型前的准备&#34;&gt;开始设计原型前的准备&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;应用用例&lt;/li&gt;
+&lt;li&gt;主要功能列表&lt;/li&gt;
+&lt;li&gt;其他前期调研资料&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;开始设计原型&#34;&gt;开始设计原型&lt;/h2&gt;
+&lt;h3 id=&#34;确定基础库axure-rp-library&#34;&gt;确定基础库(Axure RP library)&lt;/h3&gt;
+&lt;p&gt;确定整体UI样式&lt;/p&gt;
+&lt;h3 id=&#34;划定ui中哪些是公共部分设计为母版&#34;&gt;划定UI中哪些是公共部分,设计为母版&lt;/h3&gt;
+&lt;p&gt;如 网页的 header/footer/container 一般是统一的, 公共的&lt;/p&gt;
+&lt;h3 id=&#34;建立整体功能界面&#34;&gt;建立整体功能界面&lt;/h3&gt;
+&lt;p&gt;不关注细节&lt;/p&gt;
+&lt;h2 id=&#34;进入迭代&#34;&gt;进入迭代&lt;/h2&gt;
+&lt;p&gt;原型设计好一版后, 开会讨论, 有问题继续修改, 直到没有大问题. 这个过程应是快速的，迭代的.&lt;/p&gt;
+&lt;h2 id=&#34;总结summary&#34;&gt;总结|Summary&lt;/h2&gt;
+&lt;p&gt;Axure 只是一种原型设计工具而已，原型设计最重要的还是想法，工具只是来帮你表现想法的。不必过于追求技术，不必过于追求视觉表现。我们在把握好整个产品方向的同时，应专注于交互流程、页面内交互、布局结构的设计和创新。&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;AXURE在原型设计中的应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Axure 的几个快捷操作|Several Shortcut Of Axure</title>
+        <link>https://hostenwang.github.io/p/several-shortcut-of-axure/</link>
+        <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/several-shortcut-of-axure/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
+&lt;h2 id=&#34;什么是原型&#34;&gt;什么是原型&lt;/h2&gt;
+&lt;p&gt;产品原型简单的说就是产品设计成形之前的一个简单框架，对网站来讲，就是将页面模块、元素进行粗放式的排版和布局，深入一些，还会加入一些交互性的元素，使其更加具体、形象和生动。对于软件来讲, 主要将UI和交互进行形象的展示.&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;基础操作&#34;&gt;基础操作&lt;/h2&gt;
+&lt;h3 id=&#34;动态面板独立&#34;&gt;动态面板独立&lt;/h3&gt;
+&lt;p&gt;将 动态面板 右上角的 isolate 选中, 动态面板的状态就会独立, 不易变动&lt;/p&gt;
+&lt;h3 id=&#34;快速移动页面&#34;&gt;快速移动页面&lt;/h3&gt;
+&lt;p&gt;在非输入状态下，按住键盘“空格”键，界面上的鼠标“箭头”会变成“手”，这样就可以很轻松的拖动页面了。&lt;/p&gt;
+&lt;h3 id=&#34;原地复制组件&#34;&gt;原地复制组件&lt;/h3&gt;
+&lt;p&gt;在axure中“ctrl+c”“ctrl+v”复制粘贴，会错位复制一个组件。怎么解决这个问题呢：&lt;/p&gt;
+&lt;p&gt;用快捷键“ctrl+d”可以原地复制一个组件。&lt;/p&gt;
+&lt;h3 id=&#34;动作也可以复制粘贴&#34;&gt;动作也可以复制粘贴&lt;/h3&gt;
+&lt;p&gt;动作也支持 “ctrl+c”“ctrl+v”复制粘贴&lt;/p&gt;
+&lt;h3 id=&#34;素材可以直接转为动态面板&#34;&gt;素材可以直接转为动态面板&lt;/h3&gt;
+&lt;p&gt;右键需要转换的素材或控件 &lt;code&gt;Convert&amp;gt;&amp;gt;Convert To Dynamic Panel&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;高级操作&#34;&gt;高级操作&lt;/h2&gt;
+&lt;h3 id=&#34;动作支持条件&#34;&gt;动作支持条件&lt;/h3&gt;
+&lt;h3 id=&#34;使用局部变量和全局变量&#34;&gt;使用局部变量和全局变量&lt;/h3&gt;
+&lt;h2 id=&#34;总结summary&#34;&gt;总结|Summary&lt;/h2&gt;
+&lt;p&gt;Axure 只是一种原型设计工具而已，原型设计最重要的还是想法，工具只是来帮你表现想法的。不必过于追求技术，不必过于追求视觉表现。我们在把握好整个产品方向的同时，应专注于交互流程、页面内交互、布局结构的设计和创新。&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;AXURE在原型设计中的应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
         <title>简单的服务器安全加固策略|Simple Server Security Reinforcement</title>
         <link>https://hostenwang.github.io/p/simple-server-security-reinforcement/</link>
         <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
@@ -2734,6 +2906,58 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
+        <title>面向 ArcGIS 的 python 脚本编程 - Python 简介 | Python Scripting for ArcGIS - Python</title>
+        <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-01-python/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-01-python/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Python, created by Guido van Rossum in 1989, was named after his favorite comedy troupe, Monty Python.&lt;/p&gt;
+&lt;p&gt;Today, Python is a major programming language. It is used in web development, database administration, and AI.&lt;/p&gt;
+&lt;p&gt;Most importantly to GIS Analysts, Python can be used to control ArcGIS tools and Map Documents to produce geospatial data and maps in an organized and speedy manner using the excellent ArcPy module.&lt;/p&gt;
+&lt;h3 id=&#34;python的特点&#34;&gt;Python的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;简单易学&lt;/li&gt;
+&lt;li&gt;免费且开源&lt;/li&gt;
+&lt;li&gt;跨平台&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;arcgis-和-python&#34;&gt;ArcGIS 和 Python&lt;/h2&gt;
+&lt;p&gt;ArcGIS for Desktop 支持使用脚本语言实现任务自动化.Python是ArcGIS首选的脚本语言&lt;/p&gt;
+&lt;p&gt;Python 脚本可以像常见的地理处理工具一样，变成一个脚本工具，直接整合到 ArcGIS 中。&lt;/p&gt;
+&lt;p&gt;ArcGIS  10 安装后自带一个 Python 2.7&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;开发更多贴近业务的工具, 提高业务员效率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;ArcPy and ArcGIS – Geospatial Analysis with Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
         <title>用友NC开发 - 日志配置|Yonyou Nc Development - Log Configuration</title>
         <link>https://hostenwang.github.io/p/yonyou-nc-development-04-log-configuration/</link>
         <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
@@ -2857,7 +3081,7 @@
         <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/</guid>
-        <description>&lt;img src="https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/arcgis.jpg" alt="Featured image of post 面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview" /&gt;&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
 &lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;
 &lt;p&gt;目前，Python 已经成为 GIS 专业人员的一个基本工具。他们使用 Python 来扩展 ArcGIS 的功能并实现任务的自动化。&lt;/p&gt;
@@ -2890,7 +3114,8 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;面向ArcGIS的Python脚本编程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;ArcPy and ArcGIS – Geospatial Analysis with Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;​&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
@@ -5306,10 +5531,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
         </item>
         <item>
         <title>跨域技术总结</title>
-        <link>https://hostenwang.github.io/p/%E8%B7%A8%E5%9F%9F%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/</link>
+        <link>https://hostenwang.github.io/p/cors/</link>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/%E8%B7%A8%E5%9F%9F%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://hostenwang.github.io/p/cors/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
@@ -6452,6 +6677,18 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;python-2-和-python-3-主要差别&#34;&gt;Python 2 和 Python 3 主要差别&lt;/h2&gt;
+&lt;h3 id=&#34;unicode&#34;&gt;Unicode&lt;/h3&gt;
+&lt;p&gt;Python 2有基于ASCII的str()类型，其可通过单独的unicode()函数转成unicode类型，但没有byte类型。&lt;/p&gt;
+&lt;p&gt;而在Python 3中，终于有了Unicode（utf-8）字符串，以及两个字节类：bytes和bytearrays。&lt;/p&gt;
+&lt;h3 id=&#34;print&#34;&gt;print&lt;/h3&gt;
+&lt;p&gt;Python 2中的print语句被Python 3中的print()函数取代，这意味着在Python 3中必须用括号将需要输出的对象括起来。&lt;/p&gt;
+&lt;h3 id=&#34;for循环变量与全局命名空间泄漏&#34;&gt;For循环变量与全局命名空间泄漏&lt;/h3&gt;
+&lt;p&gt;在Python 3.x中，for循环中的变量不再会泄漏到全局命名空间中了！&lt;/p&gt;
+&lt;h3 id=&#34;触发异常&#34;&gt;触发异常&lt;/h3&gt;
+&lt;p&gt;Python 2支持新旧两种异常触发语法，而Python 3只接受带括号的的语法（不然会触发SyntaxError）&lt;/p&gt;
+&lt;h3 id=&#34;异常处理&#34;&gt;异常处理&lt;/h3&gt;
+&lt;p&gt;Python 3中的异常处理也发生了一点变化。在Python 3中必须使用“as”关键字&lt;/p&gt;
 &lt;h2 id=&#34;py-方式&#34;&gt;py 方式&lt;/h2&gt;
 &lt;h3 id=&#34;脚本调用&#34;&gt;脚本调用&lt;/h3&gt;
 &lt;p&gt;手动指定&lt;/p&gt;
@@ -6493,8 +6730,12 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;​&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://blog.jobbole.com/80006/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python 2.7.x 和 3.x 版本的重要区别&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.python.org/moin/Python2orPython3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Should I use Python 2 or Python 3 for my development activity?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/howto/pyporting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Porting Python 2 Code to Python 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
@@ -7554,6 +7795,23 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# * 是否存在副作用、风险? &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果需要的化可以添加一个链接到issue地址或者其它文档&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;git-commit-template-配置&#34;&gt;Git Commit Template 配置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feat&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;bugfix&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;docs&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;style&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;refactor&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;perf&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;test&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;chore&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;lt;scope&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &amp;lt;subject&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;BLANK LINE&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;body&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;BLANK LINE&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;footer&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;5-总结&#34;&gt;5 总结&lt;/h2&gt;

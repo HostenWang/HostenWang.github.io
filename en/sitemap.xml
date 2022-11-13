@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hostenwang.github.io/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +15,14 @@
                 href="https://hostenwang.github.io/"
                 />
   </url><url>
+    <loc>https://hostenwang.github.io/categories/axure/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/axure/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/categories/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -28,20 +34,34 @@
                 href="https://hostenwang.github.io/categories/"
                 />
   </url><url>
+    <loc>https://hostenwang.github.io/categories/design/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/categories/design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/categories/design/"
+                />
+  </url><url>
     <loc>https://hostenwang.github.io/post/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/tags/security/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/categories/security/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/tags/server/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/post/"
+                />
   </url><url>
     <loc>https://hostenwang.github.io/tags/</loc>
-    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -52,6 +72,30 @@
                 hreflang="en"
                 href="https://hostenwang.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E5%8E%9F%E5%9E%8B/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/p/several-principes-of-using-axure-efficiently/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/p/the-use-of-axure-in-prototype-design/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/p/several-shortcut-of-axure/</loc>
+    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/security/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/categories/security/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/server/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2022-06-12T00:00:00+00:00</lastmod>
@@ -169,18 +213,55 @@
   </url><url>
     <loc>https://hostenwang.github.io/tags/arcgis/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/tags/arcgis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/tags/arcgis/"
+                />
   </url><url>
     <loc>https://hostenwang.github.io/tags/arcpy/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/categories/arcpy/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/tags/arcpy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/tags/arcpy/"
+                />
   </url><url>
     <loc>https://hostenwang.github.io/tags/python/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/tags/python/"
+                />
   </url><url>
-    <loc>https://hostenwang.github.io/categories/python/</loc>
+    <loc>https://hostenwang.github.io/categories/python-scripting-for-arcgis/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/categories/python-scripting-for-arcgis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/categories/python-scripting-for-arcgis/"
+                />
   </url><url>
     <loc>https://hostenwang.github.io/p/python-scripting-for-arcgis-09-processing-raster-data/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
@@ -232,6 +313,19 @@
   </url><url>
     <loc>https://hostenwang.github.io/p/yonyou-nc-development-06-background-task/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/p/python-scripting-for-arcgis-01-python/</loc>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/p/python-scripting-for-arcgis-01-python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/p/python-scripting-for-arcgis-01-python/"
+                />
   </url><url>
     <loc>https://hostenwang.github.io/tags/log/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
@@ -440,7 +534,7 @@
     <loc>https://hostenwang.github.io/tags/jsonp/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/p/%E8%B7%A8%E5%9F%9F%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://hostenwang.github.io/p/cors/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/p/linux-sed/</loc>
@@ -485,6 +579,9 @@
     <loc>https://hostenwang.github.io/p/elasticsearch-overview/</loc>
     <lastmod>2017-10-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/categories/python/</loc>
+    <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/</loc>
     <lastmod>2017-09-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -492,6 +589,9 @@
     <lastmod>2017-09-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/python3/</loc>
+    <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/windows/</loc>
     <lastmod>2017-09-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/</loc>
@@ -508,9 +608,16 @@
   </url><url>
     <loc>https://hostenwang.github.io/tags/design/</loc>
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/categories/design/</loc>
-    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hostenwang.github.io/zh-cn/tags/design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hostenwang.github.io/tags/design/"
+                />
   </url><url>
     <loc>https://hostenwang.github.io/tags/powerdesigner/</loc>
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
@@ -556,6 +663,9 @@
   </url><url>
     <loc>https://hostenwang.github.io/p/linux-account-management/</loc>
     <lastmod>2016-04-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/commit/</loc>
+    <lastmod>2016-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/p/git-commit-message-tmpl/</loc>
     <lastmod>2016-04-12T00:00:00+00:00</lastmod>

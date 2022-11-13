@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>arcpy on 不忘初心,永远忠诚</title>
+        <link>https://hostenwang.github.io/zh-cn/tags/arcpy/</link>
+        <description>Recent content in arcpy on 不忘初心,永远忠诚</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/zh-cn/tags/arcpy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>面向 ArcGIS 的 python 脚本编程 - Python 简介 | Python Scripting for ArcGIS - Python</title>
+        <link>https://hostenwang.github.io/zh-cn/p/python-scripting-for-arcgis-01-python/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/zh-cn/p/python-scripting-for-arcgis-01-python/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Python 是一门简单又强大的主流编程语言。由 Guido van Rossum 于1989年创建. Python 的类库非常丰富，这使得 Python 几乎无所不能，网站开发、软件开发、大数据分析、网络爬虫、机器学习等都不在话下。&lt;/p&gt;
+&lt;p&gt;Python 语言起源于 1989 年末，当时 CWI（荷兰国家数学与计算机科学研究中心）的研究员 Guido van Rossum 需要一种高级脚本编程语言，为其研究小组的 Amoeba 分布式操作系统执行管理 任务。为创建新语言，他从高级数学语言 ABC（ALL BASIC CODE）中汲取了大量语法，并从系 统编程语言 Modula-3 中借鉴了错误处理机制。他把这种新的语言命名为 Python（蟒蛇），Python 来 源于 BBC 当时正在热播的喜剧连续剧 Monty Python’s Flying Circus ，他希望这个新的叫作 Python 的语言能符合他的理想:创造一种处于 C 和 Shell 之间，且功能全面、易学易用、可拓展的语言。&lt;/p&gt;
+&lt;p&gt;在 GIS 领域, Python 可以用来控制 ArcGIS 工具和地图, 用于生成地理数据和地图, 基于优秀的 arcpy 模块可以极大的加速 ArcGIS 操作&lt;/p&gt;
+&lt;h3 id=&#34;python的特点&#34;&gt;Python的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;简单易学&lt;/li&gt;
+&lt;li&gt;免费且开源&lt;/li&gt;
+&lt;li&gt;跨平台&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;arcgis-和-python&#34;&gt;ArcGIS 和 Python&lt;/h2&gt;
+&lt;p&gt;ArcGIS for Desktop 支持使用脚本语言实现任务自动化.Python是ArcGIS首选的脚本语言&lt;/p&gt;
+&lt;p&gt;Python 脚本可以像常见的地理处理工具一样，变成一个脚本工具，直接整合到 ArcGIS 中。&lt;/p&gt;
+&lt;p&gt;ArcGIS  10 安装后自带一个 Python 2.7&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;开发更多贴近业务的工具, 提高业务员效率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;ArcPy and ArcGIS – Geospatial Analysis with Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

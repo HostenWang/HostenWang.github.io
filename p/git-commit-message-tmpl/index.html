@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 概述 如何设计和使用一个好的 commit messages 规范
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='如何设计和使用一个好的 git commit messages 规范'>
 <title>Git 提交信息模板|Git Commit Message Template</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/p/git-commit-message-tmpl/'>
@@ -19,15 +18,15 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><meta property='og:title' content='Git 提交信息模板|Git Commit Message Template'>
-<meta property='og:description' content='1 概述 如何设计和使用一个好的 commit messages 规范
-'>
+</script>
+
+<meta property='og:title' content='Git 提交信息模板|Git Commit Message Template'>
+<meta property='og:description' content='如何设计和使用一个好的 git commit messages 规范'>
 <meta property='og:url' content='https://hostenwang.github.io/p/git-commit-message-tmpl/'>
 <meta property='og:site_name' content='Nerver Forget Why You Started'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='git' /><meta property='article:tag' content='specification' /><meta property='article:published_time' content='2016-04-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2016-04-12T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='git' /><meta property='article:tag' content='commit' /><meta property='article:tag' content='specification' /><meta property='article:published_time' content='2016-04-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2016-04-12T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Git 提交信息模板|Git Commit Message Template">
-<meta name="twitter:description" content="1 概述 如何设计和使用一个好的 commit messages 规范
-">
+<meta name="twitter:description" content="如何设计和使用一个好的 git commit messages 规范">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -254,6 +253,7 @@ var _hmt = _hmt || [];
       </ol>
     </li>
     <li><a href="#4-commit-messages-格式要求">4 Commit Messages 格式要求</a></li>
+    <li><a href="#git-commit-template-配置">Git Commit Template 配置</a></li>
     <li><a href="#5-总结">5 总结</a></li>
     <li><a href="#6-参考">6 参考</a></li>
   </ol>
@@ -286,6 +286,10 @@ var _hmt = _hmt || [];
             <a href="/p/git-commit-message-tmpl/">Git 提交信息模板|Git Commit Message Template</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            如何设计和使用一个好的 git commit messages 规范
+        </h3>
         
     </div>
 
@@ -404,6 +408,23 @@ var _hmt = _hmt || [];
 </span></span><span class="line"><span class="cl"><span class="c1"># 如果需要的化可以添加一个链接到issue地址或者其它文档</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="git-commit-template-配置">Git Commit Template 配置</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">feat<span class="p">|</span>bugfix<span class="p">|</span>docs<span class="p">|</span>style<span class="p">|</span>refactor<span class="p">|</span>perf<span class="p">|</span>test<span class="p">|</span>chore<span class="p">|</span><span class="o">(</span>&lt;scope&gt;<span class="o">)</span>: &lt;subject&gt;
+</span></span><span class="line"><span class="cl">&lt;BLANK LINE&gt;
+</span></span><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">&lt;BLANK LINE&gt;
+</span></span><span class="line"><span class="cl">&lt;footer&gt;
+</span></span></code></pre></td></tr></table>
+</div>
 </div><h2 id="5-总结">5 总结</h2>
 <h2 id="6-参考">6 参考</h2>
 <ol>
@@ -419,6 +440,8 @@ var _hmt = _hmt || [];
     <section class="article-tags">
         
             <a href="/tags/git/">git</a>
+        
+            <a href="/tags/commit/">commit</a>
         
             <a href="/tags/specification/">specification</a>
         

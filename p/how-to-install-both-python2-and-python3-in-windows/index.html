@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Overview'>
-<title>Python scrapy 爬虫配置</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows'>
+<title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/'>
 
@@ -18,13 +18,15 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><meta property='og:title' content='Python scrapy 爬虫配置'>
-<meta property='og:description' content='概述|Overview'>
+</script>
+
+<meta property='og:title' content='如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows'>
+<meta property='og:description' content='如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows'>
 <meta property='og:url' content='https://hostenwang.github.io/p/how-to-install-both-python2-and-python3-in-windows/'>
 <meta property='og:site_name' content='Nerver Forget Why You Started'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='Python2' /><meta property='article:tag' content='Python3' /><meta property='article:published_time' content='2017-09-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-09-25T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Python scrapy 爬虫配置">
-<meta name="twitter:description" content="概述|Overview">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='Python2' /><meta property='article:tag' content='Python3' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2017-09-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-09-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows">
+<meta name="twitter:description" content="如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -245,6 +247,15 @@ var _hmt = _hmt || [];
   <ol>
     <li><a href="#概述overview">概述|Overview</a></li>
     <li><a href="#环境environment">环境|Environment</a></li>
+    <li><a href="#python-2-和-python-3-主要差别">Python 2 和 Python 3 主要差别</a>
+      <ol>
+        <li><a href="#unicode">Unicode</a></li>
+        <li><a href="#print">print</a></li>
+        <li><a href="#for循环变量与全局命名空间泄漏">For循环变量与全局命名空间泄漏</a></li>
+        <li><a href="#触发异常">触发异常</a></li>
+        <li><a href="#异常处理">异常处理</a></li>
+      </ol>
+    </li>
     <li><a href="#py-方式">py 方式</a>
       <ol>
         <li><a href="#脚本调用">脚本调用</a></li>
@@ -360,6 +371,18 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table></div>
+<h2 id="python-2-和-python-3-主要差别">Python 2 和 Python 3 主要差别</h2>
+<h3 id="unicode">Unicode</h3>
+<p>Python 2有基于ASCII的str()类型，其可通过单独的unicode()函数转成unicode类型，但没有byte类型。</p>
+<p>而在Python 3中，终于有了Unicode（utf-8）字符串，以及两个字节类：bytes和bytearrays。</p>
+<h3 id="print">print</h3>
+<p>Python 2中的print语句被Python 3中的print()函数取代，这意味着在Python 3中必须用括号将需要输出的对象括起来。</p>
+<h3 id="for循环变量与全局命名空间泄漏">For循环变量与全局命名空间泄漏</h3>
+<p>在Python 3.x中，for循环中的变量不再会泄漏到全局命名空间中了！</p>
+<h3 id="触发异常">触发异常</h3>
+<p>Python 2支持新旧两种异常触发语法，而Python 3只接受带括号的的语法（不然会触发SyntaxError）</p>
+<h3 id="异常处理">异常处理</h3>
+<p>Python 3中的异常处理也发生了一点变化。在Python 3中必须使用“as”关键字</p>
 <h2 id="py-方式">py 方式</h2>
 <h3 id="脚本调用">脚本调用</h3>
 <p>手动指定</p>
@@ -401,8 +424,12 @@ var _hmt = _hmt || [];
 </ol>
 <h2 id="参考references">参考|References</h2>
 <ol>
-<li><a class="link" href="" ></a></li>
-<li>​</li>
+<li><a class="link" href="http://blog.jobbole.com/80006/"  target="_blank" rel="noopener"
+    >Python 2.7.x 和 3.x 版本的重要区别</a></li>
+<li><a class="link" href="https://wiki.python.org/moin/Python2orPython3"  target="_blank" rel="noopener"
+    >Should I use Python 2 or Python 3 for my development activity?</a></li>
+<li><a class="link" href="https://docs.python.org/3/howto/pyporting.html"  target="_blank" rel="noopener"
+    >Porting Python 2 Code to Python 3</a></li>
 </ol>
 </section>
 
@@ -416,6 +443,8 @@ var _hmt = _hmt || [];
             <a href="/tags/python2/">Python2</a>
         
             <a href="/tags/python3/">Python3</a>
+        
+            <a href="/tags/windows/">Windows</a>
         
     </section>
 
@@ -475,38 +504,12 @@ var _hmt = _hmt || [];
             
                 
 <article class="">
-    <a href="/p/python-scripting-for-arcgis-09-processing-raster-data/">
+    <a href="/p/how-to-install-both-python2-and-python3-in-windows/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/python-scripting-for-arcgis-08-processing-geometric-data/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/python-scripting-for-arcgis-07-using-spatial-data/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</h2>
+            <h2 class="article-title">Python scrapy 爬虫配置</h2>
         </div>
     </a>
 </article>

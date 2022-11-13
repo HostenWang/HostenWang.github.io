@@ -159,12 +159,64 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
+        <title>面向 ArcGIS 的 python 脚本编程 - Python 简介 | Python Scripting for ArcGIS - Python</title>
+        <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-01-python/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-01-python/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Python, created by Guido van Rossum in 1989, was named after his favorite comedy troupe, Monty Python.&lt;/p&gt;
+&lt;p&gt;Today, Python is a major programming language. It is used in web development, database administration, and AI.&lt;/p&gt;
+&lt;p&gt;Most importantly to GIS Analysts, Python can be used to control ArcGIS tools and Map Documents to produce geospatial data and maps in an organized and speedy manner using the excellent ArcPy module.&lt;/p&gt;
+&lt;h3 id=&#34;python的特点&#34;&gt;Python的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;简单易学&lt;/li&gt;
+&lt;li&gt;免费且开源&lt;/li&gt;
+&lt;li&gt;跨平台&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;arcgis-和-python&#34;&gt;ArcGIS 和 Python&lt;/h2&gt;
+&lt;p&gt;ArcGIS for Desktop 支持使用脚本语言实现任务自动化.Python是ArcGIS首选的脚本语言&lt;/p&gt;
+&lt;p&gt;Python 脚本可以像常见的地理处理工具一样，变成一个脚本工具，直接整合到 ArcGIS 中。&lt;/p&gt;
+&lt;p&gt;ArcGIS  10 安装后自带一个 Python 2.7&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;开发更多贴近业务的工具, 提高业务员效率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;ArcPy and ArcGIS – Geospatial Analysis with Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
         <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
         <link>https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/</link>
         <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/</guid>
-        <description>&lt;img src="https://hostenwang.github.io/p/python-scripting-for-arcgis-00-overview/arcgis.jpg" alt="Featured image of post 面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview" /&gt;&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
 &lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;
 &lt;p&gt;目前，Python 已经成为 GIS 专业人员的一个基本工具。他们使用 Python 来扩展 ArcGIS 的功能并实现任务的自动化。&lt;/p&gt;
@@ -197,7 +249,8 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;面向ArcGIS的Python脚本编程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;ArcPy and ArcGIS – Geospatial Analysis with Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;​&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
