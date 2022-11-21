@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>需求文档 on 不忘初心,永远忠诚</title>
+        <link>https://hostenwang.github.io/zh-cn/tags/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/</link>
+        <description>Recent content in 需求文档 on 不忘初心,永远忠诚</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/zh-cn/tags/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>如何写需求文档|How to Write Requirement Document</title>
+        <link>https://hostenwang.github.io/zh-cn/p/how-to-write-requirement-document/</link>
+        <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/zh-cn/p/how-to-write-requirement-document/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;如何写需求文档&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;什么是需求文档&#34;&gt;什么是需求文档？&lt;/h2&gt;
+&lt;p&gt;产品需求文档一般来说昰产品流程中的最后一步工作，把原型中的功能、界面具象化描述，是提交给设计（UI）、技术和测试部门的执行标准。一般由产品经理亲自完成，如果有产品专员（助理）的话，由他们主要完成其实更好。&lt;/p&gt;
+&lt;h2 id=&#34;需求文档应包括哪些内容&#34;&gt;需求文档应包括哪些内容？&lt;/h2&gt;
+&lt;p&gt;需求文档一般需要包含以下四个部分：&lt;/p&gt;
+&lt;p&gt;1、产品概要：说明产品目标、需求来源、主要项目负责人和产品整体修订记录。&lt;/p&gt;
+&lt;p&gt;2、功能结构：说明产品功能（及信息）点的分布和相关关系。&lt;/p&gt;
+&lt;p&gt;3、业务流程：说明产品板块功能的业务流转逻辑。&lt;/p&gt;
+&lt;p&gt;4、界面描述：说明产品所有界面具体需求、原型、UI和修订记录。&lt;/p&gt;
+&lt;h2 id=&#34;需求文档的作用是什么&#34;&gt;需求文档的作用是什么？&lt;/h2&gt;
+&lt;p&gt;需求文档是需要给产品执行人员看的，具体包括：&lt;/p&gt;
+&lt;p&gt;1、设计（UI）：根据原型设计UI. UI设计师结合公司设计能力和审美要求设计UI, 最终产品好不好看由UI设计师决定, 原型只决定交互和产品逻辑.&lt;/p&gt;
+&lt;p&gt;2、技术：需求文档的主要阅读对象，根据需求描述、UI演示稿 等信息对界面进行具体的施工。所以对技术来说，需求文档的作用是产品的施工规范。&lt;/p&gt;
+&lt;p&gt;3、测试：对产品进行测试的必备文档，用来理解产品各界面和功能的要求，以对技术实现的效果做出合格与否的判断。如果技术实现效果 与需求文档要求不符，测试人员会第一时间与技术沟通解决。所以对于测试来说，需求文档的作用是一份施工质量的监督标准。&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/YangBinChina/p/4973967.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PRD产品需求文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
