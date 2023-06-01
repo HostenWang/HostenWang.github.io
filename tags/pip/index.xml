@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sat, 25 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python pip 使用总结|Python pip Usage</title>
-        <link>https://hostenwang.github.io/p/python-pip-usage/</link>
+        <link>https://hostenwang.github.io/posts/python/python-pip-usage/</link>
         <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/python-pip-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/python/python-pip-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;python pip 常用命令小结&lt;/p&gt;
 &lt;h2 id=&#34;安装卸载&#34;&gt;安装卸载&lt;/h2&gt;

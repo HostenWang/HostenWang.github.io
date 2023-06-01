@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
-        <link>https://hostenwang.github.io/p/nifi-skill-points/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/nifi-skill-points/</link>
         <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/nifi-skill-points/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/nifi-skill-points/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;
 &lt;h2 id=&#34;原理和架构&#34;&gt;原理和架构&lt;/h2&gt;
@@ -88,10 +88,10 @@
         </item>
         <item>
         <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
-        <link>https://hostenwang.github.io/p/nifi-introduction/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/nifi-introduction/</link>
         <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/nifi-introduction/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/nifi-introduction/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;
 &lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;

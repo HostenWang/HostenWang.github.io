@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Thu, 28 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux 常用网络命令小结</title>
-        <link>https://hostenwang.github.io/p/linux-network-commands/</link>
+        <link>https://hostenwang.github.io/posts/misc/linux-network-commands/</link>
         <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/linux-network-commands/</guid>
+        <guid>https://hostenwang.github.io/posts/misc/linux-network-commands/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;常用网络命令小结&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -161,11 +161,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Linux SSH 使用总结</title>
-        <link>https://hostenwang.github.io/p/linux-ssh/</link>
+        <title>Linux SSH 命令使用总结|Linux SSH Command Usage</title>
+        <link>https://hostenwang.github.io/posts/misc/linux-ssh-command-usage/</link>
         <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/linux-ssh/</guid>
+        <guid>https://hostenwang.github.io/posts/misc/linux-ssh-command-usage/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;Linux #SSH 相关命令小结&lt;/p&gt;
 &lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;
@@ -179,6 +179,15 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ssh name@remoteserver -p &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ssh remoteserver -l name –p &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;远程执行指令&#34;&gt;远程执行指令&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ssh root@remoteserver -p &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;echo&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;通过远程主机1跳到远程主机2&#34;&gt;通过远程主机1跳到远程主机2&lt;/h3&gt;
@@ -273,7 +282,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://blog.csdn.net/fbysss/article/details/5767148&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Linux团队开发权限管理纪实&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;​&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         

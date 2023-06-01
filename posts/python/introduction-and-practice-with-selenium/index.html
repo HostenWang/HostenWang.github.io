@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Abstract Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化
+'>
+<title>Introduction and Practice with Selenium|Selenium 介绍和实践</title>
+
+<link rel='canonical' href='https://hostenwang.github.io/posts/python/introduction-and-practice-with-selenium/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css">
+<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?07b3f66fb5026a9433526edaa232fa7d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta property='og:title' content='Introduction and Practice with Selenium|Selenium 介绍和实践'>
+<meta property='og:description' content='概述|Abstract Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化
+'>
+<meta property='og:url' content='https://hostenwang.github.io/posts/python/introduction-and-practice-with-selenium/'>
+<meta property='og:site_name' content='Nerver Forget Why You Started'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Selenium' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2023-01-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-01-17T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Introduction and Practice with Selenium|Selenium 介绍和实践">
+<meta name="twitter:description" content="概述|Abstract Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化
+">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu06f28ed77c34952e63d738f73d7d0dfd_28689_300x0_resize_box_3.png" width="300"
+                            height="318" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Nerver Forget Why You Started</a></h1>
+            <h2 class="site-description">全栈开发工程师, 数据开发工程师, 开源爱好者, 生活探险家</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/hostenwang'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hostenwang.github.io/" selected>English</option>
+                        
+                            <option value="https://hostenwang.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#概述abstract">概述|Abstract</a></li>
+    <li><a href="#selenium-python-环境配置">Selenium Python 环境配置</a>
+      <ol>
+        <li><a href="#前提条件">前提条件：</a></li>
+        <li><a href="#安装-selenium">安装 selenium</a></li>
+        <li><a href="#安装-webdriver">安装 webdriver</a></li>
+        <li><a href="#webdriver-版本要求">webdriver 版本要求</a></li>
+      </ol>
+    </li>
+    <li><a href="#使用">使用</a></li>
+    <li><a href="#结论conclusion">结论|Conclusion</a></li>
+    <li><a href="#未来展望further">未来展望|Further</a></li>
+    <li><a href="#参考reference">参考|reference</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/python/" >
+                Python
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/python/introduction-and-practice-with-selenium/">Introduction and Practice with Selenium|Selenium 介绍和实践</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 17, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="概述abstract">概述|Abstract</h2>
+<p>Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化</p>
+<p>Webdriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。 驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。</p>
+<h2 id="selenium-python-环境配置">Selenium Python 环境配置</h2>
+<h3 id="前提条件">前提条件：</h3>
+<p>已安装好 Python 开发环境（推荐安装 Python 3.8 及以上版本）</p>
+<h3 id="安装-selenium">安装 selenium</h3>
+<p>Win：<code>pip install selenium</code></p>
+<h3 id="安装-webdriver">安装 webdriver</h3>
+<p>各大浏览器webdriver地址可参见：https://docs.seleniumhq.org/download/
+Firefox：https://github.com/mozilla/geckodriver/releases/
+Chrome：https://sites.google.com/a/chromium.org/chromedriver/ 或者http://chromedriver.storage.googleapis.com/index.html
+IE：http://selenium-release.storage.googleapis.com/index.html</p>
+<h3 id="webdriver-版本要求">webdriver 版本要求</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Webdriver版本</th>
+<th>支持的Chrome版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v2.41</td>
+<td>v67-69</td>
+</tr>
+<tr>
+<td>v2.40</td>
+<td>v66-68</td>
+</tr>
+<tr>
+<td>v2.39</td>
+<td>v66-68</td>
+</tr>
+<tr>
+<td>v2.38</td>
+<td>v65-67</td>
+</tr>
+<tr>
+<td>v2.37</td>
+<td>v64-66</td>
+</tr>
+<tr>
+<td>v2.36</td>
+<td>v63-65</td>
+</tr>
+<tr>
+<td>v2.35</td>
+<td>v62-64</td>
+</tr>
+<tr>
+<td>v2.34</td>
+<td>v61-63</td>
+</tr>
+<tr>
+<td>v2.33</td>
+<td>v60-62</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="使用">使用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">一</span><span class="err">、</span><span class="n">声明浏览器对象</span>
+</span></span><span class="line"><span class="cl"><span class="n">注意点一</span><span class="err">，</span><span class="n">Python文件名或者包名不要命名为selenium</span><span class="err">，</span><span class="n">会导致无法导入</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#webdriver可以认为是浏览器的驱动器，要驱动浏览器必须用到webdriver，支持多种浏览器，这里以Chrome为例</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">二</span><span class="err">、</span><span class="n">访问页面并获取网页html</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span><span class="c1">#browser.page_source是获取网页的全部html</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">三</span><span class="err">、</span><span class="n">查找元素</span>
+</span></span><span class="line"><span class="cl"><span class="n">单个元素</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">input_first</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">input_second</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;#q&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">input_third</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s1">&#39;//*[@id=&#34;q&#34;]&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">input_first</span><span class="p">,</span><span class="n">input_second</span><span class="p">,</span><span class="n">input_third</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">常用的查找方法</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_name</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_xpath</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_link_text</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_partial_link_text</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_tag_name</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_class_name</span>
+</span></span><span class="line"><span class="cl"><span class="n">find_element_by_css_selector</span>
+</span></span><span class="line"><span class="cl"><span class="n">也可以使用通用的方法</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">input_first</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">BY</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span><span class="s1">&#39;q&#39;</span><span class="p">)</span><span class="c1">#第一个参数传入名称，第二个传入具体的参数</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">input_first</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">多个元素</span><span class="err">，</span><span class="n">elements多个s</span>
+</span></span><span class="line"><span class="cl"><span class="n">input_first</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_elements_by_id</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">四</span><span class="err">、</span><span class="n">元素交互操作</span><span class="o">-</span><span class="n">搜索框传入关键词进行自动搜索</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span><span class="c1">#找到搜索框</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;iPhone&#39;</span><span class="p">)</span><span class="c1">#传送入关键词</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span><span class="c1">#清空搜索框</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;男士内裤&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">button</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;btn-search&#39;</span><span class="p">)</span><span class="c1">#找到搜索按钮</span>
+</span></span><span class="line"><span class="cl"><span class="n">button</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">更多操作</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">selenium</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">api</span><span class="o">.</span><span class="n">html</span><span class="c1">#module-selenium.webdriver.remote.webelement#可以有属性、截图等等</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">五</span><span class="err">、</span><span class="n">交互动作</span><span class="err">，</span><span class="n">驱动浏览器进行动作</span><span class="err">，</span><span class="n">模拟拖拽动作</span><span class="err">，</span><span class="n">将动作附加到动作链中串行执行</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.webdriver</span> <span class="kn">import</span> <span class="n">ActionChains</span><span class="c1">#引入动作链</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.runoob.com/try/try.php?filename=jqueryui-api-droppable&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="s1">&#39;iframeResult&#39;</span><span class="p">)</span><span class="c1">#切换到iframeResult框架</span>
+</span></span><span class="line"><span class="cl"><span class="n">source</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;#draggable&#39;</span><span class="p">)</span><span class="c1">#找到被拖拽对象</span>
+</span></span><span class="line"><span class="cl"><span class="n">target</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;#droppable&#39;</span><span class="p">)</span><span class="c1">#找到目标</span>
+</span></span><span class="line"><span class="cl"><span class="n">actions</span> <span class="o">=</span> <span class="n">ActionChains</span><span class="p">(</span><span class="n">browser</span><span class="p">)</span><span class="c1">#声明actions对象</span>
+</span></span><span class="line"><span class="cl"><span class="n">actions</span><span class="o">.</span><span class="n">drag_and_drop</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">actions</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span><span class="c1">#执行动作</span>
+</span></span><span class="line"><span class="cl"><span class="n">更多操作</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">selenium</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">api</span><span class="o">.</span><span class="n">html</span><span class="c1">#module-selenium.webdriver.common.action_chains</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">六</span><span class="err">、</span><span class="n">执行JavaScript</span>
+</span></span><span class="line"><span class="cl"><span class="n">有些动作可能没有提供api</span><span class="err">，</span><span class="n">比如进度条下拉</span><span class="err">，</span><span class="n">这时</span><span class="err">，</span><span class="n">我们可以通过代码执行JavaScript</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.zhihu.com/explore&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s1">&#39;window.scrollTo(0, document.body.scrollHeight)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s1">&#39;alert(&#34;To Bottom&#34;)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">七</span><span class="err">、</span><span class="n">获取元素信息</span>
+</span></span><span class="line"><span class="cl"><span class="n">获取属性</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.webdriver</span> <span class="kn">import</span> <span class="n">ActionChains</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.zhihu.com/explore&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">logo</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;zh-top-link-logo&#39;</span><span class="p">)</span><span class="c1">#获取网站logo</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">logo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">logo</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">获取文本值</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.zhihu.com/explore&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;zu-top-add-question&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="c1">#input.text文本值</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取Id，位置，标签名，大小</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.zhihu.com/explore&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;zu-top-add-question&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="c1">#获取id</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">location</span><span class="p">)</span><span class="c1">#获取位置</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">tag_name</span><span class="p">)</span><span class="c1">#获取标签名</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="c1">#获取大小</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">八</span><span class="err">、</span><span class="n">Frame操作</span>
+</span></span><span class="line"><span class="cl"><span class="n">frame相当于独立的网页</span><span class="err">，</span><span class="n">如果在父类网frame查找子类的</span><span class="err">，</span><span class="n">则必须切换到子类的frame</span><span class="err">，</span><span class="n">子类如果查找父类也需要先切换</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">NoSuchElementException</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.runoob.com/try/try.php?filename=jqueryui-api-droppable&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="s1">&#39;iframeResult&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">source</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;#draggable&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logo</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;logo&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="n">NoSuchElementException</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NO LOGO&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">parent_frame</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">logo</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;logo&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">logo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">logo</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">九</span><span class="err">、</span><span class="n">等待</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">隐式等待</span>
+</span></span><span class="line"><span class="cl"><span class="n">当使用了隐式等待执行测试的时候</span><span class="err">，</span><span class="n">如果</span> <span class="n">WebDriver没有在</span> <span class="n">DOM中找到元素</span><span class="err">，</span><span class="n">将继续等待</span><span class="err">，</span><span class="n">超出设定时间后则抛出找不到元素的异常</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">换句话说</span><span class="err">，</span><span class="n">当查找元素或元素并没有立即出现的时候</span><span class="err">，</span><span class="n">隐式等待将等待一段时间再查找</span> <span class="n">DOM</span><span class="err">，</span><span class="n">默认的时间是0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="c1">#等待十秒加载不出来就会抛出异常，10秒内加载出来正常返回</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.zhihu.com/explore&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;zu-top-add-question&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">显式等待</span>
+</span></span><span class="line"><span class="cl"><span class="n">指定一个等待条件</span><span class="err">，</span><span class="n">和一个最长等待时间</span><span class="err">，</span><span class="n">程序会判断在等待时间内条件是否满足</span><span class="err">，</span><span class="n">如果满足则返回</span><span class="err">，</span><span class="n">如果不满足会继续等待</span><span class="err">，</span><span class="n">超过时间就会抛出异常</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="n">button</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s1">&#39;.btn-search&#39;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">button</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">title_is</span> <span class="n">标题是某内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">title_contains</span> <span class="n">标题包含某内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">presence_of_element_located</span> <span class="n">元素加载出</span><span class="err">，</span><span class="n">传入定位元组</span><span class="err">，</span><span class="n">如</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">visibility_of_element_located</span> <span class="n">元素可见</span><span class="err">，</span><span class="n">传入定位元组</span>
+</span></span><span class="line"><span class="cl"><span class="n">visibility_of</span> <span class="n">可见</span><span class="err">，</span><span class="n">传入元素对象</span>
+</span></span><span class="line"><span class="cl"><span class="n">presence_of_all_elements_located</span> <span class="n">所有元素加载出</span>
+</span></span><span class="line"><span class="cl"><span class="n">text_to_be_present_in_element</span> <span class="n">某个元素文本包含某文字</span>
+</span></span><span class="line"><span class="cl"><span class="n">text_to_be_present_in_element_value</span> <span class="n">某个元素值包含某文字</span>
+</span></span><span class="line"><span class="cl"><span class="n">frame_to_be_available_and_switch_to_it</span> <span class="n">frame加载并切换</span>
+</span></span><span class="line"><span class="cl"><span class="n">invisibility_of_element_located</span> <span class="n">元素不可见</span>
+</span></span><span class="line"><span class="cl"><span class="n">element_to_be_clickable</span> <span class="n">元素可点击</span>
+</span></span><span class="line"><span class="cl"><span class="n">staleness_of</span> <span class="n">判断一个元素是否仍在DOM</span><span class="err">，</span><span class="n">可判断页面是否已经刷新</span>
+</span></span><span class="line"><span class="cl"><span class="n">element_to_be_selected</span> <span class="n">元素可选择</span><span class="err">，</span><span class="n">传元素对象</span>
+</span></span><span class="line"><span class="cl"><span class="n">element_located_to_be_selected</span> <span class="n">元素可选择</span><span class="err">，</span><span class="n">传入定位元组</span>
+</span></span><span class="line"><span class="cl"><span class="n">element_selection_state_to_be</span> <span class="n">传入元素对象以及状态</span><span class="err">，</span><span class="n">相等返回True</span><span class="err">，</span><span class="n">否则返回False</span>
+</span></span><span class="line"><span class="cl"><span class="n">element_located_selection_state_to_be</span> <span class="n">传入定位元组以及状态</span><span class="err">，</span><span class="n">相等返回True</span><span class="err">，</span><span class="n">否则返回False</span>
+</span></span><span class="line"><span class="cl"><span class="n">alert_is_present</span> <span class="n">是否出现Alert</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">详细内容</span><span class="err">：</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">selenium</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">api</span><span class="o">.</span><span class="n">html</span><span class="c1">#module-selenium.webdriver.support.expected_conditions</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">十一</span><span class="err">、</span><span class="n">前进后退</span><span class="o">-</span><span class="n">实现浏览器的前进后退以浏览不同的网页</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.baidu.com/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.python.org/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">forward</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">十二</span><span class="err">、</span><span class="n">Cookies</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.zhihu.com/explore&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">get_cookies</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">add_cookie</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;domain&#39;</span><span class="p">:</span> <span class="s1">&#39;www.zhihu.com&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;germey&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">get_cookies</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">delete_all_cookies</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">get_cookies</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">选项卡管理</span> <span class="n">增加浏览器窗口</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.baidu.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s1">&#39;window.open()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">switch_to_window</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.taobao.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">switch_to_window</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.fishc.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">十三</span><span class="err">、</span><span class="n">异常处理</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.baidu.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span><span class="p">,</span> <span class="n">NoSuchElementException</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.baidu.com&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time Out&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="n">NoSuchElementException</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No Element&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">finally</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 详细文档：http://selenium-python.readthedocs.io/api.html#module-selenium.common.exceptions</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="结论conclusion">结论|Conclusion</h2>
+<h2 id="未来展望further">未来展望|Further</h2>
+<h2 id="参考reference">参考|reference</h2>
+<ul>
+<li><a class="link" href="https://selenium-python.readthedocs.io/index.html"  target="_blank" rel="noopener"
+    >https://selenium-python.readthedocs.io/index.html</a></li>
+<li><a class="link" href="https://seleniumhq.github.io/selenium/docs/api/py/api.html"  target="_blank" rel="noopener"
+    >https://seleniumhq.github.io/selenium/docs/api/py/api.html</a></li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/selenium/">Selenium</a>
+        
+            <a href="/tags/python/">python</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/python/scrapy-configuration/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python scrapy 爬虫配置</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/python/how-to-install-both-python2-and-python3-in-windows/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/python/python-gui-summary/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python GUI 总结|Python GUI Usage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/python/python-pip-usage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python pip 使用总结|Python pip Usage</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2012 - 
+        
+        2023 Nerver Forget Why You Started
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

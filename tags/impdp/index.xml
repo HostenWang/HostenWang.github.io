@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/impdp/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>ORACLE 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
-        <link>https://hostenwang.github.io/p/oracle-expdp-and-impdp-usage/</link>
+        <title>Oracle 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
+        <link>https://hostenwang.github.io/posts/database/oracle-expdp-and-impdp-command-usage/</link>
         <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/oracle-expdp-and-impdp-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/database/oracle-expdp-and-impdp-command-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;
 &lt;h2 id=&#34;expdpimpdp-和-expimp-的区别&#34;&gt;expdp/impdp 和 exp/imp 的区别&lt;/h2&gt;
@@ -148,7 +148,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;expdp scott/tiger &lt;span class=&#34;nv&#34;&gt;directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;dump_dir &lt;span class=&#34;nv&#34;&gt;dumpfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;expdp.dmp &lt;span class=&#34;nv&#34;&gt;logfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;expdp.log &lt;span class=&#34;nv&#34;&gt;parallel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_export.htm#i1007829&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_export.htm#i1007829&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.oracle.com/cd/B19306_01/server.102/b14215/dp_import.htm#g1025464&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

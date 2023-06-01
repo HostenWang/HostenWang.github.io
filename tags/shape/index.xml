@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/shape/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>GeoServer - 添加数据 - 添加并发布 PostGIS 数据|GeoServer - Adding Your Data - loading data in PostGIS and publishing them in  GeoServer</title>
-        <link>https://hostenwang.github.io/p/geoserver-0505-loading-data-in-postgis-and-publishing-them-in-geoserver/</link>
+        <title>GeoServer - 添加并发布 PostGIS 数据|GeoServer  - loading data in PostGIS and publishing them in  GeoServer</title>
+        <link>https://hostenwang.github.io/posts/webgis/load-postgis-data-and-publish-them-in-geoserver/</link>
         <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/geoserver-0505-loading-data-in-postgis-and-publishing-them-in-geoserver/</guid>
+        <guid>https://hostenwang.github.io/posts/webgis/load-postgis-data-and-publish-them-in-geoserver/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;
 &lt;h2 id=&#34;postgresql-步骤&#34;&gt;PostgreSQL 步骤&lt;/h2&gt;
@@ -19,25 +19,6 @@
 &lt;p&gt;在 PostgreSQL 新建数据库&lt;/p&gt;
 &lt;h3 id=&#34;添加空间数据库扩展&#34;&gt;添加空间数据库扩展&lt;/h3&gt;
 &lt;p&gt;建立完成数据库后，点击该数据库下的Schemas-&amp;gt;public-&amp;gt;Table，使用SQL语句添加空间数据库管理插件PostGIS:CREATE EXTENSION PostGIS，成功后刷新，数据表中会出现 &lt;code&gt;spatial_ref_sys&lt;/code&gt;，说明可以导入空间数据了&lt;/p&gt;
-&lt;h3 id=&#34;准备-shp-文件&#34;&gt;准备 shp 文件&lt;/h3&gt;
-&lt;p&gt;确认 SRID&lt;/p&gt;
-&lt;h3 id=&#34;导入shp文件&#34;&gt;导入shp文件&lt;/h3&gt;
-&lt;p&gt;打开 PostGIS Shapefile Import/Export Manager&lt;/p&gt;
-&lt;p&gt;注意:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;文件路径为英文&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;geoserver-步骤&#34;&gt;GeoServer 步骤&lt;/h2&gt;
-&lt;h3 id=&#34;新建工作区&#34;&gt;新建工作区&lt;/h3&gt;
-&lt;p&gt;进入GeoServer首页，点击左侧的工作区（Workspaces），再点击添加新的工作区（Add new workspaces）可以创建工作空间&lt;/p&gt;
-&lt;h3 id=&#34;配置数据源&#34;&gt;配置数据源&lt;/h3&gt;
-&lt;p&gt;点击数据存储（Stores），再点击添加新的数据存储（Add new store），可以添加一个新的数据源&lt;/p&gt;
-&lt;h3 id=&#34;发布图层&#34;&gt;发布图层&lt;/h3&gt;
-&lt;p&gt;点击图层（Layers），进入图层选择界面；再点击添加新的资源（Add a new resource），选择相应的工作空间+数据源，点击发布（publish），即可进行发布&lt;/p&gt;
-&lt;h3 id=&#34;发布样&#34;&gt;发布样&lt;/h3&gt;
-&lt;p&gt;布的图层采用默认渲染模式，改变风格样式需要在发布图层界面选择发布，然后选择样式&lt;/p&gt;
-&lt;h3 id=&#34;图层预览&#34;&gt;图层预览&lt;/h3&gt;
-&lt;p&gt;点击左侧数据栏中Layer Preview选项，找到图层通过OpenLayers方式进行查看，下图为效果图&lt;/p&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;p&gt;我厂未来将使用 GeoServer 作为 GIS 后端&lt;/p&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
@@ -48,11 +29,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>GeoServer - 添加数据 - 添加 shape 文件|GeoServer  - Adding Your Data - Adding shapefiles</title>
-        <link>https://hostenwang.github.io/p/geoserver-0503-adding-shapefiles/</link>
+        <title>GeoServer - 添加 shape 文件|GeoServer - Adding shapefiles</title>
+        <link>https://hostenwang.github.io/posts/webgis/add-shapefiles-data-in-geoserver/</link>
         <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/geoserver-0503-adding-shapefiles/</guid>
+        <guid>https://hostenwang.github.io/posts/webgis/add-shapefiles-data-in-geoserver/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;
 &lt;p&gt;PostGIS shapefile 工具将 shapefile 数据从二进制转换为一系列的 SQL 命令，然后在数据库中运行以加载数据，从而使 shapefile 数据在 PostGIS 中可用&lt;/p&gt;
@@ -121,27 +102,16 @@
 &lt;/table&gt;
 &lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;新建工作区&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;新建数据存储&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;选择需要配置的数据类型，以shp文件&lt;/p&gt;
+&lt;li&gt;新建工作区&lt;/li&gt;
+&lt;li&gt;新建数据存储&lt;/li&gt;
+&lt;li&gt;选择需要配置的数据类型，以shp文件
 &lt;ol&gt;
 &lt;li&gt;DBF charset 设置为 GBK&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;点击保存，完成创建&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;编辑图层，定义SRS信息和边框信息，然后单击保存即可&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;图层预览&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;点击保存，完成创建&lt;/li&gt;
+&lt;li&gt;编辑图层，定义SRS信息和边框信息，然后单击保存即可&lt;/li&gt;
+&lt;li&gt;图层预览&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;p&gt;我厂未来将使用 GeoServer 作为 GIS 后端&lt;/p&gt;
@@ -154,30 +124,38 @@
         </item>
         <item>
         <title>GeoServer - 概述 | GeoServer - Overview</title>
-        <link>https://hostenwang.github.io/p/geoserver-0000-overview/</link>
+        <link>https://hostenwang.github.io/posts/webgis/geoserver-overview/</link>
         <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/geoserver-0000-overview/</guid>
+        <guid>https://hostenwang.github.io/posts/webgis/geoserver-overview/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;GeoServer是一个用Java编写的开源软件服务器，允许用户共享和编辑地理空间数据。为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
-&lt;p&gt;记录我厂经验&lt;/p&gt;
+&lt;p&gt;GeoServer 是一个用 #Java 编写的开源软件服务器，它是遵循OpenGIS Web 服务器规范的J2EE实现，允许用户共享和编辑 #地理空间数据. 为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
+&lt;p&gt;作为 #GeoServer #系列文章 的第一篇, 主要介绍基础概念.&lt;/p&gt;
 &lt;h2 id=&#34;geoserver-概述&#34;&gt;GeoServer 概述&lt;/h2&gt;
-&lt;p&gt;GeoServer是 &lt;a class=&#34;link&#34; href=&#34;http://www.opengeospatial.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Open Geospatial Consortium&lt;/a&gt; （OGC） &lt;a class=&#34;link&#34; href=&#34;http://www.opengeospatial.org/standards/wfs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web Feature Service&lt;/a&gt; （WFS）和 &lt;a class=&#34;link&#34; href=&#34;http://www.opengeospatial.org/standards/wcs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web Coverage Service&lt;/a&gt; （WCS）标准，以及高性能认证符合 &lt;a class=&#34;link&#34; href=&#34;http://www.opengeospatial.org/standards/wms&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web Map Service&lt;/a&gt; （WMS）。GeoServer构成地理空间Web的核心组件&lt;/p&gt;
+&lt;p&gt;GeoServer实现了 &lt;code&gt;开放地理空间联盟  &amp;lt;http://www.opengeospatial.org&amp;gt;&lt;/code&gt;_ (Open Geospatial Consortium) 的 &lt;code&gt;网络要素服务 &amp;lt;http://www.opengeospatial.org/standards/wfs&amp;gt;&lt;/code&gt;_ (Web Feature Service)、 &lt;code&gt;网络覆盖服务 &amp;lt;http://www.opengeospatial.org/standards/wcs&amp;gt;&lt;/code&gt;_ (Web Coverage Service)，以及 &lt;code&gt;网络地图服务 &amp;lt;http://www.opengeospatial.org/standards/wms&amp;gt;&lt;/code&gt;_ (Web Map Service)。其对网络地图服务的高性能实现，获得了OGC认证。GeoServer是地理空间网络的核心组件。&lt;/p&gt;
+&lt;p&gt;原文:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;GeoServer is an open source web mapping server written in Java platform. It is a subset of a web server model specially designed to share and publishes the Geographical information over the internet. It utilizes Web Mapping Service (WMS), Web Feature Service (WFS), Web Coverage Service (WCS) and many other open protocols for transfer the Geographical information, such as maps, spatial attributes and Feature data sets. Through these  protocols GeoServer can serve the data and maps in an efficient and powerful way. GeoServer supports the most common data sources like, Geo Tiff, Shapefile, ArcGrid, JPEG200 and GDAL formats and various databases viz., PostGIS, SQL Server, DB2, Oracle Spatial and ArcSDE&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;geoserver-主要特征&#34;&gt;GeoServer 主要特征&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;支持OGC规范，如WMS、WFS、WMTS等&lt;/li&gt;
-&lt;li&gt;支持PostGIS、Shapefile、ArcSDE、Oracle、VPF、MySQL、MapInfo&lt;/li&gt;
+&lt;li&gt;支持 #OGC 规范，如 #WMS, #WFS, #WMTS 等&lt;/li&gt;
+&lt;li&gt;支持 #PostGIS, #Shapefile, #ArcSDE, #Oracle, #VPF, #MySQL, #MapInfo&lt;/li&gt;
 &lt;li&gt;支持上百种投影能够将网络地图输出为JPEG、GIF、PNG、SVG、KML等格式&lt;/li&gt;
-&lt;li&gt;能够运行在任何基于J2EE/Servlet容器之上&lt;/li&gt;
+&lt;li&gt;能够运行在任何基于 #J2EE / #Servlet 容器之上&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;geoserver-主要概念&#34;&gt;GeoServer 主要概念&lt;/h2&gt;
+&lt;h2 id=&#34;和其他组件的对比&#34;&gt;和其他组件的对比&lt;/h2&gt;
+&lt;h3 id=&#34;与-arcgis-server-的比较&#34;&gt;与 ArcGIS Server 的比较&lt;/h3&gt;
+&lt;p&gt;ArcGIS  Server作为行业龙头ESRI的产品，功能强大，在各行各业都用广泛应用。使用过ArcGIS  Server的用户，一定惊叹于其方便的地图服务管理、以及在线分析功能。通过ArcGIS  Server发布相应的地图服务作为底图支撑，在此基础上进行相应的二次开发能够能够开发出功能强大又非常实用的WebGIS应用程序，能够满足大多数行业的对地理空间数据的业务管理需求，在国内国土、规划等政府项目中得到了广泛应用。&lt;/p&gt;
+&lt;p&gt;ArcGIS Server 的劣势是成本高&lt;/p&gt;
+&lt;h3 id=&#34;与商业地图的比较&#34;&gt;与商业地图的比较&lt;/h3&gt;
+&lt;p&gt;商业地图确实很方便，在我们的生活中涉及位置导航方面的服务使用起来非常方便。&lt;/p&gt;
+&lt;p&gt;商业地图的劣势&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不适合内网环境&lt;/li&gt;
+&lt;li&gt;真实坐标都是经过脱敏处理，与真实坐标相比是有一定的偏差&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ogc-主要概念&#34;&gt;OGC 主要概念&lt;/h2&gt;
 &lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -265,12 +243,15 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;p&gt;我厂未来将使用 GeoServer 作为 GIS 后端&lt;/p&gt;
+&lt;p&gt;我厂使用 GeoServer 作为 GIS 后端, 我也在深入学习代码, 力求使用好这一开源中间件&lt;/p&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoshi-hd.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;小师的Blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;GeoServer Beginner&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/laolonglai/p/15806812.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GeoServer介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         

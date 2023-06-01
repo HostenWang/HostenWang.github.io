@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Tue, 12 Apr 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/commit/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Git 提交信息模板|Git Commit Message Template</title>
-        <link>https://hostenwang.github.io/p/git-commit-message-tmpl/</link>
+        <link>https://hostenwang.github.io/posts/develop/git-commit-message-tmpl/</link>
         <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/git-commit-message-tmpl/</guid>
+        <guid>https://hostenwang.github.io/posts/develop/git-commit-message-tmpl/</guid>
         <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;如何设计和使用一个好的 commit messages 规范&lt;/p&gt;
 &lt;p&gt;在一个团队协作的项目中，开发人员需要经常提交一些代码去修复bug或者实现新的feature。&lt;/p&gt;

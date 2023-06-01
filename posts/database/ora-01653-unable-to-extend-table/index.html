@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Overview 记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法
+'>
+<title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</title>
+
+<link rel='canonical' href='https://hostenwang.github.io/posts/database/ora-01653-unable-to-extend-table/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css">
+<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?07b3f66fb5026a9433526edaa232fa7d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta property='og:title' content='ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table'>
+<meta property='og:description' content='概述|Overview 记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法
+'>
+<meta property='og:url' content='https://hostenwang.github.io/posts/database/ora-01653-unable-to-extend-table/'>
+<meta property='og:site_name' content='Nerver Forget Why You Started'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='oracle' /><meta property='article:tag' content='ora' /><meta property='article:published_time' content='2019-01-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-01-05T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table">
+<meta name="twitter:description" content="概述|Overview 记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法
+">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu06f28ed77c34952e63d738f73d7d0dfd_28689_300x0_resize_box_3.png" width="300"
+                            height="318" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Nerver Forget Why You Started</a></h1>
+            <h2 class="site-description">全栈开发工程师, 数据开发工程师, 开源爱好者, 生活探险家</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/hostenwang'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hostenwang.github.io/" selected>English</option>
+                        
+                            <option value="https://hostenwang.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#概述overview">概述|Overview</a></li>
+    <li><a href="#相关报错">相关报错</a></li>
+    <li><a href="#排查">排查</a>
+      <ol>
+        <li><a href="#11g-查看表空间使用率不推荐">11g 查看表空间使用率,不推荐</a></li>
+        <li><a href="#手写-sql查看表空间使用率推荐参考-1">手写 SQL查看表空间使用率,推荐,参考 1</a>
+          <ol>
+            <li><a href="#永久表空间">永久表空间</a></li>
+            <li><a href="#临时表空间">临时表空间</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#定位问题">定位问题</a></li>
+    <li><a href="#解决方案">解决方案</a>
+      <ol>
+        <li><a href="#联系-dba-扩容">联系 DBA 扩容</a></li>
+        <li><a href="#定位表空间对应的物理文件">定位表空间对应的物理文件</a></li>
+        <li><a href="#扩大表空间大小">扩大表空间大小</a></li>
+        <li><a href="#关掉-aud-表并关闭审计功能">关掉 AUD 表并关闭审计功能</a></li>
+      </ol>
+    </li>
+    <li><a href="#原因">原因</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/oracle/" style="background-color: #2a9d8f; color: #fff;">
+                Oracle
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/database/ora-01653-unable-to-extend-table/">ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 05, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="概述overview">概述|Overview</h2>
+<p>记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法</p>
+<h2 id="相关报错">相关报错</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ORA-00604: erroroccurred at recursive SQL level <span class="m">1</span>
+</span></span><span class="line"><span class="cl">ORA-01000: 超出打开游标的最大数 
+</span></span><span class="line"><span class="cl">ORA-01653: unable to extend table SYS.AUD$ by <span class="m">8192</span> in tablespace
+</span></span><span class="line"><span class="cl">ORA-01653: unable toextend table SYS.AUD$ by <span class="m">8192</span> in tablespace SYSTEM
+</span></span><span class="line"><span class="cl">ORA-02002: errorwhile writing to audit trail
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="排查">排查</h2>
+<h3 id="11g-查看表空间使用率不推荐">11g 查看表空间使用率,不推荐</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 它的大小计算单位是block，需要关联下数据库的block大小
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 表空间总容量如果是可自动扩展的datafile，那么结果就是所有datafile最大的max值的和
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dba_tablespace_usage_metrics</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">TABLESPACE_NAME</span><span class="o">|</span><span class="n">USED_SPACE</span><span class="o">|</span><span class="n">TABLESPACE_SIZE</span><span class="o">|</span><span class="n">USED_PERCENT</span><span class="w">  </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---------------+----------+---------------+--------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SYSTEM</span><span class="w">         </span><span class="o">|</span><span class="w">    </span><span class="mi">127240</span><span class="o">|</span><span class="w">        </span><span class="mi">4194302</span><span class="o">|</span><span class="w">  </span><span class="mi">3</span><span class="p">.</span><span class="mi">033</span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">TEMP</span><span class="w">           </span><span class="o">|</span><span class="w">       </span><span class="mi">128</span><span class="o">|</span><span class="w">        </span><span class="mi">4194302</span><span class="o">|</span><span class="w">  </span><span class="mi">0</span><span class="p">.</span><span class="mi">003</span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">USERS</span><span class="w">          </span><span class="o">|</span><span class="w">       </span><span class="mi">520</span><span class="o">|</span><span class="w">        </span><span class="mi">4194302</span><span class="o">|</span><span class="w">  </span><span class="mi">0</span><span class="p">.</span><span class="mi">012</span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="n">db_block_size</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="手写-sql查看表空间使用率推荐参考-1">手写 SQL查看表空间使用率,推荐,参考 1</h3>
+<h4 id="永久表空间">永久表空间</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">a</span><span class="p">.</span><span class="n">member</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="k">max</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;MAX_size GB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">((</span><span class="n">a</span><span class="p">.</span><span class="k">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;MAX_free GB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">((</span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;MAX_used GB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">((</span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="k">max</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;MAX_used_percent %&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_Sum MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">((</span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_used MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_free MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="n">round</span><span class="p">(((</span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_used_percent %&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">tablespace_name</span><span class="p">,</span><span class="k">sum</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="n">bytes</span><span class="p">,</span><span class="k">sum</span><span class="p">(</span><span class="n">decode</span><span class="p">(</span><span class="n">maxbytes</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="n">maxbytes</span><span class="p">))</span><span class="w"> </span><span class="k">max</span><span class="p">,</span><span class="k">count</span><span class="p">(</span><span class="n">file_id</span><span class="p">)</span><span class="w"> </span><span class="n">member</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dba_data_files</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">tablespace_name</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">tablespace_name</span><span class="p">,</span><span class="k">sum</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="n">bytes</span><span class="p">,</span><span class="k">max</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="w"> </span><span class="n">largest</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dba_free_space</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">tablespace_name</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">tablespace_name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="临时表空间">临时表空间</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">count</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">file_id</span><span class="p">)</span><span class="w"> </span><span class="n">member</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">decode</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">maxbytes</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">maxbytes</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">))</span><span class="w"> </span><span class="s2">&#34;MAX_size GB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">allocated_space</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">))</span><span class="w"> </span><span class="s2">&#34;MAX_used GB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">round</span><span class="p">((</span><span class="n">decode</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">maxbytes</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">maxbytes</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">allocated_space</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">))</span><span class="w"> </span><span class="s2">&#34;MAX_free GB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">allocated_space</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">decode</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">maxbytes</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">maxbytes</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="s2">&#34;MAX_used_percent %&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">TABLESPACE_SIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_sum MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">((</span><span class="n">a</span><span class="p">.</span><span class="n">TABLESPACE_SIZE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">FREE_SPACE</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_used MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">FREE_SPACE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_FREE MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">ALLOCATED_SPACE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="s2">&#34;Now_ALLOCATED MB&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">sum</span><span class="p">(</span><span class="n">round</span><span class="p">((</span><span class="n">a</span><span class="p">.</span><span class="n">TABLESPACE_SIZE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">FREE_SPACE</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">TABLESPACE_SIZE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="s2">&#34;Now_percent_used %&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">dba_temp_free_space</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">dba_temp_files</span><span class="w"> </span><span class="n">b</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">tablespace_name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="定位问题">定位问题</h2>
+<p>发现 SYSTEM 表空间使用率达到 99.4%, 需要扩容</p>
+<h2 id="解决方案">解决方案</h2>
+<h3 id="联系-dba-扩容">联系 DBA 扩容</h3>
+<h3 id="定位表空间对应的物理文件">定位表空间对应的物理文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">TABLESPACE_NAME</span><span class="p">,</span><span class="n">D</span><span class="p">.</span><span class="n">FILE_NAME</span><span class="p">,</span><span class="n">D</span><span class="p">.</span><span class="n">AUTOEXTENSIBLE</span><span class="p">,</span><span class="n">D</span><span class="p">.</span><span class="n">BYTES</span><span class="p">,</span><span class="n">D</span><span class="p">.</span><span class="n">MAXBYTES</span><span class="p">,</span><span class="n">D</span><span class="p">.</span><span class="n">STATUS</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">DBA_TABLESPACES</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="n">DBA_DATA_FILES</span><span class="w"> </span><span class="n">D</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">TABLESPACE_NAME</span><span class="w"> </span><span class="o">=</span><span class="n">D</span><span class="p">.</span><span class="n">TABLESPACE_NAME</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TABLESPACE_NAME</span><span class="p">,</span><span class="n">FILE_NAME</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">TABLESPACE_NAME</span><span class="o">|</span><span class="n">FILE_NAME</span><span class="w">                          </span><span class="o">|</span><span class="n">AUTOEXTENSIBLE</span><span class="o">|</span><span class="n">STATUS</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---------------+-----------------------------------+--------------+---------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SYSTEM</span><span class="w">         </span><span class="o">|</span><span class="w">      </span><span class="n">F</span><span class="p">:</span><span class="err">\</span><span class="n">SUN</span><span class="err">\</span><span class="n">ORCL</span><span class="err">\</span><span class="n">SYSTEM01</span><span class="p">.</span><span class="n">DBF</span><span class="w">     </span><span class="o">|</span><span class="n">YES</span><span class="w">           </span><span class="o">|</span><span class="n">AVAILABLE</span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">SYSAUX</span><span class="w">         </span><span class="o">|</span><span class="w">      </span><span class="n">F</span><span class="p">:</span><span class="err">\</span><span class="n">SUN</span><span class="err">\</span><span class="n">ORCL</span><span class="err">\</span><span class="n">SYSAUX</span><span class="p">.</span><span class="n">DBF</span><span class="w">       </span><span class="o">|</span><span class="n">YES</span><span class="w">           </span><span class="o">|</span><span class="n">AVAILABLE</span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">USERS</span><span class="w">          </span><span class="o">|</span><span class="w">      </span><span class="n">F</span><span class="p">:</span><span class="err">\</span><span class="n">SUN</span><span class="err">\</span><span class="n">ORCL</span><span class="err">\</span><span class="n">USERS01</span><span class="p">.</span><span class="n">DBF</span><span class="w">      </span><span class="o">|</span><span class="n">YES</span><span class="w">           </span><span class="o">|</span><span class="n">AVAILABLE</span><span class="o">|</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="扩大表空间大小">扩大表空间大小</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 方案1: 给表空间增加数据文件，并允许自动增长：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">ALTER</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">SYSTEM</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">&#39;F:\SUN\ORCL\SYSTEM02.DBF&#39;</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">500</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">500</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="mi">20000</span><span class="n">M</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 方案2: 手工改变已存在数据文件大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">datafile</span><span class="w"> </span><span class="s1">&#39;F:\SUN\ORCL\SYSTEM01.DBF&#39;</span><span class="w"> </span><span class="n">autoextend</span><span class="w"> </span><span class="k">on</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">datafile</span><span class="w"> </span><span class="s1">&#39;F:\SUN\ORCL\SYSTEM01.DBF&#39;</span><span class="w"> </span><span class="n">resize</span><span class="w"> </span><span class="mi">1200</span><span class="n">M</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 方案3: 允许已存在的数据文件自动增长：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">datafile</span><span class="w"> </span><span class="s1">&#39;F:\SUN\ORCL\SYSTEM01.DBF&#39;</span><span class="w"> </span><span class="n">autoextend</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="mi">500</span><span class="n">M</span><span class="w"> </span><span class="n">maxsize</span><span class="w"> </span><span class="n">unlimited</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="关掉-aud-表并关闭审计功能">关掉 AUD 表并关闭审计功能</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 清理审计表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">truncate</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">SYS</span><span class="p">.</span><span class="n">AUD$</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="n">audit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- --关闭审计功能
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="k">system</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">audit_trail</span><span class="o">=</span><span class="k">none</span><span class="w"> </span><span class="k">scope</span><span class="o">=</span><span class="n">spfile</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shutdown</span><span class="w"> </span><span class="k">immediate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="n">startup</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 验证
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="n">audit</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="原因">原因</h2>
+<p>系统表空间正常情况下只存放了数据字典之类的东西，所以占用的空间一般在500M以下。如果你的系统表空间占用比较多的空间，可能有以下几方面的原因：</p>
+<ul>
+<li>
+<p>没有为用户明确指定默认表空间，导致 SYSTEM系统表空间作为用户默认表空间</p>
+</li>
+<li>
+<p>开启了审计,请检查此表的大小 <code>AUD$</code></p>
+</li>
+</ul>
+<h2 id="参考">参考</h2>
+<ol>
+<li><a class="link" href="https://blog.csdn.net/zzt_2009/article/details/105004800"  target="_blank" rel="noopener"
+    >Oracle 运维篇+查看表空间使用率</a></li>
+<li><a class="link" href="https://www.zhangqiongjie.com/1527.html"  target="_blank" rel="noopener"
+    >Oracle报错SYSTEM系统表空间满解决办法</a></li>
+</ol>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/oracle/">oracle</a>
+        
+            <a href="/tags/ora/">ora</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/database/ora-28002-the-password-will-expire/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ORA-28002 7天之后口令将过期的解决方法|ORA-28002 The Password Will Expire in 7 Days Errors</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/database/ora-28000-the-account-is-locked/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ora-28000 the account is locked</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/database/oracle-backup-daily-on-windows/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/database/oracle-expdp-and-impdp-command-usage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Oracle 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/database/oracle-installation-and-configuration-on-windows/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 系统下 Oracle 的安装和配置|Oracle Installation and Configuration on Windows</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2012 - 
+        
+        2023 Nerver Forget Why You Started
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

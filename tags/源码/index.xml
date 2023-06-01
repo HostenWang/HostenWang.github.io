@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E6%BA%90%E7%A0%81/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Apache NiFi 源码学习:文档系统 | Apache NiFi Code - Doc System</title>
-        <link>https://hostenwang.github.io/p/nifi-code-doc-system/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/nifi-code-doc-system/</link>
         <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/nifi-code-doc-system/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/nifi-code-doc-system/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
 &lt;p&gt;本文记录如下内容&lt;/p&gt;

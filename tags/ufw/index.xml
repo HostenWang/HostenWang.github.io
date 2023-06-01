@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ufw/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>防火墙工具 UFW 使用总结</title>
-        <link>https://hostenwang.github.io/p/linux-ufw-uncomplicated-firewall/</link>
+        <title>Linux 防火墙工具 UFW 使用总结</title>
+        <link>https://hostenwang.github.io/posts/misc/linux-ufw-command-usage/</link>
         <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/linux-ufw-uncomplicated-firewall/</guid>
+        <guid>https://hostenwang.github.io/posts/misc/linux-ufw-command-usage/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 ubuntu 系统上默认的防火墙组件&lt;/p&gt;
 &lt;p&gt;UFW 是为了轻量化配置 #iptables 而开发的一款工具。 #UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的 #防火墙 规则。&lt;/p&gt;

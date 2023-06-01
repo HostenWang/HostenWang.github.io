@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 23 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/etl/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>将 Apache NiFi 用于 ETL |Use Apache NiFi in ETL</title>
-        <link>https://hostenwang.github.io/p/use-nifi-in-etl/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/use-nifi-in-etl/</link>
         <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/use-nifi-in-etl/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/use-nifi-in-etl/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ETL 通俗定义: 在数据源抽取后首先进行转换，然后将转换的结果写入目的地&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;

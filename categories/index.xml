@@ -6,12 +6,12 @@
         <description>Recent content in Categories on Nerver Forget Why You Started</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 05 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>axure</title>
-        <link>https://hostenwang.github.io/categories/axure/</link>
-        <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+        <lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python</title>
+        <link>https://hostenwang.github.io/categories/python/</link>
+        <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/axure/</guid>
+        <guid>https://hostenwang.github.io/categories/python/</guid>
         <description></description>
         </item>
         <item>
@@ -36,40 +36,8 @@
         <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/geoserver/</guid>
-        <description>&lt;img src="https://hostenwang.github.io/categories/geoserver/geoserver.png" alt="Featured image of post geoserver" /&gt;&lt;p&gt;记录我厂使用 GeoServer 的经验&lt;/p&gt;
+        <description>&lt;img src="https://hostenwang.github.io/categories/geoserver/geoserver_logo.png" alt="Featured image of post geoserver" /&gt;&lt;p&gt;记录我厂使用 GeoServer 的经验&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>OpenLayers</title>
-        <link>https://hostenwang.github.io/categories/openlayers/</link>
-        <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/openlayers/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>webgis</title>
-        <link>https://hostenwang.github.io/categories/webgis/</link>
-        <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/webgis/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>NC</title>
-        <link>https://hostenwang.github.io/categories/nc/</link>
-        <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/nc/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Yonyou</title>
-        <link>https://hostenwang.github.io/categories/yonyou/</link>
-        <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/yonyou/</guid>
-        <description></description>
         </item>
         <item>
         <title>用友NC开发</title>
@@ -81,28 +49,27 @@
 </description>
         </item>
         <item>
-        <title>面向 ArcGIS 的 python 脚本编程</title>
+        <title>OpenLayers</title>
+        <link>https://hostenwang.github.io/categories/openlayers/</link>
+        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/categories/openlayers/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python Scripting for Arcgis</title>
         <link>https://hostenwang.github.io/categories/python-scripting-for-arcgis/</link>
         <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/python-scripting-for-arcgis/</guid>
-        <description>&lt;img src="https://hostenwang.github.io/categories/python-scripting-for-arcgis/arcgis.jpg" alt="Featured image of post 面向 ArcGIS 的 python 脚本编程" /&gt;&lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
-</description>
+        <description>&lt;img src="https://hostenwang.github.io/categories/python-scripting-for-arcgis/arcgis.jpg" alt="Featured image of post Python Scripting for Arcgis" /&gt;</description>
         </item>
         <item>
-        <title>git</title>
-        <link>https://hostenwang.github.io/categories/git/</link>
-        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+        <title>webgis</title>
+        <link>https://hostenwang.github.io/categories/webgis/</link>
+        <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/git/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>gitea</title>
-        <link>https://hostenwang.github.io/categories/gitea/</link>
-        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/gitea/</guid>
+        <guid>https://hostenwang.github.io/categories/webgis/</guid>
         <description></description>
         </item>
         <item>
@@ -122,45 +89,21 @@
         <description></description>
         </item>
         <item>
-        <title>zentao</title>
-        <link>https://hostenwang.github.io/categories/zentao/</link>
-        <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/zentao/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>code</title>
-        <link>https://hostenwang.github.io/categories/code/</link>
-        <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/code/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Oracle Database</title>
-        <link>https://hostenwang.github.io/categories/oracle/</link>
-        <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/oracle/</guid>
-        <description>&lt;p&gt;记录我厂使用 Oracle 数据库的经验&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>运维</title>
-        <link>https://hostenwang.github.io/categories/%E8%BF%90%E7%BB%B4/</link>
-        <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/%E8%BF%90%E7%BB%B4/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Apache NiFi</title>
         <link>https://hostenwang.github.io/categories/nifi/</link>
         <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/nifi/</guid>
         <description>&lt;img src="https://hostenwang.github.io/categories/nifi/nifi.png" alt="Featured image of post Apache NiFi" /&gt;&lt;p&gt;记录我厂使用 NiFi 的经验&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Oracle</title>
+        <link>https://hostenwang.github.io/categories/oracle/</link>
+        <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/categories/oracle/</guid>
+        <description>&lt;p&gt;记录我厂使用 Oracle 数据库的经验&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -172,22 +115,6 @@
         <description></description>
         </item>
         <item>
-        <title>js</title>
-        <link>https://hostenwang.github.io/categories/js/</link>
-        <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/js/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>hadoop</title>
-        <link>https://hostenwang.github.io/categories/hadoop/</link>
-        <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/hadoop/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>hbase</title>
         <link>https://hostenwang.github.io/categories/hbase/</link>
         <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
@@ -196,19 +123,11 @@
         <description></description>
         </item>
         <item>
-        <title>Radio</title>
-        <link>https://hostenwang.github.io/categories/radio/</link>
+        <title>software-define-radio</title>
+        <link>https://hostenwang.github.io/categories/software-define-radio/</link>
         <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/radio/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>无线电</title>
-        <link>https://hostenwang.github.io/categories/%E6%97%A0%E7%BA%BF%E7%94%B5/</link>
-        <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/%E6%97%A0%E7%BA%BF%E7%94%B5/</guid>
+        <guid>https://hostenwang.github.io/categories/software-define-radio/</guid>
         <description></description>
         </item>
         <item>
@@ -220,46 +139,6 @@
         <description></description>
         </item>
         <item>
-        <title>QA</title>
-        <link>https://hostenwang.github.io/categories/qa/</link>
-        <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/qa/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>terminal</title>
-        <link>https://hostenwang.github.io/categories/terminal/</link>
-        <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/terminal/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>elasticsearch</title>
-        <link>https://hostenwang.github.io/categories/elasticsearch/</link>
-        <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/elasticsearch/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Python</title>
-        <link>https://hostenwang.github.io/categories/python/</link>
-        <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/python/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>gui</title>
-        <link>https://hostenwang.github.io/categories/gui/</link>
-        <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/gui/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>java</title>
         <link>https://hostenwang.github.io/categories/java/</link>
         <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
@@ -268,47 +147,32 @@
         <description></description>
         </item>
         <item>
-        <title>test</title>
-        <link>https://hostenwang.github.io/categories/test/</link>
-        <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
+        <title>git</title>
+        <link>https://hostenwang.github.io/categories/git/</link>
+        <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/test/</guid>
+        <guid>https://hostenwang.github.io/categories/git/</guid>
         <description></description>
         </item>
         <item>
-        <title>Ubuntu</title>
-        <link>https://hostenwang.github.io/categories/ubuntu/</link>
-        <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
+        <title>js</title>
+        <link>https://hostenwang.github.io/categories/js/</link>
+        <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/ubuntu/</guid>
+        <guid>https://hostenwang.github.io/categories/js/</guid>
         <description></description>
         </item>
         <item>
-        <title>mysql</title>
-        <link>https://hostenwang.github.io/categories/mysql/</link>
+        <title>Head First MySQL</title>
+        <link>https://hostenwang.github.io/categories/head-first-mysql/</link>
         <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/mysql/</guid>
-        <description></description>
+        <guid>https://hostenwang.github.io/categories/head-first-mysql/</guid>
+        <description>&lt;p&gt;记录我使用 MySQL 数据库的经验&lt;/p&gt;
+</description>
         </item>
         <item>
-        <title>middleware</title>
-        <link>https://hostenwang.github.io/categories/middleware/</link>
-        <pubDate>Wed, 12 Aug 2015 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/middleware/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>nginx</title>
-        <link>https://hostenwang.github.io/categories/nginx/</link>
-        <pubDate>Wed, 12 Aug 2015 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/nginx/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>FPGA</title>
+        <title>fpga</title>
         <link>https://hostenwang.github.io/categories/fpga/</link>
         <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
         

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 26 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/lucene/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Elasticsearch 集群安装|Elasticsearch Cluster Installation</title>
-        <link>https://hostenwang.github.io/p/elasticsearch-cluster-installation/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/elasticsearch-cluster-installation/</link>
         <pubDate>Sun, 26 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/elasticsearch-cluster-installation/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/elasticsearch-cluster-installation/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Elasticsearch是一个基于Apache Lucene(TM)的开源搜索引擎。无论在开源还是专有领域，Lucene可以被认为是迄今为止最先进、性能最好的、功能最全的搜索引擎库。&lt;/p&gt;
 &lt;p&gt;Elasticsearch也使用Java开发并使用Lucene作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的 RESTful API 来隐藏Lucene的复杂性，从而让全文搜索变得简单。&lt;/p&gt;

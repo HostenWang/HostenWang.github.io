@@ -6,101 +6,12 @@
         <description>Recent content in HTTP on Nerver Forget Why You Started</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 27 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>WebGIS 系列 - 网络要素服务|WebGIS - WFS(Web Feature Service)</title>
-        <link>https://hostenwang.github.io/p/webgis-wfs-web-feature-service/</link>
-        <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/p/webgis-wfs-web-feature-service/</guid>
-        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;OGC的WMS和WMTS规范都是有关空间数据显示的标准，而WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。&lt;/p&gt;
-&lt;p&gt;记录我厂使用 WFS 的知识&lt;/p&gt;
-&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Windows&lt;/td&gt;
-&lt;td&gt;10 home x64&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;geoserver&lt;/td&gt;
-&lt;td&gt;2.21.0&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;wfs-概述&#34;&gt;WFS 概述&lt;/h2&gt;
-&lt;p&gt;OGC的 #WMS 和 #WMTS 规范都是有关空间数据显示的标准，而 #WFS（Web Feature Service）则允许用户在分布式的环境下通过HTTP对空间数据进行增、删、改、查。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;http://www.opengeospatial.org/standards/wfs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web Feature Service&lt;/a&gt; (WFS) is a standard created by the Open Geospatial Consortium (OGC) for creating, modifying and exchanging vector format geographic information on the Internet using HTTP. A WFS encodes and transfers information in Geography Markup Language (GML), a subset of XML.&lt;/p&gt;
-&lt;p&gt;&amp;ndash; &lt;a class=&#34;link&#34; href=&#34;https://docs.geoserver.org/stable/en/user/services/wfs/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GeoServer 官网对 WFS 的描述&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;wms-vs-wfs&#34;&gt;WMS VS WFS&lt;/h2&gt;
-&lt;p&gt;WMS是由服务器将地图图像发送给客户端，而WFS是服务器将矢量数据发送给客户端。也就是在使用WMS时地图由服务器绘制，在使用WFS时地图由客户端绘制。另外最最重要的，使用WFS可以对WebGIS服务器中的地理数据（存储在空间数据库中）直接进行增、删、改、查。&lt;/p&gt;
-&lt;h2 id=&#34;wfs一般支持的功能&#34;&gt;WFS一般支持的功能：&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;th&gt;描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;GetCapabilities&lt;/td&gt;
-&lt;td&gt;获取WFS服务的元数据（介绍服务中的要素类和支持的操作）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;DescribeFeatureType&lt;/td&gt;
-&lt;td&gt;获取WFS服务支持的要素类的定义（要素类的元数据，比如要素包含哪些字段）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;GetFeature&lt;/td&gt;
-&lt;td&gt;获取要素数据&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;GetGmlObject&lt;/td&gt;
-&lt;td&gt;通过XLink获取GML对象&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Transaction&lt;/td&gt;
-&lt;td&gt;创建、更新、删除要素数据的事务操作&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;LockFeature&lt;/td&gt;
-&lt;td&gt;在事务过程中锁定要素&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;优势和劣势&#34;&gt;优势和劣势&lt;/h2&gt;
-&lt;p&gt;待定&lt;/p&gt;
-&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;我厂使用 WFS 对地图要素进行增查改删&lt;/li&gt;
-&lt;li&gt;​&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/rainbow70626/p/12315529.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;OGC——WFS服务&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
-        <title>Nginx 安装配置|Nginx Setup</title>
-        <link>https://hostenwang.github.io/p/nginx-setup/</link>
+        <lastBuildDate>Wed, 12 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>怎样在 Windows 安装 Nginx|How to Install Nginx on Windows</title>
+        <link>https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/</link>
         <pubDate>Wed, 12 Aug 2015 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/nginx-setup/</guid>
+        <guid>https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。&lt;/p&gt;
 &lt;p&gt;它也是一种轻量级的Web服务器，可以作为独立的服务器部署网站（类似 Tomcat）。它高性能和低消耗内存的结构受到很多大公司青睐。&lt;/p&gt;
@@ -121,7 +32,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;nginx&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1.15.2&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -129,10 +40,10 @@
 &lt;h2 id=&#34;nginx-使用场景&#34;&gt;Nginx 使用场景&lt;/h2&gt;
 &lt;h3 id=&#34;反向代理&#34;&gt;反向代理&lt;/h3&gt;
 &lt;p&gt;Nginx在做反向代理时，提供性能稳定，并且能够提供配置灵活的转发功能。Nginx可以根据不同的正则匹配，采取不同的转发策略，比如图片文件结尾的走文件服务器，动态页面走web服务器&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/nginx-setup/reverse-proxy.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/reverse-proxy.png&#34;
 	width=&#34;458&#34;
 	height=&#34;225&#34;
-	srcset=&#34;https://hostenwang.github.io/p/nginx-setup/reverse-proxy_hue6b509d3e359bcef4c203d6a13340227_100616_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/nginx-setup/reverse-proxy_hue6b509d3e359bcef4c203d6a13340227_100616_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/reverse-proxy_huf49165856259157db12171013269f7e9_99098_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/reverse-proxy_huf49165856259157db12171013269f7e9_99098_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;反向代理&#34;
@@ -145,10 +56,10 @@
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;负载均衡&#34;&gt;负载均衡&lt;/h3&gt;
 &lt;h4 id=&#34;轮询&#34;&gt;轮询&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/nginx-setup/polling.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/polling.png&#34;
 	width=&#34;606&#34;
 	height=&#34;234&#34;
-	srcset=&#34;https://hostenwang.github.io/p/nginx-setup/polling_hudac28a56dcdf46ffba1c213794975db0_119893_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/nginx-setup/polling_hudac28a56dcdf46ffba1c213794975db0_119893_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/polling_hue004df76166b3e1bddea5cc9deb8fe47_117711_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/polling_hue004df76166b3e1bddea5cc9deb8fe47_117711_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;polling&#34;
@@ -160,10 +71,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;加权轮询&#34;&gt;加权轮询&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/nginx-setup/weight-bobin.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/weight-bobin.png&#34;
 	width=&#34;622&#34;
 	height=&#34;232&#34;
-	srcset=&#34;https://hostenwang.github.io/p/nginx-setup/weight-bobin_hub7a03a7af6cde290c48e3f14a22c4256_126131_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/nginx-setup/weight-bobin_hub7a03a7af6cde290c48e3f14a22c4256_126131_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/weight-bobin_hue83ee5739b033edfec9170b4f8d9c369_122631_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/weight-bobin_hue83ee5739b033edfec9170b4f8d9c369_122631_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;weight-bobin&#34;
@@ -176,10 +87,10 @@
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;ip-hash&#34;&gt;Ip hash&lt;/h4&gt;
 &lt;p&gt;对客户端请求的ip进行hash操作，然后根据hash结果将同一个客户端ip的请求分发给同一台服务器进行处理，可以解决session不共享的问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/nginx-setup/iphash.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/iphash.png&#34;
 	width=&#34;607&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://hostenwang.github.io/p/nginx-setup/iphash_huefdc3e83a9815e6bde68c5f8b775b216_94421_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/nginx-setup/iphash_huefdc3e83a9815e6bde68c5f8b775b216_94421_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/iphash_hu9b7242a9d79993be90530379d79d9137_93269_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/misc/how-to-install-nginx-on-windows/iphash_hu9b7242a9d79993be90530379d79d9137_93269_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;iphash&#34;

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/zh-cn/tags/arcpy/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>面向 ArcGIS 的 python 脚本编程 - Python 简介 | Python Scripting for ArcGIS - Python</title>
-        <link>https://hostenwang.github.io/zh-cn/p/python-scripting-for-arcgis-01-python/</link>
+        <link>https://hostenwang.github.io/zh-cn/posts/python/python-scripting-for-arcgis-01-python/</link>
         <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/zh-cn/p/python-scripting-for-arcgis-01-python/</guid>
+        <guid>https://hostenwang.github.io/zh-cn/posts/python/python-scripting-for-arcgis-01-python/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Python 是一门简单又强大的主流编程语言。由 Guido van Rossum 于1989年创建. Python 的类库非常丰富，这使得 Python 几乎无所不能，网站开发、软件开发、大数据分析、网络爬虫、机器学习等都不在话下。&lt;/p&gt;
 &lt;p&gt;Python 语言起源于 1989 年末，当时 CWI（荷兰国家数学与计算机科学研究中心）的研究员 Guido van Rossum 需要一种高级脚本编程语言，为其研究小组的 Amoeba 分布式操作系统执行管理 任务。为创建新语言，他从高级数学语言 ABC（ALL BASIC CODE）中汲取了大量语法，并从系 统编程语言 Modula-3 中借鉴了错误处理机制。他把这种新的语言命名为 Python（蟒蛇），Python 来 源于 BBC 当时正在热播的喜剧连续剧 Monty Python’s Flying Circus ，他希望这个新的叫作 Python 的语言能符合他的理想:创造一种处于 C 和 Shell 之间，且功能全面、易学易用、可拓展的语言。&lt;/p&gt;

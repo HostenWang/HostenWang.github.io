@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='概述|Overview 空间参考系用于建立地球表面物体的空间位置与二维平面上坐标的关系
+'>
+<title>GeoServer 空间参考系|GeoServer Coordinate Reference System</title>
+
+<link rel='canonical' href='https://hostenwang.github.io/posts/webgis/geoserver-coordinate-reference-system/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css">
+<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?07b3f66fb5026a9433526edaa232fa7d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta property='og:title' content='GeoServer 空间参考系|GeoServer Coordinate Reference System'>
+<meta property='og:description' content='概述|Overview 空间参考系用于建立地球表面物体的空间位置与二维平面上坐标的关系
+'>
+<meta property='og:url' content='https://hostenwang.github.io/posts/webgis/geoserver-coordinate-reference-system/'>
+<meta property='og:site_name' content='Nerver Forget Why You Started'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='geoserver' /><meta property='article:tag' content='gis' /><meta property='article:tag' content='OpenGIS' /><meta property='article:published_time' content='2022-03-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-03-23T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="GeoServer 空间参考系|GeoServer Coordinate Reference System">
+<meta name="twitter:description" content="概述|Overview 空间参考系用于建立地球表面物体的空间位置与二维平面上坐标的关系
+">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu06f28ed77c34952e63d738f73d7d0dfd_28689_300x0_resize_box_3.png" width="300"
+                            height="318" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Nerver Forget Why You Started</a></h1>
+            <h2 class="site-description">全栈开发工程师, 数据开发工程师, 开源爱好者, 生活探险家</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/hostenwang'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hostenwang.github.io/" selected>English</option>
+                        
+                            <option value="https://hostenwang.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#概述overview">概述|Overview</a></li>
+    <li><a href="#环境">环境</a></li>
+    <li><a href="#分类">分类</a>
+      <ol>
+        <li><a href="#地理坐标系">地理坐标系</a></li>
+        <li><a href="#投影坐标系">投影坐标系</a></li>
+        <li><a href="#地理坐标系-vs-投影坐标系">地理坐标系 VS 投影坐标系</a></li>
+      </ol>
+    </li>
+    <li><a href="#常用-crs-格式">常用 CRS 格式</a></li>
+    <li><a href="#常用-crscoordinate-reference-systems">常用 CRS(Coordinate Reference Systems)</a></li>
+    <li><a href="#总结summary">总结|Summary</a></li>
+    <li><a href="#未来展望further">未来展望|Further</a></li>
+    <li><a href="#参考references">参考|References</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/geoserver/" style="background-color: #2a9d8f; color: #fff;">
+                geoserver
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/webgis/geoserver-coordinate-reference-system/">GeoServer 空间参考系|GeoServer Coordinate Reference System</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 23, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="概述overview">概述|Overview</h2>
+<p>空间参考系用于建立地球表面物体的空间位置与二维平面上坐标的关系</p>
+<p>GeoServer 是 #OpenGIS #Web 服务器规范的 J2EE 实现，利用 #GeoServer 可以方便的发布地图数据，允许用户对特征数据进行更新、删除、插入操作，通过 GeoServer 可以比较容易的在用户之间迅速共享空间地理信息。</p>
+<h2 id="环境">环境</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Version</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Win10 Home x64</td>
+<td></td>
+</tr>
+<tr>
+<td>Java</td>
+<td>OpenJDK8</td>
+<td></td>
+</tr>
+<tr>
+<td>Tomcat</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>geoserver</td>
+<td>2.21.0</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="分类">分类</h2>
+<p>CRS 可细分为 #地理坐标系 和 #投影坐标系</p>
+<h3 id="地理坐标系">地理坐标系</h3>
+<p>以弧度制下度数为单位的 地理坐标系（Geographic Coordinate Systems）帮助我们定位物体在地球球面上的具体位置</p>
+<p>地理坐标系以地表上确定的某一个点为原点，创建了包裹全球的网格，譬如 WGS84，将本初子午线与赤道的交点作为原点</p>
+<h3 id="投影坐标系">投影坐标系</h3>
+<p>地理坐标系虽然解决了我们在地球球面上定位的问题，但纬度和经度位置没有使用统一的测量单位。</p>
+<p>各种各样的投影坐标系（Projected Coordinate Systems）被开发出来</p>
+<p>投影坐标系指的是从将3D球面展平为2D平面的一套数学计算方法，利用它可以优化形状、比例/距离以及面积的失真情况。</p>
+<p>但实际情况中没有在整个地球表面都能“三全其美”的投影坐标系，有些投影坐标系优化形状上的失真，有些投影坐标系优化距离上的失真，有些投影坐标系专门针对面积失真进行优化，而有些投影坐标系可以对局部区域进行三个方面上的优化。</p>
+<p>常用的投影坐标系如横轴墨卡托（Universal Transverse Mercator，简称UTM），基于经度将全球等分为编号0-60的区域，且每个区域又进一步细分为南半球区域或北半球区域</p>
+<h3 id="地理坐标系-vs-投影坐标系">地理坐标系 VS 投影坐标系</h3>
+<p>待定</p>
+<h2 id="常用-crs-格式">常用 CRS 格式</h2>
+<p>EPSG（European Petroleum Survey Group）编码，使用4或5位数字编码来唯一确定已存在的一种CRS，可以在http://spatialreference.org/ref/epsg/中查看和搜索所有已知的EPSG与CRS对应关系</p>
+<p><img src="/posts/webgis/geoserver-coordinate-reference-system/crs.jpg"
+	width="720"
+	height="259"
+	srcset="/posts/webgis/geoserver-coordinate-reference-system/crs_hu28190c69fc974aaaee856462cdd6f818_35085_480x0_resize_q75_box.jpg 480w, /posts/webgis/geoserver-coordinate-reference-system/crs_hu28190c69fc974aaaee856462cdd6f818_35085_1024x0_resize_q75_box.jpg 1024w"
+	loading="lazy"
+	
+		alt="常用CRS格式"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="277"
+		data-flex-basis="667px"
+	
+></p>
+<h2 id="常用-crscoordinate-reference-systems">常用 CRS(Coordinate Reference Systems)</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native SRS</td>
+<td>本地数据自身的坐标系统</td>
+</tr>
+<tr>
+<td>Declared SRS</td>
+<td>地图服务发布时的坐标系统</td>
+</tr>
+<tr>
+<td>SRS handling</td>
+<td>声明 <code>Native SRS</code> 和 <code>Declared SRS</code> 不同时的处理方式</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="总结summary">总结|Summary</h2>
+<h2 id="未来展望further">未来展望|Further</h2>
+<p>我厂使用 GeoServer 作为 GIS 后端</p>
+<h2 id="参考references">参考|References</h2>
+<ol>
+<li><a class="link" href="https://xiaoshi-hd.github.io/"  target="_blank" rel="noopener"
+    >小师的Blog</a></li>
+<li><a class="link" href="" >GeoServer Beginner&rsquo;s Guide</a></li>
+</ol>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/geoserver/">geoserver</a>
+        
+            <a href="/tags/gis/">gis</a>
+        
+            <a href="/tags/opengis/">OpenGIS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/webgis/load-postgis-data-and-publish-them-in-geoserver/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GeoServer - 添加并发布 PostGIS 数据|GeoServer  - loading data in PostGIS and publishing them in  GeoServer</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/webgis/add-shapefiles-data-in-geoserver/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GeoServer - 添加 shape 文件|GeoServer - Adding shapefiles</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/webgis/geoserver-overview/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GeoServer - 概述 | GeoServer - Overview</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/webgis/ogc-open-geospatial-consortium-overview/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OGC(开放地理空间信息联盟)概述|OGC(Open Geospatial Consortium) Overview</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2012 - 
+        
+        2023 Nerver Forget Why You Started
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/elastic/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Elastic Stack 概述|Elastic Stack Overview</title>
-        <link>https://hostenwang.github.io/p/elastic-stack-overview/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/elastic-stack-overview/</link>
         <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/elastic-stack-overview/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/elastic-stack-overview/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Elastic Stack:一体化的完整数据处理堆栈，从数据摄入到分析展示、价值获取&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -37,10 +37,10 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;整体架构&#34;&gt;整体架构&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/p/elastic-stack-overview/elastic_stack.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/elastic-stack-overview/elastic_stack.png&#34;
 	width=&#34;793&#34;
 	height=&#34;445&#34;
-	srcset=&#34;https://hostenwang.github.io/p/elastic-stack-overview/elastic_stack_hu845c127349596c125c767416bef8f132_91147_480x0_resize_box_3.png 480w, https://hostenwang.github.io/p/elastic-stack-overview/elastic_stack_hu845c127349596c125c767416bef8f132_91147_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/bigdata/elastic-stack-overview/elastic_stack_hu291f8c5389e9870449d1cec3b850c354_84139_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/elastic-stack-overview/elastic_stack_hu291f8c5389e9870449d1cec3b850c354_84139_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;整体架构&#34;
@@ -59,11 +59,102 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
+        <title>Kabana 安装|Kabana Installation</title>
+        <link>https://hostenwang.github.io/posts/bigdata/kabana-installation/</link>
+        <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/bigdata/kabana-installation/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Kibana 是为 Elasticsearch 设计的开源分析和可视化平台。你可以使用 Kibana 来搜索，查看存储在 Elasticsearch 索引中的数据并与之交互&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;p&gt;Elasticsearch 和 JDK 版本对应关系：https://www.elastic.co/cn/support/matrix#matrix_jvm&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;JDK&lt;/td&gt;
+&lt;td&gt;1.8&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kabana&lt;/td&gt;
+&lt;td&gt;6.3.2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;你可以从 &lt;code&gt;elasticsearch.org/download&lt;/code&gt; 下载最新版本的 Kabana。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L -O http://download.elasticsearch.org/kabana-&lt;span class=&#34;nv&#34;&gt;$VERSION&lt;/span&gt;.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unzip kabana-&lt;span class=&#34;nv&#34;&gt;$VERSION&lt;/span&gt;.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kabana-&lt;span class=&#34;nv&#34;&gt;$VERSION&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;kabana.yml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;c1&#34;&gt;# Specifies the address to which the Kibana server will bind. IP addresses and host names are both valid values.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The default is &amp;#39;localhost&amp;#39;, which usually means remote machines will not be able to connect.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# To allow connections from remote users, set this parameter to a non-loopback address.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server.host: &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The URLs of the Elasticsearch instances to use for all your queries.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;elasticsearch.hosts: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://{{YOUR_HOST}}:9200&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;运行&#34;&gt;运行&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ./bin/kabana.bat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;验证&#34;&gt;验证&lt;/h2&gt;
+&lt;p&gt;Kibana是一个Web应用程序，你可以通过 &lt;code&gt;{{YOUR_HOST}}:5601&lt;/code&gt;  来访问它。&lt;/p&gt;
+&lt;p&gt;当访问Kibana时，默认情况下，Discover 页面加载时选择了默认索引模式。时间过滤器设置为最近15分钟，搜索查询设置为 &lt;code&gt;match-all(*)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
         <title>Elasticsearch 汉语分词IK插件使用总结|Elasticsearch IK Plugin Usage</title>
-        <link>https://hostenwang.github.io/p/elasticsearch-ik-plugin-usage/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/elasticsearch-ik-plugin-usage/</link>
         <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/elasticsearch-ik-plugin-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/elasticsearch-ik-plugin-usage/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Elasticsearch 是一款开源、近实时、高性能的分布式搜索引擎&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -371,10 +462,10 @@
         </item>
         <item>
         <title>Elasticsearch 集群安装|Elasticsearch Cluster Installation</title>
-        <link>https://hostenwang.github.io/p/elasticsearch-cluster-installation/</link>
+        <link>https://hostenwang.github.io/posts/bigdata/elasticsearch-cluster-installation/</link>
         <pubDate>Sun, 26 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/p/elasticsearch-cluster-installation/</guid>
+        <guid>https://hostenwang.github.io/posts/bigdata/elasticsearch-cluster-installation/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Elasticsearch是一个基于Apache Lucene(TM)的开源搜索引擎。无论在开源还是专有领域，Lucene可以被认为是迄今为止最先进、性能最好的、功能最全的搜索引擎库。&lt;/p&gt;
 &lt;p&gt;Elasticsearch也使用Java开发并使用Lucene作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的 RESTful API 来隐藏Lucene的复杂性，从而让全文搜索变得简单。&lt;/p&gt;
@@ -574,6 +665,120 @@
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Elasticsearch 概述|Elasticsearch Overview</title>
+        <link>https://hostenwang.github.io/posts/bigdata/elasticsearch-overview/</link>
+        <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/bigdata/elasticsearch-overview/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;Elasticsearch 是一款开源、近实时、高性能的分布式搜索引擎&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;p&gt;Elasticsearch 和 JDK 版本对应关系：https://www.elastic.co/cn/support/matrix#matrix_jvm&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;JDK&lt;/td&gt;
+&lt;td&gt;1.8&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;elasticsearch&lt;/td&gt;
+&lt;td&gt;6.3.2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;elasticsearch-analysis-ik&lt;/td&gt;
+&lt;td&gt;6.3.2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;核心特性&#34;&gt;核心特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;分布式：横向扩展非常灵活&lt;/li&gt;
+&lt;li&gt;全文检索：基于lucene的强大的全文检索能力；&lt;/li&gt;
+&lt;li&gt;近实时搜索和分析：数据进入ES，可达到近实时搜索，还可进行聚合分析&lt;/li&gt;
+&lt;li&gt;高可用：容错机制，自动发现新的或失败的节点，重组和重新平衡数据&lt;/li&gt;
+&lt;li&gt;模式自由：ES的动态mapping机制可以自动检测数据的结构和类型，创建索引并使数据可搜索。&lt;/li&gt;
+&lt;li&gt;RESTful API：JSON + HTTP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;elasticsearch-与关系型数据库对比&#34;&gt;Elasticsearch 与关系型数据库对比&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/elasticsearch-overview/compare.png&#34;
+	width=&#34;600&#34;
+	height=&#34;402&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/bigdata/elasticsearch-overview/compare_hu53293c1edc6a9105cc25f96927b29056_41714_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/elasticsearch-overview/compare_hu53293c1edc6a9105cc25f96927b29056_41714_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Elasticsearch 与关系型数据库对比&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;核心概念&#34;&gt;核心概念&lt;/h2&gt;
+&lt;h3 id=&#34;index&#34;&gt;index&lt;/h3&gt;
+&lt;p&gt;一个索引相当于关系型数据库中的一个表（在 6.x 以前，一个 &lt;code&gt;index&lt;/code&gt; 可以被认为是一个数据库）&lt;/p&gt;
+&lt;h3 id=&#34;document&#34;&gt;document&lt;/h3&gt;
+&lt;p&gt;index 中的单条记录称为 document （文档），可以理解为表中的一行数据。多条 document 组成了一个 index&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;l&#34;&gt;_index ：文档所属索引名称。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;_type ：文档所属类型名（此处已默认为_doc）。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;_id ：Doc 的主键。在写入的时候，可以指定该 Doc 的 ID 值，如果不指定，则系统自动生成一个唯一的 UUID 值。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;_score ：顾名思义，得分，也可称之为相关性，在查询是 ES 会 根据一些规则计算得分，并根据得分进行倒排。除此之外，ES 支持通过 Function score query 在查询时自定义 score 的计算规则。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;_source ：文档的原始 JSON 数据。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;field&#34;&gt;field&lt;/h3&gt;
+&lt;p&gt;一个 document 会由一个或多个 field 组成，field 是 ES 中数据索引的最小定义单位，下面仅列举部分常用的类型。&lt;/p&gt;
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+&lt;h3 id=&#34;集群cluster&#34;&gt;集群(Cluster)&lt;/h3&gt;
+&lt;p&gt;一个集群由一个唯一的名字标识，默认为“elasticsearch”。集群名称非常重要，具有相同集群名的节点才会组成一个集群。集群名称可以在配置文件中指定。&lt;/p&gt;
+&lt;h3 id=&#34;节点node&#34;&gt;节点(Node)&lt;/h3&gt;
+&lt;p&gt;存储集群的数据，参与集群的索引和搜索功能。像集群有名字，节点也有自己的名称，默认在启动时会以一个随机的UUID的前七个字符作为节点的名字，你可以为其指定任意的名字。通过集群名在网络中发现同伴组成集群。一个节点也可是集群。&lt;/p&gt;
+&lt;h3 id=&#34;分片shard&#34;&gt;分片(Shard)&lt;/h3&gt;
+&lt;p&gt;在创建一个索引时可以指定分成多少个分片来存储。每个分片本身也是一个功能完善且独立的“索引”，可以被放置在集群的任意节点上。&lt;/p&gt;
+&lt;p&gt;分片的好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;允许我们水平切分/扩展容量&lt;/li&gt;
+&lt;li&gt;可在多个分片上进行分布式的、并行的操作，提高系统的性能和吞吐量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;备份replication&#34;&gt;备份(Replication)&lt;/h3&gt;
+&lt;p&gt;一个分片可以有多个备份（副本）。&lt;/p&gt;
+&lt;p&gt;备份的好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高可用。一个主分片挂了，副本分片就顶上去&lt;/li&gt;
+&lt;li&gt;扩展搜索的并发能力、吞吐量。搜索可以在所有的副本上并行运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;Elasticsearch权威指南&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;​&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
