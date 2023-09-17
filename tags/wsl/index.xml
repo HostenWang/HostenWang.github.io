@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>wsl on Nerver Forget Why You Started</title>
+        <title>wsl on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/wsl/</link>
-        <description>Recent content in wsl on Nerver Forget Why You Started</description>
+        <description>Recent content in wsl on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Wed, 02 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Windows WSL 使用总结 | Windows WSL Usage</title>
-        <link>https://hostenwang.github.io/posts/misc/windows-wsl-usage/</link>
+        <title>Windows WSL 使用总结</title>
+        <link>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</link>
         <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/misc/windows-wsl-usage/</guid>
-        <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+        <guid>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;WSL的全程是Windows Subsystem for Linux，也就是windows的linux子系统，它是由微软与Canonical公司合作开发的，从win10开始支持wls&lt;/p&gt;
+&lt;p&gt;适用于 Linux 的 Windows 子系统 (WSL) 可让开发人员直接在 Windows 上按原样运行 GNU/Linux 环境（包括大多数命令行工具、实用工具和应用程序），且不会产生传统虚拟机或双启动设置开销。&lt;/p&gt;
+&lt;p&gt;Linux的Windows子系统（WSL）具有以下优势：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;交互性&lt;/strong&gt;：WSL允许在Windows应用程序中运行Linux命令和脚本，可以在两种操作系统之间无缝切换。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;兼容性&lt;/strong&gt;：WSL支持大多数Linux发行版，并且可以使用大多数Linux工具和实用程序。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;简洁性&lt;/strong&gt;：WSL不需要像虚拟机一样在两种操作系统之间切换，运行效率更高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全性&lt;/strong&gt;：WSL与Windows系统相互隔离，不会互相干扰。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

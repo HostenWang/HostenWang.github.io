@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Selenium on Nerver Forget Why You Started</title>
+        <title>Selenium on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/selenium/</link>
-        <description>Recent content in Selenium on Nerver Forget Why You Started</description>
+        <description>Recent content in Selenium on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/selenium/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Introduction and Practice with Selenium|Selenium 介绍和实践</title>
-        <link>https://hostenwang.github.io/posts/python/introduction-and-practice-with-selenium/</link>
+        <title>Selenium 介绍和实践</title>
+        <link>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</link>
         <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/introduction-and-practice-with-selenium/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</guid>
         <description>&lt;h2 id=&#34;概述abstract&#34;&gt;概述|Abstract&lt;/h2&gt;
 &lt;p&gt;Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化&lt;/p&gt;
 &lt;p&gt;Webdriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。 驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。&lt;/p&gt;
@@ -571,6 +571,8 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
     &gt;https://selenium-python.readthedocs.io/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://seleniumhq.github.io/selenium/docs/api/py/api.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://seleniumhq.github.io/selenium/docs/api/py/api.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.guru99.com/exception-handling-selenium.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Exception Handling in Selenium Webdriver (Types)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

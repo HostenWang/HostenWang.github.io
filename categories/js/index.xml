@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>js on Nerver Forget Why You Started</title>
+        <title>js on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/categories/js/</link>
-        <description>Recent content in js on Nerver Forget Why You Started</description>
+        <description>Recent content in js on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Sat, 06 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/js/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>jQuery 组件开发 | jQuery Plugin Development</title>
-        <link>https://hostenwang.github.io/posts/frontend/jquery-plugin-development/</link>
+        <link>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</link>
         <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/frontend/jquery-plugin-development/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单记录 jquery 插件开发&lt;/p&gt;
 &lt;p&gt;学会使用 jQuery 并不难，因为它简单易学，且插件丰富。编写一个属于自己的插件是个不错的选择。&lt;/p&gt;

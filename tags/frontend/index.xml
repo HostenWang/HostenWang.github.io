@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>frontend on Nerver Forget Why You Started</title>
+        <title>frontend on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/frontend/</link>
-        <description>Recent content in frontend on Nerver Forget Why You Started</description>
+        <description>Recent content in frontend on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Mon, 04 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>跨域解决方案总结|Frontend Cross Domain Solutions Summary</title>
-        <link>https://hostenwang.github.io/posts/frontend/cross-domain-solutions-summary/</link>
+        <link>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</link>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/frontend/cross-domain-solutions-summary/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;总结前端跨域问题解决方案&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -147,22 +147,22 @@
 &lt;h3 id=&#34;客户端方案浏览器开启跨域不安全略&#34;&gt;客户端方案:浏览器开启跨域(不安全)(略)&lt;/h3&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/sunsky303/p/16399236.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.cnblogs.com/sunsky303/p/16399236.html&lt;/a&gt; 10 种CORS跨域解决方案&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;</description>
+&lt;/div&gt;</description>
         </item>
         <item>
         <title>jQuery 组件开发 | jQuery Plugin Development</title>
-        <link>https://hostenwang.github.io/posts/frontend/jquery-plugin-development/</link>
+        <link>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</link>
         <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/frontend/jquery-plugin-development/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单记录 jquery 插件开发&lt;/p&gt;
 &lt;p&gt;学会使用 jQuery 并不难，因为它简单易学，且插件丰富。编写一个属于自己的插件是个不错的选择。&lt;/p&gt;

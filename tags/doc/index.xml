@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>doc on Nerver Forget Why You Started</title>
+        <title>doc on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/doc/</link>
-        <description>Recent content in doc on Nerver Forget Why You Started</description>
+        <description>Recent content in doc on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/doc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Apache NiFi 源码学习:文档系统 | Apache NiFi Code - Doc System</title>
-        <link>https://hostenwang.github.io/posts/bigdata/nifi-code-doc-system/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/nifi-code-doc-system/</link>
         <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/nifi-code-doc-system/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/nifi-code-doc-system/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
 &lt;p&gt;本文记录如下内容&lt;/p&gt;

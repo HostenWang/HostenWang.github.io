@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>python on Nerver Forget Why You Started</title>
+        <title>Python on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/python/</link>
-        <description>Recent content in python on Nerver Forget Why You Started</description>
+        <description>Recent content in Python on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Introduction and Practice with Selenium|Selenium 介绍和实践</title>
-        <link>https://hostenwang.github.io/posts/python/introduction-and-practice-with-selenium/</link>
+        <title>Selenium 介绍和实践</title>
+        <link>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</link>
         <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/introduction-and-practice-with-selenium/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</guid>
         <description>&lt;h2 id=&#34;概述abstract&#34;&gt;概述|Abstract&lt;/h2&gt;
 &lt;p&gt;Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化&lt;/p&gt;
 &lt;p&gt;Webdriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。 驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。&lt;/p&gt;
@@ -571,14 +571,16 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
     &gt;https://selenium-python.readthedocs.io/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://seleniumhq.github.io/selenium/docs/api/py/api.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://seleniumhq.github.io/selenium/docs/api/py/api.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.guru99.com/exception-handling-selenium.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Exception Handling in Selenium Webdriver (Types)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         <item>
-        <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据 | Python Scripting for ArcGIS - Processing Raster Data</title>
-        <link>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-09-processing-raster-data/</link>
+        <title>面向 ArcGIS 的 python 脚本编程 - 处理栅格数据</title>
+        <link>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-09-processing-raster-data/</link>
         <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-09-processing-raster-data/</guid>
+        <guid>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-09-processing-raster-data/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;栅格数据是一个独特的空间数据类型。很多地理处理工具都是为了处理栅格数据而开发的。&lt;/p&gt;
 &lt;p&gt;Arcpy 中有一个名为 &lt;code&gt;arepy.sa&lt;/code&gt; 的空间分析模块，该模块将地图代数全部整合到 Python 环境中，从而提高了脚本运行的效率。&lt;/p&gt;
@@ -625,11 +627,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据 | Python Scripting for ArcGIS - Processing Geometric Data</title>
-        <link>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-08-processing-geometric-data/</link>
+        <title>面向 ArcGIS 的 python 脚本编程 - 处理几何数据</title>
+        <link>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-08-processing-geometric-data/</link>
         <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
+        <guid>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-08-processing-geometric-data/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcPy 能处理几何图形，包括如何在已有的要素类中创建几何对象以及如何读取这些几何对象的属性信息。&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -675,11 +677,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据 | Python Scripting for ArcGIS - using Spatial Data</title>
-        <link>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-07-using-spatial-data/</link>
+        <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据</title>
+        <link>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-07-using-spatial-data/</link>
         <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-07-using-spatial-data/</guid>
+        <guid>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-07-using-spatial-data/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -726,15 +728,15 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>面向 ArcGIS 的 python 脚本编程 - Python 简介 | Python Scripting for ArcGIS - Python</title>
-        <link>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-01-python/</link>
+        <title>面向 ArcGIS 的 python 脚本编程 - Python 简介</title>
+        <link>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-01-python/</link>
         <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-01-python/</guid>
+        <guid>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-01-python/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;Python, created by Guido van Rossum in 1989, was named after his favorite comedy troupe, Monty Python.&lt;/p&gt;
-&lt;p&gt;Today, Python is a major programming language. It is used in web development, database administration, and AI.&lt;/p&gt;
-&lt;p&gt;Most importantly to GIS Analysts, Python can be used to control ArcGIS tools and Map Documents to produce geospatial data and maps in an organized and speedy manner using the excellent ArcPy module.&lt;/p&gt;
+&lt;p&gt;Python 是一门简单又强大的主流编程语言。由 Guido van Rossum 于1989年创建. Python 的类库非常丰富，这使得 Python 几乎无所不能，网站开发、软件开发、大数据分析、网络爬虫、机器学习等都不在话下。&lt;/p&gt;
+&lt;p&gt;Python 语言起源于 1989 年末，当时 CWI（荷兰国家数学与计算机科学研究中心）的研究员 Guido van Rossum 需要一种高级脚本编程语言，为其研究小组的 Amoeba 分布式操作系统执行管理 任务。为创建新语言，他从高级数学语言 ABC（ALL BASIC CODE）中汲取了大量语法，并从系 统编程语言 Modula-3 中借鉴了错误处理机制。他把这种新的语言命名为 Python（蟒蛇），Python 来 源于 BBC 当时正在热播的喜剧连续剧 Monty Python’s Flying Circus ，他希望这个新的叫作 Python 的语言能符合他的理想:创造一种处于 C 和 Shell 之间，且功能全面、易学易用、可拓展的语言。&lt;/p&gt;
+&lt;p&gt;在 GIS 领域, Python 可以用来控制 ArcGIS 工具和地图, 用于生成地理数据和地图, 基于优秀的 arcpy 模块可以极大的加速 ArcGIS 操作&lt;/p&gt;
 &lt;h3 id=&#34;python的特点&#34;&gt;Python的特点&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;简单易学&lt;/li&gt;
@@ -779,10 +781,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
         </item>
         <item>
         <title>面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</title>
-        <link>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-00-overview/</link>
+        <link>https://hostenwang.github.io/posts/0514-python/python-scripting-for-arcgis-00-overview/</link>
         <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-scripting-for-arcgis-00-overview/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/python-scripting-for-arcgis-00-overview/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
 &lt;p&gt;由于 AreGIS 是基于组件对象模型（COM）构建起来的，又因为脚本语言是面向对象的，所以脚本语言可以访问 ArcGIS 中所有获得许可的函数，也包括所有的扩展模块。因此，脚本语言才可以高效地实现任务自动化，受到了程序员的青味。&lt;/p&gt;
@@ -822,11 +824,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>如何在 Windows 上同时安装 Python2 和 Python3 |How to Install Both Python2 and Python3 in Windows</title>
-        <link>https://hostenwang.github.io/posts/python/how-to-install-both-python2-and-python3-in-windows/</link>
+        <title>如何在 Windows 上同时安装 Python2 和 Python3</title>
+        <link>https://hostenwang.github.io/posts/0514-python/how-to-install-both-python2-and-python3-in-windows/</link>
         <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/how-to-install-both-python2-and-python3-in-windows/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/how-to-install-both-python2-and-python3-in-windows/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;个人使用是 Python3, 个别行业软件只支持 #Python 2.7 ,结果就是安装 Python 2.7 后，本来在 Python 3 下能正常使用的脚本无法运行。&lt;/p&gt;
 &lt;p&gt;记录两个环境共存的配置&lt;/p&gt;
@@ -920,10 +922,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
         </item>
         <item>
         <title>Python GUI 总结|Python GUI Usage</title>
-        <link>https://hostenwang.github.io/posts/python/python-gui-summary/</link>
+        <link>https://hostenwang.github.io/posts/0514-python/python-gui-summary/</link>
         <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-gui-summary/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/python-gui-summary/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
@@ -948,11 +950,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Python pip 使用总结|Python pip Usage</title>
-        <link>https://hostenwang.github.io/posts/python/python-pip-usage/</link>
+        <title>Python pip 使用总结</title>
+        <link>https://hostenwang.github.io/posts/0514-python/python-pip-usage/</link>
         <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/python/python-pip-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/python-pip-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;python pip 常用命令小结&lt;/p&gt;
 &lt;h2 id=&#34;安装卸载&#34;&gt;安装卸载&lt;/h2&gt;

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>gitlab on Nerver Forget Why You Started</title>
+        <title>gitlab on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/gitlab/</link>
-        <description>Recent content in gitlab on Nerver Forget Why You Started</description>
+        <description>Recent content in gitlab on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>代码管理软件选型|Selection of Code Management Software</title>
-        <link>https://hostenwang.github.io/posts/develop/selection-of-code-management-software/</link>
+        <link>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</link>
         <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/develop/selection-of-code-management-software/</guid>
+        <guid>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</guid>
         <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;满足常用代码管理需求&lt;/li&gt;
@@ -237,46 +237,6 @@
 &lt;h2 id=&#34;4-gitea-定时备份&#34;&gt;4 gitea 定时备份&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/zh-cn/backup-and-restore/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://docs.gitea.io/zh-cn/backup-and-restore/&lt;/a&gt;&lt;/p&gt;</description>
-        </item>
-        <item>
-        <title>Python scrapy 爬虫配置</title>
-        <link>https://hostenwang.github.io/posts/python/scrapy-configuration/</link>
-        <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/python/scrapy-configuration/</guid>
-        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Windows&lt;/td&gt;
-&lt;td&gt;10 home x64&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;动态配置-user-agent&#34;&gt;动态配置 User-Agent&lt;/h2&gt;
-&lt;h2 id=&#34;禁用-cookies&#34;&gt;禁用 Cookies&lt;/h2&gt;
-&lt;h2 id=&#34;延迟&#34;&gt;延迟&lt;/h2&gt;
-&lt;h2 id=&#34;代理ip&#34;&gt;代理IP&lt;/h2&gt;
-&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
         </item>
         
     </channel>

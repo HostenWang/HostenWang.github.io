@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>wmts on Nerver Forget Why You Started</title>
+        <title>wmts on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/wmts/</link>
-        <description>Recent content in wmts on Nerver Forget Why You Started</description>
+        <description>Recent content in wmts on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/wmts/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>OpenLayers - WMTS(网络地图瓦片服务)|OpenLayers - WMTS(Web Map Tile Service)</title>
-        <link>https://hostenwang.github.io/posts/webgis/openlayers-wmts-web-map-tile-service/</link>
+        <link>https://hostenwang.github.io/posts/0321-webgis/openlayers-wmts-web-map-tile-service/</link>
         <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/webgis/openlayers-wmts-web-map-tile-service/</guid>
+        <guid>https://hostenwang.github.io/posts/0321-webgis/openlayers-wmts-web-map-tile-service/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;WMTS，即Web地图瓦片服务（Web Map Tile Service），由OGC（开放地理信息联盟）制定。根据WMTS标准，可以使我们轻松的访问瓦片数据。&lt;/p&gt;
 &lt;p&gt;WMTS提供了一种采用预定义地图瓦片发布数字地图服务的标准化解决方案，它最重要的特征是采用瓦片缓存技术缓解WebGIS服务器端数据处理的压力，提高前后端交互响应速度。&lt;/p&gt;
@@ -47,11 +47,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>WebGIS 系列 - 网络地图切片服务|WebGIS - WMTS(Web Map Tile Service)</title>
-        <link>https://hostenwang.github.io/posts/webgis/webgis-wmts-web-map-tile-service/</link>
+        <title>WebGIS 系列 - 网络地图切片服务</title>
+        <link>https://hostenwang.github.io/posts/0321-webgis/webgis-wmts-web-map-tile-service/</link>
         <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/webgis/webgis-wmts-web-map-tile-service/</guid>
+        <guid>https://hostenwang.github.io/posts/0321-webgis/webgis-wmts-web-map-tile-service/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;WMTS 是 OGC 提出的缓存技术标准，即在服务器端缓存被切割成一定大小瓦片的地图，对客户端只提供这些预先定义好的单个瓦片的服务，将更多的数据处理操作如图层叠加等放在客户端，从而缓解 GIS 服务器端数据处理的压力，改善用户体验。&lt;/p&gt;
 &lt;p&gt;WMTS 提供了一种采用预定义图块方法发布数字地图服务的标准化解决方案。WMTS 弥补了 WMS 不能提供分块地图的不足。WMTS牺牲了提供定制地图的灵活性，代之以通过提供静态数据（基础地图）来增强伸缩性，这些静态数据的范围框和比例尺被限定在各个图块内。这些固定的图块集使得对WMTS服务的实现可以使用一个仅简单返回已有文件的Web服务器即可，同时使得可以利用一些标准的诸如分布式缓存的网络机制实现伸缩性。&lt;/p&gt;

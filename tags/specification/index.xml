@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>specification on Nerver Forget Why You Started</title>
+        <title>Specification on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/specification/</link>
-        <description>Recent content in specification on Nerver Forget Why You Started</description>
+        <description>Recent content in Specification on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/specification/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>用友NC开发 - 规范|Yonyou NC Development - Specification</title>
-        <link>https://hostenwang.github.io/posts/yonyou/yonyou-nc-development-01-specification/</link>
+        <title>用友NC开发 - 规范</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</link>
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/yonyou/yonyou-nc-development-01-specification/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;互联网创造了新的经济形态和运行模式，正在成为经济发展的新引擎。作为一家业界领先的管理软件与企业云服务提供商，为积极推进大型集团在互联网时代背景下的转型升级，服务企业互联网化，用友NC 以客户为中心，帮助中国大型企业创新管理模式、引领商业变革。将互联网、云计算、大数据、移动应用等新技术与集团企业运营管理最佳实践深度融合，推出了可有效推进企业互联网化的解决方案，帮助企业迈向“互联网化”的新阶段。&lt;/p&gt;
+&lt;p&gt;用友NC是用友软件集团推出的一款中小企业综合管理软件，它将ERP、OA、CRM、财务管理等多种管理信息系统进行集成，从而实现对公司所有运作活动的综合管理，有效地提升企业的工作效率和生产力。&lt;/p&gt;
 &lt;p&gt;本文整理我厂使用的用友 NC 开发规范&lt;/p&gt;
 &lt;h2 id=&#34;nc-概述&#34;&gt;NC 概述&lt;/h2&gt;
 &lt;p&gt;用友NC已经有16年的历史，1997年第一代集团财务产品的诞生；从2000年开始，NC第二代逐步包括HR、供应链等，形成集团企业完整的全面ERP解决方案，其产品理念是集中管理、协同商务。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/yonyou/yonyou-nc-development-01-specification/ncc-overview.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001.png&#34;
 	width=&#34;1080&#34;
 	height=&#34;620&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/yonyou/yonyou-nc-development-01-specification/ncc-overview_hu288411750f93d4002b4333cb542c384e_143119_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/yonyou/yonyou-nc-development-01-specification/ncc-overview_hu288411750f93d4002b4333cb542c384e_143119_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001_hu1f3ed18613cb1f4581799253595f390b_119188_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001_hu1f3ed18613cb1f4581799253595f390b_119188_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;用友NC&#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -123,7 +123,7 @@
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;利用 NC 快速开发的特性, 开放更多贴近业务的工具&lt;/li&gt;
-&lt;li&gt;​&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
@@ -134,10 +134,10 @@
         </item>
         <item>
         <title>Git 提交信息模板|Git Commit Message Template</title>
-        <link>https://hostenwang.github.io/posts/develop/git-commit-message-tmpl/</link>
+        <link>https://hostenwang.github.io/posts/0513-develop/git-commit-message-tmpl/</link>
         <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/develop/git-commit-message-tmpl/</guid>
+        <guid>https://hostenwang.github.io/posts/0513-develop/git-commit-message-tmpl/</guid>
         <description>&lt;h2 id=&#34;1-概述&#34;&gt;1 概述&lt;/h2&gt;
 &lt;p&gt;如何设计和使用一个好的 commit messages 规范&lt;/p&gt;
 &lt;p&gt;在一个团队协作的项目中，开发人员需要经常提交一些代码去修复bug或者实现新的feature。&lt;/p&gt;

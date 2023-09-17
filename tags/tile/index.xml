@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>tile on Nerver Forget Why You Started</title>
+        <title>tile on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/tile/</link>
-        <description>Recent content in tile on Nerver Forget Why You Started</description>
+        <description>Recent content in tile on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tile/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>WebGIS 系列 - 瓦片地图|WebGIS - Tile</title>
-        <link>https://hostenwang.github.io/posts/webgis/webgis-tile/</link>
+        <title>WebGIS 系列 - 瓦片地图</title>
+        <link>https://hostenwang.github.io/posts/0321-webgis/webgis-tile/</link>
         <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/webgis/webgis-tile/</guid>
+        <guid>https://hostenwang.github.io/posts/0321-webgis/webgis-tile/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;瓦片地图（也叫切片地图）源于一种大地图解决方案，就是在多个比例尺下配置地图，然后提前把每个比例尺下的地图绘制为小块图片（瓦片），保存在服务器上用于缓存的目录中。&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -38,13 +38,13 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;瓦片&#34;&gt;瓦片&lt;/h3&gt;
 &lt;p&gt;瓦片就是包含地理数据的矩形影像，一幅地图按一定的瓦片大小被切割成多个瓦片，形成瓦片矩阵，一个或多个瓦片矩阵即组成瓦片矩阵集。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/webgis/webgis-tile/tile.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-tile/0001.png&#34;
 	width=&#34;401&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/webgis/webgis-tile/tile_hu0c4d8b739dc15f72ea270f863e14d1d0_29745_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/webgis/webgis-tile/tile_hu0c4d8b739dc15f72ea270f863e14d1d0_29745_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-tile/0001_hub17f1a6594e42ee0463f4d48c7d6cb62_23281_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0321-webgis/webgis-tile/0001_hub17f1a6594e42ee0463f4d48c7d6cb62_23281_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;tile&#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 

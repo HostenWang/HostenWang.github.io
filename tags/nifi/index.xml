@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>nifi on Nerver Forget Why You Started</title>
+        <title>nifi on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/nifi/</link>
-        <description>Recent content in nifi on Nerver Forget Why You Started</description>
+        <description>Recent content in nifi on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/nifi/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Apache NiFi 源码学习:文档系统 | Apache NiFi Code - Doc System</title>
-        <link>https://hostenwang.github.io/posts/bigdata/nifi-code-doc-system/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/nifi-code-doc-system/</link>
         <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/nifi-code-doc-system/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/nifi-code-doc-system/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
 &lt;p&gt;本文记录如下内容&lt;/p&gt;
@@ -142,10 +142,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
         </item>
         <item>
         <title>Apache NiFi 学习要点|Apache NiFi Skill Points</title>
-        <link>https://hostenwang.github.io/posts/bigdata/nifi-skill-points/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/nifi-skill-points/</link>
         <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/nifi-skill-points/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/nifi-skill-points/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;总结 Apache NiFi 学习路线&lt;/p&gt;
 &lt;h2 id=&#34;原理和架构&#34;&gt;原理和架构&lt;/h2&gt;
@@ -222,10 +222,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
         </item>
         <item>
         <title>Apache NiFi 系统配置最佳实践|Apache NiFi System Configuration Best Practices</title>
-        <link>https://hostenwang.github.io/posts/bigdata/nifi-system-config-best-practices/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/nifi-system-config-best-practices/</link>
         <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/nifi-system-config-best-practices/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/nifi-system-config-best-practices/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;如果您在Linux上运行，请考虑以下最佳实践。&lt;/p&gt;
 &lt;p&gt;典型的Linux缺省值并不一定能够很好地适应像NiFi这样的IO密集型应用程序的需要。&lt;/p&gt;
@@ -297,10 +297,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
         </item>
         <item>
         <title>Apache NiFi 介绍|Apache NiFi Introduction</title>
-        <link>https://hostenwang.github.io/posts/bigdata/nifi-introduction/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/nifi-introduction/</link>
         <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/nifi-introduction/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/nifi-introduction/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单来说，NiFi用于自动化管理系统之间的数据流。&lt;/p&gt;
 &lt;p&gt;在Apache NiFi官网上，是这么介绍NiFi的：“一个易用、强大、可靠的数据处理与分发系统”&lt;/p&gt;
@@ -379,10 +379,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
         </item>
         <item>
         <title>将 Apache NiFi 用于 ETL |Use Apache NiFi in ETL</title>
-        <link>https://hostenwang.github.io/posts/bigdata/use-nifi-in-etl/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/use-nifi-in-etl/</link>
         <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/use-nifi-in-etl/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/use-nifi-in-etl/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;ETL 通俗定义: 在数据源抽取后首先进行转换，然后将转换的结果写入目的地&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -434,11 +434,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
     &gt;DataPipeline CTO陈肃：从ETL到ELT，AI时代数据集成的问题与解决方案&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         <item>
-        <title>用户的最大进程数偏少|Max number of threads for user likely too low</title>
-        <link>https://hostenwang.github.io/posts/misc/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
+        <title>用户的最大进程数偏少</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
         <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/misc/linux-qa-max-number-of-threads-for-user-likely-too-low/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-number-of-threads-for-user-likely-too-low/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 Max number of threads for user likely too low 问题解决&lt;/p&gt;
 &lt;h2 id=&#34;2-环境environment&#34;&gt;2 环境|Environment&lt;/h2&gt;
@@ -493,11 +493,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>进程的最大文件描述符数量偏少|Max file descriptors for process likely too low</title>
-        <link>https://hostenwang.github.io/posts/misc/linux-qa-max-file-descriptors-for-process-likely-too-low/</link>
+        <title>进程的最大文件描述符数量偏少</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-file-descriptors-for-process-likely-too-low/</link>
         <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/misc/linux-qa-max-file-descriptors-for-process-likely-too-low/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-file-descriptors-for-process-likely-too-low/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 Max file descriptors for process likely too low 问题解决&lt;/p&gt;
 &lt;h2 id=&#34;2-环境environment&#34;&gt;2 环境|Environment&lt;/h2&gt;

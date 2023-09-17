@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>选型 on Nerver Forget Why You Started</title>
+        <title>选型 on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/%E9%80%89%E5%9E%8B/</link>
-        <description>Recent content in 选型 on Nerver Forget Why You Started</description>
+        <description>Recent content in 选型 on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E9%80%89%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>项目管理软件选型|Selection of Project Management Software</title>
-        <link>https://hostenwang.github.io/posts/develop/selection-of-project-management-software/</link>
+        <link>https://hostenwang.github.io/posts/0513-develop/selection-of-project-management-software/</link>
         <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/develop/selection-of-project-management-software/</guid>
+        <guid>https://hostenwang.github.io/posts/0513-develop/selection-of-project-management-software/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;项目管理软件是指与项目管理工作相关的各种应用软件，可以涉及进度、费用、资源、质量、风险、组织等各个方面，是项目管理相关软件的总称。&lt;/p&gt;
 &lt;p&gt;市面上这类软件很多&lt;/p&gt;
@@ -127,10 +127,10 @@
         </item>
         <item>
         <title>代码管理软件选型|Selection of Code Management Software</title>
-        <link>https://hostenwang.github.io/posts/develop/selection-of-code-management-software/</link>
+        <link>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</link>
         <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/develop/selection-of-code-management-software/</guid>
+        <guid>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</guid>
         <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;满足常用代码管理需求&lt;/li&gt;

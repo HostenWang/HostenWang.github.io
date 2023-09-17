@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>mysql on Nerver Forget Why You Started</title>
+        <title>mysql on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/mysql/</link>
-        <description>Recent content in mysql on Nerver Forget Why You Started</description>
+        <description>Recent content in mysql on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Sat, 02 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ubuntu 下 MySQL 的安装和配置|Install and Configure MySQL on Ubuntu</title>
-        <link>https://hostenwang.github.io/posts/database/install-and-configure-mysql-on-ubuntu/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/install-and-configure-mysql-on-ubuntu/</link>
         <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/install-and-configure-mysql-on-ubuntu/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/install-and-configure-mysql-on-ubuntu/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Linux 下 MySQL 的安装和配置&lt;/p&gt;
 &lt;h2 id=&#34;环境信息environment&#34;&gt;环境信息|Environment&lt;/h2&gt;

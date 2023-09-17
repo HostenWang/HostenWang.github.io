@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>hadoop on Nerver Forget Why You Started</title>
+        <title>hadoop on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/hadoop/</link>
-        <description>Recent content in hadoop on Nerver Forget Why You Started</description>
+        <description>Recent content in hadoop on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Thu, 11 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/hadoop/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>HBase 从入门到精通 - 概述 | HBase Beginner Guide - Data Model</title>
-        <link>https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/</link>
         <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。&lt;/p&gt;
 &lt;p&gt;HBase是Google Bigtable的开源实现，类似Google Bigtable利用GFS作为其文件存储系统，HBase利用Hadoop HDFS作为其文件存储系统；Google运行MapReduce来处理Bigtable中的海量数据，HBase同样利用Hadoop MapReduce来处理HBase中的海量数据；Google Bigtable利用 Chubby作为协同服务，HBase利用Zookeeper作为对应。&lt;/p&gt;
@@ -19,13 +19,13 @@
 &lt;p&gt;应用程序是以表的方式在Hbase存储数据的。表是由行和列构成的，所以的列是从属于某一个column family的。行和列的交叉点称之为cell,cell是版本化的。cell的内容是不可分割的字节数组。&lt;/p&gt;
 &lt;p&gt;表的row key也是一段字节数组，所以任何东西都可以保存进去，不论是字符串或者数字。Hbase的表是按key排序的，所以的表都必须要有key.&lt;/p&gt;
 &lt;h3 id=&#34;hbase-table&#34;&gt;HBase Table&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/data_model.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001.png&#34;
 	width=&#34;563&#34;
 	height=&#34;186&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/data_model_hu58529fcd2fd208c303146a835a55ccf7_5210_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/data_model_hu58529fcd2fd208c303146a835a55ccf7_5210_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_huc1b6ea55fefb3971264520a77c1498be_5195_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_huc1b6ea55fefb3971264520a77c1498be_5195_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;HBase 数据模型&#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -41,13 +41,13 @@
 &lt;p&gt;Table在水平方向有一个或者多个Column Family组成，一个Column Family中可以由任意多个Column组成，即&lt;strong&gt;Column Family支持动态扩展&lt;/strong&gt;，无需预先定义Column的数量以及类型，所有Column均以二进制格式存储，用户需要自行进行类型转换。&lt;/p&gt;
 &lt;h3 id=&#34;hbase-table--region&#34;&gt;HBase Table &amp;amp; Region&lt;/h3&gt;
 &lt;p&gt;当Table随着记录数不断增加而变大后，会逐渐分裂成多份splits，成为regions，一个region由&lt;code&gt;[startkey,endkey)&lt;/code&gt;表示，不同的region会被Master分配给相应的RegionServer进行管理：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/splits_and_region.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002.png&#34;
 	width=&#34;324&#34;
 	height=&#34;285&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/splits_and_region_hu50df8af4aa0bd9c765ddb9824120c288_51847_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-03-data-model/splits_and_region_hu50df8af4aa0bd9c765ddb9824120c288_51847_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_hu7f3a6fddf075c4537239d43f5198f7a3_48763_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_hu7f3a6fddf075c4537239d43f5198f7a3_48763_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;splits_and_region&#34;
+		alt=&#34;img_0002&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -63,21 +63,21 @@
         </item>
         <item>
         <title>HBase 从入门到精通 - 系统架构 | HBase Beginner Guide - Architecture</title>
-        <link>https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/</link>
         <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。&lt;/p&gt;
 &lt;p&gt;HBase是Google Bigtable的开源实现，类似Google Bigtable利用GFS作为其文件存储系统，HBase利用Hadoop HDFS作为其文件存储系统；Google运行MapReduce来处理Bigtable中的海量数据，HBase同样利用Hadoop MapReduce来处理HBase中的海量数据；Google Bigtable利用 Chubby作为协同服务，HBase利用Zookeeper作为对应。&lt;/p&gt;
 &lt;h2 id=&#34;hbase-系统架构&#34;&gt;HBase 系统架构&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/arch.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001.png&#34;
 	width=&#34;603&#34;
 	height=&#34;389&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/arch_hub37909ce63523f6c4ef306230ab40297_216959_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/arch_hub37909ce63523f6c4ef306230ab40297_216959_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu62cb3bd5b05be4fcefef72d1fba6d575_210041_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu62cb3bd5b05be4fcefef72d1fba6d575_210041_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;arch&#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -99,13 +99,13 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;hregionserver&#34;&gt;HRegionServer&lt;/h3&gt;
 &lt;p&gt;HRegionServer主要负责响应用户I/O请求，向HDFS文件系统中读写数据，是HBase中最核心的模块。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/HRegionServer.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002.png&#34;
 	width=&#34;553&#34;
 	height=&#34;347&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/HRegionServer_hu55522006df20545055a3ee0ac2f6e040_176715_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/HRegionServer_hu55522006df20545055a3ee0ac2f6e040_176715_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu5e130fc8a3a45d09aee1f055cf1adc24_172181_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu5e130fc8a3a45d09aee1f055cf1adc24_172181_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;HRegionServer&#34;
+		alt=&#34;img_0002&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -115,13 +115,13 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;HRegionServer内部管理了一系列HRegion对象，每个HRegion对应了Table中的一个Region，HRegion中由多个HStore组成。&lt;strong&gt;每个HStore对应了Table中的一个Column Family的存储，可以看出每个Column Family其实就是一个集中的存储单元，因此最好将具备共同IO特性的column放在一个Column Family中，这样最高效&lt;/strong&gt;。==怎么算 共同IO特性?==&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;HStore存储是HBase存储的核心了，其中由两部分组成，一部分是MemStore，一部分是若干StoreFile。&lt;strong&gt;MemStore是Sorted Memory Buffer，用户写入的数据首先会放入MemStore，当MemStore满了以后会Flush成一个StoreFile（底层实现是HFile），当StoreFile文件数量增长到一定阈值，会触发Compact合并操作，将多个StoreFiles合并成一个StoreFile，合并过程中会进行版本合并和数据删除，因此可以看出&lt;/strong&gt;HBase其实只有增加数据，所有的更新和删除操作都是在后续的compact过程中进行的，这使得用户的写操作只要进入内存中就可以立即返回，保证了HBase I/O的高性能&lt;/strong&gt;。当StoreFiles Compact后，会逐步形成越来越大的StoreFile，当单个StoreFile大小超过一定阈值后，会触发Split操作，同时把当前Region Split成2个Region，父Region会下线，新Split出的2个孩子Region会被HMaster分配到相应的HRegionServer上，使得原先1个Region的压力得以分流到2个Region上。下图描述了Compaction和Split的过程：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/compaction_and_split.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003.png&#34;
 	width=&#34;554&#34;
 	height=&#34;119&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/compaction_and_split_hu2f104e8871a6cc7ff0e7fdd859edc914_26357_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-02-arch/compaction_and_split_hu2f104e8871a6cc7ff0e7fdd859edc914_26357_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_huda6211aed00dc8b29b105f01ed710ea2_19055_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_huda6211aed00dc8b29b105f01ed710ea2_19055_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;compaction_and_split&#34;
+		alt=&#34;img_0003&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -138,30 +138,30 @@
         </item>
         <item>
         <title>HBase 从入门到精通 - 概述 | HBase Beginner Guide - Overview</title>
-        <link>https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-01-overview/</link>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/</link>
         <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-01-overview/</guid>
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;HBase – Hadoop Database，是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群。&lt;/p&gt;
 &lt;p&gt;HBase是Google Bigtable的开源实现，类似Google Bigtable利用GFS作为其文件存储系统，HBase利用Hadoop HDFS作为其文件存储系统；Google运行MapReduce来处理Bigtable中的海量数据，HBase同样利用Hadoop MapReduce来处理HBase中的海量数据；Google Bigtable利用 Chubby作为协同服务，HBase利用Zookeeper作为对应。&lt;/p&gt;
 &lt;h2 id=&#34;hbase-在-hadoop-生态的位置&#34;&gt;HBase 在 Hadoop 生态的位置&lt;/h2&gt;
 &lt;p&gt;Hadoop EcoSystem中的各层系统.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-01-overview/hadoop_ecosystem.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001.png&#34;
 	width=&#34;394&#34;
 	height=&#34;284&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-01-overview/hadoop_ecosystem_hu3e757502593ad67bccea0314ed2566c9_97857_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/bigdata/hbase-beginner-guide-01-overview/hadoop_ecosystem_hu3e757502593ad67bccea0314ed2566c9_97857_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hubd61ea712b44d9a3837943ad543cfda2_92724_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hubd61ea712b44d9a3837943ad543cfda2_92724_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;hadoop_ecosystem&#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;138&#34;
 		data-flex-basis=&#34;332px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;其中HBase位于结构化存储层，Hadoop HDFS 为 HBase提供了高可靠性的底层存储支持，Hadoop MapReduce为HBase提供了高性能的计算能力，Zookeeper为HBase提供了稳定服务和failover机制.&lt;/p&gt;
+&gt;
+其中HBase位于结构化存储层，Hadoop HDFS 为 HBase提供了高可靠性的底层存储支持，Hadoop MapReduce为HBase提供了高性能的计算能力，Zookeeper为HBase提供了稳定服务和failover机制.&lt;/p&gt;
 &lt;p&gt;此外，Pig和Hive还为HBase提供了高层语言支持，使得在HBase上进行数据统计处理变的非常简单。&lt;/p&gt;
 &lt;p&gt;Sqoop则为HBase提供了方便的RDBMS数据导入功能，使得传统数据库数据向HBase中迁移变的非常方便。&lt;/p&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;

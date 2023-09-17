@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>原型 on Nerver Forget Why You Started</title>
+        <title>原型 on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/%E5%8E%9F%E5%9E%8B/</link>
-        <description>Recent content in 原型 on Nerver Forget Why You Started</description>
+        <description>Recent content in 原型 on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Wed, 05 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E5%8E%9F%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>高效使用 Axure的几条原则|Several Principes Of Using Axure Efficiently</title>
-        <link>https://hostenwang.github.io/posts/design/several-principes-of-using-axure-efficiently/</link>
+        <title>高效使用 Axure的几条原则</title>
+        <link>https://hostenwang.github.io/posts/0512-design/several-principes-of-using-axure-efficiently/</link>
         <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/several-principes-of-using-axure-efficiently/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/several-principes-of-using-axure-efficiently/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -71,11 +71,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Axure 在原型设计中的使用|The Use Of Axure In Prototype Design</title>
-        <link>https://hostenwang.github.io/posts/design/the-use-of-axure-in-prototype-design/</link>
+        <title>Axure 在原型设计中的使用</title>
+        <link>https://hostenwang.github.io/posts/0512-design/the-use-of-axure-in-prototype-design/</link>
         <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/the-use-of-axure-in-prototype-design/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/the-use-of-axure-in-prototype-design/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
 &lt;h2 id=&#34;什么是原型&#34;&gt;什么是原型&lt;/h2&gt;
@@ -128,10 +128,10 @@
         </item>
         <item>
         <title>Axure 的几个快捷操作|Several Shortcut Of Axure</title>
-        <link>https://hostenwang.github.io/posts/design/several-shortcut-of-axure/</link>
+        <link>https://hostenwang.github.io/posts/0512-design/several-shortcut-of-axure/</link>
         <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/several-shortcut-of-axure/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/several-shortcut-of-axure/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
 &lt;h2 id=&#34;什么是原型&#34;&gt;什么是原型&lt;/h2&gt;

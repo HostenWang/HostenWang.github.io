@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>oracle on Nerver Forget Why You Started</title>
+        <title>oracle on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/oracle/</link>
-        <description>Recent content in oracle on Nerver Forget Why You Started</description>
+        <description>Recent content in oracle on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/oracle/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>ora-28000 the account is locked</title>
-        <link>https://hostenwang.github.io/posts/database/ora-28000-the-account-is-locked/</link>
+        <title>ORA-28000 帐号被锁定的解决办法|ORA-28000 the account is locked</title>
+        <link>https://hostenwang.github.io/posts/0533-database/ora-28000-the-account-is-locked/</link>
         <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/ora-28000-the-account-is-locked/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/ora-28000-the-account-is-locked/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 ORA-28000 帐号被锁定 的解决方法&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -41,7 +41,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;报错error-information&#34;&gt;报错|ERROR Information&lt;/h2&gt;
+&lt;h2 id=&#34;报错&#34;&gt;报错&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -52,11 +52,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ORA-28000 the account is locked
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;原因reason&#34;&gt;原因|Reason&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
 &lt;p&gt;导致出现改错误的原因是：在oracle 11g中，默认在default概要文件中设置了“FAILED_LOGIN_ATTEMPTS=10”，当输入密码错误次数达到设置值将导致此问题。&lt;/p&gt;
-&lt;h2 id=&#34;解决solution&#34;&gt;解决|Solution&lt;/h2&gt;
-&lt;h3 id=&#34;解锁unlock&#34;&gt;解锁|Unlock&lt;/h3&gt;
-&lt;p&gt;Open SQLPlus&lt;/p&gt;
+&lt;h2 id=&#34;解决&#34;&gt;解决&lt;/h2&gt;
+&lt;h3 id=&#34;解锁&#34;&gt;解锁&lt;/h3&gt;
+&lt;p&gt;打开 SQLPlus&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -65,13 +65,13 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SQL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;USER&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ACCOUNT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UNLOCK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;取消次数限制cancel-limit&#34;&gt;取消次数限制|Cancel Limit&lt;/h3&gt;
+&lt;/div&gt;&lt;h3 id=&#34;取消次数限制&#34;&gt;取消次数限制&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SQL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;alter&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;profile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;limit&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;failed_login_attempts&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unlimited&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;　
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SQL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;alter&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;profile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;limit&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;failed_login_attempts&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unlimited&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;　&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
@@ -82,11 +82,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>ORA-28002 7天之后口令将过期的解决方法|ORA-28002 The Password Will Expire in 7 Days Errors</title>
-        <link>https://hostenwang.github.io/posts/database/ora-28002-the-password-will-expire/</link>
+        <title>ORA-28002 7天之后口令将过期的解决方法</title>
+        <link>https://hostenwang.github.io/posts/0533-database/ora-28002-the-password-will-expire/</link>
         <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/ora-28002-the-password-will-expire/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/ora-28002-the-password-will-expire/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 ORA-28002 7天之后口令将过期的解决方法&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -171,10 +171,10 @@
         </item>
         <item>
         <title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</title>
-        <link>https://hostenwang.github.io/posts/database/ora-01653-unable-to-extend-table/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/ora-01653-unable-to-extend-table/</link>
         <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/ora-01653-unable-to-extend-table/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/ora-01653-unable-to-extend-table/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法&lt;/p&gt;
 &lt;h2 id=&#34;相关报错&#34;&gt;相关报错&lt;/h2&gt;
@@ -398,10 +398,10 @@
         </item>
         <item>
         <title>Oracle 在 Windows 平台的每日备份脚本|Oracle  Daily Backup Script in Windows</title>
-        <link>https://hostenwang.github.io/posts/database/oracle-backup-daily-on-windows/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/oracle-backup-daily-on-windows/</link>
         <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/oracle-backup-daily-on-windows/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/oracle-backup-daily-on-windows/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为1000多家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品之一&lt;/p&gt;
 &lt;p&gt;数据库的日常备份是运维基本操作.&lt;/p&gt;
@@ -489,10 +489,10 @@
         </item>
         <item>
         <title>Oracle 数据泵 expdp/impdp 总结|Oracle expdp and impdp Usage</title>
-        <link>https://hostenwang.github.io/posts/database/oracle-expdp-and-impdp-command-usage/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/oracle-expdp-and-impdp-command-usage/</link>
         <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/oracle-expdp-and-impdp-command-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/oracle-expdp-and-impdp-command-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;ORACLE 10G 开始推出了数据泵（&lt;code&gt;expdp /impdp&lt;/code&gt;）进行数据导入导出，可以使用并行参数选项，因此，相对于传统的exp命令来说，执行效率更高。&lt;/p&gt;
 &lt;h2 id=&#34;expdpimpdp-和-expimp-的区别&#34;&gt;expdp/impdp 和 exp/imp 的区别&lt;/h2&gt;
@@ -637,21 +637,23 @@
         </item>
         <item>
         <title>Windows 系统下 Oracle 的安装和配置|Oracle Installation and Configuration on Windows</title>
-        <link>https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/</link>
         <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;本文介绍如何在 Windows 系统下安装 Oracle 11g 数据库&lt;/p&gt;
 &lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
 &lt;p&gt;安装需要 5G 左右的磁盘空间（Oracle 主目录 3GB，数据文件 2GB）&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;Oracle 11g下载完成后，解压到一个空的文件夹，然后双击 &lt;em&gt;setup.exe&lt;/em&gt; 文件，就可以开始安装Oracle数据库了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001.png&#34;
 	width=&#34;787&#34;
 	height=&#34;599&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/02_hu04e1ddc7096e502ca1f4736e2d090756_47753_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/02_hu04e1ddc7096e502ca1f4736e2d090756_47753_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu1735232d3130a0c64da5f8a10188e831_34237_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu1735232d3130a0c64da5f8a10188e831_34237_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -664,37 +666,39 @@
 &lt;li&gt;字符集 选择 Unicode(AL32UTF8)&lt;/li&gt;
 &lt;li&gt;全局数据库名 即是数据库连接时的实例名，这里我设置为 orcl&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002.png&#34;
 	width=&#34;783&#34;
 	height=&#34;594&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/06_hu405dbfe2a2b29b71dec6d9f4f04ace3f_65248_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/06_hu405dbfe2a2b29b71dec6d9f4f04ace3f_65248_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu0a7b33b7fa357bc0f486c3e476d59a32_49897_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu0a7b33b7fa357bc0f486c3e476d59a32_49897_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;img_0002&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;131&#34;
 		data-flex-basis=&#34;316px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;一路确认,默认即可&lt;/p&gt;
+&gt;
+一路确认,默认即可&lt;/p&gt;
 &lt;h3 id=&#34;口令管理&#34;&gt;口令管理&lt;/h3&gt;
 &lt;p&gt;到了口令管理那里留意一下&lt;/p&gt;
 &lt;p&gt;单击【口令管理】按钮设置不同用户的密码，这里我们将 SYS，SYSTEM 和 HR 用户解锁并设置相应的密码 ，完成后，点击【确定】。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/09.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003.png&#34;
 	width=&#34;785&#34;
 	height=&#34;593&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/09_hud93059ae352a8aef1ab6d93e161cc3ee_72919_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/09_hud93059ae352a8aef1ab6d93e161cc3ee_72919_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu85156b356f7621f732aea754192f38c4_55240_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu85156b356f7621f732aea754192f38c4_55240_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;口令管理&#34;
+		alt=&#34;img_0003&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;132&#34;
 		data-flex-basis=&#34;317px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;其他确认即可&lt;/p&gt;
+&gt;
+其他确认即可&lt;/p&gt;
 &lt;h2 id=&#34;验证&#34;&gt;验证&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -713,32 +717,34 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;tms&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/image-20230526155207147.png&#34;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004.png&#34;
 	width=&#34;797&#34;
 	height=&#34;597&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/image-20230526155207147_hu9fb93591142422111da7414c5d7b0843_117835_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/database/oracle-installation-and-configuration-on-windows/image-20230526155207147_hu9fb93591142422111da7414c5d7b0843_117835_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_hu71731353317a80d367329307b4b4b6cf_97223_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_hu71731353317a80d367329307b4b4b6cf_97223_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;image-20230526155207147&#34;
+		alt=&#34;img_0004&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;打开注册表看看：&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services&lt;/code&gt; 下，找到&lt;code&gt;OracleMTSRecoveryService&lt;/code&gt;及&lt;code&gt;OracleRemExecService&lt;/code&gt;，查看ImagePath对应路径。&lt;/p&gt;
+&gt;&lt;br&gt;
+打开注册表看看：&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services&lt;/code&gt; 下，找到&lt;code&gt;OracleMTSRecoveryService&lt;/code&gt;及&lt;code&gt;OracleRemExecService&lt;/code&gt;，查看ImagePath对应路径。&lt;/p&gt;
 &lt;p&gt;修改&lt;code&gt;ImagePath&lt;/code&gt;路径为&lt;code&gt;xxxxxxx\dbhome_1\bin\xxxxxxxxx&lt;/code&gt;即可【修改为你本地真实路径即可】，错误原因为你上次未卸载干净，实际路径错误&lt;/p&gt;
-&lt;/li&gt;
+&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
         <title>Oracle 表空间管理|Oracle Tablespace Management</title>
-        <link>https://hostenwang.github.io/posts/database/oracle-tablespace-management/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</link>
         <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/oracle-tablespace-management/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;表空间是 #Oracle 数据库中最大的逻辑结构。&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -846,7 +852,7 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLESPACE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;表空间名&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ADD&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DATAFILE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;文件路径&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SIZE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;大小&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AUTOEXTEND&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NEXT大小&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AUTOEXTEND&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NEXT&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;大小&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MAXSIZE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;大小&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;-- 示例：
@@ -892,10 +898,10 @@
         </item>
         <item>
         <title>ora-01045 该用户没有创建session会话的权限|ora-01045 User System Lacks Create Session Privilege</title>
-        <link>https://hostenwang.github.io/posts/database/ora-01045-user-system-lacks-create-session-privilege/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/ora-01045-user-system-lacks-create-session-privilege/</link>
         <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/ora-01045-user-system-lacks-create-session-privilege/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/ora-01045-user-system-lacks-create-session-privilege/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -939,7 +945,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;grant&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;session&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UserName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UserName是登录出错的用户名&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;grant&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;session&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UserName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UserName&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;是登录出错的用户名&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;

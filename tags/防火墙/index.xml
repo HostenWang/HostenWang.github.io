@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>防火墙 on Nerver Forget Why You Started</title>
+        <title>防火墙 on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/</link>
-        <description>Recent content in 防火墙 on Nerver Forget Why You Started</description>
+        <description>Recent content in 防火墙 on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux 防火墙工具 UFW 使用总结</title>
-        <link>https://hostenwang.github.io/posts/misc/linux-ufw-command-usage/</link>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-ufw-command-usage/</link>
         <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/misc/linux-ufw-command-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-ufw-command-usage/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;UFW 全称为&lt;code&gt;Uncomplicated Firewall&lt;/code&gt;，是 ubuntu 系统上默认的防火墙组件&lt;/p&gt;
 &lt;p&gt;UFW 是为了轻量化配置 #iptables 而开发的一款工具。 #UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的 #防火墙 规则。&lt;/p&gt;

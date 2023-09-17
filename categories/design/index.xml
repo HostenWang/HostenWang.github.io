@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>design on Nerver Forget Why You Started</title>
+        <title>design on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/categories/design/</link>
-        <description>Recent content in design on Nerver Forget Why You Started</description>
+        <description>Recent content in design on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Wed, 05 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/design/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>高效使用 Axure的几条原则|Several Principes Of Using Axure Efficiently</title>
-        <link>https://hostenwang.github.io/posts/design/several-principes-of-using-axure-efficiently/</link>
+        <title>高效使用 Axure的几条原则</title>
+        <link>https://hostenwang.github.io/posts/0512-design/several-principes-of-using-axure-efficiently/</link>
         <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/several-principes-of-using-axure-efficiently/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/several-principes-of-using-axure-efficiently/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -71,11 +71,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Axure 在原型设计中的使用|The Use Of Axure In Prototype Design</title>
-        <link>https://hostenwang.github.io/posts/design/the-use-of-axure-in-prototype-design/</link>
+        <title>Axure 在原型设计中的使用</title>
+        <link>https://hostenwang.github.io/posts/0512-design/the-use-of-axure-in-prototype-design/</link>
         <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/the-use-of-axure-in-prototype-design/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/the-use-of-axure-in-prototype-design/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
 &lt;h2 id=&#34;什么是原型&#34;&gt;什么是原型&lt;/h2&gt;
@@ -128,10 +128,10 @@
         </item>
         <item>
         <title>Axure 的几个快捷操作|Several Shortcut Of Axure</title>
-        <link>https://hostenwang.github.io/posts/design/several-shortcut-of-axure/</link>
+        <link>https://hostenwang.github.io/posts/0512-design/several-shortcut-of-axure/</link>
         <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/several-shortcut-of-axure/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/several-shortcut-of-axure/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;在互联网产品领域，Axure 已成为产品经理、产品设计师以及交互设计师的必备工具. Axure帮我们建立低保真模型，便于与用户的需求验证，也帮助我们构思交互细节，使前端和开发人员更容易理解我们的产品.&lt;/p&gt;
 &lt;h2 id=&#34;什么是原型&#34;&gt;什么是原型&lt;/h2&gt;
@@ -182,12 +182,59 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>在 PowerDesigner 里将名称复制到备注|Copy Name to Comment in PowerDesigner </title>
-        <link>https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/</link>
+        <title>如何写需求文档|How to Write Requirement Document</title>
+        <link>https://hostenwang.github.io/posts/0512-design/how-to-write-requirement-document/</link>
+        <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0512-design/how-to-write-requirement-document/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;如何写需求文档&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;什么是需求文档&#34;&gt;什么是需求文档？&lt;/h2&gt;
+&lt;p&gt;产品需求文档一般来说昰产品流程中的最后一步工作，把原型中的功能、界面具象化描述，是提交给设计（UI）、技术和测试部门的执行标准。一般由产品经理亲自完成，如果有产品专员（助理）的话，由他们主要完成其实更好。&lt;/p&gt;
+&lt;h2 id=&#34;需求文档应包括哪些内容&#34;&gt;需求文档应包括哪些内容？&lt;/h2&gt;
+&lt;p&gt;需求文档一般需要包含以下四个部分：&lt;/p&gt;
+&lt;p&gt;1、产品概要：说明产品目标、需求来源、主要项目负责人和产品整体修订记录。&lt;/p&gt;
+&lt;p&gt;2、功能结构：说明产品功能（及信息）点的分布和相关关系。&lt;/p&gt;
+&lt;p&gt;3、业务流程：说明产品板块功能的业务流转逻辑。&lt;/p&gt;
+&lt;p&gt;4、界面描述：说明产品所有界面具体需求、原型、UI和修订记录。&lt;/p&gt;
+&lt;h2 id=&#34;需求文档的作用是什么&#34;&gt;需求文档的作用是什么？&lt;/h2&gt;
+&lt;p&gt;需求文档是需要给产品执行人员看的，具体包括：&lt;/p&gt;
+&lt;p&gt;1、设计（UI）：根据原型设计UI. UI设计师结合公司设计能力和审美要求设计UI, 最终产品好不好看由UI设计师决定, 原型只决定交互和产品逻辑.&lt;/p&gt;
+&lt;p&gt;2、技术：需求文档的主要阅读对象，根据需求描述、UI演示稿 等信息对界面进行具体的施工。所以对技术来说，需求文档的作用是产品的施工规范。&lt;/p&gt;
+&lt;p&gt;3、测试：对产品进行测试的必备文档，用来理解产品各界面和功能的要求，以对技术实现的效果做出合格与否的判断。如果技术实现效果 与需求文档要求不符，测试人员会第一时间与技术沟通解决。所以对于测试来说，需求文档的作用是一份施工质量的监督标准。&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/YangBinChina/p/4973967.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PRD产品需求文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>在 PowerDesigner 里将名称复制到备注</title>
+        <link>https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/</link>
         <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/</guid>
+        <guid>https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;PowerDesigner 是业界领先的业务流程/数据建模软件和元数据管理解决方案，适用于数据架构、信息架构和企业架构。&lt;/p&gt;
+&lt;p&gt;PowerDesigner is the industry-leading business process / data modeling software and metadata management solution for data architecture, information architecture, and enterprise architecture.&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -342,13 +389,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;部署deployment&#34;&gt;部署|Deployment&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001.png&#34;
 	width=&#34;967&#34;
 	height=&#34;245&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/1_hu102a94afd43a329f00b907bdac0e6254_39801_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/1_hu102a94afd43a329f00b907bdac0e6254_39801_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu98836626596795b9396d1e640c8e5356_32618_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu98836626596795b9396d1e640c8e5356_32618_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;step-1&#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -357,13 +404,13 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;运行run&#34;&gt;运行|Run&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002.png&#34;
 	width=&#34;1082&#34;
 	height=&#34;293&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/2_hueef3f0a154c5e20a507bcfa1e8a588e4_65016_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/2_hueef3f0a154c5e20a507bcfa1e8a588e4_65016_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hu476ae46f215bc10280d12fbaaaae9f8c_50787_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hu476ae46f215bc10280d12fbaaaae9f8c_50787_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;step-2&#34;
+		alt=&#34;img_0002&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -371,13 +418,13 @@
 		data-flex-basis=&#34;886px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003.png&#34;
 	width=&#34;665&#34;
 	height=&#34;468&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/3_hu22b011f9732f53531b630923b94c1125_44218_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/design/copy-name-to-comment-in-powersigner/3_hu22b011f9732f53531b630923b94c1125_44218_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu4c960aae7e03cd21158a354590415e19_31344_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu4c960aae7e03cd21158a354590415e19_31344_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;step-3&#34;
+		alt=&#34;img_0003&#34;
 	
 	
 		class=&#34;gallery-image&#34; 

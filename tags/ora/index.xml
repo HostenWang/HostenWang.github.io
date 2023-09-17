@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>ora on Nerver Forget Why You Started</title>
+        <title>ora on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/tags/ora/</link>
-        <description>Recent content in ora on Nerver Forget Why You Started</description>
+        <description>Recent content in ora on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <lastBuildDate>Mon, 07 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ora/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>ORA-28002 7天之后口令将过期的解决方法|ORA-28002 The Password Will Expire in 7 Days Errors</title>
-        <link>https://hostenwang.github.io/posts/database/ora-28002-the-password-will-expire/</link>
+        <title>ORA-28002 7天之后口令将过期的解决方法</title>
+        <link>https://hostenwang.github.io/posts/0533-database/ora-28002-the-password-will-expire/</link>
         <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/ora-28002-the-password-will-expire/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/ora-28002-the-password-will-expire/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 ORA-28002 7天之后口令将过期的解决方法&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -96,10 +96,10 @@
         </item>
         <item>
         <title>ORA 01653 表空间无法拓展的解决办法|ORA 01653 unable to extend table</title>
-        <link>https://hostenwang.github.io/posts/database/ora-01653-unable-to-extend-table/</link>
+        <link>https://hostenwang.github.io/posts/0533-database/ora-01653-unable-to-extend-table/</link>
         <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/database/ora-01653-unable-to-extend-table/</guid>
+        <guid>https://hostenwang.github.io/posts/0533-database/ora-01653-unable-to-extend-table/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 ORA 01653 表空间无法拓展的解决办法 报错 的解决方法&lt;/p&gt;
 &lt;h2 id=&#34;相关报错&#34;&gt;相关报错&lt;/h2&gt;

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>redis on 不忘初心,永远忠诚</title>
+        <link>https://hostenwang.github.io/categories/redis/</link>
+        <description>Recent content in redis on 不忘初心,永远忠诚</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/redis/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Redis最佳实践</title>
+        <link>https://hostenwang.github.io/posts/0531-midware/best-practices-for-redis/</link>
+        <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0531-midware/best-practices-for-redis/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Redis是一个开源（BSD许可），内存存储的数据结构服务器，可用作数据库，高速缓存和消息队列代理。它支持字符串、哈希表、列表、集合、有序集合，位图，hyperloglogs等数据类型&lt;/p&gt;
+&lt;p&gt;记录我厂使用 redis 的最佳实践&lt;/p&gt;
+&lt;h2 id=&#34;特点1&#34;&gt;特点&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;p&gt;Redis 是一个单进程、基于内存、弱事务（单个命令可以保证原子性，多命令无法保证）的 NoSQL 存储系统，适用于高 QPS、低迟延、弱持久化的场景，适宜用作缓存。&lt;/p&gt;
+&lt;p&gt;从经验出发：在 QPS&amp;gt;5000、容量&amp;lt;50G、存储高频数据时考虑；在 QPS&amp;lt;1000、存储大量低频数据、需要事务时考虑 MySQL。&lt;/p&gt;
+&lt;h2 id=&#34;适用场景1&#34;&gt;适用场景&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;高并发场景下，热点数据缓存&lt;/p&gt;
+&lt;p&gt;高并发场景下，合理的使用缓存不仅能够提升网站访问速度，还能降低后端数据库的压力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;排行榜类场景&lt;/p&gt;
+&lt;p&gt;关系型数据库在排行榜类场景的查询速度普遍偏慢，借助 Redis 提供的 list 和 sorted sets 结构能实现各种复杂的排行榜应用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;限时业务的运用&lt;/p&gt;
+&lt;p&gt;利用 expire 命令可以运用在限时优惠活动信息、订单库存过期、手机验证码等业务场景。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计数器&lt;/p&gt;
+&lt;p&gt;Redis 天然支持计数功能而且计数的性能也非常好，在高并发场景下优于传统的关系型数据库，常运用于商品的浏览数、视频的播放数、限制调用等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;社交网络&lt;/p&gt;
+&lt;p&gt;点赞、踩、关注/被关注、共同好友等是社交网站的基本功能，社交网站的访问量通常来说比较大，而且传统的关系数据库类型不适合存储这种类型的数据，Redis 提供的哈希、集合等数据结构能很方便的实现这些功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分布式锁&lt;/p&gt;
+&lt;p&gt;在高并发场景中，利用数据库锁来控制资源的并发访问，性能不理想，可以利用 Redis 的 setnx 功能来编写分布式的锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;过程&#34;&gt;过程&lt;/h2&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/265891042&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/265891042&lt;/a&gt; 公司内部 Redis 使用规范&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
