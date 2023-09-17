@@ -7,20 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/specification/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>用友NC开发 - 规范</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</link>
+        <title>用友NC二次开发的开发规范</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/</link>
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;用友NC是用友软件集团推出的一款中小企业综合管理软件，它将ERP、OA、CRM、财务管理等多种管理信息系统进行集成，从而实现对公司所有运作活动的综合管理，有效地提升企业的工作效率和生产力。&lt;/p&gt;
 &lt;p&gt;本文整理我厂使用的用友 NC 开发规范&lt;/p&gt;
 &lt;h2 id=&#34;nc-概述&#34;&gt;NC 概述&lt;/h2&gt;
 &lt;p&gt;用友NC已经有16年的历史，1997年第一代集团财务产品的诞生；从2000年开始，NC第二代逐步包括HR、供应链等，形成集团企业完整的全面ERP解决方案，其产品理念是集中管理、协同商务。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001.png&#34;
 	width=&#34;1080&#34;
 	height=&#34;620&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001_hu1f3ed18613cb1f4581799253595f390b_119188_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001_hu1f3ed18613cb1f4581799253595f390b_119188_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_123123_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_123123_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;

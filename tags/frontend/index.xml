@@ -7,13 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Mon, 04 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>跨域解决方案总结|Frontend Cross Domain Solutions Summary</title>
-        <link>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</link>
+        <title>前端跨域解决方案总结</title>
+        <link>https://hostenwang.github.io/posts/0521-frontend/summary-of-front-end-cross-domain-solutions/</link>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/summary-of-front-end-cross-domain-solutions/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;总结前端跨域问题解决方案&lt;/p&gt;
+&lt;p&gt;跨源域资源共享（CORS）机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 XMLHttpRequest 或 Fetch）使用 CORS，以降低跨源 HTTP 请求所带来的风险。&lt;/p&gt;
+&lt;p&gt;本文总结前端跨域问题解决方案&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;

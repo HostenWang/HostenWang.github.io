@@ -211,18 +211,27 @@
     &gt;javax.validation 参数验证&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         <item>
-        <title>Junit 总结</title>
-        <link>https://hostenwang.github.io/posts/0515-java/junit/</link>
+        <title>Java 测试框架 Junit 概述</title>
+        <link>https://hostenwang.github.io/posts/0515-java/usage-of-java-testing-framework-junit/</link>
         <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0515-java/junit/</guid>
-        <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
-&lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;
-&lt;h2 id=&#34;2-命名规范&#34;&gt;2 命名规范&lt;/h2&gt;
+        <guid>https://hostenwang.github.io/posts/0515-java/usage-of-java-testing-framework-junit/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;JUnit是一个开发源代码的Java测试框架，用于编写和运行可重复的测试。它是用于单元测试框架体系xUnit的一个实例，被广泛用于Java语言编程。&lt;/p&gt;
+&lt;p&gt;JUnit主要包括以下特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用于测试期望结果的断言（Assertion）。&lt;/li&gt;
+&lt;li&gt;用于共享共同测试数据的测试工具。&lt;/li&gt;
+&lt;li&gt;用于方便的组织和运行测试的测试套件。&lt;/li&gt;
+&lt;li&gt;图形和文本的测试运行器。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本教程将教你用 Java 编程语言做单元测试时，如何使用 JUnit。&lt;/p&gt;
+&lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;测试类&lt;/code&gt;一般用&lt;code&gt;被测试类&lt;/code&gt;+Tests来命名。&lt;/p&gt;
 &lt;p&gt;should 常用于测试方法名，如&lt;code&gt;ordersShouldBeCreated&lt;/code&gt;，&lt;code&gt;menuShouldGetActive&lt;/code&gt;，以增强可读性。&lt;/p&gt;
 &lt;p&gt;总之，测试名应该尽量表明测试进行的内容，而不必去看代码。&lt;/p&gt;
-&lt;h2 id=&#34;3-常用注解&#34;&gt;3 常用注解&lt;/h2&gt;
+&lt;h2 id=&#34;常用注解&#34;&gt;常用注解&lt;/h2&gt;
 &lt;p&gt;常用 #注解 如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -284,7 +293,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Ignore&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;nd&#34;&gt;@Ignore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;禁用原因&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;      
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;4-常用断言&#34;&gt;4 常用断言&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;常用断言&#34;&gt;常用断言&lt;/h2&gt;
 &lt;p&gt;常用 #断言 如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -330,7 +339,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;assertNotSame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expected&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;变量指向不同目标&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;5-例程&#34;&gt;5 例程&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;例程&#34;&gt;例程&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -359,7 +368,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;6-测试集&#34;&gt;6 测试集&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;测试集&#34;&gt;测试集&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -376,13 +385,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;7-未来展望further&#34;&gt;7 未来展望|Further&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;提高小组内单元测试使用率&lt;/li&gt;
 &lt;li&gt;提高单元测试自动化程度&lt;/li&gt;
 &lt;li&gt;考察集成 junitperf&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;8-参考references&#34;&gt;8 参考|References&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>

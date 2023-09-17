@@ -181,7 +181,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001.jpg&#34;
 	width=&#34;720&#34;
 	height=&#34;259&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu28190c69fc974aaaee856462cdd6f818_33531_480x0_resize_q75_box.jpg 480w, https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu28190c69fc974aaaee856462cdd6f818_33531_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37171_480x0_resize_q75_box.jpg 480w, https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37171_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -226,11 +226,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>GeoServer 介绍</title>
-        <link>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-introduction/</link>
+        <title>geoserver初学者指南 - 简介</title>
+        <link>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</link>
         <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-introduction/</guid>
+        <guid>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;GeoServer 是一个用 Java 编写的开源软件服务器，它是遵循 OpenGIS Web 服务器规范的 J2EE 实现，允许用户共享和编辑地理空间数据 .为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
 &lt;p&gt;作为 #GeoServer 系列文章 的第一篇, 主要介绍基础概念.&lt;/p&gt;

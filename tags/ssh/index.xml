@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Thu, 28 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Linux 常用网络命令小结</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-network-commands/</link>
+        <title>如何使用命令排查Linux网络问题?</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-commands-to-troubleshoot-linux-network-issues/</link>
         <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-network-commands/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-commands-to-troubleshoot-linux-network-issues/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;常用网络命令小结&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;

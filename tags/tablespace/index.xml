@@ -7,13 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Fri, 30 Mar 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/tablespace/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Oracle 表空间管理|Oracle Tablespace Management</title>
+        <title>如何在Oracle 进行表空间管理?</title>
         <link>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</link>
         <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;表空间是 #Oracle 数据库中最大的逻辑结构。&lt;/p&gt;
+&lt;p&gt;表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等&lt;/p&gt;
+&lt;p&gt;一个小型应用的ORACLE数据库通常仅包括SYSTEM表空间,然而一个稍大型应用的ORACLE数据库采用多个表空间会对数据库的使用带来更大的方便。&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;

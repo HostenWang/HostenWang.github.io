@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Wed, 02 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Windows WSL 使用总结</title>
+        <title>适用于 Linux 的 Windows 子系统 (WSL) 使用总结</title>
         <link>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</link>
         <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;p&gt;WSL的全程是Windows Subsystem for Linux，也就是windows的linux子系统，它是由微软与Canonical公司合作开发的，从win10开始支持wls&lt;/p&gt;
+&lt;p&gt;WSL的全程是Windows Subsystem for Linux，也就是windows的linux子系统，它是由微软与Canonical公司合作开发的，从win10开始支持wls。&lt;/p&gt;
 &lt;p&gt;适用于 Linux 的 Windows 子系统 (WSL) 可让开发人员直接在 Windows 上按原样运行 GNU/Linux 环境（包括大多数命令行工具、实用工具和应用程序），且不会产生传统虚拟机或双启动设置开销。&lt;/p&gt;
 &lt;p&gt;Linux的Windows子系统（WSL）具有以下优势：&lt;/p&gt;
 &lt;ol&gt;
@@ -96,7 +96,7 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Windows 系统下 Oracle 的安装和配置|Oracle Installation and Configuration on Windows</title>
+        <title>Windows 系统下 Oracle 的安装和配置</title>
         <link>https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/</link>
         <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
         
@@ -110,7 +110,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001.png&#34;
 	width=&#34;787&#34;
 	height=&#34;599&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu1735232d3130a0c64da5f8a10188e831_34237_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu1735232d3130a0c64da5f8a10188e831_34237_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37427_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37427_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -129,7 +129,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002.png&#34;
 	width=&#34;783&#34;
 	height=&#34;594&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu0a7b33b7fa357bc0f486c3e476d59a32_49897_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu0a7b33b7fa357bc0f486c3e476d59a32_49897_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49828_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49828_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -147,7 +147,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003.png&#34;
 	width=&#34;785&#34;
 	height=&#34;593&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu85156b356f7621f732aea754192f38c4_55240_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu85156b356f7621f732aea754192f38c4_55240_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55289_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55289_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -182,7 +182,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004.png&#34;
 	width=&#34;797&#34;
 	height=&#34;597&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_hu71731353317a80d367329307b4b4b6cf_97223_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_hu71731353317a80d367329307b4b4b6cf_97223_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100824_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100824_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0004&#34;

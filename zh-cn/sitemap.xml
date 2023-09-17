@@ -15,6 +15,9 @@
                 href="https://hostenwang.github.io/"
                 />
   </url><url>
+    <loc>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</loc>
+    <lastmod>2023-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/categories/</loc>
     <lastmod>2023-06-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -28,7 +31,7 @@
                 href="https://hostenwang.github.io/categories/"
                 />
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0516-microservice/115-nacos-instruction/nacos-instruction/</loc>
+    <loc>https://hostenwang.github.io/tags/nacos/</loc>
     <lastmod>2023-06-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/</loc>
@@ -65,7 +68,7 @@
     <loc>https://hostenwang.github.io/tags/selenium/</loc>
     <lastmod>2023-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</loc>
+    <loc>https://hostenwang.github.io/posts/0514-python/quickly-implementing-web-page-automation-using-python-and-selenium/</loc>
     <lastmod>2023-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/axure/</loc>
@@ -131,7 +134,7 @@
     <loc>https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/</loc>
     <lastmod>2022-03-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-introduction/</loc>
+    <loc>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</loc>
     <lastmod>2022-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/ubuntu/</loc>
@@ -140,10 +143,10 @@
     <loc>https://hostenwang.github.io/tags/windows/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</loc>
+    <loc>https://hostenwang.github.io/tags/wsl/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/wsl/</loc>
+    <loc>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/message/</loc>
@@ -203,7 +206,13 @@
     <loc>https://hostenwang.github.io/tags/task/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/tags/%E5%8F%82%E7%85%A7/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/tags/%E4%BB%BB%E5%8A%A1/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-custom-references-in-the-yonyou-nc-environment/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-05-custom-reference/</loc>
@@ -224,7 +233,7 @@
     <loc>https://hostenwang.github.io/categories/webgis/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0321-webgis/webgis-wmts-web-map-tile-service/</loc>
+    <loc>https://hostenwang.github.io/posts/0321-webgis/overview-of-web-map-tile-service-technology/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/git/</loc>
@@ -242,7 +251,7 @@
     <loc>https://hostenwang.github.io/tags/specification/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</loc>
+    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0513-develop/gitea-installation/</loc>
@@ -251,10 +260,13 @@
     <loc>https://hostenwang.github.io/tags/%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hostenwang.github.io/tags/%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1/</loc>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-01-python/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-06-background-task/</loc>
+    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/log/</loc>
@@ -263,22 +275,22 @@
     <loc>https://hostenwang.github.io/tags/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/</loc>
+    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0514-python/python-scripting-for-arcgis-00-overview/</loc>
     <lastmod>2021-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/</loc>
+    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/</loc>
     <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/tile/</loc>
     <lastmod>2021-06-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0321-webgis/webgis-tile/</loc>
+    <loc>https://hostenwang.github.io/tags/wfs/</loc>
     <lastmod>2021-06-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/wfs/</loc>
+    <loc>https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/</loc>
     <lastmod>2021-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/ogc-open-geospatial-consortium-overview/</loc>
@@ -431,10 +443,10 @@
     <loc>https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/</loc>
     <lastmod>2018-06-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/radio/</loc>
+    <loc>https://hostenwang.github.io/tags/tdoa/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0801-incubator/overview-of-tdoa-time-difference-location-method/</loc>
+    <loc>https://hostenwang.github.io/posts/0801-incubator/radio-positioning-technology-overview-of-tdoa-time-difference-positioning-method/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/linux/</loc>
@@ -443,10 +455,10 @@
     <loc>https://hostenwang.github.io/categories/linux/</loc>
     <lastmod>2018-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-number-of-threads-for-user-likely-too-low/</loc>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-max-number-of-threads-for-user-like-too-low/</loc>
     <lastmod>2018-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-file-descriptors-for-process-likely-too-low/</loc>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-the-maximum-number-of-file-descriptors-for-a-process-is-too-low/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/requirement/</loc>
@@ -458,10 +470,10 @@
     <loc>https://hostenwang.github.io/tags/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</loc>
+    <loc>https://hostenwang.github.io/tags/tablespace/</loc>
     <lastmod>2018-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/tablespace/</loc>
+    <loc>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</loc>
     <lastmod>2018-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/cors/</loc>
@@ -473,13 +485,10 @@
     <loc>https://hostenwang.github.io/tags/jsonp/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</loc>
+    <loc>https://hostenwang.github.io/posts/0521-frontend/summary-of-front-end-cross-domain-solutions/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-sed-command-usage/</loc>
-    <lastmod>2017-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/tags/terminal/</loc>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-sed-command-on-linux/</loc>
     <lastmod>2017-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/installation/</loc>
@@ -509,7 +518,7 @@
     <loc>https://hostenwang.github.io/posts/0533-database/ora-01045-user-system-lacks-create-session-privilege/</loc>
     <lastmod>2017-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-ternimal-usage/</loc>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/summary-of-common-linux-commands/</loc>
     <lastmod>2017-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/</loc>
@@ -536,7 +545,7 @@
     <loc>https://hostenwang.github.io/categories/redis/</loc>
     <lastmod>2017-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0531-midware/best-practices-for-redis/</loc>
+    <loc>https://hostenwang.github.io/posts/0531-midware/best-practices-for-high-performance-key-value-paired-storage-database-redis/</loc>
     <lastmod>2017-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/mindmap/</loc>
@@ -560,22 +569,28 @@
     <loc>https://hostenwang.github.io/posts/0514-python/python-pip-usage/</loc>
     <lastmod>2017-02-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-network-commands/</loc>
-    <lastmod>2016-07-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/tags/ssh/</loc>
     <lastmod>2016-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/junit/</loc>
+    <loc>https://hostenwang.github.io/tags/terminal/</loc>
+    <lastmod>2016-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-commands-to-troubleshoot-linux-network-issues/</loc>
+    <lastmod>2016-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/java/</loc>
     <lastmod>2016-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0515-java/junit/</loc>
+    <loc>https://hostenwang.github.io/posts/0515-java/usage-of-java-testing-framework-junit/</loc>
+    <lastmod>2016-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/tags/junit/</loc>
     <lastmod>2016-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/test/</loc>
     <lastmod>2016-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-account-management/</loc>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/how-to-manage-users-and-user-groups-on-linux/</loc>
     <lastmod>2016-04-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/commit/</loc>
@@ -608,7 +623,7 @@
     <loc>https://hostenwang.github.io/categories/js/</loc>
     <lastmod>2016-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-apt-conmand-usage/</loc>
+    <loc>https://hostenwang.github.io/posts/0552-linux-command/summary-of-linux-advanced-packaging-tool-apt-usage/</loc>
     <lastmod>2016-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/categories/head-first-mysql/</loc>
@@ -632,13 +647,13 @@
     <loc>https://hostenwang.github.io/tags/nginx/</loc>
     <lastmod>2015-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/</loc>
-    <lastmod>2015-08-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/tags/proxy/</loc>
     <lastmod>2015-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/tomcat/</loc>
+    <lastmod>2015-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/</loc>
     <lastmod>2015-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0552-linux-command/linux-ssh-command-usage/</loc>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Oracle 表空间总结'>
-<title>Oracle 表空间管理|Oracle Tablespace Management</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等 | How to manage tablespaces in Oracle'>
+<title>如何在Oracle 进行表空间管理?</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/'>
 
@@ -19,13 +19,13 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<meta property='og:title' content='Oracle 表空间管理|Oracle Tablespace Management'>
-<meta property='og:description' content='Oracle 表空间总结'>
+<meta property='og:title' content='如何在Oracle 进行表空间管理?'>
+<meta property='og:description' content='表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等 | How to manage tablespaces in Oracle'>
 <meta property='og:url' content='https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/'>
 <meta property='og:site_name' content='不忘初心,永远忠诚'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Oracle' /><meta property='article:tag' content='tablespace' /><meta property='article:published_time' content='2018-03-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-03-30T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Oracle 表空间管理|Oracle Tablespace Management">
-<meta name="twitter:description" content="Oracle 表空间总结">
+<meta name="twitter:title" content="如何在Oracle 进行表空间管理?">
+<meta name="twitter:description" content="表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等 | How to manage tablespaces in Oracle">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -288,12 +288,12 @@ var _hmt = _hmt || [];
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/0533-database/oracle-tablespace-management/">Oracle 表空间管理|Oracle Tablespace Management</a>
+            <a href="/posts/0533-database/oracle-tablespace-management/">如何在Oracle 进行表空间管理?</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Oracle 表空间总结
+            表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等 | How to manage tablespaces in Oracle
         </h3>
         
     </div>
@@ -345,7 +345,8 @@ var _hmt = _hmt || [];
     
     
     <h2 id="概述overview">概述|Overview</h2>
-<p>表空间是 #Oracle 数据库中最大的逻辑结构。</p>
+<p>表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等</p>
+<p>一个小型应用的ORACLE数据库通常仅包括SYSTEM表空间,然而一个稍大型应用的ORACLE数据库采用多个表空间会对数据库的使用带来更大的方便。</p>
 <h2 id="环境environment">环境|Environment</h2>
 <div class="table-wrapper"><table>
 <thead>

@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Nacos 介绍</title>
-        <link>https://hostenwang.github.io/posts/0516-microservice/115-nacos-instruction/nacos-instruction/</link>
+        <title>Alibaba SpringCloud 服务发现和管理组件 Nacos 介绍</title>
+        <link>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</link>
         <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0516-microservice/115-nacos-instruction/nacos-instruction/</guid>
+        <guid>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;Nacos 英文全称为 Dynamic Naming and Configuration Service，是一个由 #阿里巴巴 团队使用 #Java 语言开发的开源项目。&lt;/p&gt;
 &lt;p&gt;Nacos 是一个更易于帮助构建 #云原生 应用的动态服务发现、配置和服务管理平台.&lt;/p&gt;

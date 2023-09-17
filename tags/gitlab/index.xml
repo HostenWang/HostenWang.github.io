@@ -7,16 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>代码管理软件选型|Selection of Code Management Software</title>
+        <title>代码管理软件选型</title>
         <link>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</link>
         <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</guid>
-        <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;源代码管理 (SCM) 是跟踪修改和管理源代码更改的流程。SCM 允许开发者和其他利益相关者查看对共享代码库所做的所有更改的完整历史记录。这可确保开发者使用最新的代码，并且没有冲突的代码更改。&lt;/p&gt;
+&lt;p&gt;源代码管理，也称为版本控制，是团队跟踪和管理项目代码和资源更新的方式。您可以将源代码管理视为程序员、美术师和其他团队成员的真实来源，这些人都为项目代码库有所贡献。&lt;/p&gt;
+&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;满足常用代码管理需求&lt;/li&gt;
 &lt;li&gt;安装配置简单&lt;/li&gt;
 &lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;11-为什么没有直接选用-gitlab&#34;&gt;1.1 为什么没有直接选用 gitlab&lt;/h3&gt;
 &lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://www.annhe.net/article-4276.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.annhe.net/article-4276.html&lt;/a&gt;&lt;/p&gt;

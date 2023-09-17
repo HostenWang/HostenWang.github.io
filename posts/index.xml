@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Nacos 介绍</title>
-        <link>https://hostenwang.github.io/posts/0516-microservice/115-nacos-instruction/nacos-instruction/</link>
+        <title>Alibaba SpringCloud 服务发现和管理组件 Nacos 介绍</title>
+        <link>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</link>
         <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0516-microservice/115-nacos-instruction/nacos-instruction/</guid>
+        <guid>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;Nacos 英文全称为 Dynamic Naming and Configuration Service，是一个由 #阿里巴巴 团队使用 #Java 语言开发的开源项目。&lt;/p&gt;
 &lt;p&gt;Nacos 是一个更易于帮助构建 #云原生 应用的动态服务发现、配置和服务管理平台.&lt;/p&gt;
@@ -243,24 +243,32 @@
     &gt;Pipenv：新一代Python项目环境与依赖管理工具&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         <item>
-        <title>Selenium 介绍和实践</title>
-        <link>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</link>
+        <title>使用 Python 和 Selenium 快速实现网页自动化</title>
+        <link>https://hostenwang.github.io/posts/0514-python/quickly-implementing-web-page-automation-using-python-and-selenium/</link>
         <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0514-python/introduction-and-practice-with-selenium/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/quickly-implementing-web-page-automation-using-python-and-selenium/</guid>
         <description>&lt;h2 id=&#34;概述abstract&#34;&gt;概述|Abstract&lt;/h2&gt;
-&lt;p&gt;Selenium 通过使用 WebDriver 支持市场上所有主流浏览器的自动化&lt;/p&gt;
-&lt;p&gt;Webdriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。 驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。&lt;/p&gt;
+&lt;p&gt;Selenium 是一款流行的自动化测试框架，其主要应用于 Web 应用程序的自动化测试&lt;/p&gt;
+&lt;p&gt;以下是 Selenium的一些优势：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持多种编程语言：Selenium 支持多种编程语言（如 Java、Python、C# 等），可以根据不同团队的技术栈灵活选择，方便集成到现有项目中。&lt;/li&gt;
+&lt;li&gt;多浏览器支持：Selenium 可以与多种浏览器集成，包括 Chrome、Firefox、IE 等，覆盖了大部分主流浏览器，可以满足不同需求。&lt;/li&gt;
+&lt;li&gt;跨平台支持：Selenium 可以在 Windows、Linux 和 Mac OS 上运行，方便不同平台之间的协作和测试。&lt;/li&gt;
+&lt;li&gt;易于使用：Selenium 的 API 设计简单、易懂，同时提供了完善的开发文档，新手能够快速上手。&lt;/li&gt;
+&lt;li&gt;插件丰富：Selenium 有大量的插件和扩展，例如 WebDriverManager、TestNG、JUnit、pytest 等，可以方便地扩展自己的测试用例。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总之，Selenium 是一个功能强大的自动化测试工具，能够提高测试效率和质量，同时还可以降低测试成本。&lt;/p&gt;
 &lt;h2 id=&#34;selenium-python-环境配置&#34;&gt;Selenium Python 环境配置&lt;/h2&gt;
 &lt;h3 id=&#34;前提条件&#34;&gt;前提条件：&lt;/h3&gt;
 &lt;p&gt;已安装好 Python 开发环境（推荐安装 Python 3.8 及以上版本）&lt;/p&gt;
 &lt;h3 id=&#34;安装-selenium&#34;&gt;安装 selenium&lt;/h3&gt;
 &lt;p&gt;Win：&lt;code&gt;pip install selenium&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;安装-webdriver&#34;&gt;安装 webdriver&lt;/h3&gt;
-&lt;p&gt;各大浏览器webdriver地址可参见：https://docs.seleniumhq.org/download/
-Firefox：https://github.com/mozilla/geckodriver/releases/
-Chrome：https://sites.google.com/a/chromium.org/chromedriver/ 或者http://chromedriver.storage.googleapis.com/index.html
-IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
+&lt;p&gt;各大浏览器webdriver地址可参见：https://docs.seleniumhq.org/download/&lt;/p&gt;
+&lt;p&gt;Firefox：https://github.com/mozilla/geckodriver/releases/&lt;/p&gt;
+&lt;p&gt;Chrome：https://sites.google.com/a/chromium.org/chromedriver/ 或者http://chromedriver.storage.googleapis.com/index.html&lt;/p&gt;
+&lt;p&gt;IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;h3 id=&#34;webdriver-版本要求&#34;&gt;webdriver 版本要求&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -800,6 +808,7 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;结论conclusion&#34;&gt;结论|Conclusion&lt;/h2&gt;
+&lt;p&gt;总之，Selenium 是一个功能强大的自动化测试工具，能够提高测试效率和质量，同时还可以降低测试成本。&lt;/p&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;h2 id=&#34;参考reference&#34;&gt;参考|reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1225,7 +1234,7 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001.jpg&#34;
 	width=&#34;720&#34;
 	height=&#34;259&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu28190c69fc974aaaee856462cdd6f818_33531_480x0_resize_q75_box.jpg 480w, https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu28190c69fc974aaaee856462cdd6f818_33531_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37171_480x0_resize_q75_box.jpg 480w, https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37171_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -1270,11 +1279,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>GeoServer 介绍</title>
-        <link>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-introduction/</link>
+        <title>geoserver初学者指南 - 简介</title>
+        <link>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</link>
         <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-introduction/</guid>
+        <guid>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;GeoServer 是一个用 Java 编写的开源软件服务器，它是遵循 OpenGIS Web 服务器规范的 J2EE 实现，允许用户共享和编辑地理空间数据 .为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
 &lt;p&gt;作为 #GeoServer 系列文章 的第一篇, 主要介绍基础概念.&lt;/p&gt;
@@ -1411,13 +1420,13 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Windows WSL 使用总结</title>
+        <title>适用于 Linux 的 Windows 子系统 (WSL) 使用总结</title>
         <link>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</link>
         <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0551-ops/windows-wsl-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;p&gt;WSL的全程是Windows Subsystem for Linux，也就是windows的linux子系统，它是由微软与Canonical公司合作开发的，从win10开始支持wls&lt;/p&gt;
+&lt;p&gt;WSL的全程是Windows Subsystem for Linux，也就是windows的linux子系统，它是由微软与Canonical公司合作开发的，从win10开始支持wls。&lt;/p&gt;
 &lt;p&gt;适用于 Linux 的 Windows 子系统 (WSL) 可让开发人员直接在 Windows 上按原样运行 GNU/Linux 环境（包括大多数命令行工具、实用工具和应用程序），且不会产生传统虚拟机或双启动设置开销。&lt;/p&gt;
 &lt;p&gt;Linux的Windows子系统（WSL）具有以下优势：&lt;/p&gt;
 &lt;ol&gt;
@@ -1763,6 +1772,392 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>如何在用友NC环境开发自定义参照?</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-custom-references-in-the-yonyou-nc-environment/</link>
+        <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-custom-references-in-the-yonyou-nc-environment/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;本文记录 用友NC自定义参照的开发,导入,配置,验证和添加过滤条件&lt;/p&gt;
+&lt;p&gt;后台任务是合理利用系统资源、提升系统运行效率的重要途径，大部分耗时的、周期性处理的业务处理过程都可以部署成后台任务来实现&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jdk8&lt;/td&gt;
+&lt;td&gt;131以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;U8Cloud&lt;/td&gt;
+&lt;td&gt;3.1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eclipse_u8c&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;3-代码实现&#34;&gt;3 代码实现&lt;/h2&gt;
+&lt;h3 id=&#34;基于重载的实现不建议&#34;&gt;基于重载的实现(不建议)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;87
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nc.ui.pm.ref&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nc.ui.bd.ref.AbstractRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nc.vo.pubapp.pattern.pub.SqlBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt; * 合同档案参照类 2021-08-12 11:15:04
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt; *
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt; * @author Hosten
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ContractRef&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AbstractRefModel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 参照列名称
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     *
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getRefTitle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;合同类型参照&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 可显示字段编码
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FIELD_CODE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;contractnum&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;contractname&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s&#34;&gt;&amp;#34;contracttype&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pk_pm_h&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 可显示字段
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getFieldCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContractRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FIELD_CODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 参照列名称
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     *
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FIELDNAME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;合同号&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;合同方&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;合同类型&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;主键&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 显示列名
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getDefaultFieldCount&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContractRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FIELDNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getFieldName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContractRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FIELDNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;hzctr_pm_h&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getTableName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContractRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getEnvWherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;SqlBuilder&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wherePart&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SqlBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;wherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; nvl(dr,0)=0 and 1=1  &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 参照列主键
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PKCODE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pk_pm_h&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getPkFieldCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContractRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;PKCODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     * 隐藏列
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HIDDENFIELDCODE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pk_pm_h&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getHiddenFieldCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContractRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;HIDDENFIELDCODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;基于构造函数的实现推荐&#34;&gt;基于构造函数的实现(推荐)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nc.ui.gl.ref&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nc.ui.bd.ref.AbstractRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;TestJiluRefModel&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AbstractRefModel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;TestJiluRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refNodeName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setRefNodeName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;refNodeName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setRefNodeName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refNodeName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;m_strRefNodeName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refNodeName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;c1&#34;&gt;// 以部门表为例，只是举例，非真实需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;n&#34;&gt;setFieldCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pk_deptdoc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;deptname&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;deptcode&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setFieldName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;部门名称&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;部门编码&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;树型结构码&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setHiddenFieldCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;bd_deptdoc.remcode&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pk_fathedept&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;s&#34;&gt;&amp;#34;showorder&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setPkFieldCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;pk_deptdoc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setRefCodeField&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;pk_deptdoc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setRefNameField&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;deptname&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setTableName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;bd_deptdoc&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setWherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;( pk_corp=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getPk_corp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;) &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setOrderPart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; showorder,deptcode &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;setRefTitle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;部门档案&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;resetFieldName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;插入到系统的-sql-语句&#34;&gt;插入到系统的 SQL 语句&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;insert&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;into&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bd_refinfo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CODE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ISNEEDPARA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ISSPECIALREF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;METADATATYPENAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MODULENAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PARA1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PARA2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PARA3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PK_REFINFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;REFCLASS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;REFSYSTEM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;REFTYPE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RESERV1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RESERV2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RESERV3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RESID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RESIDPATH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WHEREPART&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;XXX101&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ContractTyeVO&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;xxx&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;合同类型&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0001Z010000000HTLX01&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nc.ui.xxx.contracttype.ref.ContractTypeRef&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;合同类型&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ref&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;2017-06-26 15:58:34&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;单据模板设置&#34;&gt;单据模板设置&lt;/h3&gt;
+&lt;p&gt;在单据模板初始化那里找到相应的单据模板；
+选择字段后，修改字段类型为参照，点击类型设置在“参照选择”可以找到“自定义参照名称”， &lt;strong&gt;不需要&lt;/strong&gt; 在 是否自定义参照 打勾。&lt;/p&gt;
+&lt;h3 id=&#34;验证&#34;&gt;验证&lt;/h3&gt;
+&lt;p&gt;如果找不到，清除缓存重启服务再试试。&lt;/p&gt;
+&lt;h2 id=&#34;4-使用&#34;&gt;4 使用&lt;/h2&gt;
+&lt;h3 id=&#34;获取参照的值&#34;&gt;获取参照的值&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;measdocRef&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getBillCardPanel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getHeadItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MaterialVO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;PK_MEASDOC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;measdocRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRefPK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//主键 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;measdocRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRefName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//名称
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;measdocRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRefCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//编码
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;参照的过滤条件&#34;&gt;参照的过滤条件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//可以添加在编辑前事件中
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;billForm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getBillCardPanel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getHeadItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;def2&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;AbstractRefModel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AbstractRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; and def5=&amp;#39;1001H2100000004MJ7SV&amp;#39; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Sql以and开头
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;refModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addWherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wherePart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//第二个参数为是否刷新该数据
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;refPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setMultiCorpRef&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//设置不能跨组织
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;表头参照多选取值&#34;&gt;表头参照多选取值&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;billCardPanel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getHeadItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hzdy41&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getPkValues&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;动态指定参照类&#34;&gt;动态指定参照类&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getBillCardPanelWrapper&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getBillCardPanel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getHeadItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;字段&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;参照类&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;设置参照是否支持多选&#34;&gt;设置参照是否支持多选&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;editor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getBillCardPanel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getHeadItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;vpsn&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setMultiSelectedEnabled&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;判断参照类型&#34;&gt;判断参照类型&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;obj&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UIRefPane&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getBillCardPanel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getHeadItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRefModel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;NC 包含的功能还是比较齐全的&lt;/li&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/dongguacha/p/7085785.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NC 自定义参照类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/fanzyx/p/14248480.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NC65在日常开发中常用的代码写法&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
@@ -2202,11 +2597,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>WebGIS 系列 - 网络地图切片服务</title>
-        <link>https://hostenwang.github.io/posts/0321-webgis/webgis-wmts-web-map-tile-service/</link>
+        <title>网络地图瓦片服务技术概述</title>
+        <link>https://hostenwang.github.io/posts/0321-webgis/overview-of-web-map-tile-service-technology/</link>
         <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0321-webgis/webgis-wmts-web-map-tile-service/</guid>
+        <guid>https://hostenwang.github.io/posts/0321-webgis/overview-of-web-map-tile-service-technology/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;WMTS 是 OGC 提出的缓存技术标准，即在服务器端缓存被切割成一定大小瓦片的地图，对客户端只提供这些预先定义好的单个瓦片的服务，将更多的数据处理操作如图层叠加等放在客户端，从而缓解 GIS 服务器端数据处理的压力，改善用户体验。&lt;/p&gt;
 &lt;p&gt;WMTS 提供了一种采用预定义图块方法发布数字地图服务的标准化解决方案。WMTS 弥补了 WMS 不能提供分块地图的不足。WMTS牺牲了提供定制地图的灵活性，代之以通过提供静态数据（基础地图）来增强伸缩性，这些静态数据的范围框和比例尺被限定在各个图块内。这些固定的图块集使得对WMTS服务的实现可以使用一个仅简单返回已有文件的Web服务器即可，同时使得可以利用一些标准的诸如分布式缓存的网络机制实现伸缩性。&lt;/p&gt;
@@ -2528,20 +2923,20 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>用友NC开发 - 规范</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</link>
+        <title>用友NC二次开发的开发规范</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/</link>
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;用友NC是用友软件集团推出的一款中小企业综合管理软件，它将ERP、OA、CRM、财务管理等多种管理信息系统进行集成，从而实现对公司所有运作活动的综合管理，有效地提升企业的工作效率和生产力。&lt;/p&gt;
 &lt;p&gt;本文整理我厂使用的用友 NC 开发规范&lt;/p&gt;
 &lt;h2 id=&#34;nc-概述&#34;&gt;NC 概述&lt;/h2&gt;
 &lt;p&gt;用友NC已经有16年的历史，1997年第一代集团财务产品的诞生；从2000年开始，NC第二代逐步包括HR、供应链等，形成集团企业完整的全面ERP解决方案，其产品理念是集中管理、协同商务。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001.png&#34;
 	width=&#34;1080&#34;
 	height=&#34;620&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001_hu1f3ed18613cb1f4581799253595f390b_119188_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-01-specification/0001_hu1f3ed18613cb1f4581799253595f390b_119188_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_123123_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_123123_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -2811,11 +3206,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>用友NC开发 - 后台任务</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-06-background-task/</link>
+        <title>如何在用友NC环境开发后台任务?</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/</link>
         <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-06-background-task/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;本文记录如何在 用友(yonyou) NC 使用后台任务功能&lt;/p&gt;
 &lt;p&gt;后台任务是合理利用系统资源、提升系统运行效率的重要途径，大部分耗时的、周期性处理的业务处理过程都可以部署成后台任务来实现&lt;/p&gt;
@@ -2877,10 +3272,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;注册&#34;&gt;注册&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-06-background-task/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1.png&#34;
 	width=&#34;788&#34;
 	height=&#34;634&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-06-background-task/1_hu4520ca7da448188d3034c8ce24f1207f_41736_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-06-background-task/1_hu4520ca7da448188d3034c8ce24f1207f_41736_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1_hu9bce55162b226655842f52eafb1d34cb_42290_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1_hu9bce55162b226655842f52eafb1d34cb_42290_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1&#34;
@@ -2914,11 +3309,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>用友NC开发 - 日志配置</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/</link>
+        <title>如何在用友NC开发环境下配置日志</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/</link>
         <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;本文记录如何在 用友(yonyou) NC 使用日志&lt;/p&gt;
 &lt;p&gt;日志机制提供对系统运行时的监控及支持对系统异常的追踪与定位。日志机制可控制日志输出的格式、日志信息的级别、日志信息输出的目的地（文件、控制台、SocketServer等）。通过配置文件进行灵活的设置，用户可以细致地控制日志的生成过程，而不需修改程序代码&lt;/p&gt;
@@ -2960,10 +3355,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;li&gt;打开 NC 安装目录下的  &lt;code&gt;sysConfig.sh&lt;/code&gt; 进行日志配置&lt;/li&gt;
 &lt;li&gt;点击&amp;quot;读取&amp;quot;按钮.选择路径 &lt;code&gt;{{NCHOME}}/ierp/bin/logger-config.properties&lt;/code&gt;文件，点击【读取】按钮, 会看到很多日志信息&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001.png&#34;
 	width=&#34;595&#34;
 	height=&#34;443&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/0001_hue92bc6c5d74a8d9eeb3e6ecd3421ced0_127662_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/0001_hue92bc6c5d74a8d9eeb3e6ecd3421ced0_127662_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129946_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129946_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3076,11 +3471,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>用友NC开发 - 环境建立</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/</link>
+        <title>如何创建用友NC开发环境?</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/</link>
         <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录建立开发环境等开发前的准备事宜&lt;/p&gt;
 &lt;p&gt;U8C二次开发平台是U8C的客开平台，可以在u8c里面增加新的功能加点、修改原有单据流程、做后台任务或者预警等等，即以u8c作为一个开发平台做客户自己的一些比较大的内容的开发。提供了单据模板、打印模板、查询模板、报表模板和节点开发的能力，客户可以基于这个平台开发自己的功能，例如开发出来一个内部管理系统或者自己的车间管理平台等等&lt;/p&gt;
@@ -3122,10 +3517,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
 &lt;p&gt;Eclipse与U8C环境配置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/0001.png&#34;
 	width=&#34;927&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/0001_hu46ed9135222e43e250638195487cc9c5_135421_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/0001_hu46ed9135222e43e250638195487cc9c5_135421_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/0001_hu65a980e3caa2a9a60806e073cd8a6c4e_138855_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/0001_hu65a980e3caa2a9a60806e073cd8a6c4e_138855_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3141,10 +3536,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;p&gt;1、服务端启动：项目右键-UAP中间件&lt;/p&gt;
 &lt;p&gt;2、客户端启动：项目右键-UAP客户端&lt;/p&gt;
 &lt;p&gt;3、看到登录页面后，组织机构选择集团，账号密码为demo/demo&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/0002.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/0002.png&#34;
 	width=&#34;830&#34;
 	height=&#34;421&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/0002_huaa0cb8b4ac43879ee2e6c590e285404c_66925_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-02-environment-setup/0002_huaa0cb8b4ac43879ee2e6c590e285404c_66925_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/0002_hu19ea76b94503940bcad276701673edb4_69468_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/0002_hu19ea76b94503940bcad276701673edb4_69468_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -3428,11 +3823,11 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>WebGIS 系列 - 瓦片地图</title>
-        <link>https://hostenwang.github.io/posts/0321-webgis/webgis-tile/</link>
+        <title>瓦片地图技术概述</title>
+        <link>https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/</link>
         <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0321-webgis/webgis-tile/</guid>
+        <guid>https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;瓦片地图（也叫切片地图）源于一种大地图解决方案，就是在多个比例尺下配置地图，然后提前把每个比例尺下的地图绘制为小块图片（瓦片），保存在服务器上用于缓存的目录中。&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -3459,10 +3854,10 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;瓦片&#34;&gt;瓦片&lt;/h3&gt;
 &lt;p&gt;瓦片就是包含地理数据的矩形影像，一幅地图按一定的瓦片大小被切割成多个瓦片，形成瓦片矩阵，一个或多个瓦片矩阵即组成瓦片矩阵集。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-tile/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/0001.png&#34;
 	width=&#34;401&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-tile/0001_hub17f1a6594e42ee0463f4d48c7d6cb62_23281_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0321-webgis/webgis-tile/0001_hub17f1a6594e42ee0463f4d48c7d6cb62_23281_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/0001_hu72e5fccfa28e919cb21eb98d0a8777f0_24917_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/0001_hu72e5fccfa28e919cb21eb98d0a8777f0_24917_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3754,7 +4149,7 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001.png&#34;
 	width=&#34;793&#34;
 	height=&#34;445&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hub6a41c9e6ea57fae56959c1ca37b5d5a_72460_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hub6a41c9e6ea57fae56959c1ca37b5d5a_72460_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3773,7 +4168,7 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>项目管理软件选型|Selection of Project Management Software</title>
+        <title>项目管理软件选型</title>
         <link>https://hostenwang.github.io/posts/0513-develop/selection-of-project-management-software/</link>
         <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
         
@@ -3892,16 +4287,20 @@ IE：http://selenium-release.storage.googleapis.com/index.html&lt;/p&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>代码管理软件选型|Selection of Code Management Software</title>
+        <title>代码管理软件选型</title>
         <link>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</link>
         <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0513-develop/selection-of-code-management-software/</guid>
-        <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;源代码管理 (SCM) 是跟踪修改和管理源代码更改的流程。SCM 允许开发者和其他利益相关者查看对共享代码库所做的所有更改的完整历史记录。这可确保开发者使用最新的代码，并且没有冲突的代码更改。&lt;/p&gt;
+&lt;p&gt;源代码管理，也称为版本控制，是团队跟踪和管理项目代码和资源更新的方式。您可以将源代码管理视为程序员、美术师和其他团队成员的真实来源，这些人都为项目代码库有所贡献。&lt;/p&gt;
+&lt;h2 id=&#34;1-需求&#34;&gt;1 需求&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;满足常用代码管理需求&lt;/li&gt;
 &lt;li&gt;安装配置简单&lt;/li&gt;
 &lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;11-为什么没有直接选用-gitlab&#34;&gt;1.1 为什么没有直接选用 gitlab&lt;/h3&gt;
 &lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://www.annhe.net/article-4276.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.annhe.net/article-4276.html&lt;/a&gt;&lt;/p&gt;
@@ -5297,7 +5696,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001.png&#34;
 	width=&#34;563&#34;
 	height=&#34;186&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_huc1b6ea55fefb3971264520a77c1498be_5195_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_huc1b6ea55fefb3971264520a77c1498be_5195_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_hu280b217ef2b4e731aefb7f5f6ee4ba58_7184_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_hu280b217ef2b4e731aefb7f5f6ee4ba58_7184_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5319,7 +5718,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002.png&#34;
 	width=&#34;324&#34;
 	height=&#34;285&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_hu7f3a6fddf075c4537239d43f5198f7a3_48763_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_hu7f3a6fddf075c4537239d43f5198f7a3_48763_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_huc6a54d4c5e16fc943b1eb9033ac272ae_49885_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_huc6a54d4c5e16fc943b1eb9033ac272ae_49885_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -5405,7 +5804,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001.png&#34;
 	width=&#34;603&#34;
 	height=&#34;389&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu62cb3bd5b05be4fcefef72d1fba6d575_210041_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu62cb3bd5b05be4fcefef72d1fba6d575_210041_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu6961bfefd07ead7d252f7d4de527005e_213064_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu6961bfefd07ead7d252f7d4de527005e_213064_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5433,7 +5832,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002.png&#34;
 	width=&#34;553&#34;
 	height=&#34;347&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu5e130fc8a3a45d09aee1f055cf1adc24_172181_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu5e130fc8a3a45d09aee1f055cf1adc24_172181_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu18be446eb2d812441b3f52582ff808ba_174215_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu18be446eb2d812441b3f52582ff808ba_174215_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -5449,7 +5848,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003.png&#34;
 	width=&#34;554&#34;
 	height=&#34;119&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_huda6211aed00dc8b29b105f01ed710ea2_19055_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_huda6211aed00dc8b29b105f01ed710ea2_19055_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_hu95df148a23076a925f08582f72ae9c2e_22410_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_hu95df148a23076a925f08582f72ae9c2e_22410_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -5481,7 +5880,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001.png&#34;
 	width=&#34;394&#34;
 	height=&#34;284&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hubd61ea712b44d9a3837943ad543cfda2_92724_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hubd61ea712b44d9a3837943ad543cfda2_92724_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hu464e3ad82e52f729a16ca798b693c1a1_93581_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hu464e3ad82e52f729a16ca798b693c1a1_93581_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5517,7 +5916,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Windows 系统下 Oracle 的安装和配置|Oracle Installation and Configuration on Windows</title>
+        <title>Windows 系统下 Oracle 的安装和配置</title>
         <link>https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/</link>
         <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
         
@@ -5531,7 +5930,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001.png&#34;
 	width=&#34;787&#34;
 	height=&#34;599&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu1735232d3130a0c64da5f8a10188e831_34237_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu1735232d3130a0c64da5f8a10188e831_34237_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37427_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37427_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5550,7 +5949,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002.png&#34;
 	width=&#34;783&#34;
 	height=&#34;594&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu0a7b33b7fa357bc0f486c3e476d59a32_49897_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu0a7b33b7fa357bc0f486c3e476d59a32_49897_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49828_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49828_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -5568,7 +5967,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003.png&#34;
 	width=&#34;785&#34;
 	height=&#34;593&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu85156b356f7621f732aea754192f38c4_55240_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu85156b356f7621f732aea754192f38c4_55240_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55289_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55289_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -5603,7 +6002,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004.png&#34;
 	width=&#34;797&#34;
 	height=&#34;597&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_hu71731353317a80d367329307b4b4b6cf_97223_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_hu71731353317a80d367329307b4b4b6cf_97223_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100824_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100824_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0004&#34;
@@ -5621,13 +6020,14 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>TDOA时间差定位法概述</title>
-        <link>https://hostenwang.github.io/posts/0801-incubator/overview-of-tdoa-time-difference-location-method/</link>
+        <title>无线电定位技术:TDOA时间差定位法概述</title>
+        <link>https://hostenwang.github.io/posts/0801-incubator/radio-positioning-technology-overview-of-tdoa-time-difference-positioning-method/</link>
         <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0801-incubator/overview-of-tdoa-time-difference-location-method/</guid>
+        <guid>https://hostenwang.github.io/posts/0801-incubator/radio-positioning-technology-overview-of-tdoa-time-difference-positioning-method/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;TDOA（Time difference of Arrival）时间差定位法 是一种利用时间差进行定位的方法，通过测量信号到达监测设备的时间，可以确定信号源的位置&lt;/p&gt;
+&lt;p&gt;TDOA时间差定位法是一种利用时间差进行定位的方法。通过测量信号到达监测站的时间，可以确定信号源的距离。&lt;/p&gt;
+&lt;p&gt;利用信号源到各个监测站的距离(以监测站为中心，距离为半径作圆)，就能确定信号的位置。但是绝对时间一般比较难测量，通过比较信号到达各个监测站的绝对时间差，就能作出以监测站为焦点，距离差为长轴的双曲线，双曲线的交点就是信号的位置。&lt;/p&gt;
 &lt;p&gt;此处记录我厂在 TDOA 上的一些使用心得.&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
@@ -5684,11 +6084,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;</description>
         </item>
         <item>
-        <title>用户的最大进程数偏少</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-number-of-threads-for-user-likely-too-low/</link>
+        <title>Linux服务器报错&#34;Max number of threads for user likely too low&#34;的解决方案</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-max-number-of-threads-for-user-like-too-low/</link>
         <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-number-of-threads-for-user-likely-too-low/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-max-number-of-threads-for-user-like-too-low/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 Max number of threads for user likely too low 问题解决&lt;/p&gt;
 &lt;h2 id=&#34;2-环境environment&#34;&gt;2 环境|Environment&lt;/h2&gt;
@@ -5743,11 +6143,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>进程的最大文件描述符数量偏少</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-file-descriptors-for-process-likely-too-low/</link>
+        <title>Linux服务器报错&#34;进程的最大文件描述符数量偏少&#34;的解决方案</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-the-maximum-number-of-file-descriptors-for-a-process-is-too-low/</link>
         <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-qa-max-file-descriptors-for-process-likely-too-low/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-the-maximum-number-of-file-descriptors-for-a-process-is-too-low/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;记录 Max file descriptors for process likely too low 问题解决&lt;/p&gt;
 &lt;h2 id=&#34;2-环境environment&#34;&gt;2 环境|Environment&lt;/h2&gt;
@@ -5843,13 +6243,14 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Oracle 表空间管理|Oracle Tablespace Management</title>
+        <title>如何在Oracle 进行表空间管理?</title>
         <link>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</link>
         <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0533-database/oracle-tablespace-management/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;表空间是 #Oracle 数据库中最大的逻辑结构。&lt;/p&gt;
+&lt;p&gt;表空间是ORACLE 数据库恢复 的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等&lt;/p&gt;
+&lt;p&gt;一个小型应用的ORACLE数据库通常仅包括SYSTEM表空间,然而一个稍大型应用的ORACLE数据库采用多个表空间会对数据库的使用带来更大的方便。&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6000,13 +6401,14 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>跨域解决方案总结|Frontend Cross Domain Solutions Summary</title>
-        <link>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</link>
+        <title>前端跨域解决方案总结</title>
+        <link>https://hostenwang.github.io/posts/0521-frontend/summary-of-front-end-cross-domain-solutions/</link>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0521-frontend/cross-domain-solutions-summary/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/summary-of-front-end-cross-domain-solutions/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;总结前端跨域问题解决方案&lt;/p&gt;
+&lt;p&gt;跨源域资源共享（CORS）机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 XMLHttpRequest 或 Fetch）使用 CORS，以降低跨源 HTTP 请求所带来的风险。&lt;/p&gt;
+&lt;p&gt;本文总结前端跨域问题解决方案&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6151,17 +6553,15 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Linux sed 使用总结</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-sed-command-usage/</link>
+        <title>如何在Linux上使用sed命令</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-sed-command-on-linux/</link>
         <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-sed-command-usage/</guid>
-        <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
-&lt;p&gt;sed (stream editor) 功能说明：利用script来处理文本文件&lt;/p&gt;
-&lt;p&gt;sed 是一个非交互式的流编辑器。&lt;/p&gt;
-&lt;p&gt;所谓非交互式，是指使用sed只能在命令行下输入编辑命令来编辑文本，然后在屏幕上查看输出；&lt;/p&gt;
-&lt;p&gt;所谓流编辑器，是指sed每次只从文件（或输入）读入一行，然后对该行进行指定的处理，并将结果输出到屏幕（除非取消了屏幕输出又没有显式地使用打印命令），接着读入下一行。整个文件像流水一样被逐行处理然后逐行输出。&lt;/p&gt;
-&lt;h2 id=&#34;2-环境信息environment&#34;&gt;2 环境信息|Environment&lt;/h2&gt;
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-sed-command-on-linux/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;在Linux中，sed（流编辑器）是一种强大的文本处理工具，主要用来自动编辑一个或多个文件、简化对文件的反复操作、编写转换程序等。&lt;/p&gt;
+&lt;p&gt;sed命令是用于处理文本流的强大工具，可以对文本进行多种操作，如替换、删除、新增、选取等特定工作，简化对文件的反复操作，编写转换程序等。&lt;/p&gt;
+&lt;h2 id=&#34;环境信息&#34;&gt;环境信息&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6178,7 +6578,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;3-语法&#34;&gt;3 语法&lt;/h2&gt;
+&lt;h2 id=&#34;语法&#34;&gt;语法&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -6201,7 +6601,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-V或--version 显示版本信息。     
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;4-示例&#34;&gt;4 示例&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;示例&#34;&gt;示例&lt;/h2&gt;
 &lt;p&gt;替换文本文件内容&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -6219,9 +6619,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/jonh/john/g&amp;#39;&lt;/span&gt; namelist.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;5-参考references&#34;&gt;5 参考|References&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;5-参考&#34;&gt;5 参考&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gnu.org/software/sed/manual/sed.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sed, a stream editor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
@@ -6836,7 +7237,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>ora-01045 该用户没有创建session会话的权限|ora-01045 User System Lacks Create Session Privilege</title>
+        <title>ora-01045 该用户没有创建session会话的权限</title>
         <link>https://hostenwang.github.io/posts/0533-database/ora-01045-user-system-lacks-create-session-privilege/</link>
         <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
         
@@ -6895,13 +7296,13 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Linux 命令行使用总结</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-ternimal-usage/</link>
+        <title>Linux常用命令总结</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/summary-of-common-linux-commands/</link>
         <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-ternimal-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/summary-of-common-linux-commands/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;熟练使用命令行会提高你作为工程师的灵活性以及生产力&lt;/p&gt;
+&lt;p&gt;Linux在我们学习和工作中都会遇到，了解一点常用命令让你工作更高效&lt;/p&gt;
 &lt;h2 id=&#34;系统信息&#34;&gt;系统信息&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -7101,7 +7502,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001.png&#34;
 	width=&#34;600&#34;
 	height=&#34;402&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu99af0b1c7b077e1e6bd9e9d7f063e348_38166_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu99af0b1c7b077e1e6bd9e9d7f063e348_38166_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu43950337dd7ec1866092b2f779ad2e31_85108_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu43950337dd7ec1866092b2f779ad2e31_85108_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -7288,11 +7689,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Redis最佳实践</title>
-        <link>https://hostenwang.github.io/posts/0531-midware/best-practices-for-redis/</link>
+        <title>高性能键值对存储数据库Redis的最佳实践</title>
+        <link>https://hostenwang.github.io/posts/0531-midware/best-practices-for-high-performance-key-value-paired-storage-database-redis/</link>
         <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0531-midware/best-practices-for-redis/</guid>
+        <guid>https://hostenwang.github.io/posts/0531-midware/best-practices-for-high-performance-key-value-paired-storage-database-redis/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;Redis是一个开源（BSD许可），内存存储的数据结构服务器，可用作数据库，高速缓存和消息队列代理。它支持字符串、哈希表、列表、集合、有序集合，位图，hyperloglogs等数据类型&lt;/p&gt;
 &lt;p&gt;记录我厂使用 redis 的最佳实践&lt;/p&gt;
@@ -7342,13 +7743,16 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>如何高效地使用思维导图</title>
+        <title>如何高效地使用思维导图?</title>
         <link>https://hostenwang.github.io/posts/0511-project-management/how-to-use-mindmap-efficiently/</link>
         <pubDate>Wed, 24 May 2017 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0511-project-management/how-to-use-mindmap-efficiently/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;p&gt;思维导图，最早由托尼·博赞（Tony Buzan）于上世纪 70 年代提出，现在已经成为人们重要的思考辅助工具。它被广泛应用于各种创意领域：头脑风暴、读书笔记、项目计划、报告展示&amp;hellip;&lt;/p&gt;
+&lt;p&gt;思维导图，最早由托尼·博赞（Tony Buzan）于上世纪 70 年代提出，现在已经成为人们重要的思考辅助工具。&lt;/p&gt;
+&lt;p&gt;它被广泛应用于各种创意领域：头脑风暴、读书笔记、项目计划、报告展示 等等场景。&lt;/p&gt;
+&lt;h2 id=&#34;优势&#34;&gt;优势&lt;/h2&gt;
+&lt;p&gt;思维导图有以下几个优势：首先，它可以帮助你更好地理解和记忆复杂的概念和公式；其次，它可以将冗长的文字信息精简为易于理解的图像和颜色；最后，通过思维导图的层次结构和关联性，你可以更好地理解各个主题之间的关系。&lt;/p&gt;
 &lt;h2 id=&#34;环境&#34;&gt;环境&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -7592,7 +7996,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001.png&#34;
 	width=&#34;967&#34;
 	height=&#34;245&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu98836626596795b9396d1e640c8e5356_32618_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu98836626596795b9396d1e640c8e5356_32618_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu65f64ff30f328e0a9442b5cc183a53fd_35995_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu65f64ff30f328e0a9442b5cc183a53fd_35995_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -7607,7 +8011,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002.png&#34;
 	width=&#34;1082&#34;
 	height=&#34;293&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hu476ae46f215bc10280d12fbaaaae9f8c_50787_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hu476ae46f215bc10280d12fbaaaae9f8c_50787_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hued1305c4e48936907686086755464aba_54339_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hued1305c4e48936907686086755464aba_54339_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -7621,7 +8025,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003.png&#34;
 	width=&#34;665&#34;
 	height=&#34;468&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu4c960aae7e03cd21158a354590415e19_31344_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu4c960aae7e03cd21158a354590415e19_31344_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu36453237fb8b78dfb51c1cdbc158df30_33547_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu36453237fb8b78dfb51c1cdbc158df30_33547_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -7640,13 +8044,14 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Python pip 使用总结</title>
+        <title>Python 包管理工具PIP的使用总结</title>
         <link>https://hostenwang.github.io/posts/0514-python/python-pip-usage/</link>
         <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/posts/0514-python/python-pip-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;p&gt;python pip 常用命令小结&lt;/p&gt;
+&lt;p&gt;pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。&lt;/p&gt;
+&lt;p&gt;目前如果你在 python.org 下载最新版本的安装包，则是已经自带了该工具。&lt;/p&gt;
 &lt;h2 id=&#34;安装卸载&#34;&gt;安装卸载&lt;/h2&gt;
 &lt;h3 id=&#34;安装时临时换源&#34;&gt;安装时临时换源&lt;/h3&gt;
 &lt;p&gt;配置&lt;/p&gt;
@@ -7776,11 +8181,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Linux 常用网络命令小结</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-network-commands/</link>
+        <title>如何使用命令排查Linux网络问题?</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-commands-to-troubleshoot-linux-network-issues/</link>
         <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-network-commands/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-commands-to-troubleshoot-linux-network-issues/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;常用网络命令小结&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -7930,18 +8335,27 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Junit 总结</title>
-        <link>https://hostenwang.github.io/posts/0515-java/junit/</link>
+        <title>Java 测试框架 Junit 概述</title>
+        <link>https://hostenwang.github.io/posts/0515-java/usage-of-java-testing-framework-junit/</link>
         <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0515-java/junit/</guid>
-        <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
-&lt;p&gt;JUnit 是一种单元测试框架&lt;/p&gt;
-&lt;h2 id=&#34;2-命名规范&#34;&gt;2 命名规范&lt;/h2&gt;
+        <guid>https://hostenwang.github.io/posts/0515-java/usage-of-java-testing-framework-junit/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;JUnit是一个开发源代码的Java测试框架，用于编写和运行可重复的测试。它是用于单元测试框架体系xUnit的一个实例，被广泛用于Java语言编程。&lt;/p&gt;
+&lt;p&gt;JUnit主要包括以下特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用于测试期望结果的断言（Assertion）。&lt;/li&gt;
+&lt;li&gt;用于共享共同测试数据的测试工具。&lt;/li&gt;
+&lt;li&gt;用于方便的组织和运行测试的测试套件。&lt;/li&gt;
+&lt;li&gt;图形和文本的测试运行器。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本教程将教你用 Java 编程语言做单元测试时，如何使用 JUnit。&lt;/p&gt;
+&lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;测试类&lt;/code&gt;一般用&lt;code&gt;被测试类&lt;/code&gt;+Tests来命名。&lt;/p&gt;
 &lt;p&gt;should 常用于测试方法名，如&lt;code&gt;ordersShouldBeCreated&lt;/code&gt;，&lt;code&gt;menuShouldGetActive&lt;/code&gt;，以增强可读性。&lt;/p&gt;
 &lt;p&gt;总之，测试名应该尽量表明测试进行的内容，而不必去看代码。&lt;/p&gt;
-&lt;h2 id=&#34;3-常用注解&#34;&gt;3 常用注解&lt;/h2&gt;
+&lt;h2 id=&#34;常用注解&#34;&gt;常用注解&lt;/h2&gt;
 &lt;p&gt;常用 #注解 如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -8003,7 +8417,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Ignore&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;nd&#34;&gt;@Ignore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;禁用原因&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;      
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;4-常用断言&#34;&gt;4 常用断言&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;常用断言&#34;&gt;常用断言&lt;/h2&gt;
 &lt;p&gt;常用 #断言 如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -8049,7 +8463,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;assertNotSame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expected&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;变量指向不同目标&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;5-例程&#34;&gt;5 例程&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;例程&#34;&gt;例程&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -8078,7 +8492,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;6-测试集&#34;&gt;6 测试集&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;测试集&#34;&gt;测试集&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -8095,24 +8509,25 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;7-未来展望further&#34;&gt;7 未来展望|Further&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;提高小组内单元测试使用率&lt;/li&gt;
 &lt;li&gt;提高单元测试自动化程度&lt;/li&gt;
 &lt;li&gt;考察集成 junitperf&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;8-参考references&#34;&gt;8 参考|References&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Linux 账号管理</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-account-management/</link>
+        <title>如何在Linux上管理用户和用户组?</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/how-to-manage-users-and-user-groups-on-linux/</link>
         <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-account-management/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/how-to-manage-users-and-user-groups-on-linux/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;用户组的管理涉及用户组的添加、删除和修改。组的增加、删除和修改实际上就是对&lt;code&gt;/etc/group&lt;/code&gt;文件的更新&lt;/p&gt;
 &lt;p&gt;Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。&lt;/p&gt;
 &lt;p&gt;用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。&lt;/p&gt;
 &lt;h2 id=&#34;账号管理&#34;&gt;账号管理&lt;/h2&gt;
@@ -8672,13 +9087,14 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Linux apt 命令总结</title>
-        <link>https://hostenwang.github.io/posts/0552-linux-command/linux-apt-conmand-usage/</link>
+        <title>Linux软件包管理器APT用法总结</title>
+        <link>https://hostenwang.github.io/posts/0552-linux-command/summary-of-linux-advanced-packaging-tool-apt-usage/</link>
         <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0552-linux-command/linux-apt-conmand-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0552-linux-command/summary-of-linux-advanced-packaging-tool-apt-usage/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;p&gt;Ubuntu apt 命令小结&lt;/p&gt;
+&lt;p&gt;apt (Advanced Packaging Tool) 是一个在Debian和Ubuntu中的Shell前端软件包管理器。&lt;/p&gt;
+&lt;p&gt;apt命令执行需要超级管理员权限(root)。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;h3 id=&#34;添加ppa源&#34;&gt;添加PPA源&lt;/h3&gt;
 &lt;p&gt;PPA ,表示 Personal Package Archives，也就是个人软件包集。有很多软件因为种种原因，不能进入官方的 Ubuntu 软件仓库。 为了方便 Ubuntu 用户使用，launchpad.net 提供了 ppa，允许用户建立自己的软件仓库， 自由的上传软件。&lt;/p&gt;
@@ -9021,11 +9437,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Nginx 介绍</title>
-        <link>https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/</link>
+        <title>高性能反向代理服务器Nginx介绍</title>
+        <link>https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/</link>
         <pubDate>Wed, 12 Aug 2015 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/</guid>
+        <guid>https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。&lt;/p&gt;
 &lt;p&gt;它也是一种轻量级的Web服务器，可以作为独立的服务器部署网站（类似 Tomcat）。它高性能和低消耗内存的结构受到很多大公司青睐。&lt;/p&gt;
@@ -9054,10 +9470,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;h2 id=&#34;nginx-使用场景&#34;&gt;Nginx 使用场景&lt;/h2&gt;
 &lt;h3 id=&#34;反向代理&#34;&gt;反向代理&lt;/h3&gt;
 &lt;p&gt;Nginx在做反向代理时，提供性能稳定，并且能够提供配置灵活的转发功能。Nginx可以根据不同的正则匹配，采取不同的转发策略，比如图片文件结尾的走文件服务器，动态页面走web服务器&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001.png&#34;
 	width=&#34;458&#34;
 	height=&#34;225&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0001_hu7a50075f2fd79cdad066e3b30926bdc9_95565_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0001_hu7a50075f2fd79cdad066e3b30926bdc9_95565_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96639_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96639_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -9070,10 +9486,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;负载均衡&#34;&gt;负载均衡&lt;/h3&gt;
 &lt;h4 id=&#34;轮询&#34;&gt;轮询&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0002.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002.png&#34;
 	width=&#34;606&#34;
 	height=&#34;234&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0002_hu40c93669c276de708daa516889e1990c_112183_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0002_hu40c93669c276de708daa516889e1990c_112183_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113925_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113925_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -9085,10 +9501,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;加权轮询&#34;&gt;加权轮询&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0003.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003.png&#34;
 	width=&#34;622&#34;
 	height=&#34;232&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0003_hu7698b2ba172ad045a2f0e7c406794563_118185_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0003_hu7698b2ba172ad045a2f0e7c406794563_118185_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119812_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119812_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -9101,10 +9517,10 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;ip-hash&#34;&gt;Ip hash&lt;/h4&gt;
 &lt;p&gt;对客户端请求的ip进行hash操作，然后根据hash结果将同一个客户端ip的请求分发给同一台服务器进行处理，可以解决session不共享的问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0004.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004.png&#34;
 	width=&#34;607&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0004_hue7b13dcd54077533fa238be47f5d2816_86921_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/how-to-install-nginx-on-windows/0004_hue7b13dcd54077533fa238be47f5d2816_86921_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89084_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89084_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0004&#34;

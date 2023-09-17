@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>用友NC开发 - 日志配置</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/</link>
+        <title>如何在用友NC开发环境下配置日志</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/</link>
         <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;本文记录如何在 用友(yonyou) NC 使用日志&lt;/p&gt;
 &lt;p&gt;日志机制提供对系统运行时的监控及支持对系统异常的追踪与定位。日志机制可控制日志输出的格式、日志信息的级别、日志信息输出的目的地（文件、控制台、SocketServer等）。通过配置文件进行灵活的设置，用户可以细致地控制日志的生成过程，而不需修改程序代码&lt;/p&gt;
@@ -53,10 +53,10 @@
 &lt;li&gt;打开 NC 安装目录下的  &lt;code&gt;sysConfig.sh&lt;/code&gt; 进行日志配置&lt;/li&gt;
 &lt;li&gt;点击&amp;quot;读取&amp;quot;按钮.选择路径 &lt;code&gt;{{NCHOME}}/ierp/bin/logger-config.properties&lt;/code&gt;文件，点击【读取】按钮, 会看到很多日志信息&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001.png&#34;
 	width=&#34;595&#34;
 	height=&#34;443&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/0001_hue92bc6c5d74a8d9eeb3e6ecd3421ced0_127662_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-04-log-configuration/0001_hue92bc6c5d74a8d9eeb3e6ecd3421ced0_127662_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129946_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129946_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
