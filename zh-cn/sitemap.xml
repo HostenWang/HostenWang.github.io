@@ -203,19 +203,10 @@
     <loc>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-09-processing-raster-data/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/task/</loc>
-    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/tags/%E5%8F%82%E7%85%A7/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/tags/%E4%BB%BB%E5%8A%A1/</loc>
-    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-custom-references-in-the-yonyou-nc-environment/</loc>
-    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/yonyou-nc-development-05-custom-reference/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-08-processing-geometric-data/</loc>
@@ -233,7 +224,7 @@
     <loc>https://hostenwang.github.io/categories/webgis/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0321-webgis/overview-of-web-map-tile-service-technology/</loc>
+    <loc>https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-web-map-tile-service-technology/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/git/</loc>
@@ -281,7 +272,7 @@
     <loc>https://hostenwang.github.io/posts/0514-python/python-scripting-for-arcgis-00-overview/</loc>
     <lastmod>2021-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-a-yonyou-nc-development-environment/</loc>
+    <loc>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/</loc>
     <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/tile/</loc>
@@ -290,7 +281,7 @@
     <loc>https://hostenwang.github.io/tags/wfs/</loc>
     <lastmod>2021-06-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0321-webgis/overview-of-tile-map-technology/</loc>
+    <loc>https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-tile-map-technology/</loc>
     <lastmod>2021-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/ogc-open-geospatial-consortium-overview/</loc>
@@ -326,7 +317,7 @@
     <loc>https://hostenwang.github.io/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0513-develop/selection-of-project-management-software/</loc>
+    <loc>https://hostenwang.github.io/posts/0513-develop/how-to-choose-project-management-software-for-small-scale-rd-teams/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/tags/%E9%80%89%E5%9E%8B/</loc>
@@ -485,7 +476,7 @@
     <loc>https://hostenwang.github.io/tags/jsonp/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hostenwang.github.io/posts/0521-frontend/summary-of-front-end-cross-domain-solutions/</loc>
+    <loc>https://hostenwang.github.io/posts/0521-frontend/summarize-solutions-to-cross-domain-issues-in-front-end-development/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hostenwang.github.io/posts/0552-linux-command/how-to-use-sed-command-on-linux/</loc>

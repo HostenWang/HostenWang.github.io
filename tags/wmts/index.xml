@@ -47,11 +47,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>网络地图瓦片服务技术概述</title>
-        <link>https://hostenwang.github.io/posts/0321-webgis/overview-of-web-map-tile-service-technology/</link>
+        <title>网络地理信息技术 : 网络地图瓦片服务技术概述</title>
+        <link>https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-web-map-tile-service-technology/</link>
         <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0321-webgis/overview-of-web-map-tile-service-technology/</guid>
+        <guid>https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-web-map-tile-service-technology/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;WMTS 是 OGC 提出的缓存技术标准，即在服务器端缓存被切割成一定大小瓦片的地图，对客户端只提供这些预先定义好的单个瓦片的服务，将更多的数据处理操作如图层叠加等放在客户端，从而缓解 GIS 服务器端数据处理的压力，改善用户体验。&lt;/p&gt;
 &lt;p&gt;WMTS 提供了一种采用预定义图块方法发布数字地图服务的标准化解决方案。WMTS 弥补了 WMS 不能提供分块地图的不足。WMTS牺牲了提供定制地图的灵活性，代之以通过提供静态数据（基础地图）来增强伸缩性，这些静态数据的范围框和比例尺被限定在各个图块内。这些固定的图块集使得对WMTS服务的实现可以使用一个仅简单返回已有文件的Web服务器即可，同时使得可以利用一些标准的诸如分布式缓存的网络机制实现伸缩性。&lt;/p&gt;
