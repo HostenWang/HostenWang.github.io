@@ -233,6 +233,7 @@
         <guid>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;GeoServer 是一个用 Java 编写的开源软件服务器，它是遵循 OpenGIS Web 服务器规范的 J2EE 实现，允许用户共享和编辑地理空间数据 .为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
+&lt;p&gt;GeoServer is an open source web mapping server written in Java platform. It is a subset of a web server model specially designed to share and publishes the Geographical information over the internet&lt;/p&gt;
 &lt;p&gt;作为 #GeoServer 系列文章 的第一篇, 主要介绍基础概念.&lt;/p&gt;
 &lt;h2 id=&#34;geoserver-概述&#34;&gt;GeoServer 概述&lt;/h2&gt;
 &lt;p&gt;GeoServer 实现了 开放地理空间联盟 (Open Geospatial Consortium) 的 网络要素服务(Web Feature Service)、 网络覆盖服务(Web Coverage Service)，以及 网络地图服务(Web Map Service)。其对网络地图服务的高性能实现，获得了OGC认证。&lt;/p&gt;

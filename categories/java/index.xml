@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Java参数校验库validation的使用</title>
-        <link>https://hostenwang.github.io/posts/0515-java/java-validator-usage/</link>
+        <link>https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/</link>
         <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0515-java/java-validator-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;javax.validation&lt;/code&gt;的一系列注解可以帮我们完成参数校验,免去繁琐的串行校验&lt;/p&gt;
 &lt;p&gt;JSR303  是一套&lt;code&gt;JavaBean&lt;/code&gt;参数校验的标准，它定义了很多常用的校验注解，可以直接将这些注解加在我们 #JavaBean 的属性上面，就可以在需要校验的时候进行参数校验了.&lt;/p&gt;

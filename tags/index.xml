@@ -207,30 +207,6 @@
         <description></description>
         </item>
         <item>
-        <title>js</title>
-        <link>https://hostenwang.github.io/tags/js/</link>
-        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/js/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>OpenLayers</title>
-        <link>https://hostenwang.github.io/tags/openlayers/</link>
-        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/openlayers/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>wmts</title>
-        <link>https://hostenwang.github.io/tags/wmts/</link>
-        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/wmts/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>ArcGIS</title>
         <link>https://hostenwang.github.io/tags/arcgis/</link>
         <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
@@ -279,6 +255,14 @@
         <description></description>
         </item>
         <item>
+        <title>wmts</title>
+        <link>https://hostenwang.github.io/tags/wmts/</link>
+        <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/tags/wmts/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>git</title>
         <link>https://hostenwang.github.io/tags/git/</link>
         <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
@@ -300,14 +284,6 @@
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/tags/specification/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>安装</title>
-        <link>https://hostenwang.github.io/tags/%E5%AE%89%E8%A3%85/</link>
-        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/%E5%AE%89%E8%A3%85/</guid>
         <description></description>
         </item>
         <item>
@@ -591,6 +567,14 @@
         <description></description>
         </item>
         <item>
+        <title>js</title>
+        <link>https://hostenwang.github.io/tags/js/</link>
+        <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/tags/js/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>jsonp</title>
         <link>https://hostenwang.github.io/tags/jsonp/</link>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
@@ -599,27 +583,19 @@
         <description></description>
         </item>
         <item>
-        <title>installation</title>
-        <link>https://hostenwang.github.io/tags/installation/</link>
-        <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/installation/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Kabana</title>
-        <link>https://hostenwang.github.io/tags/kabana/</link>
-        <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/kabana/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>IK</title>
         <link>https://hostenwang.github.io/tags/ik/</link>
         <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/tags/ik/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>installation</title>
+        <link>https://hostenwang.github.io/tags/installation/</link>
+        <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/tags/installation/</guid>
         <description></description>
         </item>
         <item>
@@ -652,14 +628,6 @@
         <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/tags/python3/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>gui</title>
-        <link>https://hostenwang.github.io/tags/gui/</link>
-        <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/tags/gui/</guid>
         <description></description>
         </item>
         <item>

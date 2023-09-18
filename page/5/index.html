@@ -170,6 +170,44 @@ var _hmt = _hmt || [];
             </a>
         </li>
         
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
 
         <div class="menu-bottom-section">
                 <li id="i18n-switch">  
@@ -222,7 +260,23 @@ var _hmt = _hmt || [];
     <aside class="sidebar right-sidebar sticky">
         
             
-                
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>搜索</label>
+            <input name="keyword" required placeholder="输入关键词..." />
+        
+            <button title="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
             
         
             
@@ -264,7 +318,7 @@ var _hmt = _hmt || [];
                     <a href="/archives/#2021">
                         
                             <span class="year">2021</span>
-                            <span class="count">17</span>
+                            <span class="count">16</span>
                         
                     </a> 
                 </div>
@@ -319,35 +373,35 @@ var _hmt = _hmt || [];
             </a>
         
             <a href="/categories/oracle/" class="font_size_8">
-                Oracle
+                高性能关系型数据库 Oracle 专栏
             </a>
         
             <a href="/categories/yonyou-nc-development/" class="font_size_6">
-                用友NC开发
+                用友NC二次开发平台专栏
             </a>
         
             <a href="/categories/design/" class="font_size_5">
                 design
             </a>
         
-            <a href="/categories/elastic/" class="font_size_5">
-                elastic
-            </a>
-        
             <a href="/categories/geoserver/" class="font_size_5">
-                geoserver
+                开源地理信息系统服务器 GeoServer 技术专栏
             </a>
         
             <a href="/categories/nifi/" class="font_size_5">
-                Apache NiFi
-            </a>
-        
-            <a href="/categories/python/" class="font_size_5">
-                pyhton
+                开源数据流管理系统 Apache NiFi 技术专栏
             </a>
         
             <a href="/categories/python-scripting-for-arcgis/" class="font_size_5">
                 Python Scripting for Arcgis
+            </a>
+        
+            <a href="/categories/elastic/" class="font_size_4">
+                elastic
+            </a>
+        
+            <a href="/categories/python/" class="font_size_4">
+                脚本语言 Python 技术专栏
             </a>
         
             <a href="/categories/frontend/" class="font_size_3">
@@ -379,24 +433,24 @@ var _hmt = _hmt || [];
                 linux
             </a>
         
-            <a href="/tags/python/" class="font_size_9">
-                Python
-            </a>
-        
-            <a href="/tags/gis/" class="font_size_8">
-                gis
-            </a>
-        
             <a href="/tags/oracle/" class="font_size_8">
                 oracle
             </a>
         
-            <a href="/tags/elasticsearch/" class="font_size_7">
-                elasticsearch
+            <a href="/tags/python/" class="font_size_8">
+                Python
+            </a>
+        
+            <a href="/tags/gis/" class="font_size_7">
+                gis
             </a>
         
             <a href="/tags/nifi/" class="font_size_7">
                 nifi
+            </a>
+        
+            <a href="/tags/elasticsearch/" class="font_size_6">
+                elasticsearch
             </a>
         
             <a href="/tags/nc/" class="font_size_6">
@@ -429,140 +483,6 @@ var _hmt = _hmt || [];
     
 
     <section class="article-list">
-        
-            
-<article class="">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/yonyou-nc-development/" style="background-color: #2a9d8f; color: #fff;">
-                用友NC开发
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/">用友NC概述和二次开发的开发规范</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            用友NC是用友软件集团推出的一款中小企业综合管理软件.本文整理我厂使用的用友 NC 开发规范 | Development specifications for secondary development of Yonyou NC
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jul 09, 2021</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 1 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/posts/0513-develop/gitea-installation/">Gitea 安装|Gitea Installation</a>
-        </h2>
-    
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jul 04, 2021</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 1 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
         
             
 <article class="">
@@ -644,7 +564,7 @@ var _hmt = _hmt || [];
     <header class="article-category">
         
             <a href="/categories/yonyou-nc-development/" style="background-color: #2a9d8f; color: #fff;">
-                用友NC开发
+                用友NC二次开发平台专栏
             </a>
         
     </header>
@@ -712,10 +632,73 @@ var _hmt = _hmt || [];
 
     <div class="article-details">
     
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/0513-develop/install-the-open-source-git-service-gitea-on-windows/">在windows上安装开源Git服务Gitea</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。我们采用Go作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 04, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+</article>
+        
+            
+<article class="">
+    <header class="article-header">
+
+    <div class="article-details">
+    
     <header class="article-category">
         
             <a href="/categories/yonyou-nc-development/" style="background-color: #2a9d8f; color: #fff;">
-                用友NC开发
+                用友NC二次开发平台专栏
             </a>
         
     </header>
@@ -750,6 +733,77 @@ var _hmt = _hmt || [];
   <path d="M18 16.496v1.504l1 1" />
 </svg>
                 <time class="article-time--published">Jul 03, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+</article>
+        
+            
+<article class="">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/python-scripting-for-arcgis/" style="background-color: #2a9d8f; color: #fff;">
+                Python Scripting for Arcgis
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/0514-python/python-scripting-for-arcgis-00-overview/">面向 ArcGIS 的 python 脚本编程 - 概述 | Python Scripting for ArcGIS - Overview</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            面向 ArcGIS 的 python 脚本编程 - 概述
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 02, 2021</time>
             </div>
         
 
@@ -846,11 +900,7 @@ var _hmt = _hmt || [];
                 
             
             
-                    
-                
-            
-            
-                    <a class='page-link' href='/page/16/'>16</a>
+                    <a class='page-link' href='/page/15/'>15</a>
                 
             
     </nav>

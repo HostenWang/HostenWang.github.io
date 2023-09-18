@@ -79,13 +79,13 @@
     &gt;https://zhuanlan.zhihu.com/p/439878778&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         <item>
-        <title>Python pipenv 使用总结</title>
-        <link>https://hostenwang.github.io/posts/0514-python/python-pipenv-usage/</link>
+        <title>python包管理器pipenv的使用</title>
+        <link>https://hostenwang.github.io/posts/0514-python/the-use-of-python-package-manager-pipenv/</link>
         <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0514-python/python-pipenv-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/the-use-of-python-package-manager-pipenv/</guid>
         <description>&lt;h2 id=&#34;概述abstract&#34;&gt;概述|Abstract&lt;/h2&gt;
-&lt;p&gt;pipenv 是 &lt;code&gt;Kenneth Reitz&lt;/code&gt;大神的作品，提供Python的各个版本间的管理，各种包管理&lt;/p&gt;
+&lt;p&gt;pipenv 是一款比较新的包管理工具，其借鉴了 javascript 的 npm 和 PHP 的 composer 等理念，通过一个依赖描述文件 Pipfile 来安装和管理依赖，以达到协同开发的目的&lt;/p&gt;
 &lt;p&gt;Pipenv is a Python virtualenv management tool that supports a multitude of systems and nicely bridges the gaps between pip, pyenv and virtualenv. Linux, macOS, and Windows are all first-class citizens in pipenv.&lt;/p&gt;
 &lt;h2 id=&#34;背景background&#34;&gt;背景|Background&lt;/h2&gt;
 &lt;p&gt;Pipenv 是 &lt;code&gt;Kenneth Reitz&lt;/code&gt; 在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的Pipfile则用来替代旧的依赖记录方式（requirements.txt）。&lt;/p&gt;
@@ -1002,7 +1002,7 @@
         
         <guid>https://hostenwang.github.io/posts/0551-ops/simple-server-security-reinforcement/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;即使服务器规模不大, 安全问题还是要重视&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;服务器加固&lt;/strong&gt;是指通过一系列&lt;strong&gt;安全&lt;/strong&gt;措施和配置来提升&lt;strong&gt;服务器的安全&lt;/strong&gt;性，从而减少&lt;strong&gt;服务器&lt;/strong&gt;面临&lt;strong&gt;的安全&lt;/strong&gt;威胁和攻击&lt;strong&gt;的&lt;/strong&gt;可能性&lt;/p&gt;
 &lt;h2 id=&#34;信息安全涉及的领域&#34;&gt;信息安全涉及的领域&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;终端安全
@@ -1286,6 +1286,7 @@
         <guid>https://hostenwang.github.io/posts/0322-geoserver-beginner-guide/geoserver-beginner-guide-introdution/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;GeoServer 是一个用 Java 编写的开源软件服务器，它是遵循 OpenGIS Web 服务器规范的 J2EE 实现，允许用户共享和编辑地理空间数据 .为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
+&lt;p&gt;GeoServer is an open source web mapping server written in Java platform. It is a subset of a web server model specially designed to share and publishes the Geographical information over the internet&lt;/p&gt;
 &lt;p&gt;作为 #GeoServer 系列文章 的第一篇, 主要介绍基础概念.&lt;/p&gt;
 &lt;h2 id=&#34;geoserver-概述&#34;&gt;GeoServer 概述&lt;/h2&gt;
 &lt;p&gt;GeoServer 实现了 开放地理空间联盟 (Open Geospatial Consortium) 的 网络要素服务(Web Feature Service)、 网络覆盖服务(Web Coverage Service)，以及 网络地图服务(Web Map Service)。其对网络地图服务的高性能实现，获得了OGC认证。&lt;/p&gt;
@@ -1509,11 +1510,11 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>用友NC开发 - 消息功能使用配置</title>
-        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/message-push-development-guide/</link>
+        <title>如何在用友NC环境开发消息推送功能?</title>
+        <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-message-push-function-in-the-yonyou-nc-environment/</link>
         <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/message-push-development-guide/</guid>
+        <guid>https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-message-push-function-in-the-yonyou-nc-environment/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;本文记录如何在 用友(yonyou) NC 使用消息功能&lt;/p&gt;
 &lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
@@ -1681,46 +1682,6 @@
     &gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.yuque.com/hanmanyi/bg70gs/ibte9d&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
-        <title>OpenLayers - WMTS(网络地图瓦片服务)|OpenLayers - WMTS(Web Map Tile Service)</title>
-        <link>https://hostenwang.github.io/posts/0321-webgis/openlayers-wmts-web-map-tile-service/</link>
-        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/0321-webgis/openlayers-wmts-web-map-tile-service/</guid>
-        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;WMTS，即Web地图瓦片服务（Web Map Tile Service），由OGC（开放地理信息联盟）制定。根据WMTS标准，可以使我们轻松的访问瓦片数据。&lt;/p&gt;
-&lt;p&gt;WMTS提供了一种采用预定义地图瓦片发布数字地图服务的标准化解决方案，它最重要的特征是采用瓦片缓存技术缓解WebGIS服务器端数据处理的压力，提高前后端交互响应速度。&lt;/p&gt;
-&lt;p&gt;WMS（Web地图服务）提供可定制地图的服务，是一个动态数据或用户定制地图（需结合SLD-Style Layer Descriptor）的理想解决方法。例如，可以在GeoServer中通过修改SLD样式文件来随时自定义地图样式：&lt;/p&gt;
-&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Windows&lt;/td&gt;
-&lt;td&gt;10 home x64&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OpenLayers&lt;/td&gt;
-&lt;td&gt;5.3.0&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/87826787&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;OpenLayers教程：地图标注&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;​&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
@@ -2275,11 +2236,62 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Gitea 配置|Gitea Configuration</title>
-        <link>https://hostenwang.github.io/posts/0513-develop/gitea-configuration/</link>
+        <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据</title>
+        <link>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-07-using-spatial-data/</link>
         <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0513-develop/gitea-configuration/</guid>
+        <guid>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-07-using-spatial-data/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;10 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;使用游标访问数据&#34;&gt;使用游标访问数据&lt;/h2&gt;
+&lt;p&gt;使用游标可以遍历属性表中的每一行数据。&lt;/p&gt;
+&lt;p&gt;游标是一个数据库术语，它主要用于访问表格中的每一行记录或者向表中插入新的记录。在表格中，一条记录也被称为一行。在ArcGIS中，游标通常用于从表中或向表中按行读取或写入新几何结构。&lt;/p&gt;
+&lt;p&gt;游标有三种形式：搜索、插入和更新。这三种游标的功能如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;搜索游标可用于检索行。&lt;/li&gt;
+&lt;li&gt;插入游标可用于向表或要素类中插入行。&lt;/li&gt;
+&lt;li&gt;更新游标可用于根据位置更新和删除行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;每种类型的游标均由 arepy.da 模块中对应的 Arcpy 函数（SearchCursor、InsertCursor 和 UpdateCursor）创建。所有这三种游标可以在表、表格视图、要素类或要素图层上进行操作。&lt;/p&gt;
+&lt;p&gt;插入游标和更新游标均支持编辑操作。在 ArcGIS 地理处理框架中，创建游标对象的同时会在属性表上添加一个锁。这个锁能够防止多个进程同时更改同一个属性表。锁有两种类型：共享锁和排他锁。&lt;/p&gt;
+&lt;h2 id=&#34;在-python-中使用-sql&#34;&gt;在 Python 中使用 SQL&lt;/h2&gt;
+&lt;p&gt;在地理处理中，经常需要使用结构化查询语言（SQL）查询数据。SQL 可以定义一个或多个由属性、运算符和算式组成的条件语句。&lt;/p&gt;
+&lt;h2 id=&#34;处理表和字段名&#34;&gt;处理表和字段名&lt;/h2&gt;
+&lt;p&gt;在处理不同的数据集时，要确保每个属性表和字段都有一个有效且唯一的名称，特别是在地理数据库中创建数据时。这样做可以避免数据被覆盖&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>在windows上配置开源Git服务Gitea</title>
+        <link>https://hostenwang.github.io/posts/0513-develop/configuring-open-source-git-service-gitea-on-windows/</link>
+        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0513-develop/configuring-open-source-git-service-gitea-on-windows/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;
 &lt;p&gt;Gitea 采用Go作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC&lt;/p&gt;
@@ -2486,57 +2498,6 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>面向 ArcGIS 的 python 脚本编程 - 访问空间数据</title>
-        <link>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-07-using-spatial-data/</link>
-        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/0323-python-scripting-for-arcgis/python-scripting-for-arcgis-07-using-spatial-data/</guid>
-        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;ArcPy 提供了数据访问模块 arepy.da . 通过 arepy.da 可以控制编辑会话、编辑操作、游标、表等&lt;/p&gt;
-&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Windows&lt;/td&gt;
-&lt;td&gt;10 home x64&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Python&lt;/td&gt;
-&lt;td&gt;2.7&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;使用游标访问数据&#34;&gt;使用游标访问数据&lt;/h2&gt;
-&lt;p&gt;使用游标可以遍历属性表中的每一行数据。&lt;/p&gt;
-&lt;p&gt;游标是一个数据库术语，它主要用于访问表格中的每一行记录或者向表中插入新的记录。在表格中，一条记录也被称为一行。在ArcGIS中，游标通常用于从表中或向表中按行读取或写入新几何结构。&lt;/p&gt;
-&lt;p&gt;游标有三种形式：搜索、插入和更新。这三种游标的功能如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;搜索游标可用于检索行。&lt;/li&gt;
-&lt;li&gt;插入游标可用于向表或要素类中插入行。&lt;/li&gt;
-&lt;li&gt;更新游标可用于根据位置更新和删除行。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;每种类型的游标均由 arepy.da 模块中对应的 Arcpy 函数（SearchCursor、InsertCursor 和 UpdateCursor）创建。所有这三种游标可以在表、表格视图、要素类或要素图层上进行操作。&lt;/p&gt;
-&lt;p&gt;插入游标和更新游标均支持编辑操作。在 ArcGIS 地理处理框架中，创建游标对象的同时会在属性表上添加一个锁。这个锁能够防止多个进程同时更改同一个属性表。锁有两种类型：共享锁和排他锁。&lt;/p&gt;
-&lt;h2 id=&#34;在-python-中使用-sql&#34;&gt;在 Python 中使用 SQL&lt;/h2&gt;
-&lt;p&gt;在地理处理中，经常需要使用结构化查询语言（SQL）查询数据。SQL 可以定义一个或多个由属性、运算符和算式组成的条件语句。&lt;/p&gt;
-&lt;h2 id=&#34;处理表和字段名&#34;&gt;处理表和字段名&lt;/h2&gt;
-&lt;p&gt;在处理不同的数据集时，要确保每个属性表和字段都有一个有效且唯一的名称，特别是在地理数据库中创建数据时。这样做可以避免数据被覆盖&lt;/p&gt;
-&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;​&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
         <title>用友NC概述和二次开发的开发规范</title>
         <link>https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/</link>
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
@@ -2660,111 +2621,6 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.yuque.com/hanmanyi/bg70gs/fy4h9p&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;U8C客开-项目模块命名规则&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
-        <title>Gitea 安装|Gitea Installation</title>
-        <link>https://hostenwang.github.io/posts/0513-develop/gitea-installation/</link>
-        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/0513-develop/gitea-installation/</guid>
-        <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
-&lt;p&gt;Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;
-&lt;p&gt;Gitea 采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC&lt;/p&gt;
-&lt;h2 id=&#34;2-环境environment&#34;&gt;2 环境|Environment&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ubuntu&lt;/td&gt;
-&lt;td&gt;20&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Gitea&lt;/td&gt;
-&lt;td&gt;1.13.2&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;3-准备&#34;&gt;3 准备&lt;/h2&gt;
-&lt;h3 id=&#34;31-升级系统--安装软件&#34;&gt;3.1 升级系统 &amp;amp;&amp;amp; 安装软件&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt full-upgrade -y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install git wget nginx ufw -y
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;32-暂时关闭防火墙&#34;&gt;3.2 暂时关闭防火墙&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw disable
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;33-创建用户&#34;&gt;3.3 创建用户&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;useradd --home-dir /var/lib/gitea  --create-home --no-user-group --shell /bin/bash git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;4-安装&#34;&gt;4 安装&lt;/h2&gt;
-&lt;h3 id=&#34;41-建立安装目录&#34;&gt;4.1 建立安装目录&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir /opt/gitea/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://dl.gitea.io/gitea/1.13.2/gitea-1.13.2-linux-amd64 -O /opt/gitea/gitea
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown root:root /opt/gitea/gitea
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;755&lt;/span&gt; /opt/gitea/gitea
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;42-配置安装-gitea&#34;&gt;4.2 配置安装 Gitea&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su -l git
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/gitea/gitea --work-path /var/lib/gitea --custom-path /var/lib/gitea web --config /var/lib/gitea/app.ini
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;5-启动&#34;&gt;5 启动&lt;/h2&gt;
-&lt;p&gt;访问 &lt;code&gt;http://ip:3000&lt;/code&gt;,配置安装选项&lt;/p&gt;
-&lt;h2 id=&#34;6-未来展望further&#34;&gt;6 未来展望|Further&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;目前我厂 gitea 使用良好, 运行稳定&lt;/li&gt;
-&lt;li&gt;未来希望开启更多功能&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;7-参考references&#34;&gt;7 参考|References&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://note.open-edgn.cn/archives/gitea-with-debian.page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;gitea-with-debian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/en-us/install-from-binary/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://docs.gitea.io/en-us/install-from-binary/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://discourse.gitea.io/t/ssh-server-configuration-in-gitea/1058&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SSH Server configuration in Gitea&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
@@ -2920,6 +2776,111 @@
     &gt;用友NC57定时任务编写&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/D_C_Hao/article/details/86009575&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;NC65后台任务（定时任务）&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>在windows上安装开源Git服务Gitea</title>
+        <link>https://hostenwang.github.io/posts/0513-develop/install-the-open-source-git-service-gitea-on-windows/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0513-develop/install-the-open-source-git-service-gitea-on-windows/</guid>
+        <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
+&lt;p&gt;Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;
+&lt;p&gt;Gitea 采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC&lt;/p&gt;
+&lt;h2 id=&#34;2-环境environment&#34;&gt;2 环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ubuntu&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gitea&lt;/td&gt;
+&lt;td&gt;1.13.2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;3-准备&#34;&gt;3 准备&lt;/h2&gt;
+&lt;h3 id=&#34;31-升级系统--安装软件&#34;&gt;3.1 升级系统 &amp;amp;&amp;amp; 安装软件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt full-upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install git wget nginx ufw -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;32-暂时关闭防火墙&#34;&gt;3.2 暂时关闭防火墙&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw disable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;33-创建用户&#34;&gt;3.3 创建用户&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;useradd --home-dir /var/lib/gitea  --create-home --no-user-group --shell /bin/bash git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4-安装&#34;&gt;4 安装&lt;/h2&gt;
+&lt;h3 id=&#34;41-建立安装目录&#34;&gt;4.1 建立安装目录&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir /opt/gitea/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://dl.gitea.io/gitea/1.13.2/gitea-1.13.2-linux-amd64 -O /opt/gitea/gitea
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown root:root /opt/gitea/gitea
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;755&lt;/span&gt; /opt/gitea/gitea
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;42-配置安装-gitea&#34;&gt;4.2 配置安装 Gitea&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-SH&#34; data-lang=&#34;SH&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su -l git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/gitea/gitea --work-path /var/lib/gitea --custom-path /var/lib/gitea web --config /var/lib/gitea/app.ini
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;5-启动&#34;&gt;5 启动&lt;/h2&gt;
+&lt;p&gt;访问 &lt;code&gt;http://ip:3000&lt;/code&gt;,配置安装选项&lt;/p&gt;
+&lt;h2 id=&#34;6-未来展望further&#34;&gt;6 未来展望|Further&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;目前我厂 gitea 使用良好, 运行稳定&lt;/li&gt;
+&lt;li&gt;未来希望开启更多功能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;7-参考references&#34;&gt;7 参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://note.open-edgn.cn/archives/gitea-with-debian.page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gitea-with-debian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/en-us/install-from-binary/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.gitea.io/en-us/install-from-binary/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://discourse.gitea.io/t/ssh-server-configuration-in-gitea/1058&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SSH Server configuration in Gitea&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
@@ -3543,10 +3504,10 @@
         </item>
         <item>
         <title>Java参数校验库validation的使用</title>
-        <link>https://hostenwang.github.io/posts/0515-java/java-validator-usage/</link>
+        <link>https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/</link>
         <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0515-java/java-validator-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;javax.validation&lt;/code&gt;的一系列注解可以帮我们完成参数校验,免去繁琐的串行校验&lt;/p&gt;
 &lt;p&gt;JSR303  是一套&lt;code&gt;JavaBean&lt;/code&gt;参数校验的标准，它定义了很多常用的校验注解，可以直接将这些注解加在我们 #JavaBean 的属性上面，就可以在需要校验的时候进行参数校验了.&lt;/p&gt;
@@ -4605,11 +4566,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>HTML iframes 使用总结 | How and When to Use HTML IFrames</title>
-        <link>https://hostenwang.github.io/posts/0521-frontend/iframes/</link>
+        <title>Html内联框架iframe的使用</title>
+        <link>https://hostenwang.github.io/posts/0521-frontend/use-of-html-inline-framework-iframe/</link>
         <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0521-frontend/iframes/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/use-of-html-inline-framework-iframe/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;我厂使用 #iframe 较多, 这里做个总结&lt;/p&gt;
 &lt;p&gt;我厂自研的  #快速开发框架 能自动生成数据库表的 list/add/edit 表单页面, 业务页面通过 iframe 加载 list/add/edit 页面即可实现功能的增查改删, 实现大量业务功能开发, 可以极大提高开发效率.&lt;/p&gt;
@@ -6257,97 +6218,6 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Kabana 安装|Kabana Installation</title>
-        <link>https://hostenwang.github.io/posts/0541-bigdata/kabana-installation/</link>
-        <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/0541-bigdata/kabana-installation/</guid>
-        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;Kibana 是为 Elasticsearch 设计的开源分析和可视化平台。你可以使用 Kibana 来搜索，查看存储在 Elasticsearch 索引中的数据并与之交互&lt;/p&gt;
-&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
-&lt;p&gt;Elasticsearch 和 JDK 版本对应关系：https://www.elastic.co/cn/support/matrix#matrix_jvm&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Windows&lt;/td&gt;
-&lt;td&gt;7 home x64&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;JDK&lt;/td&gt;
-&lt;td&gt;1.8&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Kabana&lt;/td&gt;
-&lt;td&gt;6.3.2&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
-&lt;p&gt;你可以从 &lt;code&gt;elasticsearch.org/download&lt;/code&gt; 下载最新版本的 Kabana。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L -O http://download.elasticsearch.org/kabana-&lt;span class=&#34;nv&#34;&gt;$VERSION&lt;/span&gt;.zip
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unzip kabana-&lt;span class=&#34;nv&#34;&gt;$VERSION&lt;/span&gt;.zip
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kabana-&lt;span class=&#34;nv&#34;&gt;$VERSION&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;kabana.yml&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;c1&#34;&gt;# Specifies the address to which the Kibana server will bind. IP addresses and host names are both valid values.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The default is &amp;#39;localhost&amp;#39;, which usually means remote machines will not be able to connect.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# To allow connections from remote users, set this parameter to a non-loopback address.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server.host: &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The URLs of the Elasticsearch instances to use for all your queries.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;elasticsearch.hosts: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://{{YOUR_HOST}}:9200&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;运行&#34;&gt;运行&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ./bin/kabana.bat
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;验证&#34;&gt;验证&lt;/h2&gt;
-&lt;p&gt;Kibana是一个Web应用程序，你可以通过 &lt;code&gt;{{YOUR_HOST}}:5601&lt;/code&gt;  来访问它。&lt;/p&gt;
-&lt;p&gt;当访问Kibana时，默认情况下，Discover 页面加载时选择了默认索引模式。时间过滤器设置为最近15分钟，搜索查询设置为 &lt;code&gt;match-all(*)&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;​&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
         <title>Elasticsearch 汉语分词IK插件使用总结|Elasticsearch IK Plugin Usage</title>
         <link>https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-ik-plugin-usage/</link>
         <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
@@ -7287,35 +7157,6 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
     &gt;Should I use Python 2 or Python 3 for my development activity?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/howto/pyporting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Porting Python 2 Code to Python 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
-        <title>Python GUI 总结|Python GUI Usage</title>
-        <link>https://hostenwang.github.io/posts/0514-python/python-gui-summary/</link>
-        <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/0514-python/python-gui-summary/</guid>
-        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;
-&lt;h2 id=&#34;python-gui-方案缺点&#34;&gt;python gui 方案缺点:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;好的 GUI 模块少&lt;/li&gt;
-&lt;li&gt;表现力不如 基于 WEB 技术的 Electron 方案&lt;/li&gt;
-&lt;li&gt;还是可能出现缺少依赖的情况, 如缺少 C++ 库&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;总结对比&#34;&gt;总结对比&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.python.org/moin/GuiProgramming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://wiki.python.org/moin/GuiProgramming&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;tkinter-资源&#34;&gt;Tkinter 资源&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ParthJadhav/Tkinter-Designer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/ParthJadhav/Tkinter-Designer&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythongeeks.org/gui-programming-in-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GUI Programming in Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>
@@ -8594,11 +8435,11 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>jQuery 组件开发 | jQuery Plugin Development</title>
-        <link>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</link>
+        <title>如何开发 jQuery 自定义组件</title>
+        <link>https://hostenwang.github.io/posts/0521-frontend/how-to-develop-jquery-custom-components/</link>
         <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/how-to-develop-jquery-custom-components/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单记录 jquery 插件开发&lt;/p&gt;
 &lt;p&gt;学会使用 jQuery 并不难，因为它简单易学，且插件丰富。编写一个属于自己的插件是个不错的选择。&lt;/p&gt;

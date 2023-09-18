@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>pyhton on 不忘初心,永远忠诚</title>
+        <title>脚本语言 Python 技术专栏 on 不忘初心,永远忠诚</title>
         <link>https://hostenwang.github.io/categories/python/</link>
-        <description>Recent content in pyhton on 不忘初心,永远忠诚</description>
+        <description>Recent content in 脚本语言 Python 技术专栏 on 不忘初心,永远忠诚</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Python pipenv 使用总结</title>
-        <link>https://hostenwang.github.io/posts/0514-python/python-pipenv-usage/</link>
+        <title>python包管理器pipenv的使用</title>
+        <link>https://hostenwang.github.io/posts/0514-python/the-use-of-python-package-manager-pipenv/</link>
         <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0514-python/python-pipenv-usage/</guid>
+        <guid>https://hostenwang.github.io/posts/0514-python/the-use-of-python-package-manager-pipenv/</guid>
         <description>&lt;h2 id=&#34;概述abstract&#34;&gt;概述|Abstract&lt;/h2&gt;
-&lt;p&gt;pipenv 是 &lt;code&gt;Kenneth Reitz&lt;/code&gt;大神的作品，提供Python的各个版本间的管理，各种包管理&lt;/p&gt;
+&lt;p&gt;pipenv 是一款比较新的包管理工具，其借鉴了 javascript 的 npm 和 PHP 的 composer 等理念，通过一个依赖描述文件 Pipfile 来安装和管理依赖，以达到协同开发的目的&lt;/p&gt;
 &lt;p&gt;Pipenv is a Python virtualenv management tool that supports a multitude of systems and nicely bridges the gaps between pip, pyenv and virtualenv. Linux, macOS, and Windows are all first-class citizens in pipenv.&lt;/p&gt;
 &lt;h2 id=&#34;背景background&#34;&gt;背景|Background&lt;/h2&gt;
 &lt;p&gt;Pipenv 是 &lt;code&gt;Kenneth Reitz&lt;/code&gt; 在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的Pipfile则用来替代旧的依赖记录方式（requirements.txt）。&lt;/p&gt;
@@ -843,35 +843,6 @@
     &gt;Should I use Python 2 or Python 3 for my development activity?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/howto/pyporting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Porting Python 2 Code to Python 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-        </item>
-        <item>
-        <title>Python GUI 总结|Python GUI Usage</title>
-        <link>https://hostenwang.github.io/posts/0514-python/python-gui-summary/</link>
-        <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/posts/0514-python/python-gui-summary/</guid>
-        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;目前已经不用 python 开发桌面程序, 转到 Electron 方案&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;python GUI 常用模块小结&lt;/p&gt;
-&lt;h2 id=&#34;python-gui-方案缺点&#34;&gt;python gui 方案缺点:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;好的 GUI 模块少&lt;/li&gt;
-&lt;li&gt;表现力不如 基于 WEB 技术的 Electron 方案&lt;/li&gt;
-&lt;li&gt;还是可能出现缺少依赖的情况, 如缺少 C++ 库&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;总结对比&#34;&gt;总结对比&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.python.org/moin/GuiProgramming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://wiki.python.org/moin/GuiProgramming&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;tkinter-资源&#34;&gt;Tkinter 资源&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ParthJadhav/Tkinter-Designer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/ParthJadhav/Tkinter-Designer&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythongeeks.org/gui-programming-in-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GUI Programming in Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>
         <item>

@@ -13,7 +13,7 @@
         
         <guid>https://hostenwang.github.io/posts/0551-ops/simple-server-security-reinforcement/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
-&lt;p&gt;即使服务器规模不大, 安全问题还是要重视&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;服务器加固&lt;/strong&gt;是指通过一系列&lt;strong&gt;安全&lt;/strong&gt;措施和配置来提升&lt;strong&gt;服务器的安全&lt;/strong&gt;性，从而减少&lt;strong&gt;服务器&lt;/strong&gt;面临&lt;strong&gt;的安全&lt;/strong&gt;威胁和攻击&lt;strong&gt;的&lt;/strong&gt;可能性&lt;/p&gt;
 &lt;h2 id=&#34;信息安全涉及的领域&#34;&gt;信息安全涉及的领域&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;终端安全

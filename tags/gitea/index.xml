@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Wed, 14 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/gitea/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Gitea 配置|Gitea Configuration</title>
-        <link>https://hostenwang.github.io/posts/0513-develop/gitea-configuration/</link>
+        <title>在windows上配置开源Git服务Gitea</title>
+        <link>https://hostenwang.github.io/posts/0513-develop/configuring-open-source-git-service-gitea-on-windows/</link>
         <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0513-develop/gitea-configuration/</guid>
+        <guid>https://hostenwang.github.io/posts/0513-develop/configuring-open-source-git-service-gitea-on-windows/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;Gitea的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;
 &lt;p&gt;Gitea 采用Go作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC&lt;/p&gt;
@@ -218,11 +218,11 @@
 &lt;/ol&gt;</description>
         </item>
         <item>
-        <title>Gitea 安装|Gitea Installation</title>
-        <link>https://hostenwang.github.io/posts/0513-develop/gitea-installation/</link>
+        <title>在windows上安装开源Git服务Gitea</title>
+        <link>https://hostenwang.github.io/posts/0513-develop/install-the-open-source-git-service-gitea-on-windows/</link>
         <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0513-develop/gitea-installation/</guid>
+        <guid>https://hostenwang.github.io/posts/0513-develop/install-the-open-source-git-service-gitea-on-windows/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。&lt;/p&gt;
 &lt;p&gt;Gitea 采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了x86，amd64，还包括 ARM 和 PowerPC&lt;/p&gt;

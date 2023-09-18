@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/frontend/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>HTML iframes 使用总结 | How and When to Use HTML IFrames</title>
-        <link>https://hostenwang.github.io/posts/0521-frontend/iframes/</link>
+        <title>Html内联框架iframe的使用</title>
+        <link>https://hostenwang.github.io/posts/0521-frontend/use-of-html-inline-framework-iframe/</link>
         <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0521-frontend/iframes/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/use-of-html-inline-framework-iframe/</guid>
         <description>&lt;h2 id=&#34;1-概述overview&#34;&gt;1 概述|Overview&lt;/h2&gt;
 &lt;p&gt;我厂使用 #iframe 较多, 这里做个总结&lt;/p&gt;
 &lt;p&gt;我厂自研的  #快速开发框架 能自动生成数据库表的 list/add/edit 表单页面, 业务页面通过 iframe 加载 list/add/edit 页面即可实现功能的增查改删, 实现大量业务功能开发, 可以极大提高开发效率.&lt;/p&gt;
@@ -317,11 +317,11 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>jQuery 组件开发 | jQuery Plugin Development</title>
-        <link>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</link>
+        <title>如何开发 jQuery 自定义组件</title>
+        <link>https://hostenwang.github.io/posts/0521-frontend/how-to-develop-jquery-custom-components/</link>
         <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0521-frontend/jquery-plugin-development/</guid>
+        <guid>https://hostenwang.github.io/posts/0521-frontend/how-to-develop-jquery-custom-components/</guid>
         <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
 &lt;p&gt;简单记录 jquery 插件开发&lt;/p&gt;
 &lt;p&gt;学会使用 jQuery 并不难，因为它简单易学，且插件丰富。编写一个属于自己的插件是个不错的选择。&lt;/p&gt;
