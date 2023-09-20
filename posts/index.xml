@@ -1234,7 +1234,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001.jpg&#34;
 	width=&#34;720&#34;
 	height=&#34;259&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37171_480x0_resize_q75_box.jpg 480w, https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37171_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37175_480x0_resize_q75_box.jpg 480w, https://hostenwang.github.io/posts/0321-webgis/geoserver-coordinate-reference-system/0001_hu2739d76da2929d0fbfaafb85abb8ecc6_37175_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -1419,6 +1419,97 @@
     &gt;GeoServer专栏&lt;/a&gt; 需要关注&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>SpringBoot属性注入注解@Value的使用</title>
+        <link>https://hostenwang.github.io/posts/0515-java/the-use-of-the-springboot-attribute-injection-annotation-value/</link>
+        <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0515-java/the-use-of-the-springboot-attribute-injection-annotation-value/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;在使用Spring框架的项目中，&lt;code&gt;@Value&lt;/code&gt;是使用频繁的注解之一，它的作用是将配置文件中key对应的值赋值给它标注的属性。&lt;/p&gt;
+&lt;p&gt;本篇文章系统的总结&lt;code&gt;@Value&lt;/code&gt;注解的使用方法。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;@Value&lt;/code&gt; 注解支持从 &lt;code&gt;Properties&lt;/code&gt; 配置文件或者 &lt;code&gt;YAML&lt;/code&gt; 配置文件中读取配置并注入到 &lt;code&gt;bean&lt;/code&gt; 中，由于 &lt;code&gt;YAML&lt;/code&gt; 配置的比 &lt;code&gt;Properties&lt;/code&gt; 配置更有层次，功能也更强大，本文中均以 &lt;code&gt;YAML&lt;/code&gt; 配置文件为例进行说明。&lt;/p&gt;
+&lt;h2 id=&#34;基本使用&#34;&gt;基本使用&lt;/h2&gt;
+&lt;p&gt;参考&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;前提&#34;&gt;前提:&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;@Value&lt;/code&gt; 注解的类必须是 Spring 管理的 bean，即：该类上面配置有如下任意一注解：&lt;code&gt;@Component&lt;/code&gt;/&lt;code&gt;@Service&lt;/code&gt;/&lt;code&gt;@Controller&lt;/code&gt;/&lt;code&gt;@RestController&lt;/code&gt;/&lt;code&gt;@Configuration&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;代码样例&#34;&gt;代码样例&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;DemoConfig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 注入字面常量值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@Value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;This is a literal string value&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;literalStringValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 注入配置文件中的值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@Value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;${demo-cfg.basic.string}&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stringValueWithoutDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 指定默认值，如果配置文件中找不到相应的 key，则使用默认值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@Value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;${demo-cfg.basic.string:defaultValue}&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stringValueWithDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 指定默认值为空字符串（即长度为 0 的字符串）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nd&#34;&gt;@Value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;${demo-cfg.basic.string:}&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stringValueWithDefaultEmptyString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;注意事项&#34;&gt;注意事项&lt;/h3&gt;
+&lt;h4 id=&#34;对修饰的变量的要求&#34;&gt;对修饰的变量的要求&lt;/h4&gt;
+&lt;p&gt;注解修饰的变量不能是final、static&lt;/p&gt;
+&lt;h4 id=&#34;不指定默认值时参数值不存在会抛出异常&#34;&gt;不指定默认值时参数值不存在会抛出异常&lt;/h4&gt;
+&lt;p&gt;在Spring Boot中，如果使用@Value注解对属性进行赋值，但如果在配置文件或启动参数中未指定对应的参数值，则会抛出异常，导致服务启动失败。异常信息往往是对应注入属性的类实例化失败。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder &lt;span class=&#34;s1&#34;&gt;&amp;#39;demo-cfg.basic.string&amp;#39;&lt;/span&gt; in value &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-cfg.basic.string&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;注入方式&#34;&gt;注入方式&lt;/h2&gt;
+&lt;p&gt;见&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;对基本类型和包装类型的支持&#34;&gt;对基本类型和包装类型的支持&lt;/h2&gt;
+&lt;p&gt;见&lt;sup id=&#34;fnref2:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用-spring-表达式-spel-等高级用法&#34;&gt;使用 Spring 表达式 SpEL 等高级用法&lt;/h2&gt;
+&lt;p&gt;见&lt;sup id=&#34;fnref3:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wisecoder.blog/2021/02/07/a-quick-guide-to-spring-annotation-value/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wisecoder.blog/2021/02/07/a-quick-guide-to-spring-annotation-value/&lt;/a&gt;  &amp;ldquo;Spring 注解 @Value 快速使用指南&amp;rdquo;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref3:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
         </item>
         <item>
         <title>适用于 Linux 的 Windows 子系统 (WSL) 使用总结</title>
@@ -2511,7 +2602,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001.png&#34;
 	width=&#34;1080&#34;
 	height=&#34;620&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_123123_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_123123_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_122834_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/development-specifications-for-secondary-development-of-yonyou-nc/0001_hu14779ff888f4769229651fb3eb1313ac_122834_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -2745,7 +2836,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1.png&#34;
 	width=&#34;788&#34;
 	height=&#34;634&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1_hu9bce55162b226655842f52eafb1d34cb_42290_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1_hu9bce55162b226655842f52eafb1d34cb_42290_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1_hu9bce55162b226655842f52eafb1d34cb_42145_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-develop-backend-tasks-in-the-yonyou-nc-environment/1_hu9bce55162b226655842f52eafb1d34cb_42145_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1&#34;
@@ -2933,7 +3024,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001.png&#34;
 	width=&#34;595&#34;
 	height=&#34;443&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129946_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129946_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129921_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-configure-logs-in-the-yonyou-nc-development-environment/0001_hu9b54dbed32f0c024ca1de20b7719778a_129921_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3095,7 +3186,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0001.png&#34;
 	width=&#34;927&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0001_hu65a980e3caa2a9a60806e073cd8a6c4e_138855_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0001_hu65a980e3caa2a9a60806e073cd8a6c4e_138855_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0001_hu65a980e3caa2a9a60806e073cd8a6c4e_138799_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0001_hu65a980e3caa2a9a60806e073cd8a6c4e_138799_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3114,7 +3205,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0002.png&#34;
 	width=&#34;830&#34;
 	height=&#34;421&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0002_hu19ea76b94503940bcad276701673edb4_69468_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0002_hu19ea76b94503940bcad276701673edb4_69468_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0002_hu19ea76b94503940bcad276701673edb4_69418_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0304-yonyou-nc-development/how-to-create-and-start-the-yonyou-nc-development-environment-on-windows/0002_hu19ea76b94503940bcad276701673edb4_69418_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -3447,7 +3538,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-tile-map-technology/0001.png&#34;
 	width=&#34;401&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-tile-map-technology/0001_hu72e5fccfa28e919cb21eb98d0a8777f0_24917_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-tile-map-technology/0001_hu72e5fccfa28e919cb21eb98d0a8777f0_24917_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-tile-map-technology/0001_hubb152ead657b1d153d95106b6b0090e7_24863_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0321-webgis/webgis-technology-overview-of-tile-map-technology/0001_hubb152ead657b1d153d95106b6b0090e7_24863_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -3564,53 +3655,31 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Null&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的元素必须为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotNull&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;被注释的元素必须不为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;    
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@AssertFalse&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;被注释的元素必须为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@AssertTrue&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@AssertFalse&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;被注释的元素必须为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须大于等于指定的最小值&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须小于等于指定的最大值&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@DecimalMin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须大于等于指定的最小值&lt;/span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@DecimalMax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须小于等于指定的最大值&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的元素的大小必须在指定的范围内&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Digits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fraction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须在可接受的范围内&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Past&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个过去的日期&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Future&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个将来的日期&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须符合指定的正则表达式&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Hibernate&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Validator&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;提供的校验注解：&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotBlank&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;验证字符串非&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，且&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;后长度必须大于&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Email&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须是电子邮箱地址&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的字符串的大小必须在指定的范围内&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotEmpty&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的字符串的必须非空&lt;/span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Range&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须在合适的范围内&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@AssertFalse&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;校验&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@AssertTrue&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;校验&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@DecimalMax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inclusive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;小于等于&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inclusive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;是小于等于&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@DecimalMax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inclusive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;小于等于&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inclusive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;是小于等于&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@DecimalMin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须大于等于指定的最小值&lt;/span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@DecimalMin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inclusive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;与上类似&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;小于等于&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;大于等于&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotNull&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;检查&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Null&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Digits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fraction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须在可接受的范围内&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Email&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须是电子邮箱地址&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Future&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个将来的日期&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的字符串的大小必须在指定的范围内&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须小于等于指定的最大值&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个数字，其值必须大于等于指定的最小值&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotBlank&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;验证字符串非&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，且&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;后长度必须大于&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotEmpty&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的字符串的必须非空&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@NotNull&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;被注释的元素必须不为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Null&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的元素必须为&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Past&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的元素必须是一个过去的日期&lt;/span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Past&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;检查日期&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;正则&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;字符串，集合，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;限制大小&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须符合指定的正则表达式&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Range&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;被注释的元素必须在合适的范围内&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=)&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;被注释的元素的大小必须在指定的范围内&lt;/span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Valid&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;对&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;po&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;实体类进行校验&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;校验-pojo&#34;&gt;校验 POJO&lt;/h2&gt;
@@ -3740,7 +3809,7 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001.png&#34;
 	width=&#34;793&#34;
 	height=&#34;445&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5287,7 +5356,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001.png&#34;
 	width=&#34;563&#34;
 	height=&#34;186&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_hu280b217ef2b4e731aefb7f5f6ee4ba58_7184_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_hu280b217ef2b4e731aefb7f5f6ee4ba58_7184_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_hu1d56186a810e95c2af29ac9d6dd4d51d_7111_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0001_hu1d56186a810e95c2af29ac9d6dd4d51d_7111_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5309,7 +5378,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002.png&#34;
 	width=&#34;324&#34;
 	height=&#34;285&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_huc6a54d4c5e16fc943b1eb9033ac272ae_49885_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_huc6a54d4c5e16fc943b1eb9033ac272ae_49885_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_huc6a54d4c5e16fc943b1eb9033ac272ae_49883_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-03-data-model/0002_huc6a54d4c5e16fc943b1eb9033ac272ae_49883_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -5395,7 +5464,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001.png&#34;
 	width=&#34;603&#34;
 	height=&#34;389&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu6961bfefd07ead7d252f7d4de527005e_213064_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu6961bfefd07ead7d252f7d4de527005e_213064_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu6961bfefd07ead7d252f7d4de527005e_213099_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0001_hu6961bfefd07ead7d252f7d4de527005e_213099_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5423,7 +5492,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002.png&#34;
 	width=&#34;553&#34;
 	height=&#34;347&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu18be446eb2d812441b3f52582ff808ba_174215_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu18be446eb2d812441b3f52582ff808ba_174215_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu18be446eb2d812441b3f52582ff808ba_174221_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0002_hu18be446eb2d812441b3f52582ff808ba_174221_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -5439,7 +5508,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003.png&#34;
 	width=&#34;554&#34;
 	height=&#34;119&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_hu95df148a23076a925f08582f72ae9c2e_22410_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_hu95df148a23076a925f08582f72ae9c2e_22410_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_huf61da396fe4f8380e7c8cfe9eb9cbe6c_22322_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-02-arch/0003_huf61da396fe4f8380e7c8cfe9eb9cbe6c_22322_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -5471,7 +5540,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001.png&#34;
 	width=&#34;394&#34;
 	height=&#34;284&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hu464e3ad82e52f729a16ca798b693c1a1_93581_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hu464e3ad82e52f729a16ca798b693c1a1_93581_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hu464e3ad82e52f729a16ca798b693c1a1_93594_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/hbase-beginner-guide-01-overview/0001_hu464e3ad82e52f729a16ca798b693c1a1_93594_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5521,7 +5590,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001.png&#34;
 	width=&#34;787&#34;
 	height=&#34;599&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37427_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37427_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37325_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0001_hu40943fbbc8b26cb5c5752a501b01e6eb_37325_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -5540,7 +5609,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002.png&#34;
 	width=&#34;783&#34;
 	height=&#34;594&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49828_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49828_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49701_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0002_hu28e54d0ee4a0d35069cf9655f8cdd0dc_49701_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -5558,7 +5627,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003.png&#34;
 	width=&#34;785&#34;
 	height=&#34;593&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55289_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55289_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55216_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0003_hu29ae884c3800823dce2dfdf0b1fc0f15_55216_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -5593,7 +5662,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004.png&#34;
 	width=&#34;797&#34;
 	height=&#34;597&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100824_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100824_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100685_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0533-database/oracle-installation-and-configuration-on-windows/0004_huc9e9d123c822639f81a557475257ba30_100685_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0004&#34;
@@ -7002,7 +7071,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001.png&#34;
 	width=&#34;600&#34;
 	height=&#34;402&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu43950337dd7ec1866092b2f779ad2e31_85108_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu43950337dd7ec1866092b2f779ad2e31_85108_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu43950337dd7ec1866092b2f779ad2e31_85073_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elasticsearch-overview/0001_hu43950337dd7ec1866092b2f779ad2e31_85073_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -7467,7 +7536,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001.png&#34;
 	width=&#34;967&#34;
 	height=&#34;245&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu65f64ff30f328e0a9442b5cc183a53fd_35995_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_hu65f64ff30f328e0a9442b5cc183a53fd_35995_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_huc33c101206d5385bd82d9e74b8e04e1a_35900_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0001_huc33c101206d5385bd82d9e74b8e04e1a_35900_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -7482,7 +7551,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002.png&#34;
 	width=&#34;1082&#34;
 	height=&#34;293&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hued1305c4e48936907686086755464aba_54339_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hued1305c4e48936907686086755464aba_54339_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hued1305c4e48936907686086755464aba_54349_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0002_hued1305c4e48936907686086755464aba_54349_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -7496,7 +7565,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003.png&#34;
 	width=&#34;665&#34;
 	height=&#34;468&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu36453237fb8b78dfb51c1cdbc158df30_33547_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu36453237fb8b78dfb51c1cdbc158df30_33547_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu1f94dc10ba4385746dd322f3ad0a7160_33482_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0512-design/copy-name-to-comment-in-powersigner/0003_hu1f94dc10ba4385746dd322f3ad0a7160_33482_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -8944,7 +9013,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001.png&#34;
 	width=&#34;458&#34;
 	height=&#34;225&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96639_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96639_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96628_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96628_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0001&#34;
@@ -8960,7 +9029,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002.png&#34;
 	width=&#34;606&#34;
 	height=&#34;234&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113925_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113925_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113937_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113937_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0002&#34;
@@ -8975,7 +9044,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003.png&#34;
 	width=&#34;622&#34;
 	height=&#34;232&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119812_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119812_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119839_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119839_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0003&#34;
@@ -8991,7 +9060,7 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004.png&#34;
 	width=&#34;607&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89084_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89084_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89124_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89124_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img_0004&#34;

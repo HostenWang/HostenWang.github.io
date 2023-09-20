@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验'>
 <title>Java参数校验库validation的使用</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/'>
@@ -20,12 +20,12 @@ var _hmt = _hmt || [];
 })();
 </script>
 <meta property='og:title' content='Java参数校验库validation的使用'>
-<meta property='og:description' content='validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验'>
+<meta property='og:description' content='java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验'>
 <meta property='og:url' content='https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/'>
 <meta property='og:site_name' content='不忘初心,永远忠诚'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='validation' /><meta property='article:published_time' content='2020-08-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-08-19T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Java参数校验库validation的使用">
-<meta name="twitter:description" content="validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验">
+<meta name="twitter:description" content="java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -321,7 +321,7 @@ var _hmt = _hmt || [];
     
         
         <h3 class="article-subtitle">
-            validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验
+            java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验
         </h3>
         
     </div>
@@ -428,53 +428,31 @@ var _hmt = _hmt || [];
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Null</span>   <span class="err">被注释的元素必须为</span> <span class="kc">null</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@NotNull</span>    <span class="err">被注释的元素必须不为</span> <span class="kc">null</span>    
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@AssertFalse</span>    <span class="err">被注释的元素必须为</span> <span class="kc">false</span>    
 </span></span><span class="line"><span class="cl"><span class="nd">@AssertTrue</span>     <span class="err">被注释的元素必须为</span> <span class="kc">true</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@AssertFalse</span>    <span class="err">被注释的元素必须为</span> <span class="kc">false</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Min</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须大于等于指定的最小值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Max</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须小于等于指定的最大值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMin</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>  <span class="err">被注释的元素必须是一个数字，其值必须大于等于指定的最小值</span>    
 </span></span><span class="line"><span class="cl"><span class="nd">@DecimalMax</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>  <span class="err">被注释的元素必须是一个数字，其值必须小于等于指定的最大值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Size</span><span class="o">(</span><span class="n">max</span><span class="o">=,</span> <span class="n">min</span><span class="o">=)</span>   <span class="err">被注释的元素的大小必须在指定的范围内</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Digits</span> <span class="o">(</span><span class="n">integer</span><span class="o">,</span> <span class="n">fraction</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须在可接受的范围内</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Past</span>   <span class="err">被注释的元素必须是一个过去的日期</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Future</span>     <span class="err">被注释的元素必须是一个将来的日期</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Pattern</span><span class="o">(</span><span class="n">regex</span><span class="o">=,</span><span class="n">flag</span><span class="o">=)</span>  <span class="err">被注释的元素必须符合指定的正则表达式</span>    
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Hibernate</span> <span class="n">Validator</span><span class="err">提供的校验注解：</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=)</span>   <span class="err">验证字符串非</span><span class="kc">null</span><span class="err">，且</span><span class="n">trim</span><span class="err">后长度必须大于</span><span class="mi">0</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Email</span>  <span class="err">被注释的元素必须是电子邮箱地址</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Length</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=)</span>  <span class="err">被注释的字符串的大小必须在指定的范围内</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@NotEmpty</span>   <span class="err">被注释的字符串的必须非空</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Range</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=,</span><span class="n">message</span><span class="o">=)</span>  <span class="err">被注释的元素必须在合适的范围内</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nd">@AssertFalse</span> <span class="err">校验</span><span class="kc">false</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@AssertTrue</span> <span class="err">校验</span><span class="kc">true</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMax</span><span class="o">(</span><span class="n">value</span><span class="o">=,</span><span class="n">inclusive</span><span class="o">=)</span> <span class="err">小于等于</span><span class="n">value</span><span class="err">，</span>  
-</span></span><span class="line"><span class="cl"><span class="n">inclusive</span><span class="o">=</span><span class="kc">true</span><span class="o">,</span><span class="err">是小于等于</span>  
+</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMax</span><span class="o">(</span><span class="n">value</span><span class="o">=,</span><span class="n">inclusive</span><span class="o">=)</span> <span class="err">小于等于</span><span class="n">value</span><span class="err">，</span> <span class="n">inclusive</span><span class="o">=</span><span class="kc">true</span><span class="o">,</span><span class="err">是小于等于</span>  
+</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMin</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>  <span class="err">被注释的元素必须是一个数字，其值必须大于等于指定的最小值</span>    
 </span></span><span class="line"><span class="cl"><span class="nd">@DecimalMin</span><span class="o">(</span><span class="n">value</span><span class="o">=,</span><span class="n">inclusive</span><span class="o">=)</span> <span class="err">与上类似</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@Max</span><span class="o">(</span><span class="n">value</span><span class="o">=)</span> <span class="err">小于等于</span><span class="n">value</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@Min</span><span class="o">(</span><span class="n">value</span><span class="o">=)</span> <span class="err">大于等于</span><span class="n">value</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@NotNull</span>  <span class="err">检查</span><span class="n">Null</span>  
+</span></span><span class="line"><span class="cl"><span class="nd">@Digits</span> <span class="o">(</span><span class="n">integer</span><span class="o">,</span> <span class="n">fraction</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须在可接受的范围内</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Email</span>  <span class="err">被注释的元素必须是电子邮箱地址</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Future</span>     <span class="err">被注释的元素必须是一个将来的日期</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Length</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=)</span>  <span class="err">被注释的字符串的大小必须在指定的范围内</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Max</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须小于等于指定的最大值</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Min</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须大于等于指定的最小值</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=)</span>   <span class="err">验证字符串非</span><span class="kc">null</span><span class="err">，且</span><span class="n">trim</span><span class="err">后长度必须大于</span><span class="mi">0</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@NotEmpty</span>   <span class="err">被注释的字符串的必须非空</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@NotNull</span>    <span class="err">被注释的元素必须不为</span> <span class="kc">null</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Null</span>   <span class="err">被注释的元素必须为</span> <span class="kc">null</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Past</span>   <span class="err">被注释的元素必须是一个过去的日期</span>    
 </span></span><span class="line"><span class="cl"><span class="nd">@Past</span>  <span class="err">检查日期</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@Pattern</span><span class="o">(</span><span class="n">regex</span><span class="o">=,</span><span class="n">flag</span><span class="o">=)</span>  <span class="err">正则</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@Size</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span> <span class="n">max</span><span class="o">=)</span>  <span class="err">字符串，集合，</span><span class="n">map</span><span class="err">限制大小</span>  
+</span></span><span class="line"><span class="cl"><span class="nd">@Pattern</span><span class="o">(</span><span class="n">regex</span><span class="o">=,</span><span class="n">flag</span><span class="o">=)</span>  <span class="err">被注释的元素必须符合指定的正则表达式</span>    
+</span></span><span class="line"><span class="cl"><span class="nd">@Range</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=,</span><span class="n">message</span><span class="o">=)</span>  <span class="err">被注释的元素必须在合适的范围内</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Size</span><span class="o">(</span><span class="n">max</span><span class="o">=,</span> <span class="n">min</span><span class="o">=)</span>   <span class="err">被注释的元素的大小必须在指定的范围内</span>    
 </span></span><span class="line"><span class="cl"><span class="nd">@Valid</span> <span class="err">对</span><span class="n">po</span><span class="err">实体类进行校验</span>
+</span></span><span class="line"><span class="cl"> 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="校验-pojo">校验 POJO</h2>
