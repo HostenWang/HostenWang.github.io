@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>微服务</title>
-        <link>https://hostenwang.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
+        <title>microservices</title>
+        <link>https://hostenwang.github.io/categories/microservices/</link>
         <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
+        <guid>https://hostenwang.github.io/categories/microservices/</guid>
         <description></description>
         </item>
         <item>
@@ -58,14 +58,6 @@ Python目前广泛用于数据分析、人工智能、web开发、测试、运�
 </description>
         </item>
         <item>
-        <title>Spring</title>
-        <link>https://hostenwang.github.io/categories/spring/</link>
-        <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://hostenwang.github.io/categories/spring/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>用友NC二次开发平台专栏</title>
         <link>https://hostenwang.github.io/categories/yonyou-nc-development/</link>
         <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
@@ -94,7 +86,7 @@ Python目前广泛用于数据分析、人工智能、web开发、测试、运�
         <item>
         <title>java</title>
         <link>https://hostenwang.github.io/categories/java/</link>
-        <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/java/</guid>
         <description></description>
@@ -173,6 +165,14 @@ Python目前广泛用于数据分析、人工智能、web开发、测试、运�
         <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
         
         <guid>https://hostenwang.github.io/categories/redis/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Spring</title>
+        <link>https://hostenwang.github.io/categories/spring/</link>
+        <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/categories/spring/</guid>
         <description></description>
         </item>
         <item>

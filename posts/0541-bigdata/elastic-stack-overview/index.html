@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Elasticsearch 是一个分布式的、开源的搜索分析引擎，支持各种数据类型，包括文本、数字、地理、结构化、非结构化'>
-<title>Elastic Stack 概述|Elastic Stack Overview</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Elastic Stack 是一套强大的解决方案，核心产品包括 Elasticsearch、Logstash 和 Kibana 等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。'>
+<title>大数据分析平台ELK的概述</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/'>
 
 <link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css">
-<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
-
 
 <script>
 var _hmt = _hmt || [];
@@ -19,13 +17,21 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<meta property='og:title' content='Elastic Stack 概述|Elastic Stack Overview'>
-<meta property='og:description' content='Elasticsearch 是一个分布式的、开源的搜索分析引擎，支持各种数据类型，包括文本、数字、地理、结构化、非结构化'>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "e9uc9a3iru");
+</script>
+<meta property='og:title' content='大数据分析平台ELK的概述'>
+<meta property='og:description' content='Elastic Stack 是一套强大的解决方案，核心产品包括 Elasticsearch、Logstash 和 Kibana 等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。'>
 <meta property='og:url' content='https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/'>
 <meta property='og:site_name' content='不忘初心,永远忠诚'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='elasticsearch' /><meta property='article:tag' content='elastic' /><meta property='article:published_time' content='2020-08-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-08-12T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Elastic Stack 概述|Elastic Stack Overview">
-<meta name="twitter:description" content="Elasticsearch 是一个分布式的、开源的搜索分析引擎，支持各种数据类型，包括文本、数字、地理、结构化、非结构化">
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='elastic' /><meta property='article:published_time' content='2020-08-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-08-12T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="大数据分析平台ELK的概述">
+<meta name="twitter:description" content="Elastic Stack 是一套强大的解决方案，核心产品包括 Elasticsearch、Logstash 和 Kibana 等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -312,12 +318,12 @@ var _hmt = _hmt || [];
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/0541-bigdata/elastic-stack-overview/">Elastic Stack 概述|Elastic Stack Overview</a>
+            <a href="/posts/0541-bigdata/elastic-stack-overview/">大数据分析平台ELK的概述</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Elasticsearch 是一个分布式的、开源的搜索分析引擎，支持各种数据类型，包括文本、数字、地理、结构化、非结构化
+            Elastic Stack 是一套强大的解决方案，核心产品包括 Elasticsearch、Logstash 和 Kibana 等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。
         </h3>
         
     </div>
@@ -369,7 +375,8 @@ var _hmt = _hmt || [];
     
     
     <h2 id="概述overview">概述|Overview</h2>
-<p>Elastic Stack:一体化的完整数据处理堆栈，从数据摄入到分析展示、价值获取</p>
+<p>ELK Stack 核心产品包括 Elasticsearch、Kibana、Beats 和 Logstash 等等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。</p>
+<p>Elastic Stack 包含各种功能（之前统一称为 X-Pack），从企业级安全性和开发人员友好型 API，到 Machine Learning 和图表分析，非常全面；借助这些功能，您能够对所有类型的数据进行大规模采集、分析、搜索和可视化。</p>
 <h2 id="环境environment">环境|Environment</h2>
 <div class="table-wrapper"><table>
 <thead>
@@ -386,8 +393,8 @@ var _hmt = _hmt || [];
 <td></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>ELK</td>
+<td>6.8</td>
 <td></td>
 </tr>
 </tbody>
@@ -396,10 +403,10 @@ var _hmt = _hmt || [];
 <p><img src="/posts/0541-bigdata/elastic-stack-overview/0001.png"
 	width="793"
 	height="445"
-	srcset="/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_480x0_resize_box_3.png 480w, /posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_1024x0_resize_box_3.png 1024w"
+	srcset="/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_480x0_resize_box_3.png 480w, /posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="img_0001"
+		alt="Elastic Stack "
 	
 	
 		class="gallery-image" 
@@ -411,7 +418,7 @@ var _hmt = _hmt || [];
 <h2 id="参考references">参考|References</h2>
 <ol>
 <li><a class="link" href="" >Elasticsearch权威指南</a></li>
-<li>​</li>
+<li></li>
 </ol>
 </section>
 
@@ -419,8 +426,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/elasticsearch/">elasticsearch</a>
         
             <a href="/tags/elastic/">elastic</a>
         
@@ -513,7 +518,7 @@ var _hmt = _hmt || [];
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

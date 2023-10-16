@@ -23,6 +23,15 @@
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;本教程将教你用 Java 编程语言做单元测试时，如何使用 JUnit。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;h3 id=&#34;单元测试&#34;&gt;单元测试&lt;/h3&gt;
+&lt;p&gt;单元测试是一段会执行目标工程中指定功能（测试对象）的代码，并验证它的行为。单元测试并不适合复杂的UI或组件交互，这部分工作属于一致性测试。&lt;/p&gt;
+&lt;p&gt;被测试的代码比例也叫做覆盖率。&lt;/p&gt;
+&lt;h3 id=&#34;一致性测试&#34;&gt;一致性测试&lt;/h3&gt;
+&lt;p&gt;旨在测试组件或组件间的一致性，有时也称为功能测试。&lt;/p&gt;
+&lt;p&gt;这种测试将用例转化为测试集，例如模拟一个用户与应用交互。&lt;/p&gt;
+&lt;h3 id=&#34;性能测试&#34;&gt;性能测试&lt;/h3&gt;
+&lt;p&gt;反复进行的基准测试&lt;/p&gt;
 &lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;测试类&lt;/code&gt;一般用&lt;code&gt;被测试类&lt;/code&gt;+Tests来命名。&lt;/p&gt;
 &lt;p&gt;should 常用于测试方法名，如&lt;code&gt;ordersShouldBeCreated&lt;/code&gt;，&lt;code&gt;menuShouldGetActive&lt;/code&gt;，以增强可读性。&lt;/p&gt;
@@ -189,6 +198,8 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://azyet.github.io/2015/05/18/junitNote1/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;单元测试之JUnit学习笔记&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
         </item>

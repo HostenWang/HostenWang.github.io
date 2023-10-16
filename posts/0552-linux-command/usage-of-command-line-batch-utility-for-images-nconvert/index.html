@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='NConvert是一款功能强大的命令行多平台批处理图像处理器，具有80多个命令。兼容500种图像格式。'>
+<title>最佳批量图像转换器Xncovert的使用</title>
+
+<link rel='canonical' href='https://hostenwang.github.io/posts/0552-linux-command/usage-of-command-line-batch-utility-for-images-nconvert/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css">
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?07b3f66fb5026a9433526edaa232fa7d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "e9uc9a3iru");
+</script>
+<meta property='og:title' content='最佳批量图像转换器Xncovert的使用'>
+<meta property='og:description' content='NConvert是一款功能强大的命令行多平台批处理图像处理器，具有80多个命令。兼容500种图像格式。'>
+<meta property='og:url' content='https://hostenwang.github.io/posts/0552-linux-command/usage-of-command-line-batch-utility-for-images-nconvert/'>
+<meta property='og:site_name' content='不忘初心,永远忠诚'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-05-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-01T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="最佳批量图像转换器Xncovert的使用">
+<meta name="twitter:description" content="NConvert是一款功能强大的命令行多平台批处理图像处理器，具有80多个命令。兼容500种图像格式。">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu06f28ed77c34952e63d738f73d7d0dfd_28689_300x0_resize_box_3.png" width="300"
+                            height="318" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">不忘初心,永远忠诚</a></h1>
+            <h2 class="site-description">全栈开发工程师, 开源爱好者, 生活探险家</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/hostenwang'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E%E6%88%91/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于我</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>存档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hostenwang.github.io/en/" >English</option>
+                        
+                            <option value="https://hostenwang.github.io/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#背景">背景</a></li>
+    <li><a href="#命令行参数详解">命令行参数详解</a></li>
+    <li><a href="#调整画布">调整画布</a></li>
+    <li><a href="#jpeg无损转换">JPEG无损转换</a></li>
+    <li><a href="#旋转">旋转</a></li>
+    <li><a href="#添加图片">添加图片</a></li>
+    <li><a href="#添加文本">添加文本</a></li>
+    <li><a href="#瓦片效果">瓦片效果</a></li>
+    <li><a href="#结果">结果</a></li>
+    <li><a href="#讨论">讨论</a></li>
+    <li><a href="#未来展望">未来展望</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/0552-linux-command/usage-of-command-line-batch-utility-for-images-nconvert/">最佳批量图像转换器Xncovert的使用</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            NConvert是一款功能强大的命令行多平台批处理图像处理器，具有80多个命令。兼容500种图像格式。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 01, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="概述">概述</h2>
+<p>XnConvert是一款快速、强大且免费的跨平台批量图像转换器</p>
+<p>XnConvert是一款快速、强大且免费的跨平台批量图像转换器。它允许自动编辑您的照片集：您可以轻松地旋转、转换和压缩图像、照片和图片，并应用80多项操作（如调整大小、裁剪、颜色调整、过滤等）。支持所有常见的图片和图形格式（JPEG、TIFF、PNG、GIF、WebP、PSD、JPEG2000、JPEG-XL、OpenEXR、相机RAW、HEIC、PDF、DNG、CR2）。您可以保存并重复使用您的预设以进行另一个批处理图像转换。</p>
+<h2 id="背景">背景</h2>
+<h2 id="命令行参数详解">命令行参数详解</h2>
+<p><code>Usage : nconvert [options] file ...</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> Options :
+</span></span><span class="line"><span class="cl">-quiet            : 不显示该软件的信息
+</span></span><span class="line"><span class="cl">-info             : 只显示信息
+</span></span><span class="line"><span class="cl">-fullinfo         : 显示全部信息包括该软件的信息
+</span></span><span class="line"><span class="cl">-v<span class="o">[</span>.<span class="o">]</span>             : 详细模式
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-in format        : 输入图片格式如jpg，bmp
+</span></span><span class="line"><span class="cl">-page num         : 页数/页码
+</span></span><span class="line"><span class="cl">-xall             : 提取所有图像
+</span></span><span class="line"><span class="cl">-multi            : 创建多页（只适用tiff，dcx，ldf）
+</span></span><span class="line"><span class="cl">-npcd num         : PCD 0:192x128, 1:384x256, 2:768x512 <span class="o">(</span>default<span class="o">)</span> pcd格式
+</span></span><span class="line"><span class="cl">-ngrb npic        : HP-48 number of grey : 1, <span class="m">2</span> or <span class="m">4</span> <span class="o">(</span>default : 1<span class="o">)</span> 灰度:数值
+</span></span><span class="line"><span class="cl">-no#              : <span class="c1"># not used for numeric operator</span>
+</span></span><span class="line"><span class="cl">-clipboard        : 从剪切板导入
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-ctype <span class="nb">type</span>       : 通道类型 <span class="o">(</span>Raw<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    grey  : 灰度（默认）
+</span></span><span class="line"><span class="cl">    rgb   : 红,绿,蓝
+</span></span><span class="line"><span class="cl">    bgr   : 蓝,绿,红
+</span></span><span class="line"><span class="cl">    rgba  : 红,绿,蓝,透明
+</span></span><span class="line"><span class="cl">    abgr  : 透明,蓝,绿,红
+</span></span><span class="line"><span class="cl">    cmy   : 青紫,洋红,黄色
+</span></span><span class="line"><span class="cl">    cmyk  : 青紫,洋红,黄色,黑色
+</span></span><span class="line"><span class="cl">-corder order     : 通道排列<span class="o">(</span>Raw<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">    inter : 交错的<span class="o">(</span>default<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    seq   : 连续的
+</span></span><span class="line"><span class="cl">    sep   : 独立的
+</span></span><span class="line"><span class="cl">-size geometry    : 宽和高<span class="o">(</span>Raw/YUV<span class="o">)</span>,几何是高*宽+偏移
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-i file :           使用文件作为文件列表
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从 list.txt 文件中读取图片可用</span>
+</span></span><span class="line"><span class="cl">&gt; dir /b *.jpg &gt; list.txt
+</span></span><span class="line"><span class="cl">&gt; nconvert -i list.txt 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-n start end step :开始，结束，步长（为了图像序列）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-o filename       : 输出文件名,使用#号指定数字计数器的位置
+</span></span><span class="line"><span class="cl">              
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -o c:<span class="se">\#</span>.jpg *.jpg 将图片按数字递增排序
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">             使用%号指定源文件名
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -o c:<span class="se">\%</span>.jpg *.jpg  原名复制到c:盘
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">              使用$号指定源文件夹
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">格式转换：
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">      -out format       : 输出格式名称
+</span></span><span class="line"><span class="cl">------------------------------------------------------------------------------------------------- 
+</span></span><span class="line"><span class="cl">     　　　             &gt; nconvert -out jpeg -truecolors in.bmp  将bmp格式转换为jpeg
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">          -D            : 删除源文件
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------    
+</span></span><span class="line"><span class="cl">                        &gt; nconvert -D -out jpeg -truecolors in.bmp   转换后删除源文件
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -c value          : 压缩率<span class="o">(</span>默认为0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">              PDF    : <span class="m">1</span> <span class="o">(</span>Fax<span class="o">)</span>, <span class="m">2</span> <span class="o">(</span>Rle<span class="o">)</span>, <span class="m">3</span> <span class="o">(</span>LZW<span class="o">)</span>, 4<span class="o">(</span>ZIP<span class="o">)</span>, <span class="m">5</span> <span class="o">(</span>JPEG<span class="o">)</span>
+</span></span><span class="line"><span class="cl">              TIFF   : <span class="m">1</span> <span class="o">(</span>Rle<span class="o">)</span>, <span class="m">2</span> <span class="o">(</span>LZW<span class="o">)</span>, <span class="m">3</span> <span class="o">(</span>LZW+Prediction<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                       <span class="m">4</span> <span class="o">(</span>ZLIB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                       <span class="m">5</span> <span class="o">(</span>CCITT G3<span class="o">)</span>, <span class="m">6</span> <span class="o">(</span>CCITT G3-2D<span class="o">)</span>, <span class="m">7</span> <span class="o">(</span>CCITT G4<span class="o">)</span> only B/W
+</span></span><span class="line"><span class="cl">                       <span class="m">8</span> <span class="o">(</span>JPEG<span class="o">)</span> only 24/32 bits
+</span></span><span class="line"><span class="cl">              TARGA, Softimage, SGI, PCX, IFF, BMP : <span class="m">1</span> <span class="o">(</span>Rle<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -q value          : JPEG/PNG/FPX/WIC/PDF 质量，默认100）
+</span></span><span class="line"><span class="cl">          -clevel value     : png压缩水平（默认为6）
+</span></span><span class="line"><span class="cl">          -i                : 交错的gif/渐进的jpeg
+</span></span><span class="line"><span class="cl">          -icc              : 使用icc配置
+</span></span><span class="line"><span class="cl">          -keep_icc         : 保留源文件的icc配置
+</span></span><span class="line"><span class="cl">          -icc_in filename  : 输入颜色配置
+</span></span><span class="line"><span class="cl">          -icc_out filename : 输出颜色配置
+</span></span><span class="line"><span class="cl">          -icc_intent value : 目的值
+</span></span><span class="line"><span class="cl">          -icc_bcp          : 黑点补偿
+</span></span><span class="line"><span class="cl">          -icc_ie           : 忽略嵌入的Icc配置
+</span></span><span class="line"><span class="cl">          -merge_alpha      : 使用32位‘透明色’合并透明度
+</span></span><span class="line"><span class="cl">          -transparent value: 透明度索引<span class="o">(</span>GIF/PNG<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">          -transpcolor red green blue: 透明度颜色<span class="o">(</span>GIF/PNG<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">          -opthuff          : 优化霍夫曼表
+</span></span><span class="line"><span class="cl">          -bgcolor red green blue: 背景色<span class="o">(</span>旋转/画布调整时的背景色<span class="o">)</span>
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">设置分辨率：
+</span></span><span class="line"><span class="cl">          -dpi res_dpi      : 设置DPI分辨率
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">                                  &gt;  nconvert  -dpi <span class="m">10</span> in.jpg
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -keepdocsize      : Resize bitmap <span class="k">function</span> of the old and new DPI value
+</span></span><span class="line"><span class="cl">          -keepfiledate     : 保留原文件的数据/时间
+</span></span><span class="line"><span class="cl">          -keepcspace       : 保留原有色彩空间,如果可能的话
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -clean value : 清除元数据<span class="o">(</span>EXIF/IPTC/...<span class="o">)</span>
+</span></span><span class="line"><span class="cl">              <span class="m">1</span>      : 注释
+</span></span><span class="line"><span class="cl">              <span class="m">2</span>      : exif信息
+</span></span><span class="line"><span class="cl">              <span class="m">4</span>      : XMP
+</span></span><span class="line"><span class="cl">              <span class="m">8</span>      : exif缩略图
+</span></span><span class="line"><span class="cl">              <span class="m">16</span>     : IPTC
+</span></span><span class="line"><span class="cl">              <span class="m">32</span>     : icc配置
+</span></span><span class="line"><span class="cl">              <span class="m">64</span>     : 其他标志
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -rmeta              : 移除元数据 （可移除注释）
+</span></span><span class="line"><span class="cl">          -rexifthumb         : 移除exif缩略图
+</span></span><span class="line"><span class="cl">          -buildexifthumb     : 尝试重建exif缩略图
+</span></span><span class="line"><span class="cl">          -thumb width height : 提取缩略图
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">                              &gt; nconvert -thumb <span class="m">160</span> <span class="m">150</span> in.jpg 　制作缩略图，原图被毁坏
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -use_cie   : 使用CIE颜色<span class="o">(</span>PS/EPS/PDF ghostscript<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -wflag flag: 写入标记，标志
+</span></span><span class="line"><span class="cl">              os2    : Write OS/2 bmp
+</span></span><span class="line"><span class="cl">              gif87  : Write GIF87a
+</span></span><span class="line"><span class="cl">              hp49   : Write HP49
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -high_res             : 载入高分辨率<span class="o">(</span>Camera RAW<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">          -ascii                : Ascii <span class="o">(</span>PPM<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -one_strip            : 剖光<span class="o">(</span>TIFF<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">          -raw_autobalance      : 自动平衡<span class="o">(</span>Camera RAW<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -raw_camerabalance    : 相机平衡<span class="o">(</span>Camera RAW<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -raw_autobright       : 自动亮度调节<span class="o">(</span>Camera RAW<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -raw_gamma value      : 高斯模糊<span class="o">(</span>Camera RAW<span class="o">)</span><span class="nv">default</span><span class="o">=</span>0.6
+</span></span><span class="line"><span class="cl">          -raw_brightness value : 亮度<span class="o">(</span>Camera RAW<span class="o">)</span><span class="nv">default</span><span class="o">=</span>0.8 
+</span></span><span class="line"><span class="cl">          -raw_redscale value   : 红缩放<span class="o">(</span>Camera RAW<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -raw_bluescale value  : 蓝缩放<span class="o">(</span>Camera RAW<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -ilut file            : 输入LUT文件<span class="o">(</span>DPX/Cineon<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">          -olut file            : 输出lut文件<span class="o">(</span>DPX/Cineon<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                           
+</span></span><span class="line"><span class="cl">---------------------------------------------------------------------------------------------------------------------------------           
+</span></span><span class="line"><span class="cl">        Process :
+</span></span><span class="line"><span class="cl">          -32bits             : 32比特转换
+</span></span><span class="line"><span class="cl">          -average size       : 平均<span class="o">(</span>3,5,7,9,11,13<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -autocrop tol r g b : 自动剪切
+</span></span><span class="line"><span class="cl">          -balance r g b      : 色彩平衡
+</span></span><span class="line"><span class="cl">---------------------------------------------------------------------------------------------------------------------------------         
+</span></span><span class="line"><span class="cl">       &gt;   nconvert -average <span class="m">9</span> in.jpg                      模糊
+</span></span><span class="line"><span class="cl">       &gt;   nconvert -balance <span class="m">255</span> <span class="m">0</span> <span class="m">255</span> in.jpg              红色
+</span></span><span class="line"><span class="cl">       &gt;   nconvert -balance <span class="m">20</span> <span class="m">65</span> <span class="m">255</span> in.jpg              偏绿色
+</span></span><span class="line"><span class="cl">---------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">颜色转换：
+</span></span><span class="line"><span class="cl">---------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">          -binary dither    : 二进制转换
+</span></span><span class="line"><span class="cl">                         &gt;  nconvert -binary halft45   in.jpg
+</span></span><span class="line"><span class="cl">                         &gt;  nconvert -binary floyd     in.jpg    颜色转换成灰色
+</span></span><span class="line"><span class="cl">                         &gt;  nconvert -binary nodither  in.jpg    黑色了
+</span></span><span class="line"><span class="cl">dither取值：  
+</span></span><span class="line"><span class="cl">              pattern : 有序模式
+</span></span><span class="line"><span class="cl">              floyd   : 256色抖动
+</span></span><span class="line"><span class="cl">              halft45 : 中间色调 <span class="m">45</span>
+</span></span><span class="line"><span class="cl">              halft90 : 中间色调 <span class="m">90</span>
+</span></span><span class="line"><span class="cl">              nodither: 无递色
+</span></span><span class="line"><span class="cl">          -blur percent:模糊污点<span class="o">(</span>1...100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">亮度调整：
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">          -brightness value : 修改亮度（-100..100）
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -brightness -100 in.jpg 调整亮度 
+</span></span><span class="line"><span class="cl">          -conbright value  : 修改亮度<span class="o">(</span>-100...100<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">调整画布：
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">　　　　　                                                              
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">          -colours num
+</span></span><span class="line"><span class="cl">          -colors num       : 在索引颜色中转换<span class="o">(</span>256, 216, 128, 64, 32, <span class="m">16</span> or 8<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -colours <span class="m">32</span> in.gif <span class="c1"># 对jpg无效果，转换后gif成静态</span>
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">          -contrast value   : 修改对比度<span class="o">(</span>-100...100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -contrast <span class="m">100</span> in.jpg      <span class="c1"># 修改对比度</span>
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -conbright -100 in.jpg    <span class="c1"># 调整图片亮度</span>
+</span></span><span class="line"><span class="cl">          -crop x y w h     : 剪切图片
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -crop <span class="m">20</span> <span class="m">50</span> <span class="m">10</span> <span class="m">20</span> in.jpg   <span class="c1"># 剪切图片</span>
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -crop <span class="m">0</span> <span class="m">0</span>  <span class="m">1000</span> <span class="m">800</span> in.jpg <span class="c1"># x，y是坐标</span>
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -dither           : Use dither <span class="k">for</span> conversion <span class="o">(</span>Colors and Grey only<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -deinter k n      : De-interlace
+</span></span><span class="line"><span class="cl">              k : even or odd
+</span></span><span class="line"><span class="cl">              n : dup or int
+</span></span><span class="line"><span class="cl">                           &gt; nconvert -deinter odd int in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -edetail          : 提高细节
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -eedge percent    : 强化边缘 <span class="o">(</span>1...100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -eedge <span class="m">100</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -edgedetect <span class="nb">type</span>  : 探测边缘
+</span></span><span class="line"><span class="cl">                              type值为：light/medium/heavy
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -edgedetect medium in.jpg 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -efocus           : 提高焦点
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -emboss           : 浮雕效果
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -emboss in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -embossmore       : 增强浮雕效果
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -embossmore in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -equalize         : 色彩均衡
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -Equalize in.jpg
+</span></span><span class="line"><span class="cl">          -frestore         : 焦点复原
+</span></span><span class="line"><span class="cl">          -gamma value      : Modify gamma <span class="o">(</span>0.01&lt;-&gt;5.0   灰度系数
+</span></span><span class="line"><span class="cl">          -gammasat value   : Modify gamma <span class="o">(</span>0.01&lt;-&gt;5.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -gauss size       : 高斯模糊<span class="o">(</span>3,5,7,9,11,13..<span class="o">)</span>，值越大执行时间越长
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -grey num         : 转换成灰阶<span class="o">(</span>256, 128, 64, 32, 16, <span class="m">8</span> or 4<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -grey <span class="m">256</span> in.jpg 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -hls h l s        : 调整亮度饱和度，色调
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -hls <span class="m">10</span> <span class="m">12</span> <span class="m">10</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -lens percent     : 透镜放大效果<span class="o">(</span>1...100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -lens <span class="m">100</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -levels b w       : 色阶
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -levels <span class="m">100</span> <span class="m">200</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -log              : 运用对数修正
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -log in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -maximum size     : 最大过滤<span class="o">(</span>3,5,7,9,11,13<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -maximum <span class="m">13</span> in.jpg
+</span></span><span class="line"><span class="cl">          -medianb size     : Median Box filter <span class="o">(</span>3,5,7,9,11,13<span class="o">)</span>      平均盒过滤<span class="o">(</span>变模糊了<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          -medianc size     : Median Cross filter <span class="o">(</span>3,5,7,9,11,13<span class="o">)</span>    平均交叉过滤（模糊）
+</span></span><span class="line"><span class="cl">          -minimum size     : Minimum filter <span class="o">(</span>3,5,7,9,11,13<span class="o">)</span>          最小过滤 
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -minimum <span class="m">13</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -mosaic size      : 马赛克效果<span class="o">(</span>1...64<span class="o">)</span>   size越大效果越明显
+</span></span><span class="line"><span class="cl">                            &gt;  nconvert -mosaic <span class="m">10</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -negate           : 负片效果
+</span></span><span class="line"><span class="cl">                            &gt; nconvert -negate <span class="m">64</span> in.jpg （还可跟数字来调整效果）
+</span></span><span class="line"><span class="cl">          -new bpp w h      : 创造新的位图
+</span></span><span class="line"><span class="cl">          -noise reduce     : 减少杂色
+</span></span><span class="line"><span class="cl">          -noise <span class="nb">type</span> value 
+</span></span><span class="line"><span class="cl">              uniform   : 增加唯一杂色
+</span></span><span class="line"><span class="cl">              gaussian  : 增加高斯杂色
+</span></span><span class="line"><span class="cl">              laplacian : 增加拉普拉斯杂色
+</span></span><span class="line"><span class="cl">              poisson   : 增加泊松杂色
+</span></span><span class="line"><span class="cl">                              &gt;   nconvert -noise poisson <span class="m">5</span> in.jpg <span class="c1"># 增加泊松杂色（老照片效果）</span>
+</span></span><span class="line"><span class="cl">          -normalize        : 使正态化
+</span></span><span class="line"><span class="cl">          -oil size         : 油画效果<span class="o">(</span>1...16<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                              &gt;   nconvert -oil <span class="m">5</span> in.jpg   油画效果
+</span></span><span class="line"><span class="cl">          -posterize count  : 色调分离<span class="o">(</span>2...256<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">                              &gt;   nconvert -posterize <span class="m">2</span>  in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -ratio            : 保持比例缩放
+</span></span><span class="line"><span class="cl">          -rtype            : 重新采样
+</span></span><span class="line"><span class="cl">              quick    : 快速调整
+</span></span><span class="line"><span class="cl">              linear   : 线性调整
+</span></span><span class="line"><span class="cl">              hermite  : 艾米插值曲线
+</span></span><span class="line"><span class="cl">              gaussian : 高斯
+</span></span><span class="line"><span class="cl">              bell     : 钟状物
+</span></span><span class="line"><span class="cl">              bspline  : B样条
+</span></span><span class="line"><span class="cl">              mitchell : 米歇尔
+</span></span><span class="line"><span class="cl">              lanczos  : 兰索斯法
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">         -rflag      : 重设标志大小尺寸
+</span></span><span class="line"><span class="cl">              incr   : 只增加
+</span></span><span class="line"><span class="cl">              decr   : 只减少
+</span></span><span class="line"><span class="cl">              orient : 自适应
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">调整图片宽高比：
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -resize w h      : Scale width-height  宽高比
+</span></span><span class="line"><span class="cl">                             w h 可以是百分数 <span class="o">(</span>example: -resize 100% 200%<span class="o">)</span>
+</span></span><span class="line"><span class="cl">            &gt;  nconvert -resize 100% 200% 97.jpg in.jpg   调整宽高比
+</span></span><span class="line"><span class="cl">-----------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          -rotate_flag      : 旋转标志
+</span></span><span class="line"><span class="cl">              smooth : 使用平滑的旋转
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="调整画布">调整画布</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">-canvas w h pos   : 重新调整画布大小，pos是位置参数
+</span></span><span class="line"><span class="cl">    w h 可以是百分数<span class="o">(</span>例如: -resize 100% 200%<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    或者 <span class="c1">#x #y 作为偏移量  x，y是偏移值</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    pos top-left, top-center, top-right
+</span></span><span class="line"><span class="cl">    center-left, center, center-right
+</span></span><span class="line"><span class="cl">    bottom-left, bottom-center, bottom-right
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; nconvert -canvas 200% 200% center in.jpg  <span class="c1"># 调整画布大小和位置</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert -canvas 200% 200% center  -bgcolor <span class="m">255</span> <span class="m">0</span> <span class="m">225</span> in.jpg  <span class="c1"># 调整画布大小和位置，画布背景为红色</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="jpeg无损转换">JPEG无损转换</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">-jpegtrans op     : JPEG无损转换
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    rot90  : 旋转90度
+</span></span><span class="line"><span class="cl">    rot180 : 旋转180度
+</span></span><span class="line"><span class="cl">    rot270 : 旋转270度
+</span></span><span class="line"><span class="cl">    exif   : 使用定向的exif标签
+</span></span><span class="line"><span class="cl">    vflip  : 垂直翻转
+</span></span><span class="line"><span class="cl">    hflip  : 水平翻转
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-jpegcrop x y w h : 无损剪切 x,y是坐标，w,h是宽高
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt;  nconvert -jpegcrop <span class="m">600</span> <span class="m">500</span> <span class="m">300</span> <span class="m">450</span> in.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="旋转">旋转</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-rotate degrees   : 顺时针旋转
+</span></span><span class="line"><span class="cl"><span class="c1"># 顺时针旋转30度</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert  -rotate <span class="m">30</span> 96.jpg  
+</span></span><span class="line"><span class="cl"><span class="c1"># 旋转时背景色设置为红色</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert -rotate <span class="m">30</span> -bgcolor <span class="m">255</span> <span class="m">0</span> <span class="m">245</span> in.jpg 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-sepia            : Sepia
+</span></span><span class="line"><span class="cl">-sharpen percent  : 锐化<span class="o">(</span>1...100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">&gt;  nconvert  -sharpen <span class="m">100</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-shear            : 波浪化
+</span></span><span class="line"><span class="cl">-slice            : 切片效果
+</span></span><span class="line"><span class="cl">-soften percent   : 柔化<span class="o">(</span>1...100<span class="o">)</span>  
+</span></span><span class="line"><span class="cl">-solarize value   : 曝光率<span class="o">(</span>1...255<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">&gt; nconvert  -solarize <span class="m">5</span>  in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-spread amount    : 扩散<span class="o">(</span>1...32<span class="o">)</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert  -spread  <span class="m">20</span>  in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-swap <span class="nb">type</span>        : 交换通道
+</span></span><span class="line"><span class="cl">    rbg   : RGB-&gt;RBG
+</span></span><span class="line"><span class="cl">    bgr   : RGB-&gt;BGR
+</span></span><span class="line"><span class="cl">    brg   : RGB-&gt;BRG
+</span></span><span class="line"><span class="cl">    grb   : RGB-&gt;GRB
+</span></span><span class="line"><span class="cl">gbr   : RGB-&gt;GBR
+</span></span><span class="line"><span class="cl">&gt; nconvert  -swap rbg in.jpg   
+</span></span><span class="line"><span class="cl">&gt; nconvert  -swap brg in.jpg   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-swirl degrees    : 中心旋转<span class="o">(</span>1...360<span class="o">)</span> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 以图片中心为轴旋转200度</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert  -swirl <span class="m">200</span> in.jpg   
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="添加图片">添加图片</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">-wmfile file      : 作为水印的文件
+</span></span><span class="line"><span class="cl">-wmpos x y        : 水印位置
+</span></span><span class="line"><span class="cl">-wmflag flag      : 水印位置
+</span></span><span class="line"><span class="cl">top-left, top-center, top-right
+</span></span><span class="line"><span class="cl">center-left, center, center-right
+</span></span><span class="line"><span class="cl">bottom-left, bottom-center, bottom-right
+</span></span><span class="line"><span class="cl">-wmopacity value  : 水印透明度（0-100）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 将 wm.jpg作为水印添加到 origin.jpg，并设置透明度为30</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert -wmpos <span class="m">100</span> <span class="m">200</span> -wmflag center -wmopacity <span class="m">30</span> -wmfile wm.jpg origin.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                              
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="添加文本">添加文本</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 参数</span>
+</span></span><span class="line"><span class="cl">-text string      :在图片上添加文字
+</span></span><span class="line"><span class="cl">-text_font name size  :文字类型和大小
+</span></span><span class="line"><span class="cl">-text_color r g b : 文字颜色
+</span></span><span class="line"><span class="cl">-text_back r g b  : 文字背景颜色
+</span></span><span class="line"><span class="cl">-text_flag pos    : 文字位置
+</span></span><span class="line"><span class="cl">    top-left, top-center, top-right
+</span></span><span class="line"><span class="cl">    center-left, center, center-right
+</span></span><span class="line"><span class="cl">    bottom-left, bottom-center, bottom-right
+</span></span><span class="line"><span class="cl">-text_pos x y     : 位移或偏移量
+</span></span><span class="line"><span class="cl">-text_rotation degrees : 文字旋转度
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 在图片上顺时针30度打上文字,文字背景为黄色</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert -text_pos <span class="m">100</span> <span class="m">150</span> -text_rotation <span class="m">30</span>  -text_back <span class="m">255</span> <span class="m">255</span> <span class="m">120</span> -text <span class="s2">&#34;HostenWang&#34;</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 在图片上顺时针120度打上文字,设置文字前景色和背景色</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert -text_font Verdana <span class="m">72</span> -text_pos <span class="m">90</span> <span class="m">100</span> -text_rotation <span class="m">120</span>  -text_flag center -text_color <span class="m">255</span> <span class="m">0</span> <span class="m">255</span> -text_back <span class="m">255</span> <span class="m">255</span> <span class="m">255</span> -text <span class="s2">&#34;HostenWang&#34;</span> *.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="瓦片效果">瓦片效果</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">-tile size        : 瓦片效果<span class="o">(</span>1...64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">&gt; nconvert  -tile <span class="m">10</span> in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-truecolors　　　 : 真彩效果
+</span></span><span class="line"><span class="cl">-truecolours      : 真彩效果
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-xflip            : 水平翻转
+</span></span><span class="line"><span class="cl">&gt; nconvert  -xflip   in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-yflip            : 垂直翻转
+</span></span><span class="line"><span class="cl">&gt; nconvert  -yflip   in.jpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-waves wavelength phase amount : Waves
+</span></span><span class="line"><span class="cl">wavelength   : 波长<span class="o">(</span>1.0 50.0<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">phase        : 相位<span class="o">(</span>0.0 360.0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">amount       : 数量<span class="o">(</span>0.0 100.0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; nconvert    -waves <span class="m">15</span> <span class="m">12</span> <span class="m">50</span>   in.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="结果">结果</h2>
+<h2 id="讨论">讨论</h2>
+<h2 id="未来展望">未来展望</h2>
+<h2 id="参考">参考</h2>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2012 - 
+        
+        2023 不忘初心,永远忠诚
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

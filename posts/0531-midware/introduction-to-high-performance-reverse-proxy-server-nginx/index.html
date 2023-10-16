@@ -7,8 +7,6 @@
 <link rel='canonical' href='https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/'>
 
 <link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css">
-<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
-
 
 <script>
 var _hmt = _hmt || [];
@@ -18,6 +16,14 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "e9uc9a3iru");
 </script>
 <meta property='og:title' content='高性能反向代理服务器Nginx介绍'>
 <meta property='og:description' content='Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器 | Introduction to High Performance Reverse Proxy Server Nginx'>
@@ -410,7 +416,7 @@ var _hmt = _hmt || [];
 <p><img src="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001.png"
 	width="458"
 	height="225"
-	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96628_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96628_1024x0_resize_box_3.png 1024w"
+	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96639_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0001_huf5e2629c136f38ee83a026f629d3dec9_96639_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="img_0001"
@@ -426,7 +432,7 @@ var _hmt = _hmt || [];
 <p><img src="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002.png"
 	width="606"
 	height="234"
-	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113937_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113937_1024x0_resize_box_3.png 1024w"
+	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113925_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0002_hud481455ae82c17c3106c11f4662750b3_113925_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="img_0002"
@@ -441,7 +447,7 @@ var _hmt = _hmt || [];
 <p><img src="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003.png"
 	width="622"
 	height="232"
-	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119839_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119839_1024x0_resize_box_3.png 1024w"
+	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119812_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0003_hu4ebe5a8b55f3965d149b1f3815c024be_119812_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="img_0003"
@@ -457,7 +463,7 @@ var _hmt = _hmt || [];
 <p><img src="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004.png"
 	width="607"
 	height="227"
-	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89124_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89124_1024x0_resize_box_3.png 1024w"
+	srcset="/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89084_480x0_resize_box_3.png 480w, /posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/0004_hucda9e3130072f2c2fd3e08ef989dac5a_89084_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="img_0004"
@@ -612,7 +618,7 @@ var _hmt = _hmt || [];
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

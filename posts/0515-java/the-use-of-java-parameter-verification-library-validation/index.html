@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='JSR303 规范（Bean Validation 规范）为 JavaBean 验证定义了相应的元数据模型和 API。Hibernate Validator 对其进行了参考实现, 除此之外还有一些附加的 constraint。'>
 <title>Java参数校验库validation的使用</title>
 
 <link rel='canonical' href='https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/'>
 
 <link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css">
-<script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "e9uc9a3iru");</script>
-
 
 <script>
 var _hmt = _hmt || [];
@@ -19,13 +17,21 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "e9uc9a3iru");
+</script>
 <meta property='og:title' content='Java参数校验库validation的使用'>
-<meta property='og:description' content='java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验'>
+<meta property='og:description' content='JSR303 规范（Bean Validation 规范）为 JavaBean 验证定义了相应的元数据模型和 API。Hibernate Validator 对其进行了参考实现, 除此之外还有一些附加的 constraint。'>
 <meta property='og:url' content='https://hostenwang.github.io/posts/0515-java/the-use-of-java-parameter-verification-library-validation/'>
 <meta property='og:site_name' content='不忘初心,永远忠诚'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='validation' /><meta property='article:published_time' content='2020-08-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-08-19T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Java参数校验库validation的使用">
-<meta name="twitter:description" content="java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验">
+<meta name="twitter:description" content="JSR303 规范（Bean Validation 规范）为 JavaBean 验证定义了相应的元数据模型和 API。Hibernate Validator 对其进行了参考实现, 除此之外还有一些附加的 constraint。">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -281,12 +287,24 @@ var _hmt = _hmt || [];
             <nav id="TableOfContents">
   <ol>
     <li><a href="#概述">概述</a></li>
-    <li><a href="#用maven引入">用Maven引入</a></li>
+    <li><a href="#背景">背景</a></li>
+    <li><a href="#快速使用">快速使用</a>
+      <ol>
+        <li><a href="#用-maven-引入">用 Maven 引入</a></li>
+        <li><a href="#参数校验">参数校验</a></li>
+        <li><a href="#pojo-校验">POJO 校验</a></li>
+      </ol>
+    </li>
     <li><a href="#常用注解">常用注解</a></li>
-    <li><a href="#校验-pojo">校验 POJO</a></li>
-    <li><a href="#自定义注解">自定义注解</a></li>
-    <li><a href="#结果">结果</a></li>
-    <li><a href="#讨论">讨论</a></li>
+    <li><a href="#高级">高级</a>
+      <ol>
+        <li><a href="#分组校验">分组校验</a></li>
+        <li><a href="#按顺序校验">按顺序校验</a></li>
+        <li><a href="#嵌套校验">嵌套校验</a></li>
+        <li><a href="#valid-和-validated-注解的区别"><code>@Valid</code> 和 <code>@Validated</code> 注解的区别</a></li>
+        <li><a href="#自定义注解">自定义注解</a></li>
+      </ol>
+    </li>
     <li><a href="#未来展望">未来展望</a></li>
     <li><a href="#参考">参考</a></li>
   </ol>
@@ -321,7 +339,7 @@ var _hmt = _hmt || [];
     
         
         <h3 class="article-subtitle">
-            java 第三方库 validation 的一系列注解可以帮我们方便地完成参数校验,免去繁琐的串行校验
+            JSR303 规范（Bean Validation 规范）为 JavaBean 验证定义了相应的元数据模型和 API。Hibernate Validator 对其进行了参考实现, 除此之外还有一些附加的 constraint。
         </h3>
         
     </div>
@@ -357,7 +375,7 @@ var _hmt = _hmt || [];
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -373,9 +391,13 @@ var _hmt = _hmt || [];
     
     
     <h2 id="概述">概述</h2>
-<p><code>javax.validation</code>的一系列注解可以帮我们完成参数校验,免去繁琐的串行校验</p>
+<p><code>javax.validation</code>的一系列注解可以帮我们完成参数校验,免去繁琐的串行校验。</p>
 <p>JSR303  是一套<code>JavaBean</code>参数校验的标准，它定义了很多常用的校验注解，可以直接将这些注解加在我们 #JavaBean 的属性上面，就可以在需要校验的时候进行参数校验了.</p>
-<h2 id="用maven引入">用Maven引入</h2>
+<h2 id="背景">背景</h2>
+<p>JSR303 规范（Bean Validation 规范）为 JavaBean 验证定义了相应的元数据模型和 API。在应用程序中，通过使用  Bean Validation 或是你自己定义的 constraint，例如 <code>@NotNull</code>, <code>@Max</code>, <code>@ZipCode</code> ，  就可以确保数据模型（JavaBean）的正确性。constraint 可以附加到字段，getter  方法，类或者接口上面。对于一些特定的需求，用户可以很容易的开发定制化的 constraint。Bean Validation  是一个运行时的数据验证框架，在验证之后验证的错误信息会被马上返回。</p>
+<p>对于 JSR 303 规范，#Hibernate Validator 对其进行了参考实现 . Hibernate Validator 提供了 JSR 303 规范中所有内置 constraint 的实现，除此之外还有一些附加的 constraint</p>
+<h2 id="快速使用">快速使用</h2>
+<h3 id="用-maven-引入">用 Maven 引入</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -402,7 +424,7 @@ var _hmt = _hmt || [];
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="常用注解">常用注解</h2>
+</div><h3 id="参数校验">参数校验</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -418,44 +440,24 @@ var _hmt = _hmt || [];
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@AssertFalse</span>    <span class="err">被注释的元素必须为</span> <span class="kc">false</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@AssertTrue</span>     <span class="err">被注释的元素必须为</span> <span class="kc">true</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMax</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>  <span class="err">被注释的元素必须是一个数字，其值必须小于等于指定的最大值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMax</span><span class="o">(</span><span class="n">value</span><span class="o">=,</span><span class="n">inclusive</span><span class="o">=)</span> <span class="err">小于等于</span><span class="n">value</span><span class="err">，</span> <span class="n">inclusive</span><span class="o">=</span><span class="kc">true</span><span class="o">,</span><span class="err">是小于等于</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMin</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>  <span class="err">被注释的元素必须是一个数字，其值必须大于等于指定的最小值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@DecimalMin</span><span class="o">(</span><span class="n">value</span><span class="o">=,</span><span class="n">inclusive</span><span class="o">=)</span> <span class="err">与上类似</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@Digits</span> <span class="o">(</span><span class="n">integer</span><span class="o">,</span> <span class="n">fraction</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须在可接受的范围内</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Email</span>  <span class="err">被注释的元素必须是电子邮箱地址</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Future</span>     <span class="err">被注释的元素必须是一个将来的日期</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Length</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=)</span>  <span class="err">被注释的字符串的大小必须在指定的范围内</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Max</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须小于等于指定的最大值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Min</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>     <span class="err">被注释的元素必须是一个数字，其值必须大于等于指定的最小值</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=)</span>   <span class="err">验证字符串非</span><span class="kc">null</span><span class="err">，且</span><span class="n">trim</span><span class="err">后长度必须大于</span><span class="mi">0</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@NotEmpty</span>   <span class="err">被注释的字符串的必须非空</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@NotNull</span>    <span class="err">被注释的元素必须不为</span> <span class="kc">null</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Null</span>   <span class="err">被注释的元素必须为</span> <span class="kc">null</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Past</span>   <span class="err">被注释的元素必须是一个过去的日期</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Past</span>  <span class="err">检查日期</span>  
-</span></span><span class="line"><span class="cl"><span class="nd">@Pattern</span><span class="o">(</span><span class="n">regex</span><span class="o">=,</span><span class="n">flag</span><span class="o">=)</span>  <span class="err">被注释的元素必须符合指定的正则表达式</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Range</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=,</span><span class="n">message</span><span class="o">=)</span>  <span class="err">被注释的元素必须在合适的范围内</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Size</span><span class="o">(</span><span class="n">max</span><span class="o">=,</span> <span class="n">min</span><span class="o">=)</span>   <span class="err">被注释的元素的大小必须在指定的范围内</span>    
-</span></span><span class="line"><span class="cl"><span class="nd">@Valid</span> <span class="err">对</span><span class="n">po</span><span class="err">实体类进行校验</span>
-</span></span><span class="line"><span class="cl"> 
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 注意：如果想在参数中使用 @NotNull 这种注解校验，就必须在类上添加 @Validated
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 可以在 Controller 或者 Service 上添加
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Validated</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@RestController</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">&#34;/user&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserController</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">&#34;/query&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@ResponseBody</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">UserDTO</span> <span class="nf">query</span><span class="o">(</span><span class="nd">@NotNull</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">&#34;userId不能为空&#34;</span><span class="o">)</span> <span class="n">Integer</span> <span class="n">userId</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">userService</span><span class="o">.</span><span class="na">queryById</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="校验-pojo">校验 POJO</h2>
+</div><h3 id="pojo-校验">POJO 校验</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -493,25 +495,11 @@ var _hmt = _hmt || [];
 </span><span class="lnt">33
 </span><span class="lnt">34
 </span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 1 在参数前增加 Validated 注解
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">&#34;/save&#34;</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">RspDTO</span> <span class="nf">save</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nd">@Validated</span> <span class="n">UserDTO</span> <span class="n">userDTO</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">userService</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">userDTO</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">RspDTO</span><span class="o">.</span><span class="na">success</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 2 在 POJO 增加注解
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 1 在 POJO 上添加注解
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Data</span>
 </span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDTO</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="cm">/*** 用户ID*/</span>
 </span></span><span class="line"><span class="cl">    <span class="nd">@NotNull</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">&#34;用户id不能为空&#34;</span><span class="o">)</span>
@@ -536,17 +524,297 @@ var _hmt = _hmt || [];
 </span></span><span class="line"><span class="cl">    <span class="cm">/*** 创建时间 */</span>
 </span></span><span class="line"><span class="cl">    <span class="nd">@Future</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">&#34;时间必须是将来时间&#34;</span><span class="o">)</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Date</span> <span class="n">createTime</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2 在参数前增加`@Validated`注解
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">&#34;/save&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">RspDTO</span> <span class="nf">save</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nd">@Validated</span> <span class="n">UserDTO</span> <span class="n">userDTO</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">userService</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">userDTO</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">RspDTO</span><span class="o">.</span><span class="na">success</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="常用注解">常用注解</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Email</span>                      <span class="c1">// 被注释的元素必须是电子邮箱地址    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Future</span>                     <span class="c1">// 被注释的元素必须是一个将来的日期    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Length</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=)</span>          <span class="c1">// 被注释的字符串的大小必须在指定的范围内    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Max</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>                 <span class="c1">// 被注释的元素必须是一个数字，其值必须小于等于指定的最大值    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Min</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>                 <span class="c1">// 被注释的元素必须是一个数字，其值必须大于等于指定的最小值    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=)</span>        <span class="c1">// 验证字符串非null，且trim后长度必须大于0    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@NotEmpty</span>                   <span class="c1">// 被注释的字符串的必须非空    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@NotNull</span>                    <span class="c1">// 被注释的元素必须不为 null    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Null</span>                       <span class="c1">// 被注释的元素必须为 null    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Past</span>                       <span class="c1">// 被注释的元素必须是一个过去的日期    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Past</span>                       <span class="c1">// 检查日期  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Pattern</span><span class="o">(</span><span class="n">regex</span><span class="o">=,</span><span class="n">flag</span><span class="o">=)</span>      <span class="c1">// 被注释的元素必须符合指定的正则表达式    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Range</span><span class="o">(</span><span class="n">min</span><span class="o">=,</span><span class="n">max</span><span class="o">=,</span><span class="n">message</span><span class="o">=)</span>  <span class="c1">// 被注释的元素必须在合适的范围内
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Size</span><span class="o">(</span><span class="n">max</span><span class="o">=,</span> <span class="n">min</span><span class="o">=)</span>           <span class="c1">// 被注释的元素的大小必须在指定的范围内    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Valid</span>                      <span class="c1">// 对po实体类进行校验
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="高级">高级</h2>
+<h3 id="分组校验">分组校验</h3>
+<p>有时候对于不同的接口，需要对 POJO 进行不同的校验规则。例如成年人和未成年人设置不同游戏时长.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDTO</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Minority</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Adult</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="cm">/** 用户名*/</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">&#34;用户名不能为空&#34;</span><span class="o">,</span><span class="n">groups</span> <span class="o">=</span> <span class="n">Minority</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">username</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nd">@Range</span><span class="o">(</span><span class="n">min</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">2</span><span class="o">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s">&#34;未成年人游戏时长必须是正数,且不得大于2小时每天&#34;</span><span class="o">,</span><span class="n">groups</span> <span class="o">=</span> <span class="n">Minority</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@Range</span><span class="o">(</span><span class="n">min</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s">&#34;成年人游戏时长必须是正数&#34;</span><span class="o">,</span> <span class="n">groups</span> <span class="o">=</span> <span class="n">Adult</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">duration</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">&#34;/saveMinority&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@ResponseBody</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//注意：加了groups属性之后，必须在@Validated 注解中也加上groups属性后，校验规则才能生效
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="n">Response</span><span class="o">&lt;</span><span class="n">UserDTO</span><span class="o">&gt;</span> <span class="nf">saveUser</span><span class="o">(</span><span class="nd">@Validated</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="n">UserDTO</span><span class="o">.</span><span class="na">Minority</span><span class="o">.</span><span class="na">class</span><span class="o">})</span> <span class="nd">@RequestBody</span> <span class="n">UserDTO</span> <span class="n">userDTO</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">userService</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">userDTO</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">&#34;/saveAdult&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@ResponseBody</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//注意：加了groups属性之后，必须在@Validated 注解中也加上groups属性后，校验规则才能生效
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="n">Response</span><span class="o">&lt;</span><span class="n">UserDTO</span><span class="o">&gt;</span> <span class="nf">saveUser</span><span class="o">(</span><span class="nd">@Validated</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="n">UserDTO</span><span class="o">.</span><span class="na">Adult</span><span class="o">.</span><span class="na">class</span><span class="o">})</span> <span class="nd">@RequestBody</span> <span class="n">UserDTO</span> <span class="n">userDTO</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">userService</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">userDTO</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="按顺序校验">按顺序校验</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDTO</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">&#34;至少包含一个非空字符&#34;</span><span class="o">,</span> <span class="n">groups</span> <span class="o">=</span> <span class="o">{</span><span class="n">First</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@Size</span><span class="o">(</span><span class="n">min</span> <span class="o">=</span> <span class="mi">2</span><span class="o">,</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">8</span><span class="o">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s">&#34;长度最多是8&#34;</span><span class="o">,</span> <span class="n">groups</span> <span class="o">=</span> <span class="o">{</span><span class="n">Second</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">First</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Second</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@GroupSequence</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="n">First</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">Second</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">OrderedOne</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 先计算属于 First 组的约束，再计算属于 Second 组的约束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@GroupSequence</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="n">Second</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">First</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">OrderedTwo</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 先计算属于 Second 组的约束，再计算属于 First 组的约束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 先计算属于 First 组的约束，再计算属于 Second 组的约束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Validated</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="n">OrderedOne</span><span class="o">.</span><span class="na">class</span><span class="o">})</span> <span class="nd">@RequestBody</span> <span class="n">UserDTO</span> <span class="n">user</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="嵌套校验">嵌套校验</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserInfoDTO</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">userId</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nd">@NotEmpty</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nd">@NotNull</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nd">@Valid</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@NotNull</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Job</span> <span class="n">job</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 静态内部类
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@Data</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Job</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@NotEmpty</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">Integer</span> <span class="n">level</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="nd">@DecimalMax</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&#34;500.00&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">Double</span> <span class="n">salary</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="自定义注解">自定义注解</h2>
-<h2 id="结果">结果</h2>
-<h2 id="讨论">讨论</h2>
+</div><h3 id="valid-和-validated-注解的区别"><code>@Valid</code> 和 <code>@Validated</code> 注解的区别</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>区别</th>
+<th>@Valid</th>
+<th>@Validated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>来源</td>
+<td>JSR-303规范</td>
+<td>Spring</td>
+</tr>
+<tr>
+<td>是否支持分组</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>标注位置</td>
+<td>METHOD, FIELD, CONSTRUCTOR, PARAMETER, TYPE_USE</td>
+<td>TYPE,METHOD,PARAMETER</td>
+</tr>
+<tr>
+<td>嵌套校验</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="自定义注解">自定义注解</h3>
+<p>略</p>
 <h2 id="未来展望">未来展望</h2>
+<p>我厂已经强制要求使用 Validation 注解来做参数校验</p>
 <h2 id="参考">参考</h2>
+<p><a class="link" href="https://beanvalidation.org/3.0/"  target="_blank" rel="noopener"
+    >Jakarta Bean Validation</a></p>
+<p><a class="link" href="https://docs.jboss.org/hibernate/validator/8.0/reference/en-US/html_single/#validator-gettingstarted-createmodel"  target="_blank" rel="noopener"
+    >Hibernate Validator 8.0.1.Final</a></p>
 <p><a class="link" href="https://www.cnblogs.com/iathanasy/p/13409941.html"  target="_blank" rel="noopener"
     >javax.validation 参数验证</a></p>
+<p><a class="link" href="https://www.cnblogs.com/54chensongxia/p/14016179.html"  target="_blank" rel="noopener"
+    >使用SpringBoot进行优雅的数据验证</a></p>
 </section>
 
 
@@ -588,6 +856,19 @@ var _hmt = _hmt || [];
             
                 
 <article class="">
+    <a href="/posts/0515-java/access-http-rest-service-using-spring-resttemplate/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用 Spring RestTemplate 访问 HTTP REST 服务</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/posts/0515-java/usage-of-java-testing-framework-junit/">
         
         
@@ -619,7 +900,7 @@ var _hmt = _hmt || [];
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

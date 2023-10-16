@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/nacos/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Alibaba SpringCloud 服务发现和管理组件 Nacos 介绍</title>
-        <link>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</link>
+        <link>https://hostenwang.github.io/posts/0516-microservice/0115-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</link>
         <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hostenwang.github.io/posts/0516-microservice/0115-alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</guid>
+        <guid>https://hostenwang.github.io/posts/0516-microservice/0115-nacos-introduction/alibaba-springcloud-service-discovery-and-management-component-nacos-introduction/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;Nacos 英文全称为 Dynamic Naming and Configuration Service，是一个由 #阿里巴巴 团队使用 #Java 语言开发的开源项目。&lt;/p&gt;
 &lt;p&gt;Nacos 是一个更易于帮助构建 #云原生 应用的动态服务发现、配置和服务管理平台.&lt;/p&gt;
@@ -57,10 +57,9 @@
 &lt;li&gt;服务消费者在注册服务的同时，它还会从服务注册中心获取一份服务注册列表信息，该列表中包含了所有注册到服务注册中心上的服务的信息（包括服务提供者和自身的信息）；&lt;/li&gt;
 &lt;li&gt;在获取了服务提供者的信息后，服务消费者通过 HTTP 或消息中间件远程调用服务提供者提供的服务。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;结果results&#34;&gt;结果|results&lt;/h2&gt;
-&lt;h2 id=&#34;讨论discussion&#34;&gt;讨论|discussion&lt;/h2&gt;
-&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
-&lt;h2 id=&#34;参考reference&#34;&gt;参考|reference&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;p&gt;功能强大, 简单易用&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://c.biancheng.net/springcloud/nacos.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Nacos：Spring Cloud Alibaba服务注册与配置中心&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/konglxblog/p/15201270.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
