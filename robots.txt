@@ -1,9 +1,21 @@
 User-agent: *
-Disallow: /post/
-Disallow: /tpl/
 Disallow: /blog/
-Disallow: /series/
 Disallow: /p/
+Disallow: /post/
+Disallow: /posts/bigdata/
+Disallow: /posts/database/
+Disallow: /posts/design/
+Disallow: /posts/develop/
+Disallow: /posts/frontend/
+Disallow: /posts/java/
+Disallow: /posts/misc/
+Disallow: /posts/python/
+Disallow: /posts/webgis/
+Disallow: /posts/yonyou/
+Disallow: /series/
+Disallow: /top/archive
+Disallow: /top/books
+Disallow: /tpl/
 Disallow: /zh-cn/
 Disallow: 
 Sitemap: https://hostenwang.github.io/zh-cn/sitemap.xml
