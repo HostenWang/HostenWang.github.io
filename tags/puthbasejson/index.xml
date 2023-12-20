@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>puthbasejson on 不忘初心,永远忠诚</title>
+        <link>https://hostenwang.github.io/tags/puthbasejson/</link>
+        <description>Recent content in puthbasejson on 不忘初心,永远忠诚</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 23 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/puthbasejson/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用 Apache NiFi 向 HBase 写入数据</title>
+        <link>https://hostenwang.github.io/posts/0541-bigdata/write-data-to-hbase-using-apache-nifi/</link>
+        <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0541-bigdata/write-data-to-hbase-using-apache-nifi/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;使用Apache &lt;strong&gt;NIFI&lt;/strong&gt;通过读取mysql开启的binlog日志,同步数据库变化到Hbase&lt;/p&gt;
+&lt;p&gt;敬请期待&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;h2 id=&#34;过程&#34;&gt;过程&lt;/h2&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -434,6 +434,38 @@ writeBody内包含writeTags等方法,先通过反射获取tags注解包含的字
     &gt;DataPipeline CTO陈肃：从ETL到ELT，AI时代数据集成的问题与解决方案&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         <item>
+        <title>Apache NiFi OSGI 机制总结</title>
+        <link>https://hostenwang.github.io/p/nifi-osgi/</link>
+        <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-osgi/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Apache NiFi 是一个易于使用、功能强大而且可靠的数据拉取、数据处理和分发系统，用于自动化管理系统间的数据流&lt;/p&gt;
+&lt;p&gt;敬请期待&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;h2 id=&#34;过程&#34;&gt;过程&lt;/h2&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>NiFi 报错error keyvalue size too large的解决方案</title>
+        <link>https://hostenwang.github.io/p/nifi-error-keyvalue-size-too-large/</link>
+        <pubDate>Fri, 22 Jun 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nifi-error-keyvalue-size-too-large/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Apache NiFi 是一个易于使用、功能强大而且可靠的数据拉取、数据处理和分发系统，用于自动化管理系统间的数据流&lt;/p&gt;
+&lt;p&gt;敬请期待&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;h2 id=&#34;过程&#34;&gt;过程&lt;/h2&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;</description>
+        </item>
+        <item>
         <title>Linux服务器报错&#34;Max number of threads for user likely too low&#34;的解决方案</title>
         <link>https://hostenwang.github.io/posts/0552-linux-command/solution-to-linux-server-error-max-number-of-threads-for-user-like-too-low/</link>
         <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>

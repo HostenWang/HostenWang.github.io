@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MyBatis on 不忘初心,永远忠诚</title>
+        <link>https://hostenwang.github.io/categories/mybatis/</link>
+        <description>Recent content in MyBatis on 不忘初心,永远忠诚</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 08 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/categories/mybatis/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MyBatis 简介</title>
+        <link>https://hostenwang.github.io/posts/0517-mybatis-from-introduction-to-practice/mybatis-brief-introduction/</link>
+        <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0517-mybatis-from-introduction-to-practice/mybatis-brief-introduction/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎
+所有的 JDBC 代码以及设置参数和获取结果集的工作。&lt;/p&gt;
+&lt;p&gt;MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。&lt;/p&gt;
+&lt;h2 id=&#34;特点&#34;&gt;特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。&lt;/li&gt;
+&lt;li&gt;MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。&lt;/li&gt;
+&lt;li&gt;MyBatis 可以使用简单的 XML 或注解用于配置和原始映射，将接口和 Java 的 POJO
+（Plain Old Java Objects，普通的 Java 对象）映射成数据库中的记录。&lt;/li&gt;
+&lt;li&gt;半自动 ORM（Object Relation Mapping 对象关系映射）框架。&lt;/li&gt;
+&lt;li&gt;SQL 和 Java 编码分开，功能边界清晰，一个专注业务、一个专注数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;过程&#34;&gt;过程&lt;/h2&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/tags/elastic/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>大数据分析平台ELK的概述</title>
+        <title>大数据分析平台 Elastic Stack 概述</title>
         <link>https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/</link>
         <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
         
@@ -41,10 +41,10 @@
 &lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001.png&#34;
 	width=&#34;793&#34;
 	height=&#34;445&#34;
-	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_76114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0541-bigdata/elastic-stack-overview/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Elastic Stack &#34;
+		alt=&#34;img_0001&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -52,6 +52,66 @@
 		data-flex-basis=&#34;427px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;Elasticsearch权威指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>大数据分析平台 Elastic Stack 的概述</title>
+        <link>https://hostenwang.github.io/posts/0542-elastic-stack/elastic-stack-overview-cn/</link>
+        <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/posts/0542-elastic-stack/elastic-stack-overview-cn/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview&lt;/h2&gt;
+&lt;p&gt;ELK Stack 核心产品包括 Elasticsearch、Kibana、Beats 和 Logstash 等等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。&lt;/p&gt;
+&lt;p&gt;Elastic Stack 包含各种功能（之前统一称为 X-Pack），从企业级安全性和开发人员友好型 API，到 Machine Learning 和图表分析，非常全面；借助这些功能，您能够对所有类型的数据进行大规模采集、分析、搜索和可视化。&lt;/p&gt;
+&lt;h2 id=&#34;环境environment&#34;&gt;环境|Environment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;7 home x64&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ELK&lt;/td&gt;
+&lt;td&gt;6.4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;整体架构&#34;&gt;整体架构&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://hostenwang.github.io/posts/0542-elastic-stack/elastic-stack-overview-cn/0001.png&#34;
+	width=&#34;793&#34;
+	height=&#34;445&#34;
+	srcset=&#34;https://hostenwang.github.io/posts/0542-elastic-stack/elastic-stack-overview-cn/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_480x0_resize_box_3.png 480w, https://hostenwang.github.io/posts/0542-elastic-stack/elastic-stack-overview-cn/0001_hu7ba7065ede0669ef9ebc3d2ec828f162_75983_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img_0001&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;427px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;核心产品包括 Elasticsearch、Kibana、Beats 和 Logstash（也称为 ELK Stack）等等。能够安全可靠地从任何来源获取任何格式的数据，然后对数据进行搜索、分析和可视化。&lt;/p&gt;
+&lt;h3 id=&#34;kibana&#34;&gt;Kibana&lt;/h3&gt;
+&lt;p&gt;在 Kibana 中通过炫酷的可视化来探索您的数据，从华夫饼图到热点图，再到时序数据分析，应有尽有。针对多样化数据源使用预配置仪表板，创建实时演示文稿以突出显示 KPI，并使用单一 UI 来管理您的部署。&lt;/p&gt;
+&lt;h3 id=&#34;elasticsearch&#34;&gt;Elasticsearch&lt;/h3&gt;
+&lt;p&gt;无论您正在查找来自特定 IP 地址的活动，还是正在分析交易请求数量为何突然飙升，或者正在方圆一公里内搜寻美食店，我们尝试解决的这些问题归根结底都是搜索问题。通过 Elasticsearch，您可以快速存储、搜索和分析大量数据。&lt;/p&gt;
+&lt;h3 id=&#34;integrations&#34;&gt;Integrations&lt;/h3&gt;
+&lt;p&gt;在收集、存储、搜索和分析数据时，发掘有价值的见解。使用 Elastic 代理、Beats 或网络爬虫等功能，从应用程序、基础架构和公共内容源中采集数据，在大量开箱即用型集成功能的加持下，分分钟即可开始工作。&lt;/p&gt;
 &lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further&lt;/h2&gt;
 &lt;h2 id=&#34;参考references&#34;&gt;参考|References&lt;/h2&gt;
 &lt;ol&gt;

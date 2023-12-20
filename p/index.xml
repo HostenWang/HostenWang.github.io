@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ps on 不忘初心,永远忠诚</title>
+        <link>https://hostenwang.github.io/p/</link>
+        <description>Recent content in Ps on 不忘初心,永远忠诚</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 20 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://hostenwang.github.io/p/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>深入浅出 Nginx 的安装配置和使用</title>
+        <link>https://hostenwang.github.io/p/nginx-setup/</link>
+        <pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
+        
+        <guid>https://hostenwang.github.io/p/nginx-setup/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Nginx 是一款轻量级的Web服务器、反向代理服务器，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用&lt;/p&gt;
+&lt;p&gt;详情见 &lt;a class=&#34;link&#34; href=&#34;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hostenwang.github.io/posts/0531-midware/introduction-to-high-performance-reverse-proxy-server-nginx/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;h2 id=&#34;过程&#34;&gt;过程&lt;/h2&gt;
+&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
+&lt;h2 id=&#34;讨论&#34;&gt;讨论&lt;/h2&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
