@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Nerver Forget Why You Started</title>
+        <link>http://localhost:5555/en/tags/</link>
+        <description>Recent content in Tags on Nerver Forget Why You Started</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>HostenWang</copyright><atom:link href="http://localhost:5555/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>

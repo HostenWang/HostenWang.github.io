@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gitlab on 不忘初心</title>
+        <link>http://localhost:5555/tags/gitlab/</link>
+        <description>Recent content in Gitlab on 不忘初心</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>HostenWang</copyright>
+        <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5555/tags/gitlab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>代码管理软件选型|Selection of Code Management Software</title>
+        <link>http://localhost:5555/p/selection-of-code-management-software/</link>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/selection-of-code-management-software/</guid>
+        <description>&lt;h2 id=&#34;1-需求&#34;&gt;1 需求
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;满足常用代码管理需求&lt;/li&gt;
+&lt;li&gt;安装配置简单&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;11-为什么没有直接选用-gitlab&#34;&gt;1.1 为什么没有直接选用 gitlab
+&lt;/h3&gt;&lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://www.annhe.net/article-4276.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.annhe.net/article-4276.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gitlab 是大而全的，对内存的需求比较大，最好是 4G 以上内存的机器。&lt;/p&gt;
+&lt;p&gt;相比之下，Gitea 就很轻量级了，能够很好的节约系统资源。另外  Go 程序部署起来也更方便。&lt;/p&gt;
+&lt;p&gt;还有一个比较实用的功能是，Gitea 支持全文搜索，而 Gitlab 社区版本不支持。&lt;/p&gt;
+&lt;p&gt;和 Gerrit  对比，Gitea 有着和 Github 体验类似的工单系统，也能很好的和CI工具集成，比如 Drone CI，获得和 Github  类似的使用体验。&lt;/p&gt;
+&lt;p&gt;综合来看，使用 Gitea 是一个不错的选择。&lt;/p&gt;
+&lt;h3 id=&#34;12-主流代码管理软件主要特性横向对比&#34;&gt;1.2 主流代码管理软件主要特性横向对比
+&lt;/h3&gt;&lt;p&gt;来自 &lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/zh-cn/comparison/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.gitea.io/zh-cn/comparison/&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;特性&lt;/th&gt;
+          &lt;th&gt;Gitea&lt;/th&gt;
+          &lt;th&gt;Gogs&lt;/th&gt;
+          &lt;th&gt;GitLab CE&lt;/th&gt;
+          &lt;th&gt;GitHub EE&lt;/th&gt;
+          &lt;th&gt;GitLab EE&lt;/th&gt;
+          &lt;th&gt;BitBucket&lt;/th&gt;
+          &lt;th&gt;RhodeCode CE&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;开源免费&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;低资源开销 (RAM/CPU)&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;支持多种数据库&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;⁄&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;⁄&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;支持多种操作系统&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;升级简便&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;支持 Markdown&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;支持 Orgmode&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;?&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;支持 CSV&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;?&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;支持第三方渲染工具&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;?&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Git 驱动的静态 pages&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Git 驱动的集成化 wiki&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;部署令牌&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;仓库写权限令牌&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;内置容器 Registry&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;外部 Git 镜像&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FIDO U2F (2FA)&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;内置 CI/CD&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;子组织：组织内的组织&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+          &lt;td&gt;✘&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2-选型决策&#34;&gt;2 选型决策
+&lt;/h2&gt;&lt;p&gt;目前选用 #gitea&lt;/p&gt;
+&lt;h2 id=&#34;3-gitea-安装和配置&#34;&gt;3 gitea 安装和配置
+&lt;/h2&gt;&lt;p&gt;参考官方文档即可&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/zh-cn/install-from-binary/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.gitea.io/zh-cn/install-from-binary/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/zh-cn/linux-service/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.gitea.io/zh-cn/linux-service/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.annhe.net/article-4276.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.annhe.net/article-4276.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-gitea-定时备份&#34;&gt;4 gitea 定时备份
+&lt;/h2&gt;&lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://docs.gitea.io/zh-cn/backup-and-restore/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.gitea.io/zh-cn/backup-and-restore/&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

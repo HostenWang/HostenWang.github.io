@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Geoserver on 不忘初心</title>
+        <link>http://localhost:5555/tags/geoserver/</link>
+        <description>Recent content in Geoserver on 不忘初心</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>HostenWang</copyright>
+        <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5555/tags/geoserver/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GeoServer添加并发布 PostGIS 数据|loading data in PostGIS and publishing them in  GeoServer</title>
+        <link>http://localhost:5555/p/loading-data-in-postgis-and-publishing-them-in-geoserver/</link>
+        <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/loading-data-in-postgis-and-publishing-them-in-geoserver/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview
+&lt;/h2&gt;&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;
+&lt;h2 id=&#34;postgresql-步骤&#34;&gt;PostgreSQL 步骤
+&lt;/h2&gt;&lt;h3 id=&#34;新建数据库&#34;&gt;新建数据库
+&lt;/h3&gt;&lt;p&gt;在 #PostgreSQL 新建数据库&lt;/p&gt;
+&lt;h3 id=&#34;添加空间数据库扩展&#34;&gt;添加空间数据库扩展
+&lt;/h3&gt;&lt;p&gt;建立完成数据库后，点击该数据库下的Schemas-&amp;gt;public-&amp;gt;Table，使用SQL语句添加空间数据库管理插件PostGIS:CREATE EXTENSION PostGIS，成功后刷新，数据表中会出现 &lt;code&gt;spatial_ref_sys&lt;/code&gt;，说明可以导入空间数据了&lt;/p&gt;
+&lt;h3 id=&#34;准备-shp-文件&#34;&gt;准备 shp 文件
+&lt;/h3&gt;&lt;p&gt;确认 SRID&lt;/p&gt;
+&lt;h3 id=&#34;导入shp文件&#34;&gt;导入shp文件
+&lt;/h3&gt;&lt;p&gt;打开 PostGIS Shapefile Import/Export Manager&lt;/p&gt;
+&lt;p&gt;注意:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;文件路径为英文&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;geoserver-步骤&#34;&gt;GeoServer 步骤
+&lt;/h2&gt;&lt;h3 id=&#34;新建工作区&#34;&gt;新建工作区
+&lt;/h3&gt;&lt;p&gt;进入 #GeoServer 首页，点击左侧的工作区（Workspaces），再点击添加新的工作区（Add new workspaces）可以创建工作空间&lt;/p&gt;
+&lt;h3 id=&#34;配置数据源&#34;&gt;配置数据源
+&lt;/h3&gt;&lt;p&gt;点击数据存储（Stores），再点击添加新的数据存储（Add new store），可以添加一个新的数据源&lt;/p&gt;
+&lt;h3 id=&#34;发布图层&#34;&gt;发布图层
+&lt;/h3&gt;&lt;p&gt;点击图层（Layers），进入图层选择界面；再点击添加新的资源（Add a new resource），选择相应的工作空间+数据源，点击发布（publish），即可进行发布&lt;/p&gt;
+&lt;h3 id=&#34;发布样&#34;&gt;发布样
+&lt;/h3&gt;&lt;p&gt;布的图层采用默认渲染模式，改变风格样式需要在发布图层界面选择发布，然后选择样式&lt;/p&gt;
+&lt;h3 id=&#34;图层预览&#34;&gt;图层预览
+&lt;/h3&gt;&lt;p&gt;点击左侧数据栏中Layer Preview选项，找到图层通过OpenLayers方式进行查看，下图为效果图&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further
+&lt;/h2&gt;&lt;p&gt;我厂未来将使用 GeoServer 作为 #GIS 后端&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoshi-hd.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小师的Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;GeoServer Beginner&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>GeoServer添加shape文件作为数据源</title>
+        <link>http://localhost:5555/p/loading-shapefiles-and-publishing-them-in-geoserver/</link>
+        <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/loading-shapefiles-and-publishing-them-in-geoserver/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview
+&lt;/h2&gt;&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;
+&lt;p&gt;PostGIS shapefile 工具将 shapefile 数据从二进制转换为一系列的 #SQL 命令，然后在数据库中运行以加载数据，从而使 shapefile 数据在 #PostGIS 中可用&lt;/p&gt;
+&lt;h2 id=&#34;shapfile-包含的内容&#34;&gt;shapfile 包含的内容
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;介绍&lt;/th&gt;
+          &lt;th&gt;是否必选&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;.shp&lt;/td&gt;
+          &lt;td&gt;存储地理要素的几何信息&lt;/td&gt;
+          &lt;td&gt;必选&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;.shx&lt;/td&gt;
+          &lt;td&gt;存储要素几何图形的索引信息&lt;/td&gt;
+          &lt;td&gt;必选&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;.dbf&lt;/td&gt;
+          &lt;td&gt;存储地理要素的属性信息（非几何信息）&lt;/td&gt;
+          &lt;td&gt;必选&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;.prj&lt;/td&gt;
+          &lt;td&gt;存储空间参考信息，即地理坐标系统信息和投影坐标系统信息。使用well-known文本格式进行描述&lt;/td&gt;
+          &lt;td&gt;可选&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;基础概念&#34;&gt;基础概念
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;功能&lt;/th&gt;
+          &lt;th&gt;参数&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SRID(Spatial Reference IDentifier, 空间参考标识符)&lt;/td&gt;
+          &lt;td&gt;它定义了我们数据的地理坐标系统和投影的所有参数&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;spatial_ref_sys 表&lt;/td&gt;
+          &lt;td&gt;用于定义数据库已知的所有空间参考系统&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bounding Boxes&lt;/td&gt;
+          &lt;td&gt;Native Bounding Box&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Lat/Lon Bounding Box&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Isolated Workspace&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;步骤
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;新建工作区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建数据存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择需要配置的数据类型，以shp文件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;DBF charset 设置为 GBK&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击保存，完成创建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编辑图层，定义SRS信息和边框信息，然后单击保存即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图层预览&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further
+&lt;/h2&gt;&lt;p&gt;我厂未来将使用 GeoServer 作为 GIS 后端&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoshi-hd.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小师的Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;GeoServer Beginner&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>GeoServer 安装</title>
+        <link>http://localhost:5555/p/geoserver-installation/</link>
+        <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/geoserver-installation/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview
+&lt;/h2&gt;&lt;p&gt;GeoServer 是 OGC Web 的开源实现.&lt;/p&gt;
+&lt;p&gt;GeoServer是 #OpenGIS Web 服务器规范的 J2EE 实现，利用 GeoServer 可以方便的发布地图数据，允许用户对特征数据进行更新、删除、插入操作，通过 #GeoServer 可以比较容易的在用户之间迅速共享空间地理信息。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;组件&lt;/th&gt;
+          &lt;th&gt;版本&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OS&lt;/td&gt;
+          &lt;td&gt;Win10 Home x64&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Java&lt;/td&gt;
+          &lt;td&gt;JDK8&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Tomcat&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;geoserver&lt;/td&gt;
+          &lt;td&gt;2.21.0&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;到 &lt;a class=&#34;link&#34; href=&#34;http://geoserver.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GeoServer官网&lt;/a&gt; 下载 war 包&lt;/li&gt;
+&lt;li&gt;放到 Tomcat webapps 目录下&lt;/li&gt;
+&lt;li&gt;启动 #Tomcat&lt;/li&gt;
+&lt;li&gt;访问 http://localhost:8080/geoserver/ GeoServer 的管理员帐号。帐号admin，密码geoserver&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;功能介绍&#34;&gt;功能介绍
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;功能&lt;/th&gt;
+          &lt;th&gt;介绍&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;styles&lt;/td&gt;
+          &lt;td&gt;管理GeoServer发布的样式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;图层预览&lt;/td&gt;
+          &lt;td&gt;提供了GeoServer的所图层配置列表，并提供以各种格式预览&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;图层和图层组&lt;/td&gt;
+          &lt;td&gt;用来发布和管理新图层，并使用组的形式来进行组织和管理&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;数据存储&lt;/td&gt;
+          &lt;td&gt;管理GeoServer的数据存储，我们可以将其理解为为Web服务提供数据支持的“数据库”&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;工作区&lt;/td&gt;
+          &lt;td&gt;用于对某一项具体的工作进行统一的管理。对应于GeoServer所用于的web服务，也可以理解为是一个web网站的根目录&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;配置&#34;&gt;配置
+&lt;/h2&gt;&lt;h3 id=&#34;切换语言&#34;&gt;切换语言
+&lt;/h3&gt;&lt;p&gt;切换浏览器语言设置即可&lt;/p&gt;
+&lt;h3 id=&#34;叠加-tiff&#34;&gt;叠加 TIFF
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/WhynLight/article/details/94553734&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/WhynLight/article/details/94553734&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further
+&lt;/h2&gt;&lt;p&gt;我厂未来将使用 GeoServer 作为 GIS 后端&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoshi-hd.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小师的Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;GeoServer Beginner&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>GeoServer 空间参考系|GeoServer Coordinate Reference System</title>
+        <link>http://localhost:5555/p/geoserver-coordinate-reference-system/</link>
+        <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/geoserver-coordinate-reference-system/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview
+&lt;/h2&gt;&lt;p&gt;空间参考系用于建立地球表面物体的空间位置与二维平面上坐标的关系&lt;/p&gt;
+&lt;p&gt;GeoServer 是 #OpenGIS #Web 服务器规范的 J2EE 实现，利用 #GeoServer 可以方便的发布地图数据，允许用户对特征数据进行更新、删除、插入操作，通过 GeoServer 可以比较容易的在用户之间迅速共享空间地理信息。&lt;/p&gt;
+&lt;h2 id=&#34;环境&#34;&gt;环境
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Component&lt;/th&gt;
+          &lt;th&gt;Version&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OS&lt;/td&gt;
+          &lt;td&gt;Win10 Home x64&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Java&lt;/td&gt;
+          &lt;td&gt;OpenJDK8&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Tomcat&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;geoserver&lt;/td&gt;
+          &lt;td&gt;2.21.0&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;分类&#34;&gt;分类
+&lt;/h2&gt;&lt;p&gt;CRS 可细分为 #地理坐标系 和 #投影坐标系&lt;/p&gt;
+&lt;h3 id=&#34;地理坐标系&#34;&gt;地理坐标系
+&lt;/h3&gt;&lt;p&gt;以弧度制下度数为单位的 地理坐标系（Geographic Coordinate Systems）帮助我们定位物体在地球球面上的具体位置&lt;/p&gt;
+&lt;p&gt;地理坐标系以地表上确定的某一个点为原点，创建了包裹全球的网格，譬如 WGS84，将本初子午线与赤道的交点作为原点&lt;/p&gt;
+&lt;h3 id=&#34;投影坐标系&#34;&gt;投影坐标系
+&lt;/h3&gt;&lt;p&gt;地理坐标系虽然解决了我们在地球球面上定位的问题，但纬度和经度位置没有使用统一的测量单位。&lt;/p&gt;
+&lt;p&gt;各种各样的投影坐标系（Projected Coordinate Systems）被开发出来&lt;/p&gt;
+&lt;p&gt;投影坐标系指的是从将3D球面展平为2D平面的一套数学计算方法，利用它可以优化形状、比例/距离以及面积的失真情况。&lt;/p&gt;
+&lt;p&gt;但实际情况中没有在整个地球表面都能“三全其美”的投影坐标系，有些投影坐标系优化形状上的失真，有些投影坐标系优化距离上的失真，有些投影坐标系专门针对面积失真进行优化，而有些投影坐标系可以对局部区域进行三个方面上的优化。&lt;/p&gt;
+&lt;p&gt;常用的投影坐标系如横轴墨卡托（Universal Transverse Mercator，简称UTM），基于经度将全球等分为编号0-60的区域，且每个区域又进一步细分为南半球区域或北半球区域&lt;/p&gt;
+&lt;h3 id=&#34;地理坐标系-vs-投影坐标系&#34;&gt;地理坐标系 VS 投影坐标系
+&lt;/h3&gt;&lt;p&gt;待定&lt;/p&gt;
+&lt;h2 id=&#34;常用-crs-格式&#34;&gt;常用 CRS 格式
+&lt;/h2&gt;&lt;p&gt;EPSG（European Petroleum Survey Group）编码，使用4或5位数字编码来唯一确定已存在的一种CRS，可以在http://spatialreference.org/ref/epsg/中查看和搜索所有已知的EPSG与CRS对应关系&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:5555/0001.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img_0001&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;常用-crscoordinate-reference-systems&#34;&gt;常用 CRS(Coordinate Reference Systems)
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;功能&lt;/th&gt;
+          &lt;th&gt;参数&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Native SRS&lt;/td&gt;
+          &lt;td&gt;本地数据自身的坐标系统&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Declared SRS&lt;/td&gt;
+          &lt;td&gt;地图服务发布时的坐标系统&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SRS handling&lt;/td&gt;
+          &lt;td&gt;声明 &lt;code&gt;Native SRS&lt;/code&gt; 和 &lt;code&gt;Declared SRS&lt;/code&gt; 不同时的处理方式&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;总结summary&#34;&gt;总结|Summary
+&lt;/h2&gt;&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further
+&lt;/h2&gt;&lt;p&gt;我厂使用 GeoServer 作为 GIS 后端&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoshi-hd.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小师的Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;GeoServer Beginner&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>GeoServer - 概述 | GeoServer - Overview</title>
+        <link>http://localhost:5555/p/geoserver-overview/</link>
+        <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/geoserver-overview/</guid>
+        <description>&lt;h2 id=&#34;概述overview&#34;&gt;概述|Overview
+&lt;/h2&gt;&lt;p&gt;GeoServer 是一个用 #Java 编写的开源软件服务器，允许用户共享和编辑 #地理空间数据. 为实现互操作性而设计，它使用开放标准发布来自任何主要空间数据源的数据。&lt;/p&gt;
+&lt;p&gt;作为 #GeoServer #系列文章 的第一篇, 主要介绍基础概念.&lt;/p&gt;
+&lt;h2 id=&#34;geoserver-概述&#34;&gt;GeoServer 概述
+&lt;/h2&gt;&lt;p&gt;GeoServer实现了 &lt;code&gt;开放地理空间联盟  &amp;lt;http://www.opengeospatial.org&amp;gt;&lt;/code&gt;_ (Open Geospatial Consortium) 的 &lt;code&gt;网络要素服务 &amp;lt;http://www.opengeospatial.org/standards/wfs&amp;gt;&lt;/code&gt;_ (Web Feature Service)、 &lt;code&gt;网络覆盖服务 &amp;lt;http://www.opengeospatial.org/standards/wcs&amp;gt;&lt;/code&gt;_ (Web Coverage Service)，以及 &lt;code&gt;网络地图服务 &amp;lt;http://www.opengeospatial.org/standards/wms&amp;gt;&lt;/code&gt;_ (Web Map Service)。其对网络地图服务的高性能实现，获得了OGC认证。GeoServer是地理空间网络的核心组件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GeoServer is an open source web mapping server written in Java platform. It is a subset of a web server model specially designed to share and publishes the Geographical information over the internet. It utilizes Web Mapping Service (WMS), Web Feature Service (WFS), Web Coverage Service (WCS) and many other open protocols for transfer the Geographical information, such as maps, spatial attributes and Feature data sets. Through these  protocols GeoServer can serve the data and maps in an efficient and powerful way. GeoServer supports the most common data sources like, Geo Tiff, Shapefile, ArcGrid, JPEG200 and GDAL formats and various databases viz., PostGIS, SQL Server, DB2, Oracle Spatial and ArcSDE&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;geoserver-主要特征&#34;&gt;GeoServer 主要特征
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;支持 #OGC 规范，如 #WMS, #WFS, #WMTS 等&lt;/li&gt;
+&lt;li&gt;支持 #PostGIS, #Shapefile, #ArcSDE, #Oracle, #VPF, #MySQL, #MapInfo&lt;/li&gt;
+&lt;li&gt;支持上百种投影能够将网络地图输出为JPEG、GIF、PNG、SVG、KML等格式&lt;/li&gt;
+&lt;li&gt;能够运行在任何基于 #J2EE / #Servlet 容器之上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ogc-主要概念&#34;&gt;OGC 主要概念
+&lt;/h2&gt;&lt;h3 id=&#34;总结&#34;&gt;总结
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;功能&lt;/th&gt;
+          &lt;th&gt;介绍&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OGC（Open Geospatial Consortium, 开放地理信息协会）&lt;/td&gt;
+          &lt;td&gt;是一个非赢利的国际化标准制定组织，领导进行对地理数据相关的操作和服务标准的制定&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WCS(Web Coverage Service)&lt;/td&gt;
+          &lt;td&gt;用于管理元数据信息和WCS、WFS、WMS通用的配置信息，如数据请求读写最大值等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WMS(Web Map Service)&lt;/td&gt;
+          &lt;td&gt;用于管理和配置栅格数据和SVG选项以及切片地图压缩和分级情况&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WFS(Web Feature Service)&lt;/td&gt;
+          &lt;td&gt;用于配置和管理Feature Data、服务级别以及GML输出等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;TMS(Tile map Servcie, 切片地图服务)&lt;/td&gt;
+          &lt;td&gt;允许用户按需访问切片地图，访问速度更快，还支持修改坐标系&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WMTS&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WPS&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;对比&#34;&gt;对比
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;服务类型&lt;/th&gt;
+          &lt;th&gt;WCS&lt;/th&gt;
+          &lt;th&gt;WMS&lt;/th&gt;
+          &lt;th&gt;WFS&lt;/th&gt;
+          &lt;th&gt;WMTS&lt;/th&gt;
+          &lt;th&gt;WPS&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;地图服务&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;地理数据服务&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;影像服务&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;地理处理服务&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Y&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;未来展望further&#34;&gt;未来展望|Further
+&lt;/h2&gt;&lt;p&gt;我厂使用 GeoServer 作为 GIS 后端, 我也在深入学习代码, 力求使用好这一开源中间件&lt;/p&gt;
+&lt;h2 id=&#34;参考references&#34;&gt;参考|References
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://xiaoshi-hd.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小师的Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;GeoServer Beginner&amp;rsquo;s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

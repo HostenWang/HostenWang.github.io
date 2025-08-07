@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on 不忘初心</title>
+        <link>http://localhost:5555/tags/</link>
+        <description>Recent content in Tags on 不忘初心</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>HostenWang</copyright>
+        <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5555/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vue2</title>
+        <link>http://localhost:5555/tags/vue2/</link>
+        <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/vue2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Geoserver</title>
+        <link>http://localhost:5555/tags/geoserver/</link>
+        <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/geoserver/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gis</title>
+        <link>http://localhost:5555/tags/gis/</link>
+        <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/gis/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OpenGIS</title>
+        <link>http://localhost:5555/tags/opengis/</link>
+        <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/opengis/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Shape</title>
+        <link>http://localhost:5555/tags/shape/</link>
+        <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/shape/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Git</title>
+        <link>http://localhost:5555/tags/git/</link>
+        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gitea</title>
+        <link>http://localhost:5555/tags/gitea/</link>
+        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/gitea/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>项目管理</title>
+        <link>http://localhost:5555/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link>
+        <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>选型</title>
+        <link>http://localhost:5555/tags/%E9%80%89%E5%9E%8B/</link>
+        <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/%E9%80%89%E5%9E%8B/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gitlab</title>
+        <link>http://localhost:5555/tags/gitlab/</link>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/gitlab/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Commit</title>
+        <link>http://localhost:5555/tags/commit/</link>
+        <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/commit/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Specification</title>
+        <link>http://localhost:5555/tags/specification/</link>
+        <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/specification/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Backup</title>
+        <link>http://localhost:5555/tags/backup/</link>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/backup/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Expdp</title>
+        <link>http://localhost:5555/tags/expdp/</link>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/expdp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Impdp</title>
+        <link>http://localhost:5555/tags/impdp/</link>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/impdp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Oracle</title>
+        <link>http://localhost:5555/tags/oracle/</link>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/oracle/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>http://localhost:5555/tags/windows/</link>
+        <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/tags/windows/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

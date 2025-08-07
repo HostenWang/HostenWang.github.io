@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on 不忘初心</title>
+        <link>http://localhost:5555/categories/</link>
+        <description>Recent content in Categories on 不忘初心</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>HostenWang</copyright>
+        <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5555/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vue</title>
+        <link>http://localhost:5555/categories/vue/</link>
+        <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/vue/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>开源地理信息系统服务器 GeoServer 技术专栏</title>
+        <link>http://localhost:5555/categories/geoserver/</link>
+        <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/geoserver/</guid>
+        <description>&lt;img src="http://localhost:5555/categories/geoserver/ODLS.png" alt="Featured image of post 开源地理信息系统服务器 GeoServer 技术专栏" /&gt;&lt;p&gt;GeoServer 是一个基于 #J2EE 的 #开源 #地理信息系统 （GIS）服务器，它实现了 #OpenGIS Web 服务器规范。&lt;/p&gt;
+&lt;p&gt;GeoServer的主要优势:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;能够方便地发布地图数据，并允许用户对特征数据进行更新、删除、插入操作。&lt;/li&gt;
+&lt;li&gt;GeoServer还支持多种数据源和投影方式，能够将网络地图输出为多种格式，包括jpeg、gif、png、SVG、KML等。&lt;/li&gt;
+&lt;li&gt;它还具有强大的数据处理和可视化能力，可以帮助用户实现空间数据的快速共享和可视化。&lt;/li&gt;
+&lt;li&gt;GeoServer还具有良好的可扩展性和灵活性，可以通过插件和模块来扩展其功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总之,#GeoServer 是一个功能强大的开源地理信息系统服务器，适用于各种行业和领域。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Develop</title>
+        <link>http://localhost:5555/categories/develop/</link>
+        <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/develop/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Git</title>
+        <link>http://localhost:5555/categories/git/</link>
+        <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>高性能关系型数据库 Oracle 专栏</title>
+        <link>http://localhost:5555/categories/oracle/</link>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/oracle/</guid>
+        <description>&lt;p&gt;Oracle数据库具有以下优点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;可靠性&lt;/strong&gt;：Oracle数据库可以长时间运行并保持稳定，具有高度的可靠性和可用性。它提供了多种备份和恢复选项，可以最大限度地减少数据丢失的风险。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能&lt;/strong&gt;：Oracle数据库具有出色的性能，能够高效地处理大量数据，并提供了多种优化选项来调整数据库性能。它还支持并行处理和分布式计算，可以扩展到大型系统中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开放性&lt;/strong&gt;：Oracle数据库可以运行在各种主流平台上，如Windows、Linux、UNIX等。它支持各种工业标准，包括SQL、Java、C++等，并提供了丰富的开发工具和接口，方便开发人员使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可伸缩性&lt;/strong&gt;：Oracle数据库具有良好的可伸缩性，可以轻松应对数据量的增长和业务需求的扩展。它支持多层次网络计算，并提供了多种连接选项，如ODBC、JDBC、OCI等，方便客户连接和使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全性&lt;/strong&gt;：Oracle数据库提供了完善的安全性控制机制，包括用户认证、权限管理、审计等。它还提供了基于角色的分工和安全保密管理功能，可以有效地保护数据安全。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易用性&lt;/strong&gt;：Oracle数据库易于安装和配置，提供了丰富的文档和在线帮助资源。它还支持多种客户端应用程序和开发工具，方便用户进行数据访问和使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可维护性&lt;/strong&gt;：Oracle数据库具有较低的维护成本，因为它可以长时间稳定运行并需要较少的维护。它提供了多种监控和管理工具，方便管理员及时发现和解决问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总之，Oracle数据库具有高可靠性、高性能、高可用性、高安全性、高易用性和低维护成本等多个优点，因此在多个领域得到了广泛应用。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>脚本语言 Python 技术专栏</title>
+        <link>http://localhost:5555/categories/python/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/python/</guid>
+        <description>&lt;img src="http://localhost:5555/categories/python/python.jpg" alt="Featured image of post 脚本语言 Python 技术专栏" /&gt;&lt;p&gt;Python是一种不受局限、跨平台的开源编程语言，其数据处理速度快、功能强大且简单易学，在数据分析与处理中被广泛应用。
+Python目前广泛用于数据分析、人工智能、web开发、测试、运维、web安全等领域。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>开源数据流管理系统 Apache NiFi 技术专栏</title>
+        <link>http://localhost:5555/categories/nifi/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/nifi/</guid>
+        <description>&lt;img src="http://localhost:5555/lnifi.jpg" alt="Featured image of post 开源数据流管理系统 Apache NiFi 技术专栏" /&gt;&lt;p&gt;Apache NiFi 是一个易于使用、功能强大而且可靠的流式数据处理和分发系统。NiFi 是为数据流设计，支持从多种数据源动态的拉取数据，并基于WEB图形界面，通过拖拽、连接、配置完成基于流程的编程，实现数据采集、处理等功能&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>面向 ArcGIS 的 python 脚本编程</title>
+        <link>http://localhost:5555/categories/python-scripting-for-arcgis/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/python-scripting-for-arcgis/</guid>
+        <description>&lt;img src="http://localhost:5555/categories/python-scripting-for-arcgis/arcgis.jpg" alt="Featured image of post 面向 ArcGIS 的 python 脚本编程" /&gt;&lt;p&gt;ArcGIS 9 引入了脚本处理技术，并支持多种脚本语言，包括 Python、VBScritp 等.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>用友NC二次开发平台专栏</title>
+        <link>http://localhost:5555/categories/yonyou-nc-development/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/categories/yonyou-nc-development/</guid>
+        <description>&lt;img src="http://localhost:5555/categories/yonyou-nc-development/yonyou.png" alt="Featured image of post 用友NC二次开发平台专栏" /&gt;&lt;p&gt;用友NC是用友软件集团推出的一款中小企业综合管理软件，它将ERP、OA、CRM、财务管理等多种管理信息系统进行集成，从而实现对公司所有运作活动的综合管理，有效地提升企业的工作效率和生产力。&lt;/p&gt;
+&lt;p&gt;用友NC的二次开发平台，可以在NC里面增加新的功能加点、修改原有单据流程、做后台任务或者预警等等，即以NC作为一个开发平台做客户自己的一些比较大的内容的开发。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

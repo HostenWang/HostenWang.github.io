@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on 不忘初心</title>
+        <link>http://localhost:5555/page/</link>
+        <description>Recent content in Pages on 不忘初心</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>HostenWang</copyright>
+        <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5555/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于</title>
+        <link>http://localhost:5555/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;全栈开发工程师, 大数据开发工程师, 生活探险家, 开源爱好者&lt;/p&gt;
+&lt;h2 id=&#34;项目经验&#34;&gt;项目经验
+&lt;/h2&gt;&lt;h3 id=&#34;java-开源项目&#34;&gt;Java 开源项目
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;GeoServer 贡献者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python-开源项目&#34;&gt;Python 开源项目
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;geoserver-rest 贡献者&lt;/li&gt;
+&lt;li&gt;fake-agent 贡献者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工作经历&#34;&gt;工作经历
+&lt;/h2&gt;&lt;h3 id=&#34;2021---现在-内蒙古某龙头企业&#34;&gt;2021 - 现在 内蒙古某龙头企业
+&lt;/h3&gt;&lt;p&gt;参与建设业务管理系统, 实现业务, 财务, 人力 数据一体化&lt;/p&gt;
+&lt;p&gt;目前专攻 GIS 自动化和数据建模分析自动化&lt;/p&gt;
+&lt;h3 id=&#34;2018---2021-用友-数据中台-大数据开发&#34;&gt;2018 - 2021 用友 数据中台 大数据开发
+&lt;/h3&gt;&lt;p&gt;2018年起参与建设和推广用友数据中台, 精通多数据源数据采集,存储和常用大数据组件&lt;/p&gt;
+&lt;p&gt;2019年9月作为讲师参加&amp;quot;用友数据中台全国巡讲&amp;ndash;西安站&amp;quot;活动&lt;/p&gt;
+&lt;h3 id=&#34;2016---2018-科大讯飞-教育事业群-java开发&#34;&gt;2016 - 2018 科大讯飞 教育事业群 Java开发
+&lt;/h3&gt;&lt;p&gt;参与开发科大讯飞教育事业群教务领域应用, 涉及考务, 教务, 成绩分析等领域&lt;/p&gt;
+&lt;p&gt;参与开发基于进化算法和神经网络的智能排课算法&lt;/p&gt;
+&lt;h3 id=&#34;2012---2016-普源精电-软件开发&#34;&gt;2012 - 2016 普源精电 软件开发
+&lt;/h3&gt;&lt;p&gt;参与开发通信领域软件, 如 GSM 信号生成软件, EMI(电磁兼容)测试软件, 数字通信调制解调软件 等&lt;/p&gt;
+&lt;h2 id=&#34;教育经历&#34;&gt;教育经历
+&lt;/h2&gt;&lt;h3 id=&#34;西安邮电大学&#34;&gt;西安邮电大学
+&lt;/h3&gt;&lt;h2 id=&#34;联系方式&#34;&gt;联系方式
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:hostenwang@foxmail.com&#34; &gt;hostenwang@foxmail.com&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>存档</title>
+        <link>http://localhost:5555/archives/</link>
+        <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>友情链接</title>
+        <link>http://localhost:5555/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>站内搜索</title>
+        <link>http://localhost:5555/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

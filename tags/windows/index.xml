@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Windows on 不忘初心</title>
+        <link>http://localhost:5555/tags/windows/</link>
+        <description>Recent content in Windows on 不忘初心</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>HostenWang</copyright>
+        <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5555/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows 系统下 Oracle 的安装和配置|Install and Configure Oracle on Windows</title>
+        <link>http://localhost:5555/p/install-and-configure-oracle-on-windows/</link>
+        <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5555/p/install-and-configure-oracle-on-windows/</guid>
+        <description>&lt;h2 id=&#34;概述&#34;&gt;概述
+&lt;/h2&gt;&lt;p&gt;本文介绍如何在 Windows 系统下安装 #Oracle 11g 数据库&lt;/p&gt;
+&lt;h2 id=&#34;准备&#34;&gt;准备
+&lt;/h2&gt;&lt;p&gt;安装需要 5G 左右的磁盘空间（Oracle 主目录 3GB，数据文件 2GB）&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;p&gt;Oracle 11g下载完成后，解压到一个空的文件夹，然后双击&lt;em&gt;setup.exe&lt;/em&gt;文件，就可以开始安装Oracle数据库了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:5555/p/install-and-configure-oracle-on-windows/02.png&#34;
+	width=&#34;787&#34;
+	height=&#34;599&#34;
+	srcset=&#34;http://localhost:5555/p/install-and-configure-oracle-on-windows/02_hu_79a7634eb3dd02f9.png 480w, http://localhost:5555/p/install-and-configure-oracle-on-windows/02_hu_1dcb48ccb7d141c2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;315px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据库版本 选择企业版&lt;/li&gt;
+&lt;li&gt;字符集 选择 Unicode(AL32UTF8)&lt;/li&gt;
+&lt;li&gt;全局数据库名 即是数据库连接时的实例名，这里我设置为 orcl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:5555/p/install-and-configure-oracle-on-windows/06.png&#34;
+	width=&#34;783&#34;
+	height=&#34;594&#34;
+	srcset=&#34;http://localhost:5555/p/install-and-configure-oracle-on-windows/06_hu_40f8ac351525c2bb.png 480w, http://localhost:5555/p/install-and-configure-oracle-on-windows/06_hu_b6b17da6326e90ef.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;316px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;一路确认,默认即可&lt;/p&gt;
+&lt;h3 id=&#34;口令管理&#34;&gt;口令管理
+&lt;/h3&gt;&lt;p&gt;到了口令管理那里留意一下&lt;/p&gt;
+&lt;p&gt;单击【口令管理】按钮设置不同用户的密码，这里我们将 SYS，SYSTEM 和 HR 用户解锁并设置相应的密码 ，完成后，点击【确定】。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:5555/p/install-and-configure-oracle-on-windows/09.png&#34;
+	width=&#34;785&#34;
+	height=&#34;593&#34;
+	srcset=&#34;http://localhost:5555/p/install-and-configure-oracle-on-windows/09_hu_de1a735dea246562.png 480w, http://localhost:5555/p/install-and-configure-oracle-on-windows/09_hu_1e42f8f3d0aeb66.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;口令管理&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;317px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;其他确认即可&lt;/p&gt;
+&lt;h2 id=&#34;验证&#34;&gt;验证
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Sql Plus&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在命令提示符中输入用户和登录密码，如提示连接成功，证明我们的Oracle11g安装完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;出错和解决&#34;&gt;出错和解决
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;安装过程中可以会出现“&lt;strong&gt;由于以下错误,Enterprise Manager 配置失败 -实例化 EM 配置文件时出错&lt;/strong&gt;”.请参考 &lt;a class=&#34;link&#34; href=&#34;https://www.hangge.com/blog/cache/detail_2817.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oracle - Windows下Oracle 11g数据库详细安装、设置教程&lt;/a&gt; 解决&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
